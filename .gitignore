@@ -1,0 +1,17 @@
+# Logs
+*.log
+
+# Coverage
+coverage/
+
+# Dependencies
+node_modules/
+
+# Cache
+.eslintcache
+
+# Environment variables
+.env
+
+# Build
+dist
