@@ -6,7 +6,7 @@
   "private": false,
   "repository": "git@github.com:kporten/template-react.git",
   "bugs": "https://github.com/kporten/template-react/issues",
-  "description": "Template to develop a component or single-page application with React",
+  "description": "Template to develop a single-page application or library with React (TypeScript)",
   "keywords": [
     "template",
     "react",
