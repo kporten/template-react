@@ -5,7 +5,7 @@
 ![last-commit](https://img.shields.io/github/last-commit/kporten/template-react)
 ![ci](https://github.com/kporten/template-react/workflows/CI/badge.svg?branch=main&event=push)
 
-This template allows you to start immediately with a [React](https://reactjs.org) ([TypeScript](https://www.typescriptlang.org)) single-page application or library. The template takes away the work of having to assemble and configure all the tools for professional development yourself. Through [Vite](https://vitejs.dev) you get on demand file serving over native ESM and HMR out-of-the-box. [Jest](https://jestjs.io) uses the [esbuild runner](https://github.com/folke/esbuild-runner), so your test environment also benefits from the extremely high performance of [esbuild](https://esbuild.github.io).
+This template allows you to start immediately with a [React](https://reactjs.org) ([TypeScript](https://www.typescriptlang.org)) single-page application or library. The template takes away the work of having to assemble and configure all the tools for professional development yourself. Through [Vite](https://vitejs.dev) you get on demand file serving over native ESM and HMR out-of-the-box. [Jest](https://jestjs.io) uses an [esbuild-jest transformer](https://github.com/aelbore/esbuild-jest), so your test environment also benefits from the extremely high performance of [esbuild](https://esbuild.github.io).
 
 The following tools are used and preconfigured in this template:
 
