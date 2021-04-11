@@ -7,6 +7,6 @@ module.exports = {
   setupFilesAfterEnv: ['<rootDir>/jest.setup.ts'],
   testMatch: ['<rootDir>/**/*.test.ts?(x)'],
   transform: {
-    '\\.tsx?$': 'esbuild-jest',
+    '\\.tsx?$': 'esbuild-runner/jest',
   },
 };

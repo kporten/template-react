@@ -7,6 +7,11 @@ beforeEach(() => {
   jest.useFakeTimers();
 });
 
+afterEach(() => {
+  jest.runOnlyPendingTimers();
+  jest.useRealTimers();
+});
+
 it('should render my app', async () => {
   const { unmount } = render(<App />);
 
@@ -39,9 +44,4 @@ it('should show different emojis', () => {
   expect(screen.getByRole('heading')).toHaveTextContent(/💻/);
 
   unmount();
-});
-
-afterEach(() => {
-  jest.runOnlyPendingTimers();
-  jest.useRealTimers();
 });
