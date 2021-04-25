@@ -24,10 +24,6 @@
     "plugin:import/typescript",
     "plugin:promise/recommended",
     "plugin:unicorn/recommended",
-    "plugin:jest/recommended",
-    "plugin:jest-dom/recommended",
-    "plugin:testing-library/recommended",
-    "plugin:testing-library/react",
     "prettier"
   ],
   "rules": {
@@ -49,5 +45,6 @@
         }
       }
     ]
-  }
+  },
+  "ignorePatterns": ["*.js", "cypress/**/*.js"]
 }

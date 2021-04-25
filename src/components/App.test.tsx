@@ -1,47 +1,28 @@
-import { render, screen, act } from '@testing-library/react';
-import React from 'react';
+// ? https://testing-library.com/docs/cypress-testing-library/intro/
 
+import React from 'react';
+import { mount } from '@cypress/react';
 import App from './App';
 
-beforeEach(() => {
-  jest.useFakeTimers();
+it('should render my app', () => {
+  mount(<App />);
+
+  cy.findByRole('heading').should('contain.text', 'application');
 });
 
-afterEach(() => {
-  jest.runOnlyPendingTimers();
-  jest.useRealTimers();
-});
+it('should render different emojis over time', () => {
+  cy.clock();
 
-it('should render my app', async () => {
-  const { unmount } = render(<App />);
+  mount(<App />);
 
-  expect(await screen.findByRole('heading')).toHaveTextContent(/application/i);
+  cy.findByRole('heading').should('contain.text', '💻');
 
-  unmount();
-});
+  cy.tick(2000);
+  cy.findByRole('heading').should('contain.text', '👍');
 
-it('should show different emojis', () => {
-  const { unmount } = render(<App />);
+  cy.tick(2000);
+  cy.findByRole('heading').should('contain.text', '😃');
 
-  expect(screen.getByRole('heading')).toHaveTextContent(/💻/);
-
-  act(() => {
-    jest.advanceTimersByTime(2000);
-  });
-
-  expect(screen.getByRole('heading')).toHaveTextContent(/👍/);
-
-  act(() => {
-    jest.advanceTimersByTime(2000);
-  });
-
-  expect(screen.getByRole('heading')).toHaveTextContent(/😃/);
-
-  act(() => {
-    jest.advanceTimersByTime(2000);
-  });
-
-  expect(screen.getByRole('heading')).toHaveTextContent(/💻/);
-
-  unmount();
+  cy.tick(2000);
+  cy.findByRole('heading').should('contain.text', '💻');
 });

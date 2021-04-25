@@ -10,7 +10,8 @@
     "noEmit": true,
     "resolveJsonModule": true,
     "skipLibCheck": true,
-    "strict": true
+    "strict": true,
+    "types": ["cypress", "@testing-library/cypress"]
   },
   "include": ["./src"]
 }
