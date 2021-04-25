@@ -5,26 +5,26 @@
 ![last-commit](https://img.shields.io/github/last-commit/kporten/template-react)
 ![ci](https://github.com/kporten/template-react/workflows/CI/badge.svg?branch=main&event=push)
 
-This template allows you to start immediately with a [React](https://reactjs.org) ([TypeScript](https://www.typescriptlang.org)) single-page application or library. The template takes away the work of having to assemble and configure all the tools for professional development yourself. Through [Vite](https://vitejs.dev) you get on demand file serving over native ESM and HMR out-of-the-box. [Jest](https://jestjs.io) uses the [esbuild-runner](https://github.com/folke/esbuild-runner), so your test environment also benefits from the extremely high performance of [esbuild](https://esbuild.github.io).
+This template allows you to start immediately with a [React](https://reactjs.org) ([TypeScript](https://www.typescriptlang.org)) single-page application or library. The template takes away the work of having to assemble and configure all the tools for professional development yourself. Through [Vite](https://vitejs.dev) you get on demand file serving over native ESM and HMR out-of-the-box.
 
 The following tools are used and preconfigured in this template:
 
 - [React](https://reactjs.org)
 - [Tailwind CSS](https://tailwindcss.com)
-- [Vite](https://vitejs.dev)
 - [TypeScript](https://www.typescriptlang.org)
+- [Vite](https://vitejs.dev)
 
 Quality:
 
-- [Husky](https://typicode.github.io/husky)
-- [ESLint](https://eslint.org)
-- [Prettier](https://prettier.io)
 - [Commitlint](https://commitlint.js.org)
+- [ESLint](https://eslint.org)
+- [Husky](https://typicode.github.io/husky)
+- [Prettier](https://prettier.io)
 - [Snyk](https://snyk.io)
 
 Tests:
 
-- [Jest](https://jestjs.io)
+- [Cypress](https://www.cypress.io)
 - [Testing Library](https://testing-library.com)
 
 ## Getting Started
@@ -53,7 +53,8 @@ yarn start # start development server
 yarn build # build for production
 yarn serve # locally preview production build
 yarn lint # lint code with eslint
-yarn test # run jest tests and watch for file changes
+yarn test # run all cypress component tests
+yarn test:open # open cypress component testing interactive mode
 ```
 
 ## Publish
