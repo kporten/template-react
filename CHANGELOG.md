@@ -1,3 +1,12 @@
+# [1.2.0](https://github.com/kporten/template-react/compare/v1.1.1...v1.2.0) (2021-04-25)
+
+
+### Features
+
+* replace jest with cypress ct ([dc41793](https://github.com/kporten/template-react/commit/dc41793bb2b52e0595f13050e621a054551c434c))
+
+
+
 ## [1.1.1](https://github.com/kporten/template-react/compare/v1.1.0...v1.1.1) (2021-04-11)
 
 
