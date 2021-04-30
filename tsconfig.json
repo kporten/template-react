@@ -11,6 +11,7 @@
     "resolveJsonModule": true,
     "skipLibCheck": true,
     "strict": true,
+    "target": "esnext",
     "types": ["cypress", "@testing-library/cypress"]
   },
   "include": ["./src"]
