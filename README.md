@@ -106,7 +106,7 @@ The following adjustments are recommended if you want to ship type declarations 
 "types": "./dist/[your-package-name].d.ts",
 ...
 "scripts": {
-  "build": "vite build && cp ./src/types/[your-package-name].d.ts ./dist/[your-package-name].d.ts",
+  "build": "vite build && cp ./src/types/[your-package-name].d.ts ./dist",
 },
 ...
 ```
