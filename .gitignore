@@ -1,17 +1,19 @@
-# Logs
-*.log
-
-# Coverage
-coverage/
-
-# Dependencies
-node_modules/
+# Build
+dist
 
 # Cache
 .eslintcache
 
+# Dependencies
+node_modules/
+
 # Environment variables
 .env
 
-# Build
-dist
+# Logs
+cypress/screenshots/
+cypress/videos/
+*.log
+
+# System
+.DS_Store
