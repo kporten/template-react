@@ -1,6 +1,4 @@
+// ? https://tailwindcss.com/docs/using-with-preprocessors#vendor-prefixes
 module.exports = {
-  plugins: {
-    tailwindcss: {},
-    autoprefixer: {},
-  },
+  plugins: [require('tailwindcss'), require('autoprefixer')],
 };
