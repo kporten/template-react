@@ -24,8 +24,10 @@ jobs:
         run: yarn tsc
       - name: Run lint
         run: yarn lint
-      - name: Run tests
+      - name: Run component tests
         run: yarn test
+      - name: Check test coverage
+        run: yarn test:coverage
   security:
     runs-on: ubuntu-latest
     steps:
