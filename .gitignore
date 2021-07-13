@@ -11,6 +11,8 @@ node_modules/
 .env
 
 # Logs
+.nyc_output
+coverage
 cypress/screenshots/
 cypress/videos/
 *.log

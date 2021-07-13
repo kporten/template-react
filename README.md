@@ -55,6 +55,8 @@ yarn serve # locally preview production build
 yarn lint # lint code with eslint
 yarn test # run all cypress component tests
 yarn test:open # open cypress component testing interactive mode
+yarn test:clean # clean test results (e.g. before `yarn test`)
+yarn test:coverage # report test coverage as text and check coverage tresholds
 ```
 
 ## Publish
