@@ -1,3 +1,12 @@
+# [1.3.0](https://github.com/kporten/template-react/compare/v1.2.5...v1.3.0) (2021-07-13)
+
+
+### Features
+
+* add cypress test coverage ([0d64aab](https://github.com/kporten/template-react/commit/0d64aab9defc5332b8ae217b363b607fb245bc3d))
+
+
+
 ## [1.2.5](https://github.com/kporten/template-react/compare/v1.2.4...v1.2.5) (2021-06-17)
 
 
