@@ -1,3 +1,12 @@
+# [1.4.0](https://github.com/kporten/template-react/compare/v1.3.0...v1.4.0) (2021-07-14)
+
+
+### Features
+
+* improve library config ([7304c94](https://github.com/kporten/template-react/commit/7304c94f65af7b3e27a5c76a4a63f0e216773dfd))
+
+
+
 # [1.3.0](https://github.com/kporten/template-react/compare/v1.2.5...v1.3.0) (2021-07-13)
 
 
