@@ -13,11 +13,15 @@
     "typescript",
     "tailwindcss"
   ],
-  "main": "./dist/template-react.cjs.js",
-  "module": "./dist/template-react.es.js",
   "files": [
     "dist"
   ],
+  "exports": {
+    ".": {
+      "import": "./dist/template-react.es.js",
+      "require": "./dist/template-react.cjs.js"
+    }
+  },
   "scripts": {
     "start": "vite --port 3000",
     "build": "vite build",

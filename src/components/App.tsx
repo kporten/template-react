@@ -17,9 +17,9 @@ const App: React.FC = () => {
   }, []);
 
   return (
-    <main className="flex justify-center items-center h-screen p-8 dark:bg-gray-900">
-      <div className="px-8 py-4 shadow-xl dark:shadow-none rounded-lg dark:bg-gray-800">
-        <h1 className="font-mono font-bold text-2xl text-center space-x-4">
+    <main className="flex items-center justify-center h-screen p-8 dark:bg-gray-900">
+      <div className="px-8 py-4 rounded-lg shadow-xl dark:shadow-none dark:bg-gray-800">
+        <h1 className="space-x-4 font-mono text-2xl font-bold text-center">
           <span
             key="title"
             className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-blue-300"

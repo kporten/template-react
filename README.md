@@ -88,13 +88,19 @@ SNYK_TOKEN=... # https://support.snyk.io/hc/en-us/articles/360004037537-Authenti
 
 If you want to develop a SPA, you do not need to make any changes to the template configuration to start it.
 
+But some lines of code are only needed in library mode and therefore can be deleted:
+- `vite.config.ts` (see comments)
+- `package.json` (exports are not necessary)
+
 The `yarn build` command creates a production-ready build of your code in the `/dist` folder. You can then publish the contents of this folder on a platform of your choice (e.g. in a CDN). Or you can add this job to the CI workflow.
 
 ### Library
 
-If you want to build a library, uncomment the marked lines in the `vite.config.ts` file and remove the `index.html` file.
+If you want to build a library, uncomment the marked lines in the `vite.config.ts`.
 
-The `yarn build` command creates a production-ready build of your code in the `/dist` folder. You can then publish the contents of this folder as a package in a registry of your choice (e.g. npmjs.org) with `yarn publish --non-interactive`. Or you can add this job to the CI workflow.
+Note the entry point in the configuration. Files that are not imported in the entry point will not be included in the library. These files and their dependencies can be removed (e.g. `index.html` or `index.tsx`).
+
+The `yarn build` command creates a production-ready build of your library code in the `/dist` folder. You can then publish the contents of this folder as a library in a package registry of your choice (e.g. npmjs.org) with `yarn publish --non-interactive`. Or you can add this job to the CI workflow.
 
 The following adjustments are recommended if you want to ship type declarations with your library:
 
