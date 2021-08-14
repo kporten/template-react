@@ -88,23 +88,43 @@ SNYK_TOKEN=... # https://support.snyk.io/hc/en-us/articles/360004037537-Authenti
 
 If you want to develop a SPA, you do not need to make any changes to the template configuration to start it.
 
-But some lines of code are only needed in library mode and therefore can be deleted:
-- `vite.config.ts` (see comments)
-- `package.json` (exports are not necessary)
+The marked lines in `vite.config.ts` are only needed in library mode and therefore these lines of code can be deleted.
 
-The `yarn build` command creates a production-ready build of your code in the `/dist` folder. You can then publish the contents of this folder on a platform of your choice (e.g. in a CDN). Or you can add this job to the CI workflow.
+The `yarn build` command creates a production-ready build of your code in the `/dist` folder. You can then publish the contents of this folder on a platform of your choice (e.g. in a CDN) or add this job to the CI workflow.
 
 ### Library
 
-If you want to build a library, uncomment the marked lines in the `vite.config.ts`.
+If you want to build a library, uncomment and modify the marked lines in the `vite.config.ts`.
 
-Note the entry point in the configuration. Files that are not imported in the entry point will not be included in the library. These files and their dependencies can be removed (e.g. `index.html` or `index.tsx`).
+Note the configured entry point in `vite.config.ts`. Files that are not imported in the entry point will not be included in the library. These files and their dependencies can be removed (e.g. `index.html` or `src/index.tsx`).
+
+Add the following lines to your `package.json` to restrict the exported files and set an entrypoint:
+
+```json
+"exports": {
+  ".": {
+    "import": "./dist/template-react.es.js",
+    "require": "./dist/template-react.cjs.js"
+  }
+},
+```
+
+Also check if you want to add some of your dependencies to `peerDependencies` (and `devDependencies`) instead of `dependencies`.
+
+For example `react` should not be included in your package bundle to prevent version conflicts. It is also recommended to define a version range instead of a specific version:
+
+```json
+"peerDependencies": {
+  "react": ">=17",
+  "react-dom": ">=17"
+}
+```
 
 The `yarn build` command creates a production-ready build of your library code in the `/dist` folder. You can then publish the contents of this folder as a library in a package registry of your choice (e.g. npmjs.org) with `yarn publish --non-interactive`. Or you can add this job to the CI workflow.
 
 The following adjustments are recommended if you want to ship type declarations with your library:
 
-1. Create a new folder `./src/types` with a file `[your-package-name].d.ts`.
+1. Create a new folder `src/types` with a file `[your-package-name].d.ts`.
 2. Define the [type declarations](https://www.typescriptlang.org/docs/handbook/declaration-files/templates/module-d-ts.html) you want there.
 3. Modify the following sections in the `package.json`:
 
