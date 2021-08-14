@@ -1,3 +1,12 @@
+# [1.5.0](https://github.com/kporten/template-react/compare/v1.4.1...v1.5.0) (2021-08-14)
+
+
+### Features
+
+* add web vitals reporter ([de45c14](https://github.com/kporten/template-react/commit/de45c14e97af10513ebd030148cbd237d4cc1fbe))
+
+
+
 ## [1.4.1](https://github.com/kporten/template-react/compare/v1.4.0...v1.4.1) (2021-07-31)
 
 
