@@ -40,8 +40,9 @@
     "unicorn/prevent-abbreviations": [
       "error",
       {
-        "replacements": {
-          "props": false
+        "allowList": {
+          "env": true,
+          "props": true
         }
       }
     ]
