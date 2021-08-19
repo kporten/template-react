@@ -18,8 +18,8 @@ Quality:
 
 - [Commitlint](https://commitlint.js.org)
 - [ESLint](https://eslint.org)
-- [Husky](https://typicode.github.io/husky)
 - [Prettier](https://prettier.io)
+- [Husky](https://typicode.github.io/husky)
 - [Snyk](https://snyk.io)
 
 Tests:
@@ -32,6 +32,7 @@ Tests:
 1. Clone this repository.
 
 2. Decide if you want to develop a single-page application or a library:
+
    1. [Single-page application](#single-page-application-spa)
    2. [Library](#library)
 
@@ -52,7 +53,8 @@ yarn start
 yarn start # start development server
 yarn build # build for production
 yarn serve # locally preview production build
-yarn lint # lint code with eslint
+yarn format ./ # format files with prettier
+yarn lint ./ # lint files with eslint
 yarn test # run all cypress component tests
 yarn test:open # open cypress component testing interactive mode
 yarn test:clean # clean test results (e.g. before `yarn test`)

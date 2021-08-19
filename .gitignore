@@ -1,8 +1,9 @@
 # Build
-dist
+dist/
 
 # Cache
 .eslintcache
+tsconfig.lint.json
 
 # Dependencies
 node_modules/
@@ -11,8 +12,8 @@ node_modules/
 .env
 
 # Logs
-.nyc_output
-coverage
+.nyc_output/
+coverage/
 cypress/screenshots/
 cypress/videos/
 *.log

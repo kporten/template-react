@@ -1,0 +1,12 @@
+# Build
+dist/
+
+# Cache
+tsconfig.lint.json
+
+# Logs
+.nyc_output/
+coverage/
+
+# Docs
+CHANGELOG.md
