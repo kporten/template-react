@@ -11,7 +11,8 @@ export default defineConfig({
   // build: {
   //   lib: {
   //     entry: './src/components/App.tsx',
-  //     formats: ['cjs', 'es'],
+  //     formats: ['umd', 'es'],
+  //     name: 'template-react',
   //   },
   //   rollupOptions: {
   //     external: Object.keys(peerDependencies),

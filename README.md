@@ -45,7 +45,7 @@ yarn install
 yarn start
 ```
 
-🚀 Now you can get up and running with your ideas!
+:rocket: Now you can get up and running with your ideas!
 
 ## Development Scripts
 
@@ -103,10 +103,12 @@ Note the configured entry point in `vite.config.ts`. Files that are not imported
 Add the following lines to your `package.json` to restrict the exported files and set an entrypoint:
 
 ```json
+"main": "./dist/template-react.umd.js",
+"module": "./dist/template-react.es.js",
 "exports": {
   ".": {
     "import": "./dist/template-react.es.js",
-    "require": "./dist/template-react.cjs.js"
+    "require": "./dist/template-react.umd.js"
   }
 },
 ```
