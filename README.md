@@ -73,7 +73,7 @@ yarn build && yarn publish --non-interactive # build and publish your library to
 The preconfigured [GitHub Actions](https://github.com/features/actions) workflow runs the following jobs:
 
 - test (run `yarn tsc`, `yarn lint`, `yarn test` and `yarn test:coverage`)
-- security (check for vulnerabilities in package dependencies)
+- security (check for vulnerabilities in package dependencies with [Snyk](https://snyk.io))
 
 You will need to define the following secrets in your repository settings to use this project with the initial workflow configuration (or you can remove the jobs you do not need):
 
