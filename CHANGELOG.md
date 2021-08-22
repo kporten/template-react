@@ -1,3 +1,12 @@
+## [1.6.1](https://github.com/kporten/template-react/compare/v1.6.0...v1.6.1) (2021-08-22)
+
+
+### Bug Fixes
+
+* update ci lint scope ([f86df78](https://github.com/kporten/template-react/commit/f86df782644059b9ba945d297b0c5b19d5b2ce0c))
+
+
+
 # [1.6.0](https://github.com/kporten/template-react/compare/v1.5.0...v1.6.0) (2021-08-19)
 
 
