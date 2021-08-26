@@ -27,6 +27,12 @@
     "prettier"
   ],
   "rules": {
+    "@typescript-eslint/no-empty-interface": [
+      "error",
+      {
+        "allowSingleExtends": true
+      }
+    ],
     "react/prop-types": "off",
     "unicorn/filename-case": [
       "error",
@@ -37,15 +43,26 @@
         }
       }
     ],
+    "unicorn/no-null": "off",
     "unicorn/prevent-abbreviations": [
       "error",
       {
-        "allowList": {
-          "env": true,
-          "props": true
+        "replacements": {
+          "args": false,
+          "env": false,
+          "params": false,
+          "props": false
         }
       }
     ]
   },
+  "overrides": [
+    {
+      "files": ["*.ts"],
+      "rules": {
+        "@typescript-eslint/explicit-module-boundary-types": "off"
+      }
+    }
+  ],
   "ignorePatterns": ["*.js"]
 }
