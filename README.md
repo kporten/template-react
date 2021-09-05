@@ -49,13 +49,13 @@ The following tools are used and preconfigured in this template.
 
 3. Replace all occurrences of `template-react` with the name of your project.
 
-4. Adjust the values in the `package.json` file (e.g. the autor name)
+4. Adjust the values in the `package.json` file (e.g. the author name)
 
 5. Execute the following commands in your terminal:
 
 ```sh
-yarn install
-yarn start
+npm install
+npm start
 ```
 
 :rocket: Now you can get up and running with your ideas!
@@ -63,24 +63,35 @@ yarn start
 ## Scripts
 
 ```sh
-yarn start # start development server
-yarn build # build for production
-yarn serve # locally preview production build
-yarn format . # format files with prettier
-yarn lint . # lint files with eslint
-yarn test # run all cypress component tests
-yarn test:open # open cypress component testing interactive mode
-yarn test:coverage # report test coverage as text and check coverage tresholds
-yarn test:clean # clean test results (e.g. before `yarn test`)
-yarn intl:extract # extract messages and put them into a file
-yarn intl:upload # upload extracted messages to translation vendor
-yarn intl:download # download translations to project
-yarn intl:compile # compile translations to use it with react-intl
-yarn intl:clean # clean temporary translation files
-yarn changelog # generate changelog based on Git commits
+npm start # start development server
+
+npm run build # build for production
+npm run serve # locally preview production build
+npm run format . # format files with prettier
+npm run lint . # lint files with eslint
+npm run type-check # execute typescript compiler to check types
+
+npm test # run all cypress component tests
+npm run test:open # open cypress component testing interactive mode
+npm run test:coverage # report test coverage as text and check coverage tresholds
+npm run test:clean # clean test results (e.g. before `npm test`)
+
+npm run intl:extract # extract messages and put them into a file
+npm run intl:upload # upload extracted messages to translation vendor
+npm run intl:download # download translations to project
+npm run intl:compile # compile translations to use it with react-intl
+npm run intl:clean # clean temporary translation files
+
+npm run changelog # generate changelog based on Git commits
 ```
 
-## Initial Source Code
+### Hooks
+
+- `prepare` - setup husky
+- `version` - update changelog
+- `postversion` - push with tags
+
+## Template
 
 - **src** -> Contains source code
   - **components** -> Contains all UI components
@@ -102,18 +113,11 @@ yarn changelog # generate changelog based on Git commits
   - `index.css` -> CSS entry point (imported from `index.tsx`)
   - `index.tsx` -> React entry point (imported from `index.html`)
 
-## Publish
-
-```sh
-yarn version # create a new version, update changelog and push them
-yarn build && yarn publish --non-interactive # build and publish your library to your preferred package registry
-```
-
-### Continuous Integration
+### Continuous Integration (CI)
 
 The preconfigured [GitHub Actions](https://github.com/features/actions) workflow runs the following jobs:
 
-- test (run `yarn tsc`, `yarn lint`, `yarn test` and `yarn test:coverage`)
+- test (run `npm run type-check`, `npm run lint`, `npm test` and `npm run test:coverage`)
 - security (check for vulnerabilities in package dependencies with [Snyk](https://snyk.io))
 
 You will need to define the following secrets in your repository settings to use this project with the initial workflow configuration (or you can remove the jobs/steps you do not need):
@@ -123,15 +127,17 @@ You will need to define the following secrets in your repository settings to use
 SNYK_TOKEN=... # https://support.snyk.io/hc/en-us/articles/360004037537-Authentication-for-third-party-tools
 ```
 
-### Continuous Deployment
+### Continuous Deployment (CD)
 
 It is recommended (but not required) to add a build step to the CI workflow if this is not already handled by the hosting platform of your choice. The other jobs should be defined as dependencies in this case, so that only tested changes are built and deployed.
+
+See also [SPA Deploy](#deploy) and [Library Publish](#publish).
 
 ### Internationalization (I18n)
 
 [Format.JS](https://formatjs.io) is used to internationalize the project. You can easily customize translation files in the `src/providers/Intl/messages` folder.
 
-For larger projects it is recommended to use a translation provider and configure the scripts `yarn intl:upload` and `yarn intl:download`. These scripts (and the other `yarn intl:*` scripts) can then be integrated into the CI pipeline (see also https://formatjs.io/docs/getting-started/application-workflow#pipeline).
+For larger projects it is recommended to use a translation provider and configure the scripts `npm run intl:upload` and `npm run intl:download`. These scripts (and the other `npm run intl:*` scripts) can then be integrated into the CI pipeline (see also https://formatjs.io/docs/getting-started/application-workflow#pipeline).
 
 ## Modes
 
@@ -141,13 +147,23 @@ If you want to develop a SPA, you do not need to make any changes to the templat
 
 The marked lines in `vite.config.ts` are only needed in library mode and therefore these lines of code can be deleted.
 
-The `yarn build` command creates a production-ready build of your code in the `/dist` folder. You can then publish the contents of this folder on a platform of your choice (e.g. in a CDN) or add this job to the CI workflow.
+#### Deploy
+
+The `npm run build` command creates a production-ready build of your library code in the `/dist` folder.
+
+Optional bump the package version with `npm version` (https://docs.npmjs.com/cli/v7/commands/npm-version).
+
+You can deploy the contents of the `/dist` folder on a platform of your choice (e.g. in a CDN).
+
+Or you can add these jobs to your CI/CD workflow.
 
 ### Library
 
 If you want to build a library, uncomment and modify the marked lines in the `vite.config.ts`.
 
 Note the configured entry point in `vite.config.ts`. Files that are not imported in the entry point will not be included in the library. These files and their dependencies can be removed (e.g. `index.html` or `src/index.tsx`).
+
+#### Exports
 
 Add the following lines to your `package.json` to restrict the exported files and set an entrypoint:
 
@@ -162,6 +178,8 @@ Add the following lines to your `package.json` to restrict the exported files an
 },
 ```
 
+#### External Dependencies
+
 Also check if you want to add some of your dependencies to `peerDependencies` (and `devDependencies`) instead of `dependencies`.
 
 For example `react` should not be included in your package bundle to prevent version conflicts. It is also recommended to define a version range instead of a specific version:
@@ -173,7 +191,7 @@ For example `react` should not be included in your package bundle to prevent ver
 }
 ```
 
-The `yarn build` command creates a production-ready build of your library code in the `/dist` folder. You can then publish the contents of this folder as a library in a package registry of your choice (e.g. npmjs.org) with `yarn publish --non-interactive`. Or you can add this job to the CI workflow.
+#### Type Declarations
 
 The following adjustments are recommended if you want to ship type declarations with your library:
 
@@ -191,6 +209,16 @@ The following adjustments are recommended if you want to ship type declarations 
 },
 ...
 ```
+
+#### Publish
+
+The `npm run build` command creates a production-ready build of your library code in the `/dist` folder.
+
+Bump the package version with `npm version` (https://docs.npmjs.com/cli/v7/commands/npm-version).
+
+You can then publish the contents of the `/dist` folder as a library in a package registry of your choice (e.g. npmjs.org) with `npm publish` (https://docs.npmjs.com/cli/v7/commands/npm-publish).
+
+Or you can add these jobs to your CI/CD workflow.
 
 ## License
 

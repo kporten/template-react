@@ -6,7 +6,6 @@ dist/
 .intl_messages/
 .nyc_output/
 .eslintcache
-tsconfig.lint.json
 
 # Dependencies
 node_modules/

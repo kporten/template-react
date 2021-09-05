@@ -17,7 +17,8 @@
     "dist"
   ],
   "engines": {
-    "node": ">=14"
+    "node": ">=16.8.0",
+    "npm": ">=7.21.0"
   },
   "scripts": {
     "start": "vite --port 3000",
@@ -25,7 +26,8 @@
     "serve": "vite preview --port 3000",
     "format": "prettier --write --ignore-unknown",
     "lint": "eslint --cache --ignore-path .gitignore --ext .ts,.tsx --max-warnings 0",
-    "test": "yarn test:clean && cypress run-ct",
+    "type-check": "tsc",
+    "test": "npm run test:clean && cypress run-ct",
     "test:open": "cypress open-ct",
     "test:coverage": "nyc report --reporter=text --check-coverage --lines 90 --branches 90",
     "test:clean": "rimraf .nyc_output coverage",
@@ -36,7 +38,7 @@
     "intl:clean": "rimraf .intl_extract .intl_messages",
     "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s",
     "prepare": "husky install",
-    "version": "yarn changelog && git add CHANGELOG.md",
+    "version": "npm run changelog && git add CHANGELOG.md",
     "postversion": "git push --follow-tags"
   },
   "dependencies": {
