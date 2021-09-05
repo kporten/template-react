@@ -1,3 +1,14 @@
+# [2.0.0](https://github.com/kporten/template-react/compare/v1.6.1...v2.0.0) (2021-09-05)
+
+
+### Features
+
+* add eslint rules ([ddcd5da](https://github.com/kporten/template-react/commit/ddcd5dafe253c30174ddee85be95a9bad64d3f67))
+* add intl resources ([9a697fd](https://github.com/kporten/template-react/commit/9a697fd98253761e745535160ab87fede019b39e))
+* replace yarn with npm ([3824c9a](https://github.com/kporten/template-react/commit/3824c9a5f0a388e65940fb931f5e441fc6d3fcf6))
+
+
+
 ## [1.6.1](https://github.com/kporten/template-react/compare/v1.6.0...v1.6.1) (2021-08-22)
 
 
