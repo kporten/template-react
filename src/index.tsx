@@ -7,12 +7,7 @@ import App from './components/App';
 
 import './index.css';
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.querySelector('#app'),
-);
+ReactDOM.render(<App />, document.querySelector('#app'));
 
 // ? https://web.dev/vitals/
 // ? If you want to report web vitals, you can pass a report handler (https://github.com/GoogleChrome/web-vitals#reporthandler)

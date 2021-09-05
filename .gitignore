@@ -2,6 +2,9 @@
 dist/
 
 # Cache
+.intl_extract/
+.intl_messages/
+.nyc_output/
 .eslintcache
 tsconfig.lint.json
 
@@ -12,7 +15,6 @@ node_modules/
 .env
 
 # Logs
-.nyc_output/
 coverage/
 cypress/screenshots/
 cypress/videos/

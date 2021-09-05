@@ -1,4 +1,5 @@
 // ? https://github.com/okonet/lint-staged#configuration
+
 const fs = require('fs');
 
 // ! https://github.com/microsoft/TypeScript/issues/27379

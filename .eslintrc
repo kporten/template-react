@@ -26,6 +26,7 @@
     "plugin:unicorn/recommended",
     "prettier"
   ],
+  "plugins": ["formatjs"],
   "rules": {
     "@typescript-eslint/no-empty-interface": [
       "error",
@@ -33,6 +34,13 @@
         "allowSingleExtends": true
       }
     ],
+    "formatjs/enforce-default-message": ["error", "literal"],
+    "formatjs/enforce-id": "error",
+    "formatjs/no-camel-case": "error",
+    "formatjs/no-emoji": "error",
+    "formatjs/no-multiple-plurals": "error",
+    "formatjs/no-multiple-whitespaces": "error",
+    "formatjs/no-offset": "error",
     "react/prop-types": "off",
     "unicorn/filename-case": [
       "error",
