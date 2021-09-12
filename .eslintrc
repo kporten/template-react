@@ -59,7 +59,8 @@
           "args": false,
           "env": false,
           "params": false,
-          "props": false
+          "props": false,
+          "ref": false
         }
       }
     ]
