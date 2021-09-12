@@ -1,3 +1,7 @@
+## [2.0.1](https://github.com/kporten/template-react/compare/v2.0.0...v2.0.1) (2021-09-12)
+
+
+
 # [2.0.0](https://github.com/kporten/template-react/compare/v1.6.1...v2.0.0) (2021-09-05)
 
 
