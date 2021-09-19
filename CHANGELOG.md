@@ -1,3 +1,12 @@
+# [2.1.0](https://github.com/kporten/template-react/compare/v2.0.1...v2.1.0) (2021-09-19)
+
+
+### Features
+
+* improve file structure and test env ([d67ac1c](https://github.com/kporten/template-react/commit/d67ac1c75d32ee44e61ae75219d88a31f58d34f4))
+
+
+
 ## [2.0.1](https://github.com/kporten/template-react/compare/v2.0.0...v2.0.1) (2021-09-12)
 
 
