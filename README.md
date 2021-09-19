@@ -98,7 +98,7 @@ npm run changelog # generate changelog based on Git commits
     - `Hello.tsx` -> Component, displays headline
     - `Layout.tsx` -> Component, wrapper for page components
     - `Locale.tsx` -> Component, displays locale selection
-  - messages -> Intl messages for each supported locale
+  - **messages** -> Intl messages for each supported locale
     - `de.json`
     - `en.json`
   - **providers** -> Contains all context providers

@@ -24,7 +24,7 @@ jobs:
       - name: Type check project files
         run: npm run type-check
       - name: Lint project files
-        run: npm run lint ./
+        run: npm run lint .
       - name: Test components
         run: npm test
       - name: Check test coverage
