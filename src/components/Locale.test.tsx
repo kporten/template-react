@@ -1,16 +1,14 @@
 import React from 'react';
 import { mount } from '@cypress/react';
 
-import Layout from './Layout';
+import Test from '../Test';
+
 import Locale from './Locale';
-import Test from '../providers/Test';
 
 it('should change locale', () => {
   mount(
     <Test>
-      <Layout>
-        <Locale />
-      </Layout>
+      <Locale />
     </Test>,
   );
 

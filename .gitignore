@@ -10,8 +10,8 @@ dist/
 # Dependencies
 node_modules/
 
-# Environment variables
-.env
+# Environment variables (https://vitejs.dev/guide/env-and-mode.html#env-files)
+*.local
 
 # Logs
 coverage/

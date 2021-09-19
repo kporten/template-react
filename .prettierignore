@@ -5,11 +5,10 @@ dist/
 .intl_extract/
 .intl_messages/
 .nyc_output/
-.eslintcache
-
-# Logs
-coverage/
-*.log
+package-lock.json
 
 # Docs
 CHANGELOG.md
+
+# Logs
+coverage/

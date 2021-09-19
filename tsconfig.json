@@ -14,5 +14,5 @@
     "target": "esnext",
     "types": ["vite/client", "cypress", "@testing-library/cypress"]
   },
-  "include": ["./src"]
+  "include": ["src"]
 }

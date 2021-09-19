@@ -18,7 +18,7 @@ const Hello: React.FC = () => {
   }, []);
 
   return (
-    <h1 className="text-3xl text-white font-extrabold">
+    <h1 className="text-3xl font-extrabold">
       <FormattedMessage
         id="hello.headline"
         defaultMessage="Hello World"

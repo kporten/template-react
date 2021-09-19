@@ -95,23 +95,23 @@ npm run changelog # generate changelog based on Git commits
 
 - **src** -> Contains source code
   - **components** -> Contains all UI components
-    - `App.tsx` -> Root UI component (imported from `index.tsx`)
-    - `Hello.tsx` -> UI component, displays headline
-    - `Layout.tsx` -> UI component, wrapper for page components
-    - `Locale.tsx` -> UI component, displays locale selection
+    - `Hello.tsx` -> Component, displays headline
+    - `Layout.tsx` -> Component, wrapper for page components
+    - `Locale.tsx` -> Component, displays locale selection
+  - messages -> Intl messages for each supported locale
+    - `de.json`
+    - `en.json`
   - **providers** -> Contains all context providers
-    - **Intl** -> Contains intl provider files
-      - messages -> Intl messages for each supported locale
-        - `de.json`
-        - `en.json`
-      - `Intl.tsx` -> Component to provide intl context
-    - `Test.tsx` -> Component to provide context for components in test mounts
+    - `Intl.tsx` -> Component to provide intl context
+    - `Store.tsx` -> Component to provide store with initial values
   - **store** -> Contains all global state definitions
     - `locale.tsx` -> Locale state definition (initialized with the best fitting locale)
   - **utils** -> Contains all utility functions
     - `reportWebVitals.ts` -> Optional web vitals report
-  - `index.css` -> CSS entry point (imported from `index.tsx`)
+  - `App.tsx` -> Root component (rendered by `ReactDOM` in `index.tsx`)
+  - `Test.tsx` -> Wrapper to test components with providers (rendered by `mount` in test files)
   - `index.tsx` -> React entry point (imported from `index.html`)
+  - `tailwind.css` -> Style entry point (imported from `App.tsx` and `Test.tsx`)
 
 ### Continuous Integration (CI)
 
@@ -135,7 +135,7 @@ See also [SPA Deploy](#deploy) and [Library Publish](#publish).
 
 ### Internationalization (I18n)
 
-[Format.JS](https://formatjs.io) is used to internationalize the project. You can easily customize translation files in the `src/providers/Intl/messages` folder.
+[Format.JS](https://formatjs.io) is used to internationalize the project. You can easily customize translation files in the `src/messages` folder.
 
 For larger projects it is recommended to use a translation provider and configure the scripts `npm run intl:upload` and `npm run intl:download`. These scripts (and the other `npm run intl:*` scripts) can then be integrated into the CI pipeline (see also https://formatjs.io/docs/getting-started/application-workflow#pipeline).
 

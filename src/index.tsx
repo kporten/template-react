@@ -1,11 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
+import App from './App';
+
 import reportWebVitals from './utils/reportWebVitals';
-
-import App from './components/App';
-
-import './index.css';
 
 ReactDOM.render(<App />, document.querySelector('#app'));
 

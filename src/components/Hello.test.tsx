@@ -1,16 +1,14 @@
 import React from 'react';
 import { mount, unmount } from '@cypress/react';
 
+import Test from '../Test';
+
 import Hello from './Hello';
-import Layout from './Layout';
-import Test from '../providers/Test';
 
 it('should display hello', () => {
   mount(
     <Test>
-      <Layout>
-        <Hello />
-      </Layout>
+      <Hello />
     </Test>,
   );
 
@@ -22,9 +20,7 @@ it('should display different emojis over time', () => {
 
   mount(
     <Test>
-      <Layout>
-        <Hello />
-      </Layout>
+      <Hello />
     </Test>,
   );
 

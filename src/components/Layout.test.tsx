@@ -1,8 +1,9 @@
 import React from 'react';
 import { mount } from '@cypress/react';
 
+import Test from '../Test';
+
 import Layout from './Layout';
-import Test from '../providers/Test';
 
 it('should display test', () => {
   mount(

@@ -9,7 +9,7 @@ export default defineConfig({
   // TODO Uncomment the build block for the library mode
   // build: {
   //   lib: {
-  //     entry: './src/components/App.tsx',
+  //     entry: 'src/App.tsx',
   //     formats: ['umd', 'es'],
   //     name: 'template-react',
   //   },

@@ -18,14 +18,9 @@ module.exports = (on, config) => {
               ignored: '**/coverage/**',
             },
           },
-          esbuild: {
-            // * set browser language to `en`, otherwise the tests may have different results
-            jsxInject: `Object.defineProperty(window.navigator, 'languages', {value: ['en'], writable: true});`,
-          },
           plugins: [
             pluginIstanbul({
-              include: 'src/**',
-              exclude: ['src/providers/Test.tsx'],
+              exclude: ['src/Test.tsx'],
             }),
           ],
         },
