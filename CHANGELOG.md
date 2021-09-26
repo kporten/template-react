@@ -1,3 +1,12 @@
+# [2.2.0](https://github.com/kporten/template-react/compare/v2.1.0...v2.2.0) (2021-09-26)
+
+
+### Features
+
+* update ci setup ([59cef70](https://github.com/kporten/template-react/commit/59cef70222f83380032098423b5c3b8c308d441c))
+
+
+
 # [2.1.0](https://github.com/kporten/template-react/compare/v2.0.1...v2.1.0) (2021-09-19)
 
 
