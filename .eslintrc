@@ -56,11 +56,16 @@
       "error",
       {
         "replacements": {
+          "arg": false,
           "args": false,
           "env": false,
+          "param": false,
           "params": false,
+          "prop": false,
           "props": false,
-          "ref": false
+          "ref": false,
+          "req": false,
+          "res": false
         }
       }
     ]
