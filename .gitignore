@@ -5,7 +5,6 @@ dist/
 .intl_extract/
 .intl_messages/
 .nyc_output/
-.eslintcache
 
 # Dependencies
 node_modules/

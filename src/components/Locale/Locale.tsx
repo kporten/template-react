@@ -4,7 +4,7 @@ import { useAtom } from 'jotai';
 import React from 'react';
 import { FormattedMessage } from 'react-intl';
 
-import { localeAtom, LOCALES, LOCALE_KEYS } from '../store/locale';
+import { localeAtom, LOCALES, LOCALE_KEYS } from '~store/locale';
 
 const Locale: React.FC = () => {
   const [locale, setLocale] = useAtom(localeAtom);

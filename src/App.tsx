@@ -1,11 +1,10 @@
 import React from 'react';
 
-import Intl from './providers/Intl';
-import Store from './providers/Store';
-
-import Hello from './components/Hello';
-import Layout from './components/Layout';
-import Locale from './components/Locale';
+import Hello from '~components/Hello/Hello';
+import Layout from '~components/Layout/Layout';
+import Locale from '~components/Locale/Locale';
+import Intl from '~providers/Intl';
+import Store from '~providers/Store';
 
 import './tailwind.css';
 

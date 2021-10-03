@@ -2,10 +2,9 @@ import { useAtom } from 'jotai';
 import React from 'react';
 import { IntlProvider } from 'react-intl';
 
-import { localeAtom, LOCALE_DEFAULT } from '../store/locale';
-
-import de from '../messages/de.json';
-import en from '../messages/en.json';
+import de from '~messages/de.json';
+import en from '~messages/en.json';
+import { localeAtom, LOCALE_DEFAULT } from '~store/locale';
 
 const messages = { de, en };
 

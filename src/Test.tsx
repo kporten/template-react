@@ -1,9 +1,8 @@
 import React from 'react';
 
-import Intl from './providers/Intl';
-import Store from './providers/Store';
-
-import { localeAtom } from './store/locale';
+import Intl from '~providers/Intl';
+import Store from '~providers/Store';
+import { localeAtom } from '~store/locale';
 
 import './tailwind.css';
 

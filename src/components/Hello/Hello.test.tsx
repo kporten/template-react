@@ -1,7 +1,7 @@
-import React from 'react';
 import { mount, unmount } from '@cypress/react';
+import React from 'react';
 
-import Test from '../Test';
+import Test from '~Test';
 
 import Hello from './Hello';
 
