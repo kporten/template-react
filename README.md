@@ -49,7 +49,7 @@ The following tools are used and preconfigured in this template.
 
 3. Replace all occurrences of `template-react` with the name of your project.
 
-4. Adjust the values in the `package.json` file (e.g. the author name)
+4. Adjust the information (e.g. the author name) in the files `package.json`, `LICENSE`, `CHANGELOG.md` and `README.md`.
 
 5. Execute the following commands in your terminal:
 
@@ -95,9 +95,15 @@ npm run changelog # generate changelog based on Git commits
 
 - **src** -> Contains source code
   - **components** -> Contains all UI components
-    - `Hello.tsx` -> Component, displays headline
-    - `Layout.tsx` -> Component, wrapper for page components
-    - `Locale.tsx` -> Component, displays locale selection
+    - **Hello**
+      - `Hello.tsx` -> Component, displays headline
+      - `Hello.test.tsx` -> Related tests
+    - **Layout**
+      - `Layout.tsx` -> Component, wrapper for page components
+      - `Layout.test.tsx` -> Related tests
+    - **Locale**
+      - `Locale.tsx` -> Component, displays locale selection
+      - `Locale.test.tsx` -> Related tests
   - **messages** -> Intl messages for each supported locale
     - `de.json`
     - `en.json`
