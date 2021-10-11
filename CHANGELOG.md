@@ -1,3 +1,14 @@
+# [2.3.0](https://github.com/kporten/template-react/compare/v2.2.0...v2.3.0) (2021-10-11)
+
+
+### Features
+
+* add alias paths ([cf65140](https://github.com/kporten/template-react/commit/cf65140e9509f90fd81cc25fe12e97506a20d29c))
+* add integration tests ([8b23228](https://github.com/kporten/template-react/commit/8b232285b3e3704d0bb954a142b053679c3bf51d))
+* add theme color ([82c7250](https://github.com/kporten/template-react/commit/82c7250c593a58349347d313ffbac66f8122013e))
+
+
+
 # [2.2.0](https://github.com/kporten/template-react/compare/v2.1.0...v2.2.0) (2021-09-26)
 
 
