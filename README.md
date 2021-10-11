@@ -19,11 +19,14 @@ The following tools are used and preconfigured in this template.
 ### Libraries
 
 - [React](https://reactjs.org)
+- [React Router](https://reactrouter.com)
+- [React Helmet](https://github.com/nfl/react-helmet)
 - [Tailwind CSS](https://tailwindcss.com)
 - [Headless UI](https://headlessui.dev)
 - [Heroicons](https://heroicons.com)
 - [Jotai](https://jotai.pmnd.rs)
 - [Format JS](https://formatjs.io)
+- [Web Vitals](https://github.com/GoogleChrome/web-vitals)
 
 ### Quality
 
@@ -101,12 +104,22 @@ npm run changelog # generate changelog based on Git commits
     - **Layout**
       - `Layout.tsx` -> Component, wrapper for page components
       - `Layout.test.tsx` -> Related tests
+      - **Navigation**
+        - `Navigation.tsx` -> Subcomponent, navigation links
+        - `Navigation.test.tsx` -> Related tests
     - **Locale**
       - `Locale.tsx` -> Component, displays locale selection
       - `Locale.test.tsx` -> Related tests
   - **messages** -> Intl messages for each supported locale
     - `de.json`
     - `en.json`
+  - **pages** -> Contains all pages
+    - **404**
+      - `404.tsx` -> Not found page
+    - **Home**
+      - `Home.tsx` -> Home page
+    - **Settings**
+      - `Settings.tsx` -> Settings page
   - **providers** -> Contains all context providers
     - `Intl.tsx` -> Component to provide intl context
     - `Store.tsx` -> Component to provide store with initial values

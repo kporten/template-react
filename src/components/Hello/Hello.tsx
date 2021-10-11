@@ -18,14 +18,10 @@ const Hello: React.FC = () => {
   }, []);
 
   return (
-    <h1 className="text-3xl font-extrabold">
-      <FormattedMessage
-        id="hello.headline"
-        defaultMessage="Hello World"
-        tagName="span"
-      />
+    <>
+      <FormattedMessage id="components.hello.label" defaultMessage="Hello World" />
       {` ${emoji}`}
-    </h1>
+    </>
   );
 };
 

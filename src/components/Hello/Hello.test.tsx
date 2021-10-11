@@ -12,7 +12,7 @@ it('should display hello', () => {
     </Test>,
   );
 
-  cy.findByRole('heading').should('contain.text', 'Hello World');
+  cy.root().should('contain.text', 'Hello World');
 });
 
 it('should display different emojis over time', () => {
@@ -24,16 +24,16 @@ it('should display different emojis over time', () => {
     </Test>,
   );
 
-  cy.findByRole('heading').should('contain.text', '💻');
+  cy.root().should('contain.text', '💻');
 
   cy.tick(2000);
-  cy.findByRole('heading').should('contain.text', '👍');
+  cy.root().should('contain.text', '👍');
 
   cy.tick(2000);
-  cy.findByRole('heading').should('contain.text', '😃');
+  cy.root().should('contain.text', '😃');
 
   cy.tick(2000);
-  cy.findByRole('heading').should('contain.text', '💻');
+  cy.root().should('contain.text', '💻');
 
   unmount();
 });
