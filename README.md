@@ -75,9 +75,12 @@ npm run lint . # lint files with eslint
 npm run type-check # execute typescript compiler to check types
 
 npm test # run all cypress component tests
-npm run test:open # open cypress component testing interactive mode
+npm run test:open # open cypress component tests in interactive mode
 npm run test:coverage # report test coverage as text and check coverage tresholds
 npm run test:clean # clean test results (e.g. before `npm test`)
+
+npm run integration # run all cypress integration tests
+npm run integration:open # open cypress integration tests in interactive mode
 
 npm run intl:extract # extract messages and put them into a file
 npm run intl:upload # upload extracted messages to translation vendor
