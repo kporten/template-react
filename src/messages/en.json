@@ -1,4 +1,32 @@
 {
-  "hello.headline": "Hello World",
-  "locale.label": "Language"
+  "components.hello.label": [
+    {
+      "type": 0,
+      "value": "Hello World"
+    }
+  ],
+  "components.locale.label": [
+    {
+      "type": 0,
+      "value": "Language"
+    }
+  ],
+  "pages.error404.headline": [
+    {
+      "type": 0,
+      "value": "Not Found"
+    }
+  ],
+  "pages.home.headline": [
+    {
+      "type": 0,
+      "value": "Home"
+    }
+  ],
+  "pages.settings.headline": [
+    {
+      "type": 0,
+      "value": "Settings"
+    }
+  ]
 }

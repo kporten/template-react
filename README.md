@@ -19,11 +19,14 @@ The following tools are used and preconfigured in this template.
 ### Libraries
 
 - [React](https://reactjs.org)
+- [React Router](https://reactrouter.com)
+- [React Helmet](https://github.com/nfl/react-helmet)
 - [Tailwind CSS](https://tailwindcss.com)
 - [Headless UI](https://headlessui.dev)
 - [Heroicons](https://heroicons.com)
 - [Jotai](https://jotai.pmnd.rs)
 - [Format JS](https://formatjs.io)
+- [Web Vitals](https://github.com/GoogleChrome/web-vitals)
 
 ### Quality
 
@@ -72,9 +75,12 @@ npm run lint . # lint files with eslint
 npm run type-check # execute typescript compiler to check types
 
 npm test # run all cypress component tests
-npm run test:open # open cypress component testing interactive mode
+npm run test:open # open cypress component tests in interactive mode
 npm run test:coverage # report test coverage as text and check coverage tresholds
 npm run test:clean # clean test results (e.g. before `npm test`)
+
+npm run integration # run all cypress integration tests
+npm run integration:open # open cypress integration tests in interactive mode
 
 npm run intl:extract # extract messages and put them into a file
 npm run intl:upload # upload extracted messages to translation vendor
@@ -101,12 +107,22 @@ npm run changelog # generate changelog based on Git commits
     - **Layout**
       - `Layout.tsx` -> Component, wrapper for page components
       - `Layout.test.tsx` -> Related tests
+      - **Navigation**
+        - `Navigation.tsx` -> Subcomponent, navigation links
+        - `Navigation.test.tsx` -> Related tests
     - **Locale**
       - `Locale.tsx` -> Component, displays locale selection
       - `Locale.test.tsx` -> Related tests
   - **messages** -> Intl messages for each supported locale
     - `de.json`
     - `en.json`
+  - **pages** -> Contains all pages
+    - **404**
+      - `404.tsx` -> Not found page
+    - **Home**
+      - `Home.tsx` -> Home page
+    - **Settings**
+      - `Settings.tsx` -> Settings page
   - **providers** -> Contains all context providers
     - `Intl.tsx` -> Component to provide intl context
     - `Store.tsx` -> Component to provide store with initial values

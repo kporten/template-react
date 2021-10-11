@@ -10,19 +10,14 @@ const Locale: React.FC = () => {
   const [locale, setLocale] = useAtom(localeAtom);
 
   return (
-    <Listbox
-      as="div"
-      className="relative w-40"
-      value={locale}
-      onChange={setLocale}
-    >
+    <Listbox as="div" className="relative" value={locale} onChange={setLocale}>
       <Listbox.Label className="sr-only">
-        <FormattedMessage id="locale.label" defaultMessage="Language" />
+        <FormattedMessage id="components.locale.label" defaultMessage="Language" />
       </Listbox.Label>
-      <Listbox.Button className="relative w-full pl-3 pr-9 py-2 rounded-lg shadow-md text-left text-gray-900 bg-white focus:outline-none focus-visible:ring-2 focus-visible:ring-white/75 focus-visible:ring-offset-2 focus-visible:ring-offset-sky-300">
+      <Listbox.Button className="relative w-full pl-3 pr-9 py-2 rounded-lg shadow-md text-left bg-white focus:outline-none focus-visible:ring-2 focus-visible:ring-white/75 focus-visible:ring-offset-2 focus-visible:ring-offset-sky-300">
         <span className="block">{LOCALES[locale]}</span>
         <span className="absolute inset-y-0 right-0 pr-2 flex items-center pointer-events-none">
-          <SelectorIcon className="w-5 h-5 text-gray-400" />
+          <SelectorIcon className="w-5 h-5 text-gray-500" />
         </span>
       </Listbox.Button>
       <Transition
@@ -38,22 +33,18 @@ const Locale: React.FC = () => {
               value={supportedLocaleKey}
               className={({ active }) =>
                 `relative pl-9 pr-3 py-2 select-none cursor-pointer focus:outline-none ${
-                  active ? 'bg-cyan-100 text-cyan-900' : 'text-gray-900'
+                  active ? 'bg-cyan-100 text-cyan-900' : ''
                 }`
               }
             >
               {({ selected }) => (
                 <>
-                  <span
-                    className={`block ${
-                      selected ? 'font-medium' : 'font-normal'
-                    }`}
-                  >
+                  <span className={`block ${selected ? 'font-medium' : 'font-normal'}`}>
                     {LOCALES[supportedLocaleKey]}
                   </span>
                   {selected && (
                     <span className="absolute inset-y-0 left-0 pl-2 flex items-center pointer-events-none">
-                      <CheckIcon className="w-5 h-5 text-cyan-400" />
+                      <CheckIcon className="w-5 h-5 text-cyan-500" />
                     </span>
                   )}
                 </>

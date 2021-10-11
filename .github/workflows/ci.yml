@@ -28,13 +28,22 @@ jobs:
       - name: Check test coverage
         run: npm run test:coverage
 
+  integration:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: cypress-io/github-action@v2
+        with:
+          build: npm run build
+          start: npm run serve
+          wait-on: 'http://localhost:3000'
+
   security:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - name: Check for vulnerabilities
-        uses: snyk/actions/node@master
+      - uses: snyk/actions/node@master
         with:
-          args: --dev --severity-threshold=high --fail-on=all
+          args: --severity-threshold=high --fail-on=all
         env:
           SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}

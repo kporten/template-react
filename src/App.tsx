@@ -1,8 +1,10 @@
 import React from 'react';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
-import Hello from '~components/Hello/Hello';
 import Layout from '~components/Layout/Layout';
-import Locale from '~components/Locale/Locale';
+import Error404 from '~pages/404/404';
+import Home from '~pages/Home/Home';
+import Settings from '~pages/Settings/Settings';
 import Intl from '~providers/Intl';
 import Store from '~providers/Store';
 
@@ -11,12 +13,21 @@ import './tailwind.css';
 const App: React.FC = () => (
   <Store>
     <Intl>
-      <Layout>
-        <div className="flex flex-col items-center w-72 space-y-4">
-          <Hello />
-          <Locale />
-        </div>
-      </Layout>
+      <BrowserRouter>
+        <Layout>
+          <Switch>
+            <Route path="/" exact>
+              <Home />
+            </Route>
+            <Route path="/settings" exact sensitive>
+              <Settings />
+            </Route>
+            <Route path="*">
+              <Error404 />
+            </Route>
+          </Switch>
+        </Layout>
+      </BrowserRouter>
     </Intl>
   </Store>
 );

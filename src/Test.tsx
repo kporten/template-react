@@ -1,4 +1,5 @@
 import React from 'react';
+import { MemoryRouter } from 'react-router-dom';
 
 import Intl from '~providers/Intl';
 import Store from '~providers/Store';
@@ -8,7 +9,9 @@ import './tailwind.css';
 
 const Test: React.FC = ({ children }) => (
   <Store values={[[localeAtom, 'en']]}>
-    <Intl>{children}</Intl>
+    <Intl>
+      <MemoryRouter>{children}</MemoryRouter>
+    </Intl>
   </Store>
 );
 
