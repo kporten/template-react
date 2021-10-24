@@ -8,6 +8,6 @@ it('should navigate through pages', () => {
   cy.findByRole('link', { name: /settings/i }).click();
   cy.url().should('match', /\/settings$/);
 
-  cy.findByRole('link', { name: /home/i }).click();
+  cy.findAllByRole('link', { name: /home/i }).click({ multiple: true });
   cy.url().should('be.eq', `${Cypress.config().baseUrl || ''}/`);
 });
