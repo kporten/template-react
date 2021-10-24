@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useMemo } from 'react';
 import { Helmet } from 'react-helmet';
 import { FormattedMessage, useIntl } from 'react-intl';
 
@@ -6,6 +6,8 @@ import Hello from '~components/Hello/Hello';
 
 const Home: React.FC = () => {
   const intl = useIntl();
+
+  const emojis = useMemo(() => ['💻', '👍', '😃'], []);
 
   return (
     <>
@@ -16,7 +18,7 @@ const Home: React.FC = () => {
         <FormattedMessage id="pages.home.headline" defaultMessage="Home" />
       </h1>
       <p className="mt-4">
-        <Hello />
+        <Hello emojis={emojis} />
       </p>
     </>
   );

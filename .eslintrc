@@ -77,6 +77,9 @@
         "warnOnUnassignedImports": true
       }
     ],
+    "max-params": ["error", 2],
+    "no-console": ["error", { "allow": ["info", "error", "warn"] }],
+    "react/display-name": "off",
     "react/prop-types": "off",
     "unicorn/filename-case": [
       "error",

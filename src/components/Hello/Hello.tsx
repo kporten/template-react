@@ -1,26 +1,29 @@
 import React, { useEffect, useState } from 'react';
 import { FormattedMessage } from 'react-intl';
 
-const EMOJIS = ['💻', '👍', '😃'];
+type HelloProps = {
+  emojis: string[];
+};
 
-const Hello: React.FC = () => {
-  const [emoji, setEmoji] = useState(EMOJIS[0]);
+const Hello: React.FC<HelloProps> = ({ emojis }) => {
+  const [emoji, setEmoji] = useState(emojis[0]);
 
   useEffect(() => {
     const timeout = setInterval(() => {
-      setEmoji((state) => {
-        const next = EMOJIS.indexOf(state) + 1;
-        return next === EMOJIS.length ? EMOJIS[0] : EMOJIS[next];
+      setEmoji((state = '') => {
+        let nextIndex = emojis.indexOf(state) + 1;
+        nextIndex = nextIndex === emojis.length ? 0 : nextIndex;
+
+        return emojis[nextIndex];
       });
     }, 2000);
 
     return () => clearInterval(timeout);
-  }, []);
+  }, [emojis]);
 
   return (
     <>
-      <FormattedMessage id="components.hello.label" defaultMessage="Hello World" />
-      {` ${emoji}`}
+      <FormattedMessage id="components.hello.label" defaultMessage="Hello World" /> {emoji}
     </>
   );
 };

@@ -12,6 +12,6 @@ it('should display navigation', () => {
     </Test>,
   );
 
-  cy.findByRole('link', { name: /home/i }).should('be.visible');
+  cy.findAllByRole('link', { name: /home/i }).should('be.visible');
   cy.findByRole('link', { name: /settings/i }).should('be.visible');
 });

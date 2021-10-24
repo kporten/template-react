@@ -1,5 +1,5 @@
 const codeCoverageTask = require('@cypress/code-coverage/task');
-const { startDevServer } = require('@cypress/vite-dev-server');
+const { devServer, defineDevServerConfig } = require('@cypress/vite-dev-server');
 const pluginIstanbul = require('vite-plugin-istanbul');
 
 /**
@@ -8,9 +8,9 @@ const pluginIstanbul = require('vite-plugin-istanbul');
 module.exports = (on, config) => {
   if (config.testingType === 'component') {
     on('dev-server:start', (options) =>
-      startDevServer({
+      devServer(
         options,
-        viteConfig: {
+        defineDevServerConfig({
           mode: 'test',
           clearScreen: false,
           server: {
@@ -23,8 +23,8 @@ module.exports = (on, config) => {
               exclude: ['src/Test.tsx'],
             }),
           ],
-        },
-      }),
+        }),
+      ),
     );
 
     codeCoverageTask(on, config);
