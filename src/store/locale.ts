@@ -3,12 +3,12 @@ import { atom } from 'jotai';
 
 type Locale = keyof typeof LOCALES;
 
-export const LOCALES = Object.freeze({
+export const LOCALES = {
   de: 'Deutsch',
   en: 'English',
-});
+} as const;
 
-export const LOCALE_KEYS = Object.freeze(Object.keys(LOCALES) as Locale[]);
+export const LOCALE_KEYS = Object.keys(LOCALES) as Readonly<Locale[]>;
 
 export const LOCALE_DEFAULT: Locale = 'en';
 
