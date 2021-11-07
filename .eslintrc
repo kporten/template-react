@@ -55,7 +55,37 @@
         "ignoreRestSiblings": true
       }
     ],
+    "@typescript-eslint/naming-convention": [
+      "error",
+      {
+        "selector": ["enumMember", "typeLike"],
+        "format": ["StrictPascalCase"]
+      },
+      {
+        "selector": "variable",
+        "format": ["strictCamelCase", "StrictPascalCase", "UPPER_CASE"]
+      },
+      {
+        "selector": "variable",
+        "types": ["boolean"],
+        "prefix": ["can", "has", "is", "should"],
+        "format": ["StrictPascalCase"]
+      },
+      {
+        "selector": "variable",
+        "modifiers": ["destructured"],
+        "format": null
+      }
+    ],
     "@typescript-eslint/no-unnecessary-condition": "error",
+    "@typescript-eslint/padding-line-between-statements": [
+      "error",
+      {
+        "blankLine": "always",
+        "prev": "*",
+        "next": ["const", "type"]
+      }
+    ],
     "formatjs/enforce-default-message": ["error", "literal"],
     "formatjs/enforce-id": "error",
     "formatjs/no-camel-case": "error",
