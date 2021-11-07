@@ -9,7 +9,6 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        cyan: colors.cyan,
         sky: colors.sky,
       },
     },

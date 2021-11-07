@@ -1,10 +1,11 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
 import { useIntl } from 'react-intl';
+import { Outlet } from 'react-router-dom';
 
 import Navigation from './Navigation/Navigation';
 
-const Layout: React.FC = ({ children }) => {
+const Layout: React.FC = () => {
   const intl = useIntl();
 
   return (
@@ -17,7 +18,9 @@ const Layout: React.FC = ({ children }) => {
       </Helmet>
       <div className="min-h-screen bg-white text-gray-900">
         <Navigation />
-        <main className="container mx-auto p-4">{children}</main>
+        <main className="container mx-auto p-4">
+          <Outlet />
+        </main>
       </div>
     </>
   );

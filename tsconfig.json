@@ -18,6 +18,7 @@
       "~utils/*": ["./src/utils/*"],
       "~Test": ["./src/Test.tsx"]
     },
+    "removeComments": true,
     "resolveJsonModule": true,
     "skipLibCheck": true,
     "strict": true,

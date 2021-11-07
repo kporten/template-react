@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 import Layout from '~components/Layout/Layout';
 import Error404 from '~pages/404/404';
@@ -14,19 +14,13 @@ const App: React.FC = () => (
   <Store>
     <Intl>
       <BrowserRouter>
-        <Layout>
-          <Switch>
-            <Route path="/" exact>
-              <Home />
-            </Route>
-            <Route path="/settings" exact sensitive>
-              <Settings />
-            </Route>
-            <Route path="*">
-              <Error404 />
-            </Route>
-          </Switch>
-        </Layout>
+        <Routes>
+          <Route path="/" element={<Layout />}>
+            <Route index element={<Home />} />
+            <Route path="/settings" element={<Settings />} />
+            <Route path="*" element={<Error404 />} />
+          </Route>
+        </Routes>
       </BrowserRouter>
     </Intl>
   </Store>

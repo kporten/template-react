@@ -17,7 +17,7 @@ const Settings: React.FC = () => {
       <h1 className="text-3xl font-extrabold">
         <FormattedMessage id="pages.settings.headline" defaultMessage="Settings" />
       </h1>
-      <div className="mt-4 w-60">
+      <div className="mt-4 max-w-sm">
         <Locale />
       </div>
     </>

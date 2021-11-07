@@ -14,7 +14,7 @@ const Locale: React.FC = () => {
       <Listbox.Label className="sr-only">
         <FormattedMessage id="components.locale.label" defaultMessage="Language" />
       </Listbox.Label>
-      <Listbox.Button className="relative w-full pl-3 pr-9 py-2 rounded-lg shadow-md text-left bg-white focus:outline-none focus-visible:ring-2 focus-visible:ring-white/75 focus-visible:ring-offset-2 focus-visible:ring-offset-sky-300">
+      <Listbox.Button className="relative w-full pl-3 pr-9 py-2 rounded-lg shadow-md text-left bg-white focus:outline-none focus-visible:ring-2 focus-visible:ring-sky-500 dark:focus-visible:ring-sky-700">
         <span className="block">{LOCALES[locale]}</span>
         <span className="absolute inset-y-0 right-0 pr-2 flex items-center pointer-events-none">
           <SelectorIcon className="w-5 h-5 text-gray-500" />
@@ -33,7 +33,7 @@ const Locale: React.FC = () => {
               value={supportedLocaleKey}
               className={({ active }) =>
                 `relative pl-9 pr-3 py-2 select-none cursor-pointer focus:outline-none ${
-                  active ? 'bg-cyan-100 text-cyan-900' : ''
+                  active ? 'bg-sky-100 text-sky-900' : ''
                 }`
               }
             >
@@ -44,7 +44,7 @@ const Locale: React.FC = () => {
                   </span>
                   {selected && (
                     <span className="absolute inset-y-0 left-0 pl-2 flex items-center pointer-events-none">
-                      <CheckIcon className="w-5 h-5 text-cyan-500" />
+                      <CheckIcon className="w-5 h-5 text-sky-500" />
                     </span>
                   )}
                 </>

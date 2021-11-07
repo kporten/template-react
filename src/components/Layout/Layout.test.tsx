@@ -1,5 +1,6 @@
 import { mount } from '@cypress/react';
 import React from 'react';
+import { Route, Routes } from 'react-router-dom';
 
 import Test from '~Test';
 
@@ -8,7 +9,11 @@ import Layout from './Layout';
 it('should render layout', () => {
   mount(
     <Test>
-      <Layout>test</Layout>
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<div>test</div>} />
+        </Route>
+      </Routes>
     </Test>,
   );
 
