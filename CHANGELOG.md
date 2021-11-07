@@ -1,3 +1,14 @@
+# [2.4.0](https://github.com/kporten/template-react/compare/v2.3.1...v2.4.0) (2021-11-07)
+
+
+### Features
+
+* extend eslint rules ([f5cdbf7](https://github.com/kporten/template-react/commit/f5cdbf7d5e94c9b35528a38e4f0a10eb9aba7c1a))
+* extend linting ([e2db47e](https://github.com/kporten/template-react/commit/e2db47e865b1cbb03c92184946197a9a5467d7af))
+* update dependencies and add license scan ([6570c09](https://github.com/kporten/template-react/commit/6570c0971d6087ade0522cf3eb819e58fc6c7441))
+
+
+
 ## [2.3.1](https://github.com/kporten/template-react/compare/v2.3.0...v2.3.1) (2021-10-24)
 
 
