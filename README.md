@@ -256,4 +256,4 @@ Copyright (c) 2021 Kevin Porten
 
 You are allowed to remove the LICENSE file in this project if you use the template for your project. A link to this template would be appreciated.
 
-[![FOSSA Status](https://app.fossa.com/api/projects/custom%2B27173%2Fgit%40github.com%3Akporten%2Ftemplate-react.git.svg?type=large)](https://app.fossa.com/projects/custom%2B27173%2Fgit%40github.com%3Akporten%2Ftemplate-react.git?ref=badge_large)
+[![FOSSA Status](https://app.fossa.com/api/projects/custom%2B27173%2Fgithub.com%2Fkporten%2Ftemplate-react.svg?type=large)](https://app.fossa.com/projects/custom%2B27173%2Fgithub.com%2Fkporten%2Ftemplate-react?ref=badge_large)
