@@ -1,3 +1,13 @@
+# [2.5.0](https://github.com/kporten/template-react/compare/v2.4.0...v2.5.0) (2021-11-21)
+
+
+### Features
+
+* extend line space rules ([9de27ed](https://github.com/kporten/template-react/commit/9de27eda1439607025f5d4d270acb93339964a4a))
+* **package:** update dependencies ([2b92a23](https://github.com/kporten/template-react/commit/2b92a234d734f1deb867fbf3b189dac99d5bb1d8))
+
+
+
 # [2.4.0](https://github.com/kporten/template-react/compare/v2.3.1...v2.4.0) (2021-11-07)
 
 
