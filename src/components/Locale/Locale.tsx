@@ -6,7 +6,7 @@ import { FormattedMessage } from 'react-intl';
 
 import { localeAtom, LOCALES, LOCALE_KEYS } from '~store/locale';
 
-const Locale: React.FC = () => {
+const Locale: React.VFC = () => {
   const [locale, setLocale] = useAtom(localeAtom);
 
   return (

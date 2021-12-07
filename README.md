@@ -59,7 +59,7 @@ The following tools are used and preconfigured in this template.
 
 ```sh
 npm install
-npm start
+npm run dev
 ```
 
 :rocket: Now you can get up and running with your ideas!
@@ -67,12 +67,13 @@ npm start
 ## Scripts
 
 ```sh
-npm start # start development server
-
+npm run dev # start development server
 npm run build # build for production
-npm run serve # locally preview production build
-npm run format . # format files with prettier
-npm run lint . # lint files with eslint
+npm run preview # locally preview production build
+npm run format # format files with prettier
+npm run format:ci [folder] # format files with prettier
+npm run lint # lint files with eslint
+npm run lint:ci [folder] # lint files with eslint
 npm run type-check # execute typescript compiler to check types
 
 npm test # run all cypress component tests
@@ -118,15 +119,17 @@ npm run changelog # generate changelog based on Git commits
     - `de.json`
     - `en.json`
   - **pages** -> Contains all pages
-    - **404**
-      - `404.tsx` -> Not found page
     - **Home**
       - `Home.tsx` -> Home page
+    - **NotFound**
+      - `NotFound.tsx` -> Not found (404) page
     - **Settings**
       - `Settings.tsx` -> Settings page
   - **providers** -> Contains all context providers
-    - `Intl.tsx` -> Component to provide intl context
-    - `Store.tsx` -> Component to provide store with initial values
+    - **Intl**
+      - `Intl.tsx` -> Component to provide intl context
+    - **Store**
+      - `Store.tsx` -> Component to provide store with initial values
   - **store** -> Contains all global state definitions
     - `locale.tsx` -> Locale state definition (initialized with the best fitting locale)
   - **utils** -> Contains all utility functions

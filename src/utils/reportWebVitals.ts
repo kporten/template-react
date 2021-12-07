@@ -1,4 +1,4 @@
-import { ReportHandler } from 'web-vitals';
+import type { ReportHandler } from 'web-vitals';
 
 const reportWebVitals = async (onReport?: ReportHandler): Promise<void> => {
   if (!onReport) return;

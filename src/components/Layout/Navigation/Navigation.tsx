@@ -3,7 +3,7 @@ import React from 'react';
 import { FormattedMessage, useIntl } from 'react-intl';
 import { Link, NavLink } from 'react-router-dom';
 
-const Navigation: React.FC = () => {
+const Navigation: React.VFC = () => {
   const intl = useIntl();
 
   return (

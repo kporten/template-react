@@ -4,7 +4,7 @@ import { FormattedMessage, useIntl } from 'react-intl';
 
 import Hello from '~components/Hello/Hello';
 
-const Home: React.FC = () => {
+const Home: React.VFC = () => {
   const intl = useIntl();
 
   const emojis = useMemo(() => ['💻', '👍', '😃'], []);

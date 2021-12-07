@@ -5,7 +5,7 @@ type HelloProps = {
   emojis: string[];
 };
 
-const Hello: React.FC<HelloProps> = ({ emojis }) => {
+const Hello: React.VFC<HelloProps> = ({ emojis }) => {
   const [emoji, setEmoji] = useState(emojis[0]);
 
   useEffect(() => {

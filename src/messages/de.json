@@ -11,16 +11,16 @@
       "value": "Sprache"
     }
   ],
-  "pages.error404.headline": [
-    {
-      "type": 0,
-      "value": "Nicht gefunden"
-    }
-  ],
   "pages.home.headline": [
     {
       "type": 0,
       "value": "Startseite"
+    }
+  ],
+  "pages.notFound.headline": [
+    {
+      "type": 0,
+      "value": "Nicht gefunden"
     }
   ],
   "pages.settings.headline": [

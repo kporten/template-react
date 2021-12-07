@@ -1,8 +1,8 @@
 import React from 'react';
 import { MemoryRouter } from 'react-router-dom';
 
-import Intl from '~providers/Intl';
-import Store from '~providers/Store';
+import Intl from '~providers/Intl/Intl';
+import Store from '~providers/Store/Store';
 import { localeAtom } from '~store/locale';
 
 import './tailwind.css';

@@ -5,7 +5,7 @@ import { Outlet } from 'react-router-dom';
 
 import Navigation from './Navigation/Navigation';
 
-const Layout: React.FC = () => {
+const Layout: React.VFC = () => {
   const intl = useIntl();
 
   return (

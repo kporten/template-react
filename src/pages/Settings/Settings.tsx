@@ -4,7 +4,7 @@ import { FormattedMessage, useIntl } from 'react-intl';
 
 import Locale from '~components/Locale/Locale';
 
-const Settings: React.FC = () => {
+const Settings: React.VFC = () => {
   const intl = useIntl();
 
   return (

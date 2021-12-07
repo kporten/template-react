@@ -7,6 +7,20 @@
   "parserOptions": {
     "project": "./tsconfig.eslint.json"
   },
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:@typescript-eslint/recommended-requiring-type-checking",
+    "plugin:react/recommended",
+    "plugin:react-hooks/recommended",
+    "plugin:jsx-a11y/recommended",
+    "plugin:import/recommended",
+    "plugin:import/typescript",
+    "plugin:promise/recommended",
+    "plugin:unicorn/recommended",
+    "prettier"
+  ],
+  "plugins": ["formatjs"],
   "settings": {
     "import/resolver": {
       "alias": {
@@ -26,21 +40,9 @@
       "version": "detect"
     }
   },
-  "extends": [
-    "eslint:recommended",
-    "plugin:@typescript-eslint/recommended",
-    "plugin:@typescript-eslint/recommended-requiring-type-checking",
-    "plugin:react/recommended",
-    "plugin:react-hooks/recommended",
-    "plugin:jsx-a11y/recommended",
-    "plugin:import/recommended",
-    "plugin:import/typescript",
-    "plugin:promise/recommended",
-    "plugin:unicorn/recommended",
-    "prettier"
-  ],
-  "plugins": ["formatjs"],
   "rules": {
+    "@typescript-eslint/consistent-type-definitions": ["error", "type"],
+    "@typescript-eslint/consistent-type-imports": ["error"],
     "@typescript-eslint/no-empty-interface": [
       "error",
       {
@@ -62,13 +64,17 @@
         "format": ["StrictPascalCase"]
       },
       {
-        "selector": "variable",
+        "selector": ["variable"],
         "format": ["strictCamelCase", "StrictPascalCase", "UPPER_CASE"]
       },
       {
-        "selector": "variable",
+        "selector": ["typeProperty"],
+        "format": ["strictCamelCase"]
+      },
+      {
+        "selector": ["typeProperty", "variable"],
         "types": ["boolean"],
-        "prefix": ["can", "has", "is", "should"],
+        "prefix": ["has", "is"],
         "format": ["StrictPascalCase"]
       },
       {
@@ -106,13 +112,22 @@
         "next": ["export", "import"]
       }
     ],
+    "@typescript-eslint/prefer-nullish-coalescing": ["error"],
+    "@typescript-eslint/prefer-reduce-type-parameter": ["error"],
+    "@typescript-eslint/promise-function-async": [
+      "error",
+      {
+        "checkArrowFunctions": true
+      }
+    ],
     "formatjs/enforce-default-message": ["error", "literal"],
-    "formatjs/enforce-id": "error",
-    "formatjs/no-camel-case": "error",
-    "formatjs/no-emoji": "error",
-    "formatjs/no-multiple-plurals": "error",
-    "formatjs/no-multiple-whitespaces": "error",
-    "formatjs/no-offset": "error",
+    "formatjs/enforce-id": ["error"],
+    "formatjs/no-camel-case": ["error"],
+    "formatjs/no-emoji": ["error"],
+    "formatjs/no-multiple-plurals": ["error"],
+    "formatjs/no-multiple-whitespaces": ["error"],
+    "formatjs/no-offset": ["error"],
+    "import/first": ["error"],
     "import/order": [
       "error",
       {
@@ -136,8 +151,33 @@
       }
     ],
     "max-params": ["error", 2],
-    "no-console": ["error", { "allow": ["info", "error", "warn"] }],
+    "no-console": [
+      "error",
+      {
+        "allow": ["info", "error", "warn"]
+      }
+    ],
+    "promise/prefer-await-to-then": ["error"],
+    "react/boolean-prop-naming": [
+      "error",
+      {
+        "validateNested": true
+      }
+    ],
     "react/display-name": "off",
+    "react/function-component-definition": [
+      "error",
+      {
+        "namedComponents": "arrow-function",
+        "unnamedComponents": "arrow-function"
+      }
+    ],
+    "react/jsx-boolean-value": ["error"],
+    "react/jsx-fragments": ["error"],
+    "react/jsx-props-no-spreading": ["error"],
+    "react/jsx-no-useless-fragment": ["error"],
+    "react/jsx-pascal-case": ["error"],
+    "react/no-multi-comp": ["error"],
     "react/prop-types": "off",
     "unicorn/filename-case": [
       "error",
@@ -148,9 +188,16 @@
         }
       }
     ],
+    "unicorn/no-array-reduce": "off",
     "unicorn/no-null": "off",
-    "unicorn/no-useless-undefined": ["error", { "checkArguments": false }],
+    "unicorn/no-useless-undefined": [
+      "error",
+      {
+        "checkArguments": false
+      }
+    ],
     "unicorn/prefer-node-protocol": "off",
+    "unicorn/prefer-string-replace-all": ["error"],
     "unicorn/prevent-abbreviations": [
       "error",
       {
