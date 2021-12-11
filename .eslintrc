@@ -43,20 +43,6 @@
   "rules": {
     "@typescript-eslint/consistent-type-definitions": ["error", "type"],
     "@typescript-eslint/consistent-type-imports": ["error"],
-    "@typescript-eslint/no-empty-interface": [
-      "error",
-      {
-        "allowSingleExtends": true
-      }
-    ],
-    "@typescript-eslint/no-unused-vars": [
-      "error",
-      {
-        "vars": "all",
-        "args": "after-used",
-        "ignoreRestSiblings": true
-      }
-    ],
     "@typescript-eslint/naming-convention": [
       "error",
       {
@@ -83,7 +69,21 @@
         "format": null
       }
     ],
+    "@typescript-eslint/no-empty-interface": [
+      "error",
+      {
+        "allowSingleExtends": true
+      }
+    ],
     "@typescript-eslint/no-unnecessary-condition": "error",
+    "@typescript-eslint/no-unused-vars": [
+      "error",
+      {
+        "vars": "all",
+        "args": "after-used",
+        "ignoreRestSiblings": true
+      }
+    ],
     "@typescript-eslint/padding-line-between-statements": [
       "error",
       {
@@ -204,14 +204,17 @@
         "replacements": {
           "arg": false,
           "args": false,
+          "dst": false,
           "env": false,
+          "img": false,
           "param": false,
           "params": false,
           "prop": false,
           "props": false,
           "ref": false,
           "req": false,
-          "res": false
+          "res": false,
+          "src": false
         }
       }
     ]
