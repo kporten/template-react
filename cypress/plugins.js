@@ -1,5 +1,10 @@
 const codeCoverageTask = require('@cypress/code-coverage/task');
-const { devServer, defineDevServerConfig } = require('@cypress/vite-dev-server');
+
+const {
+  devServer,
+  defineDevServerConfig,
+} = require('@cypress/vite-dev-server');
+
 const pluginIstanbul = require('vite-plugin-istanbul');
 
 /**

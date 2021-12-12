@@ -12,7 +12,11 @@ const Intl: React.FC = ({ children }) => {
   const [locale] = useAtom(localeAtom);
 
   return (
-    <IntlProvider messages={messages[locale]} locale={locale} defaultLocale={LOCALE_DEFAULT}>
+    <IntlProvider
+      messages={messages[locale]}
+      locale={locale}
+      defaultLocale={LOCALE_DEFAULT}
+    >
       {children}
     </IntlProvider>
   );

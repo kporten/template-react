@@ -9,11 +9,17 @@ const NotFound: React.VFC = () => {
     <>
       <Helmet>
         <title>
-          {intl.formatMessage({ id: 'pages.notFound.headline', defaultMessage: 'Not Found' })}
+          {intl.formatMessage({
+            id: 'pages.notFound.headline',
+            defaultMessage: 'Not Found',
+          })}
         </title>
       </Helmet>
       <h1 className="text-3xl font-extrabold">
-        <FormattedMessage id="pages.notFound.headline" defaultMessage="Not Found" />
+        <FormattedMessage
+          id="pages.notFound.headline"
+          defaultMessage="Not Found"
+        />
       </h1>
     </>
   );

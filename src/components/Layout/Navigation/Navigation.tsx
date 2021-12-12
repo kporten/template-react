@@ -11,7 +11,10 @@ const Navigation: React.VFC = () => {
       <div className="container mx-auto px-4 py-2 flex justify-between items-center">
         <Link
           to="/"
-          aria-label={intl.formatMessage({ id: 'pages.home.headline', defaultMessage: 'Home' })}
+          aria-label={intl.formatMessage({
+            id: 'pages.home.headline',
+            defaultMessage: 'Home',
+          })}
           className="rounded-md focus:outline-none focus-visible:ring-2 focus-visible:ring-sky-500 dark:focus-visible:ring-sky-700"
         >
           <TemplateIcon className="w-8 h-8" />
@@ -35,7 +38,10 @@ const Navigation: React.VFC = () => {
               }`
             }
           >
-            <FormattedMessage id="pages.settings.headline" defaultMessage="Settings" />
+            <FormattedMessage
+              id="pages.settings.headline"
+              defaultMessage="Settings"
+            />
           </NavLink>
         </div>
       </div>

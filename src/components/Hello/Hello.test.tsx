@@ -10,16 +10,11 @@ it('should display hello', () => {
 
   mount(
     <Test>
-      <Hello emojis={[]} />
+      <Hello />
     </Test>,
   );
 
   cy.root().should('contain.text', 'Hello World');
-
-  cy.tick(2000);
-  cy.root().should('not.contain.text', '💻');
-  cy.root().should('not.contain.text', '👍');
-  cy.root().should('not.contain.text', '😃');
 
   unmount();
 });
@@ -29,7 +24,7 @@ it('should display different emojis over time', () => {
 
   mount(
     <Test>
-      <Hello emojis={['💻', '👍', '😃']} />
+      <Hello />
     </Test>,
   );
 

@@ -42,7 +42,7 @@
   },
   "rules": {
     "@typescript-eslint/consistent-type-definitions": ["error", "type"],
-    "@typescript-eslint/consistent-type-imports": ["error"],
+    "@typescript-eslint/consistent-type-imports": "error",
     "@typescript-eslint/naming-convention": [
       "error",
       {
@@ -112,8 +112,8 @@
         "next": ["export", "import"]
       }
     ],
-    "@typescript-eslint/prefer-nullish-coalescing": ["error"],
-    "@typescript-eslint/prefer-reduce-type-parameter": ["error"],
+    "@typescript-eslint/prefer-nullish-coalescing": "error",
+    "@typescript-eslint/prefer-reduce-type-parameter": "error",
     "@typescript-eslint/promise-function-async": [
       "error",
       {
@@ -121,13 +121,13 @@
       }
     ],
     "formatjs/enforce-default-message": ["error", "literal"],
-    "formatjs/enforce-id": ["error"],
-    "formatjs/no-camel-case": ["error"],
-    "formatjs/no-emoji": ["error"],
-    "formatjs/no-multiple-plurals": ["error"],
-    "formatjs/no-multiple-whitespaces": ["error"],
-    "formatjs/no-offset": ["error"],
-    "import/first": ["error"],
+    "formatjs/enforce-id": "error",
+    "formatjs/no-camel-case": "error",
+    "formatjs/no-emoji": "error",
+    "formatjs/no-multiple-plurals": "error",
+    "formatjs/no-multiple-whitespaces": "error",
+    "formatjs/no-offset": "error",
+    "import/first": "error",
     "import/order": [
       "error",
       {
@@ -157,7 +157,7 @@
         "allow": ["info", "error", "warn"]
       }
     ],
-    "promise/prefer-await-to-then": ["error"],
+    "promise/prefer-await-to-then": "error",
     "react/boolean-prop-naming": [
       "error",
       {
@@ -172,12 +172,12 @@
         "unnamedComponents": "arrow-function"
       }
     ],
-    "react/jsx-boolean-value": ["error"],
-    "react/jsx-fragments": ["error"],
-    "react/jsx-props-no-spreading": ["error"],
-    "react/jsx-no-useless-fragment": ["error"],
-    "react/jsx-pascal-case": ["error"],
-    "react/no-multi-comp": ["error"],
+    "react/jsx-boolean-value": "error",
+    "react/jsx-fragments": "error",
+    "react/jsx-props-no-spreading": "error",
+    "react/jsx-no-useless-fragment": "error",
+    "react/jsx-pascal-case": "error",
+    "react/no-multi-comp": "error",
     "react/prop-types": "off",
     "unicorn/filename-case": [
       "error",
@@ -197,7 +197,7 @@
       }
     ],
     "unicorn/prefer-node-protocol": "off",
-    "unicorn/prefer-string-replace-all": ["error"],
+    "unicorn/prefer-string-replace-all": "error",
     "unicorn/prevent-abbreviations": [
       "error",
       {

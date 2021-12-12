@@ -6,13 +6,16 @@ import { FormattedMessage } from 'react-intl';
 
 import { localeAtom, LOCALES, LOCALE_KEYS } from '~store/locale';
 
-const Locale: React.VFC = () => {
+const LocaleListbox: React.VFC = () => {
   const [locale, setLocale] = useAtom(localeAtom);
 
   return (
     <Listbox as="div" className="relative" value={locale} onChange={setLocale}>
       <Listbox.Label className="sr-only">
-        <FormattedMessage id="components.locale.label" defaultMessage="Language" />
+        <FormattedMessage
+          id="components.locale.label"
+          defaultMessage="Language"
+        />
       </Listbox.Label>
       <Listbox.Button className="relative w-full pl-3 pr-9 py-2 rounded-lg shadow-md text-left bg-white focus:outline-none focus-visible:ring-2 focus-visible:ring-sky-500 dark:focus-visible:ring-sky-700">
         <span className="block">{LOCALES[locale]}</span>
@@ -39,7 +42,11 @@ const Locale: React.VFC = () => {
             >
               {({ selected }) => (
                 <>
-                  <span className={`block ${selected ? 'font-medium' : 'font-normal'}`}>
+                  <span
+                    className={`block ${
+                      selected ? 'font-medium' : 'font-normal'
+                    }`}
+                  >
                     {LOCALES[supportedLocaleKey]}
                   </span>
                   {selected && (
@@ -57,4 +64,4 @@ const Locale: React.VFC = () => {
   );
 };
 
-export default Locale;
+export default LocaleListbox;

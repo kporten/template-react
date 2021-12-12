@@ -3,12 +3,12 @@ import React from 'react';
 
 import Test from '~Test';
 
-import Locale from './Locale';
+import LocaleListbox from './LocaleListbox';
 
 it('should change locale', () => {
   mount(
     <Test>
-      <Locale />
+      <LocaleListbox />
     </Test>,
   );
 

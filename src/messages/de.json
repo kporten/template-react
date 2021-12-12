@@ -2,7 +2,11 @@
   "components.hello.label": [
     {
       "type": 0,
-      "value": "Hallo Welt"
+      "value": "Hallo Welt "
+    },
+    {
+      "type": 1,
+      "value": "emoji"
     }
   ],
   "components.locale.label": [
