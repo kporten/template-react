@@ -1,3 +1,12 @@
+# [2.7.0](https://github.com/kporten/template-react/compare/v2.6.0...v2.7.0) (2021-12-12)
+
+
+### Features
+
+* update dependencies ([1a3636b](https://github.com/kporten/template-react/commit/1a3636bccd825df5f48e6bda2e4bb1a30313e843))
+
+
+
 # [2.6.0](https://github.com/kporten/template-react/compare/v2.5.0...v2.6.0) (2021-12-07)
 
 
