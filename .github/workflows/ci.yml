@@ -1,43 +1,12 @@
-name: Continuous Integration
+name: 'ci'
 
 on:
   push:
-    branches:
-      - 'main'
+    branches: ['main']
   pull_request:
-    branches:
-      - '**'
+    types: [opened, reopened, synchronize]
 
 jobs:
-  test:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v2
-        with:
-          node-version: '16.13.0'
-          cache: 'npm'
-      - name: Install dependencies
-        run: npm ci
-      - name: Type check project files
-        run: npm run type-check
-      - name: Lint project files
-        run: npm run lint:ci .
-      - name: Test components
-        run: npm test
-      - name: Check test coverage
-        run: npm run test:coverage
-
-  integration:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-      - uses: cypress-io/github-action@v2
-        with:
-          build: npm run build
-          start: npm run preview
-          wait-on: 'http://localhost:3000'
-
   security:
     runs-on: ubuntu-latest
     steps:
@@ -59,3 +28,34 @@ jobs:
         with:
           api-key: ${{secrets.FOSSA_API_KEY}}
           run-tests: true
+
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: ./.github/actions/setup
+      - name: Typecheck
+        run: pnpm run typecheck
+      - name: Lint
+        run: pnpm run lint
+      - name: Test Coverage
+        run: pnpm run test:coverage
+
+  build:
+    if: ${{ github.event_name == 'push' && contains('refs/heads/main', github.ref) }}
+    needs:
+      - licenses
+      - security
+      - test
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: ./.github/actions/setup
+      - name: Build
+        run: pnpm run build
+      - uses: actions/upload-artifact@v2
+        with:
+          name: build
+          path: apps/*/dist
+          if-no-files-found: error
+          retention-days: 1

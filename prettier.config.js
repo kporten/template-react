@@ -1,18 +1,17 @@
-// ? https://prettier.io/docs/en/options.html
-
+// ? https://prettier.io/docs/en/configuration.html
 module.exports = {
+  arrowParens: 'always',
+  bracketSameLine: false,
+  bracketSpacing: true,
+  endOfLine: 'lf',
+  htmlWhitespaceSensitivity: 'css',
+  jsxSingleQuote: false,
   printWidth: 80,
-  tabWidth: 2,
-  useTabs: false,
+  proseWrap: 'preserve',
+  quoteProps: 'as-needed',
   semi: true,
   singleQuote: true,
-  quoteProps: 'as-needed',
-  jsxSingleQuote: false,
+  tabWidth: 2,
   trailingComma: 'all',
-  bracketSpacing: true,
-  bracketSameLine: false,
-  arrowParens: 'always',
-  proseWrap: 'preserve',
-  htmlWhitespaceSensitivity: 'css',
-  endOfLine: 'lf',
+  useTabs: false,
 };

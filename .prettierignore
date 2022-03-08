@@ -1,14 +1,7 @@
-# Build
-dist/
-
-# Cache
-.intl_extract/
-.intl_messages/
-.nyc_output/
-package-lock.json
-
-# Docs
+# Common
 CHANGELOG.md
-
-# Logs
 coverage/
+pnpm-lock.yaml
+
+# Vite
+dist/

@@ -1,6 +1,4 @@
-// ? https://github.com/okonet/lint-staged#configuration
-
+// ? https://github.com/okonet/lint-staged#how-to-use-lint-staged-in-a-multi-package-monorepo
 module.exports = {
-  '*.{ts,tsx}': ['npm run lint:ci'],
-  '*': ['npm run format:ci'],
+  '*': ['prettier --write --ignore-unknown'],
 };

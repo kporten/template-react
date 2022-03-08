@@ -1,0 +1,20 @@
+{
+  "extends": "@template-react/ts-config/react",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@/components/*": ["src/components/*"],
+      "@/context/*": ["src/context/*"],
+      "@/features/*": ["src/features/*"],
+      "@/hooks/*": ["src/hooks/*"],
+      "@/layout/*": ["src/layout/*"],
+      "@/messages/*": ["src/messages/*"],
+      "@/routes/*": ["src/routes/*"],
+      "@/store/*": ["src/store/*"],
+      "@/test/*": ["src/test/*"],
+      "@/types/*": ["src/types/*"],
+      "@/utils/*": ["src/utils/*"]
+    },
+    "types": ["vite/client"]
+  }
+}

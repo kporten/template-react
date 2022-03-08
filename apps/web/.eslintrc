@@ -1,0 +1,25 @@
+{
+  "extends": "@template-react/eslint-config/react",
+  "rules": {
+    "import/no-restricted-paths": [
+      "error",
+      {
+        "basePath": "./**/src",
+        "zones": [
+          {
+            "target": "./components/**/*",
+            "from": "./{features,layout,routes}/**/*"
+          },
+          {
+            "target": "./features/**/*",
+            "from": "./{layout,routes}/**/*"
+          },
+          {
+            "target": "./layout/**/*",
+            "from": "./{features,routes}/**/*"
+          }
+        ]
+      }
+    ]
+  }
+}

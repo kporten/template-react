@@ -1,23 +1,10 @@
-# Build
-dist/
-
-# Cache
-.intl_extract/
-.intl_messages/
-.nyc_output/
-
-# Dependencies
+# Common
+.DS_Store
+.turbo/
+*.local
+*.log
+coverage/
 node_modules/
 
-# Environment variables (https://vitejs.dev/guide/env-and-mode.html#env-files)
-*.local
-
-# Logs
-coverage/
-cypress/downloads/
-cypress/screenshots/
-cypress/videos/
-*.log
-
-# System
-.DS_Store
+# Vite
+dist/
