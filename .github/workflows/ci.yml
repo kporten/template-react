@@ -53,7 +53,7 @@ jobs:
       - uses: ./.github/actions/setup
       - name: Build
         run: pnpm run build
-      - uses: actions/upload-artifact@v2
+      - uses: actions/upload-artifact@v3
         with:
           name: build
           path: apps/*/dist
