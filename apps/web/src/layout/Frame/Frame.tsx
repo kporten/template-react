@@ -25,11 +25,11 @@ export default function Frame() {
           content="rgb(7 89 133)"
         />
       </Helmet>
-      <ErrorBoundary fallback={Fallback} showDialog>
-        <main className="grid min-h-screen place-items-center dark:bg-gray-900 dark:text-gray-100">
+      <main className="grid min-h-screen place-items-center p-4 dark:bg-gray-900 dark:text-gray-100">
+        <ErrorBoundary fallback={Fallback} showDialog>
           <Outlet />
-        </main>
-      </ErrorBoundary>
+        </ErrorBoundary>
+      </main>
     </>
   );
 }

@@ -1,3 +1,4 @@
+import { EmojiSadIcon } from '@heroicons/react/solid';
 import { Helmet } from 'react-helmet';
 import { FormattedMessage, useIntl } from 'react-intl';
 
@@ -16,11 +17,12 @@ export default function NotFound() {
           })}
         </title>
       </Helmet>
-      <div className="p-4 text-center">
+      <div className="flex flex-col items-center space-y-4">
+        <EmojiSadIcon className="h-16 w-16 text-sky-800 md:h-24 md:w-24" />
         <Headline level={1}>
           <FormattedMessage
             id="features.error.notFound.headline"
-            defaultMessage="Not Found 😿"
+            defaultMessage="Not Found"
           />
         </Headline>
       </div>

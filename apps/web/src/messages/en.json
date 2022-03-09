@@ -1,6 +1,7 @@
 {
   "components.fallback.headline": "Unexpected Error",
-  "features.error.notFound.headline": "Not Found 😿",
+  "features.error.notFound.headline": "Not Found",
   "features.error.notFound.title": "Not Found",
-  "features.index.welcome.getStarted": "Get started by editing the {file} file!"
+  "features.landing.welcome.instruction": "Get started by editing the {file} file!",
+  "features.landing.welcome.title": "Welcome"
 }
