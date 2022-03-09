@@ -5,47 +5,9 @@
 ![last-commit](https://img.shields.io/github/last-commit/kporten/template-react)
 ![ci](https://github.com/kporten/template-react/workflows/ci/badge.svg?branch=main&event=push)
 
-This monorepo template allows you to start immediately with a [React](https://reactjs.org) ([TypeScript](https://www.typescriptlang.org)) single-page application, but it can also be used for any other type of webapp.
+This monorepo template allows you to start immediately with a [React](https://reactjs.org) ([TypeScript](https://www.typescriptlang.org)) single-page application, but it can also be used for any other type of web app.
 
 The template takes away the work of having to assemble and configure all the tools for professional development yourself.
-
-## Tools
-
-The following tools are preconfigured in this template.
-
-### Monorepo
-
-The root of the repository includes the following tools:
-
-- [Changesets](https://github.com/changesets/changesets)
-- [Commitlint](https://commitlint.js.org)
-- [ESLint](https://eslint.org)
-- [Fossa](https://fossa.com)
-- [Husky](https://typicode.github.io/husky)
-- [Lint Staged](https://github.com/okonet/lint-staged)
-- [Prettier](https://prettier.io)
-- [Snyk](https://snyk.io)
-- [Turborepo](https://turborepo.org)
-- [TypeScript](https://www.typescriptlang.org)
-
-### App
-
-An example React app with the following tools:
-
-- [Format JS](https://formatjs.io)
-- [Headless UI](https://headlessui.dev)
-- [Heroicons](https://heroicons.com)
-- [Jotai](https://jotai.pmnd.rs)
-- [Mock Service Worker](https://mswjs.io)
-- [React Helmet](https://github.com/nfl/react-helmet)
-- [React Router](https://reactrouter.com)
-- [React](https://reactjs.org)
-- [Sentry](https://sentry.io)
-- [Tailwind CSS](https://tailwindcss.com)
-- [Testing Library](https://testing-library.com)
-- [Vite](https://vitejs.dev)
-- [Vitest](https://vitest.dev)
-- [Web Vitals](https://github.com/GoogleChrome/web-vitals)
 
 ## Getting Started
 
@@ -66,15 +28,96 @@ pnpm dev
 
 ## Scripts
 
-TODO
+### Root
 
-## Environment Variables
+```sh
+# run all dev servers in parallel during development
+pnpm dev
 
-TODO
+# build all workspaces
+pnpm build
+
+# run all preview servers in parallel
+pnpm preview
+
+# lint all workspaces
+pnpm lint
+
+# run tests for each workspace
+pnpm test
+
+# run tests and check coverage for each workspace
+pnpm test:coverage
+
+# run type checks for each workspace
+pnpm typecheck
+
+# format repo files
+pnpm format
+
+# describe a feat/fix changes and add the changeset
+pnpm changeset
+
+# update version and create tags
+pnpm release
+```
+
+### Workspace: Web
+
+[See README](./apps/web/README.md#scripts)
 
 ## Workflows
 
-TODO
+### CI
+
+[See workflow](./.github/workflows/ci.yml)
+
+#### Events
+
+- `push`
+- `pull_request`
+
+#### Jobs
+
+- `security` run https://github.com/snyk/actions
+- `licenses` run https://github.com/fossas/fossa-action
+- `test`
+  - run typecheck
+  - run lint
+  - run tests and check coverage threshold
+- `build`
+  - needs all other **jobs** were **successful**
+  - run on **push** and only for the **main** branch
+  - build apps
+  - upload builded apps as artifact
+
+#### Secrets
+
+- `FOSSA_API_KEY` see https://docs.fossa.com/docs/api-reference
+- `SNYK_TOKEN` see https://docs.snyk.io/features/user-and-group-management/authentication/authentication-for-third-party-tools
+
+## Tools
+
+The following tools are used in this monorepo:
+
+### Root
+
+The root of the repository includes the following tools:
+
+- [Changesets](https://github.com/changesets/changesets)
+- [Commitlint](https://commitlint.js.org)
+- [ESLint](https://eslint.org)
+- [Fossa](https://fossa.com)
+- [Husky](https://typicode.github.io/husky)
+- [Lint Staged](https://github.com/okonet/lint-staged)
+- [Prettier](https://prettier.io)
+- [Snyk](https://snyk.io)
+- [Turborepo](https://turborepo.org)
+- [TypeScript](https://www.typescriptlang.org)
+
+### Workspace: Web
+
+[See README](./apps/web/README.md#tools)
 
 ## License
 
