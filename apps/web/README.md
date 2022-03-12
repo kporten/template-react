@@ -44,7 +44,7 @@ pnpm --filter @template-react/web typecheck
 
 ## Environment Variables
 
-- `VITE_SENTRY_DSN` optionally used for error monitoring (https://docs.sentry.io/product/sentry-basics/dsn-explainer/#where-to-find-your-dsn)
+- `VITE_SENTRY_DSN` optionally used for monitoring (https://docs.sentry.io/product/sentry-basics/dsn-explainer/#where-to-find-your-dsn)
 
 ## Tools
 

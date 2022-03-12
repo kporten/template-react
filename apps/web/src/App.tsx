@@ -2,7 +2,7 @@ import { BrowserRouter } from 'react-router-dom';
 
 import IntlProvider from '@/context/intl';
 import StoreProvider from '@/context/store';
-import Routes from '@/routes/index';
+import Routes from '@/routes';
 
 export default function App() {
   return (

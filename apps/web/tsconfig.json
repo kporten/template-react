@@ -3,17 +3,7 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "@/components/*": ["src/components/*"],
-      "@/context/*": ["src/context/*"],
-      "@/features/*": ["src/features/*"],
-      "@/hooks/*": ["src/hooks/*"],
-      "@/layout/*": ["src/layout/*"],
-      "@/messages/*": ["src/messages/*"],
-      "@/routes/*": ["src/routes/*"],
-      "@/store/*": ["src/store/*"],
-      "@/test/*": ["src/test/*"],
-      "@/types/*": ["src/types/*"],
-      "@/utils/*": ["src/utils/*"]
+      "@/*": ["src/*"]
     },
     "types": ["vite/client"]
   }
