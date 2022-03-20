@@ -14,6 +14,9 @@ pnpm --filter next build
 # run preview server
 pnpm --filter next preview
 
+# run prod server
+pnpm --filter next start
+
 # lint app files
 pnpm --filter next lint
 ```

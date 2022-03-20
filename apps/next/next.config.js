@@ -4,7 +4,6 @@
  * @type {import('next').NextConfig}
  */
 module.exports = {
-  distDir: 'dist',
   poweredByHeader: false,
   swcMinify: true,
 };
