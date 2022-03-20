@@ -1,0 +1,3 @@
+{
+  "extends": "@template-react/eslint-config/next"
+}

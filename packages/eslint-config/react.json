@@ -60,8 +60,7 @@
               "pascalCase": true
             }
           }
-        ],
-        "unicorn/no-null": "off"
+        ]
       }
     }
   ]

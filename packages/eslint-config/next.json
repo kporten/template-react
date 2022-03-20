@@ -1,0 +1,8 @@
+{
+  "$schema": "https://json.schemastore.org/eslintrc",
+  "extends": ["./react", "plugin:@next/next/recommended"],
+  "rules": {
+    "jsx-a11y/anchor-is-valid": "off",
+    "react/jsx-props-no-spreading": "off"
+  }
+}

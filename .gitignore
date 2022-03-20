@@ -6,5 +6,8 @@
 coverage/
 node_modules/
 
+# Next
+.next/
+
 # Vite
 dist/

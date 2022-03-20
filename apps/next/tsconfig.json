@@ -1,0 +1,11 @@
+{
+  "extends": "@template-react/ts-config/next",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"]
+    }
+  },
+  "include": ["next-env.d.ts", "*.js", "**/*.ts", "**/*.tsx"],
+  "exclude": ["node_modules"]
+}

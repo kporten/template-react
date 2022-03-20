@@ -1,45 +1,45 @@
-# Workspace: Web
+# Workspace: Vite
 
-This is an example web app with [React](https://reactjs.org) ([TypeScript](https://www.typescriptlang.org)) and [more](#tools).
+This is an example app with [React](https://reactjs.org) ([TypeScript](https://www.typescriptlang.org)) and [Vite](https://vitejs.dev).
 
 ## Scripts
 
 ```sh
 # run dev server
-pnpm --filter @template-react/web dev
+pnpm --filter vite dev
 
 # build app
-pnpm --filter @template-react/web build
+pnpm --filter vite build
 
 # run preview server
-pnpm --filter @template-react/web preview
+pnpm --filter vite preview
 
 # extract and compile intl messages
-pnpm --filter @template-react/web intl
+pnpm --filter vite intl
 
 # extract intl messages
-pnpm --filter @template-react/web intl:extract
+pnpm --filter vite intl:extract
 
 # compile extracted intl messages
-pnpm --filter @template-react/web intl:compile
+pnpm --filter vite intl:compile
 
 # clean extracted intl messages
-pnpm --filter @template-react/web intl:clean
+pnpm --filter vite intl:clean
 
 # lint app files
-pnpm --filter @template-react/web lint
+pnpm --filter vite lint
 
 # run tests
-pnpm --filter @template-react/web test
+pnpm --filter vite test
 
 # run tests and check coverage
-pnpm --filter @template-react/web test:coverage
+pnpm --filter vite test:coverage
 
 # open test ui and watch
-pnpm --filter @template-react/web test:ui
+pnpm --filter vite test:ui
 
 # run type checks
-pnpm --filter @template-react/web typecheck
+pnpm --filter vite typecheck
 ```
 
 ## Environment Variables

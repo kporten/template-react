@@ -62,9 +62,13 @@ pnpm changeset
 pnpm release
 ```
 
-### Workspace: Web
+### Workspace: Next
 
-[See README](./apps/web/README.md#scripts)
+[See README](./apps/next/README.md#scripts)
+
+### Workspace: Vite
+
+[See README](./apps/vite/README.md#scripts)
 
 ## Workflows
 
@@ -115,9 +119,13 @@ The root of the repository includes the following tools:
 - [Turborepo](https://turborepo.org)
 - [TypeScript](https://www.typescriptlang.org)
 
-### Workspace: Web
+### Workspace: Next
 
-[See README](./apps/web/README.md#tools)
+[See README](./apps/next/README.md#tools)
+
+### Workspace: Vite
+
+[See README](./apps/vite/README.md#tools)
 
 ## License
 

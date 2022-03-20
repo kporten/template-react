@@ -32,6 +32,7 @@
         "allow": ["info", "error", "warn"]
       }
     ],
+    "no-implicit-coercion": "error",
     "sort-imports": [
       "error",
       {
@@ -72,6 +73,12 @@
         "selector": "variable",
         "modifiers": ["destructured"],
         "format": null
+      }
+    ],
+    "@typescript-eslint/no-misused-promises": [
+      "error",
+      {
+        "checksVoidReturn": false
       }
     ],
     "@typescript-eslint/no-unnecessary-condition": "error",
@@ -126,6 +133,7 @@
       }
     ],
     "promise/prefer-await-to-then": "error",
+    "unicorn/no-null": "off",
     "unicorn/no-useless-undefined": [
       "error",
       {
