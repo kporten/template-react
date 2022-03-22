@@ -1,6 +1,6 @@
 import { render, type RenderOptions } from '@testing-library/react';
 
-import TestProvider from '../context/provider/TestProvider';
+import TestProvider from '../providers/TestProvider';
 
 const mount = (
   ui: React.ReactElement,

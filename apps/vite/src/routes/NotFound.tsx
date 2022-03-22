@@ -12,7 +12,7 @@ export default function NotFound() {
       <Helmet>
         <title>
           {intl.formatMessage({
-            id: 'features.error.notFound.title',
+            id: 'routes.notFound.title',
             defaultMessage: 'Not Found',
           })}
         </title>
@@ -21,7 +21,7 @@ export default function NotFound() {
         <EmojiSadIcon className="h-16 w-16 text-sky-800 md:h-24 md:w-24" />
         <Headline level={1}>
           <FormattedMessage
-            id="features.error.notFound.headline"
+            id="routes.notFound.headline"
             defaultMessage="Not Found"
           />
         </Headline>

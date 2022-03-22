@@ -1,8 +1,9 @@
 import { Route, Routes } from 'react-router-dom';
 
-import { NotFound } from '@/features/error';
-import Landing from '@/features/landing';
 import Frame from '@/layout/Frame/Frame';
+
+import Landing from './Landing';
+import NotFound from './NotFound';
 
 export default () => (
   <Routes>

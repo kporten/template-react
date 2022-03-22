@@ -1,7 +1,8 @@
 {
   "components.fallback.headline": "Unexpected Error",
-  "features.error.notFound.headline": "Not Found",
-  "features.error.notFound.title": "Not Found",
-  "features.landing.welcome.instruction": "Get started by editing the {file} file!",
-  "features.landing.welcome.title": "Welcome"
+  "features.template.components.welcome.description": "Get started by editing the {file} file!",
+  "features.template.components.welcome.headline": "Template React",
+  "routes.landing.title": "Welcome",
+  "routes.notFound.headline": "Not Found",
+  "routes.notFound.title": "Not Found"
 }

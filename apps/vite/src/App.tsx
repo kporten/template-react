@@ -1,7 +1,7 @@
 import { BrowserRouter } from 'react-router-dom';
 
-import IntlProvider from '@/context/intl';
-import StoreProvider from '@/context/store';
+import IntlProvider from '@/contexts/intl';
+import StoreProvider from '@/contexts/store';
 import Routes from '@/routes';
 
 export default function App() {
