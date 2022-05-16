@@ -6,10 +6,10 @@ runs:
   steps:
     - uses: pnpm/action-setup@v2
       with:
-        version: '6.32.2'
+        version: '7.1.0'
     - uses: actions/setup-node@v2
       with:
-        node-version: '16.14.x'
+        node-version: '16.15.x'
         cache: 'pnpm'
     - run: pnpm install
       shell: bash

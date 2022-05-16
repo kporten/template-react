@@ -1,4 +1,4 @@
-import { render } from 'react-dom';
+import { createRoot } from 'react-dom/client';
 
 import { initMonitoring } from '@/utils/monitoring';
 import { reportWebVitals } from '@/utils/web-vitals';
@@ -6,7 +6,8 @@ import { reportWebVitals } from '@/utils/web-vitals';
 import App from './App';
 import './index.css';
 
-render(<App />, document.querySelector('#app'));
+const root = createRoot(document.querySelector('#app')!);
+root.render(<App />);
 
 // ? https://docs.sentry.io/platforms/javascript/guides/react/
 initMonitoring();

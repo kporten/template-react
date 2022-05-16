@@ -1,5 +1,5 @@
 import { EmojiSadIcon } from '@heroicons/react/solid';
-import { Helmet } from 'react-helmet';
+import { Helmet } from 'react-helmet-async';
 import { FormattedMessage, useIntl } from 'react-intl';
 
 import Headline from '@/components/Headline/Headline';

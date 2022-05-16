@@ -1,5 +1,5 @@
 import { ErrorBoundary } from '@sentry/react';
-import { Helmet } from 'react-helmet';
+import { Helmet } from 'react-helmet-async';
 import { useIntl } from 'react-intl';
 import { Outlet } from 'react-router-dom';
 
