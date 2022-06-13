@@ -1,4 +1,6 @@
 // ? https://tailwindcss.com/docs/configuration
+
+/** @type {import('tailwindcss/types').Config} */
 module.exports = {
   content: [
     'index.html',

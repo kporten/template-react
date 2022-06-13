@@ -10,10 +10,7 @@
   "engines": {
     "node": ">=16.15.0"
   },
-  "volta": {
-    "node": "16.15.0"
-  },
-  "packageManager": "pnpm@7.1.0",
+  "packageManager": "pnpm@7.2.1",
   "scripts": {
     "dev": "turbo run dev --parallel",
     "build": "turbo run build",
@@ -28,13 +25,13 @@
     "prepare": "husky install"
   },
   "devDependencies": {
-    "@changesets/cli": "^2.22.0",
-    "@commitlint/cli": "^17.0.0",
-    "@commitlint/config-conventional": "^17.0.0",
+    "@changesets/cli": "^2.23.0",
+    "@commitlint/cli": "^17.0.2",
+    "@commitlint/config-conventional": "^17.0.2",
     "husky": "^8.0.1",
-    "lint-staged": "^12.4.1",
+    "lint-staged": "^13.0.1",
     "prettier": "^2.6.2",
     "prettier-plugin-tailwindcss": "^0.1.11",
-    "turbo": "^1.2.9"
+    "turbo": "^1.2.16"
   }
 }
