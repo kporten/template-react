@@ -1,4 +1,5 @@
 // ? https://prettier.io/docs/en/configuration.html
+
 module.exports = {
   arrowParens: 'always',
   bracketSameLine: false,
