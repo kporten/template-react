@@ -9,6 +9,22 @@ This monorepo template allows you to start immediately with a [React](https://re
 
 The template takes away the work of having to assemble and configure all the tools for professional development yourself.
 
+## Tools
+
+- [Turborepo](https://turborepo.org)
+- [TypeScript](https://www.typescriptlang.org)
+- [Changesets](https://github.com/changesets/changesets)
+- [Commitlint](https://commitlint.js.org)
+- [ESLint](https://eslint.org)
+- [Fossa](https://fossa.com)
+- [Husky](https://typicode.github.io/husky)
+- [Lint Staged](https://github.com/okonet/lint-staged)
+- [Prettier](https://prettier.io)
+- [Snyk](https://snyk.io)
+- ...and more in app templates:
+  - [Next](./apps/next/README.md#tools)
+  - [Vite](./apps/vite/README.md#tools)
+
 ## Getting Started
 
 1. Clone the template: `npx degit kporten/template-react my-project`
@@ -28,47 +44,47 @@ pnpm dev
 
 ## Scripts
 
-### Root
-
 ```sh
-# run all dev servers in parallel during development
+# run all dev servers in parallel during development (turbo)
 pnpm dev
 
-# build all workspaces
+# build all workspaces (turbo)
 pnpm build
 
-# run all preview servers in parallel
+# run all preview servers in parallel (turbo)
 pnpm preview
 
-# lint all workspaces
+# lint all workspaces (turbo)
 pnpm lint
 
-# run tests for each workspace
+# run tests for each workspace (turbo)
 pnpm test
 
-# run tests and check coverage for each workspace
+# run tests and check coverage for each workspace (turbo)
 pnpm test:coverage
 
-# run type checks for each workspace
+# run type checks for each workspace (turbo)
 pnpm typecheck
 
 # format repo files
 pnpm format
 
-# describe a feat/fix changes and add the changeset
+# describe a feat/fix and add the changeset
 pnpm changeset
 
 # update version and create tags
 pnpm release
 ```
 
-### Workspace: Next
+## Apps
 
-[See README](./apps/next/README.md#scripts)
+- [next](./apps/next/README.md)
+- [vite](./apps/vite/README.md)
 
-### Workspace: Vite
+## Packages
 
-[See README](./apps/vite/README.md#scripts)
+- [eslint-config](./packages/eslint-config/)
+- [ts-config](./packages/ts-config/)
 
 ## Workflows
 
@@ -99,33 +115,6 @@ pnpm release
 
 - `FOSSA_API_KEY` see https://docs.fossa.com/docs/api-reference
 - `SNYK_TOKEN` see https://docs.snyk.io/features/user-and-group-management/authentication/authentication-for-third-party-tools
-
-## Tools
-
-The following tools are used in this monorepo:
-
-### Root
-
-The root of the repository includes the following tools:
-
-- [Changesets](https://github.com/changesets/changesets)
-- [Commitlint](https://commitlint.js.org)
-- [ESLint](https://eslint.org)
-- [Fossa](https://fossa.com)
-- [Husky](https://typicode.github.io/husky)
-- [Lint Staged](https://github.com/okonet/lint-staged)
-- [Prettier](https://prettier.io)
-- [Snyk](https://snyk.io)
-- [Turborepo](https://turborepo.org)
-- [TypeScript](https://www.typescriptlang.org)
-
-### Workspace: Next
-
-[See README](./apps/next/README.md#tools)
-
-### Workspace: Vite
-
-[See README](./apps/vite/README.md#tools)
 
 ## License
 

@@ -7,7 +7,7 @@
     },
     "build": {
       "dependsOn": ["^build"],
-      "outputs": ["dist/**"]
+      "outputs": ["dist/**", ".next/**"]
     },
     "preview": {
       "cache": false,
@@ -17,12 +17,15 @@
       "outputs": []
     },
     "test": {
+      "inputs": ["**/*.tsx", "**/*.ts"],
       "outputs": []
     },
     "test:coverage": {
+      "inputs": ["**/*.tsx", "**/*.ts"],
       "outputs": ["coverage/**"]
     },
     "typecheck": {
+      "inputs": ["**/*.tsx", "**/*.ts"],
       "outputs": []
     }
   }
