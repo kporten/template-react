@@ -3,5 +3,8 @@ CHANGELOG.md
 coverage/
 pnpm-lock.yaml
 
+# Next
+.next/
+
 # Vite
 dist/
