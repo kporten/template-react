@@ -118,6 +118,11 @@ pnpm release
   - build apps
   - upload builded apps as artifact
 
+#### Secrets
+
+- `FOSSA_API_KEY` see https://docs.fossa.com/docs/api-reference
+- `SNYK_TOKEN` see https://docs.snyk.io/features/user-and-group-management/authentication/authentication-for-third-party-tools
+
 ### PR
 
 [See workflow](./.github/workflows/pr.yml)
@@ -131,11 +136,6 @@ pnpm release
 - `lint`
   - run commitlint on pull request title
   - run changeset status report
-
-#### Secrets
-
-- `FOSSA_API_KEY` see https://docs.fossa.com/docs/api-reference
-- `SNYK_TOKEN` see https://docs.snyk.io/features/user-and-group-management/authentication/authentication-for-third-party-tools
 
 ## License
 
