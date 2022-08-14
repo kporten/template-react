@@ -99,17 +99,38 @@ pnpm release
 
 #### Jobs
 
-- `security` run https://github.com/snyk/actions
-- `licenses` run https://github.com/fossas/fossa-action
+- `security`
+  - run https://github.com/snyk/actions
+- `licenses`
+  - run https://github.com/fossas/fossa-action
 - `test`
   - run typecheck
   - run lint
   - run tests and check coverage threshold
+- `versioning`
+  - needs all previous jobs were successful
+  - run on `push` and only for the `main` branch
+  - create pull request to update workspace versions and changelogs
+  - create workspace version tags (requires merged pull request from step before)
 - `build`
-  - needs all other **jobs** were **successful**
-  - run on **push** and only for the **main** branch
+  - needs all previous jobs were successful
+  - run on `push` and only for the `main` branch
   - build apps
   - upload builded apps as artifact
+
+### PR
+
+[See workflow](./.github/workflows/pr.yml)
+
+#### Events
+
+- `pull_request`
+
+#### Jobs
+
+- `lint`
+  - run commitlint on pull request title
+  - run changeset status check (requires a changeset)
 
 #### Secrets
 

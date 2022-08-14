@@ -1,4 +1,4 @@
-name: 'pr'
+name: pr
 
 on:
   pull_request:
@@ -12,5 +12,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - uses: ./.github/actions/setup
-      - name: Lint
+      - name: Lint Pull Request Title
         run: pnpm exec commitlint <<< "${{ github.event.pull_request.title }}"
+      - name: Check Changeset
+        run: pnpm exec changeset status --since=main
