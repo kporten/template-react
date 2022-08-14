@@ -15,6 +15,7 @@
       }
     }
   },
+  "ignorePatterns": ["*.js"],
   "extends": [
     "eslint:recommended",
     "plugin:@typescript-eslint/recommended",
@@ -147,22 +148,19 @@
       {
         "replacements": {
           "args": false,
+          "ctx": false,
+          "dst": false,
           "env": false,
           "props": false,
           "ref": false,
           "req": false,
-          "res": false
+          "res": false,
+          "src": false
         }
       }
     ]
   },
   "overrides": [
-    {
-      "files": ["*.js"],
-      "rules": {
-        "unicorn/prefer-module": "off"
-      }
-    },
     {
       "files": ["*.d.ts"],
       "rules": {

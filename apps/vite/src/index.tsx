@@ -9,9 +9,13 @@ import './index.css';
 const root = createRoot(document.querySelector('#app')!);
 root.render(<App />);
 
-// ? https://docs.sentry.io/platforms/javascript/guides/react/
+// https://docs.sentry.io/platforms/javascript/guides/react/
 initMonitoring();
 
-// ? https://web.dev/vitals/
-// ? If you want to report web vitals, you can pass a report handler (https://github.com/GoogleChrome/web-vitals#reporthandler)
-reportWebVitals().catch(console.error);
+// https://web.dev/vitals/
+// If you want to report web vitals, you can pass a report handler (https://github.com/GoogleChrome/web-vitals#reporthandler)
+try {
+  await reportWebVitals();
+} catch (error) {
+  console.error(error);
+}

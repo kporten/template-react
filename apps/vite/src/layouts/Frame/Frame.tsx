@@ -11,7 +11,10 @@ export default function Frame() {
 
   return (
     <>
-      <Helmet titleTemplate="template-react | %s" defaultTitle="template-react">
+      <Helmet
+        titleTemplate="template-react | vite | %s"
+        defaultTitle="template-react | vite"
+      >
         <html lang={lang} />
         <meta name="description" content="template-react" />
         <meta
@@ -25,11 +28,11 @@ export default function Frame() {
           content="rgb(7 89 133)"
         />
       </Helmet>
-      <main className="grid min-h-screen place-items-center p-4 dark:bg-gray-900 dark:text-gray-100">
+      <div className="grid min-h-screen place-items-center p-4 dark:bg-gray-900 dark:text-gray-100">
         <ErrorBoundary fallback={Fallback} showDialog>
           <Outlet />
         </ErrorBoundary>
-      </main>
+      </div>
     </>
   );
 }

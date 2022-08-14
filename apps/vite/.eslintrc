@@ -8,14 +8,14 @@
         "zones": [
           {
             "target": "./components/**/*",
-            "from": "./{features,layout,routes}/**/*"
+            "from": "./{features,layouts,routes}/**/*"
           },
           {
             "target": "./features/**/*",
-            "from": "./{layout,routes}/**/*"
+            "from": "./{layouts,routes}/**/*"
           },
           {
-            "target": "./layout/**/*",
+            "target": "./layouts/**/*",
             "from": "./{features,routes}/**/*"
           }
         ]

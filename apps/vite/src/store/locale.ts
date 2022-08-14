@@ -7,15 +7,13 @@ export const LOCALES = {
   en: 'English',
 } as const;
 
-export const LOCALE_KEYS = Object.keys(LOCALES) as Readonly<Locale[]>;
-
 export const LOCALE_DEFAULT: Locale = 'en';
 
-const localeBestFit = IntlLocaleMatcher.match(
-  navigator.languages as string[],
-  LOCALE_KEYS as string[],
-  LOCALE_DEFAULT,
-  { algorithm: 'best fit' },
-) as Locale;
-
-export const localeAtom = atom<Locale>(localeBestFit);
+export const localeAtom = atom(
+  IntlLocaleMatcher.match(
+    navigator.languages as string[],
+    Object.keys(LOCALES),
+    LOCALE_DEFAULT,
+    { algorithm: 'best fit' },
+  ) as Locale,
+);

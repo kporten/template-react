@@ -1,6 +1,6 @@
 import { Route, Routes } from 'react-router-dom';
 
-import Frame from '@/layout/Frame/Frame';
+import Frame from '@/layouts/Frame/Frame';
 
 import Landing from './Landing';
 import NotFound from './NotFound';

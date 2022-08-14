@@ -1,19 +1,25 @@
-import { signOut, useSession } from 'next-auth/react';
+import Head from 'next/head';
 
 export default function Index() {
-  const { data: session } = useSession();
-
   return (
-    <div className="space-y-4">
-      <pre className="bg-black/10 p-4 rounded">
-        {JSON.stringify(session, null, 2)}
-      </pre>
-      <button
-        className="flex px-4 py-2 text-sm dark:text-white bg-black/20 rounded hover:bg-black/30 focus:outline-none focus-visible:ring-2 focus-visible:ring-white/75"
-        onClick={async () => signOut()}
-      >
-        Sign out
-      </button>
-    </div>
+    <>
+      <Head>
+        <title>template-react | next | Index</title>
+      </Head>
+      <div className="text-center">
+        <h1 className="mb-8 bg-gradient-to-r from-sky-400 to-sky-800 bg-clip-text font-template text-6xl text-transparent md:text-8xl">
+          Template React
+        </h1>
+        <p>
+          <span className="text-base md:text-lg">
+            Get started by editing the{' '}
+            <code className="mx-1 rounded bg-gray-200 p-1 font-mono dark:bg-gray-700">
+              pages/index.tsx
+            </code>{' '}
+            file!
+          </span>
+        </p>
+      </div>
+    </>
   );
 }

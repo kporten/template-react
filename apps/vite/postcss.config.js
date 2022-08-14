@@ -1,4 +1,4 @@
-// ? https://tailwindcss.com/docs/configuration
+// https://tailwindcss.com/docs/configuration
 
 module.exports = {
   plugins: {

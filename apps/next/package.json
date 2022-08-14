@@ -3,27 +3,26 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "dev": "next dev --port 3002",
+    "dev": "next dev --port 5171",
     "build": "next build",
-    "preview": "next start --port 3002",
+    "preview": "next start --port 5171",
     "start": "next start",
     "lint": "next lint"
   },
   "dependencies": {
-    "next": "^12.1.6",
-    "next-auth": "^4.5.0",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "sharp": "^0.30.6"
+    "next": "12.2.5",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "sharp": "0.30.7"
   },
   "devDependencies": {
     "@template-react/eslint-config": "workspace:*",
     "@template-react/ts-config": "workspace:*",
-    "@types/node": "^16.11.41",
-    "@types/react": "^18.0.14",
-    "autoprefixer": "^10.4.7",
-    "postcss": "^8.4.14",
-    "tailwindcss": "^3.1.3",
-    "typescript": "^4.7.4"
+    "@types/node": "18.7.3",
+    "@types/react": "18.0.17",
+    "autoprefixer": "10.4.8",
+    "postcss": "8.4.16",
+    "tailwindcss": "3.1.8",
+    "typescript": "4.7.4"
   }
 }

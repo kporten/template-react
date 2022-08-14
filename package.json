@@ -8,9 +8,9 @@
   "bugs": "https://github.com/kporten/template-react/issues",
   "private": true,
   "engines": {
-    "node": ">=16.15.0"
+    "node": ">=16",
+    "pnpm": ">=7"
   },
-  "packageManager": "pnpm@7.3.0",
   "scripts": {
     "dev": "turbo run dev --parallel",
     "build": "turbo run build",
@@ -25,13 +25,13 @@
     "prepare": "husky install"
   },
   "devDependencies": {
-    "@changesets/cli": "^2.23.0",
-    "@commitlint/cli": "^17.0.2",
-    "@commitlint/config-conventional": "^17.0.2",
-    "husky": "^8.0.1",
-    "lint-staged": "^13.0.2",
-    "prettier": "^2.7.1",
-    "prettier-plugin-tailwindcss": "^0.1.11",
-    "turbo": "^1.2.16"
+    "@changesets/cli": "2.24.3",
+    "@commitlint/cli": "17.0.3",
+    "@commitlint/config-conventional": "17.0.3",
+    "husky": "8.0.1",
+    "lint-staged": "13.0.3",
+    "prettier": "2.7.1",
+    "prettier-plugin-tailwindcss": "0.1.13",
+    "turbo": "1.4.3"
   }
 }

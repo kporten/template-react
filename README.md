@@ -31,7 +31,7 @@ The template takes away the work of having to assemble and configure all the too
 
 2. Replace all occurrences of `template-react` and `Template React` with the name of your project.
 
-3. Adjust the information (e.g. the author name) in the files `package.json`, `LICENSE`, `CHANGELOG.md` and `README.md`.
+3. Adjust the information (e.g. the author name) in the files `package.json`, `LICENSE` and `README.md`.
 
 4. Execute the following commands in your terminal:
 

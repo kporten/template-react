@@ -4,7 +4,7 @@ import reactPlugin from '@vitejs/plugin-react';
 import { defineConfig } from 'vite';
 import { ViteWebfontDownload as webfontPlugin } from 'vite-plugin-webfont-dl';
 
-// ? https://vitejs.dev/config/
+// https://vitejs.dev/config/
 export default defineConfig({
   plugins: [
     reactPlugin(),
@@ -17,7 +17,7 @@ export default defineConfig({
       '@': path.resolve('src'),
     },
   },
-  // ? https://vitest.dev/config/
+  // https://vitest.dev/config/
   test: {
     coverage: {
       branches: 90,

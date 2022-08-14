@@ -1,1 +1,1 @@
-export { default } from './providers/IntlProvider';
+export { default } from './providers/IntlProvider/IntlProvider';

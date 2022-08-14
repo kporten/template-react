@@ -21,13 +21,6 @@ pnpm --filter next start
 pnpm --filter next lint
 ```
 
-## Environment Variables
-
-- `NEXTAUTH_URL` see https://next-auth.js.org/configuration/options#nextauth_url
-- `NEXTAUTH_SECRET` see https://next-auth.js.org/configuration/options#nextauth_secret
-- `AUTH_USER` set user for credentials provider
-- `AUTH_PASSWORD` set password for credentials provider
-
 ## Tools
 
 - [Next.js](https://nextjs.org)
