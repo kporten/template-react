@@ -15,4 +15,4 @@ jobs:
       - name: Lint Pull Request Title
         run: pnpm exec commitlint <<< "${{ github.event.pull_request.title }}"
       - name: Check Changeset
-        run: pnpm exec changeset status --since=main
+        run: pnpm exec changeset status --since=origin/main
