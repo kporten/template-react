@@ -1,0 +1,16 @@
+name: 'pr'
+
+on:
+  pull_request:
+    types: [opened, edited, reopened, synchronize]
+    branches:
+      - main
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: ./.github/actions/setup
+      - name: Lint
+        run: pnpm exec commitlint <<< "${{ github.event.pull_request.title }}"
