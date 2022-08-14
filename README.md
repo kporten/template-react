@@ -108,13 +108,13 @@ pnpm release
   - run lint
   - run tests and check coverage threshold
 - `versioning`
-  - needs all previous jobs were successful
-  - run on `push` and only for the `main` branch
+  - _all previous jobs need to be successful_
+  - _starts on `push` to `main` branch_
   - create pull request to update workspace versions and changelogs
   - create workspace version tags (requires merged pull request from step before)
 - `build`
-  - needs all previous jobs were successful
-  - run on `push` and only for the `main` branch
+  - _all previous jobs need to be successful_
+  - _starts on `push` to `main` branch_
   - build apps
   - upload builded apps as artifact
 
