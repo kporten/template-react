@@ -1,8 +1,8 @@
-name: 'ci'
+name: ci
 
 on:
   push:
-    branches: ['main']
+    branches: [main]
   pull_request:
     types: [opened, reopened, synchronize]
 
@@ -41,12 +41,34 @@ jobs:
       - name: Test Coverage
         run: pnpm run test:coverage
 
+  versioning:
+    if: ${{ github.event_name == 'push' && contains('refs/heads/main', github.ref) }}
+    needs:
+      - licenses
+      - security
+      - test
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+      - uses: ./.github/actions/setup
+      - uses: changesets/action@v1
+        with:
+          title: 'chore: update versions'
+          commit: 'chore: update versions'
+          createGithubReleases: false
+          publish: pnpm exec changeset tag
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
   build:
     if: ${{ github.event_name == 'push' && contains('refs/heads/main', github.ref) }}
     needs:
       - licenses
       - security
       - test
+      - versioning
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3

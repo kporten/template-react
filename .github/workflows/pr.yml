@@ -1,4 +1,4 @@
-name: 'pr'
+name: pr
 
 on:
   pull_request:
@@ -11,6 +11,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
       - uses: ./.github/actions/setup
-      - name: Lint
+      - name: Lint Pull Request Title
         run: pnpm exec commitlint <<< "${{ github.event.pull_request.title }}"
+      - name: Report Changeset Status
+        run: pnpm exec changeset status --since=origin/main
