@@ -14,8 +14,4 @@ initMonitoring();
 
 // https://web.dev/vitals/
 // If you want to report web vitals, you can pass a report handler (https://github.com/GoogleChrome/web-vitals#reporthandler)
-try {
-  await reportWebVitals();
-} catch (error) {
-  console.error(error);
-}
+reportWebVitals().catch(console.error);

@@ -60,7 +60,8 @@
             },
             "ignore": ["\\.test\\.tsx$"]
           }
-        ]
+        ],
+        "unicorn/prefer-top-level-await": "off"
       }
     }
   ]
