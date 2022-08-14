@@ -16,5 +16,5 @@ jobs:
       - uses: ./.github/actions/setup
       - name: Lint Pull Request Title
         run: pnpm exec commitlint <<< "${{ github.event.pull_request.title }}"
-      - name: Check Changeset
+      - name: Report Changeset Status
         run: pnpm exec changeset status --since=origin/main

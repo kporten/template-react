@@ -130,7 +130,7 @@ pnpm release
 
 - `lint`
   - run commitlint on pull request title
-  - run changeset status check (requires a changeset)
+  - run changeset status report
 
 #### Secrets
 
