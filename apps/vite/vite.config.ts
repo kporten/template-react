@@ -1,8 +1,8 @@
 import path from 'node:path';
 
 import reactPlugin from '@vitejs/plugin-react';
-import { defineConfig } from 'vite';
 import { ViteWebfontDownload as webfontPlugin } from 'vite-plugin-webfont-dl';
+import { defineConfig } from 'vitest/config';
 
 // https://vitejs.dev/config/
 export default defineConfig({
