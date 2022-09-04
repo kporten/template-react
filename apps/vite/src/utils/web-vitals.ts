@@ -1,18 +1,19 @@
 // https://web.dev/vitals/
 
-import { type ReportHandler } from 'web-vitals';
+import { type ReportCallback } from 'web-vitals';
 
-export async function reportWebVitals(onReport?: ReportHandler) {
+export async function reportWebVitals(onReport?: ReportCallback) {
   if (!onReport) return;
 
-  const { getCLS, getFCP, getFID, getLCP, getTTFB } = await import(
+  const { onCLS, onFCP, onFID, onINP, onLCP, onTTFB } = await import(
     'web-vitals'
   );
 
   // https://github.com/GoogleChrome/web-vitals#functions
-  getCLS(onReport);
-  getFCP(onReport);
-  getFID(onReport);
-  getLCP(onReport);
-  getTTFB(onReport);
+  onCLS(onReport);
+  onFCP(onReport);
+  onFID(onReport);
+  onINP(onReport);
+  onLCP(onReport);
+  onTTFB(onReport);
 }

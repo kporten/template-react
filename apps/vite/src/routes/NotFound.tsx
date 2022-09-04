@@ -1,4 +1,4 @@
-import { EmojiSadIcon } from '@heroicons/react/solid';
+import { FaceFrownIcon } from '@heroicons/react/24/outline';
 import { Helmet } from 'react-helmet-async';
 import { FormattedMessage, useIntl } from 'react-intl';
 
@@ -18,7 +18,7 @@ export default function NotFound() {
         </title>
       </Helmet>
       <div className="flex flex-col items-center space-y-4">
-        <EmojiSadIcon className="h-16 w-16 text-sky-800 md:h-24 md:w-24" />
+        <FaceFrownIcon className="h-16 w-16 text-sky-800 md:h-24 md:w-24" />
         <Headline level={1}>
           <FormattedMessage
             id="routes.notFound.headline"
