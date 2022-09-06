@@ -3,5 +3,4 @@
 module.exports = {
   ...require('../../lint-staged.config.js'),
   '*.{ts,tsx}': ['eslint --fix'],
-  '*.test.{ts,tsx}': ['vitest related'],
 };

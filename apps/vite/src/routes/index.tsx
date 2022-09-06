@@ -1,15 +1,22 @@
-import { Route, Routes } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
+import { useIntl } from 'react-intl';
 
-import Frame from '@/layouts/Frame/Frame';
+import { Welcome } from '@/features/template';
 
-import Landing from './Landing';
-import NotFound from './NotFound';
+export default function Index() {
+  const intl = useIntl();
 
-export default () => (
-  <Routes>
-    <Route path="/" element={<Frame />}>
-      <Route index element={<Landing />} />
-      <Route path="*" element={<NotFound />} />
-    </Route>
-  </Routes>
-);
+  return (
+    <>
+      <Helmet>
+        <title>
+          {intl.formatMessage({
+            id: 'routes.index.title',
+            defaultMessage: 'Welcome',
+          })}
+        </title>
+      </Helmet>
+      <Welcome />
+    </>
+  );
+}

@@ -2,7 +2,7 @@ import { render, type RenderOptions } from '@testing-library/react';
 
 import TestProvider from '@/test/providers/TestProvider';
 
-const mount = (
+export const renderWithProvider = (
   ui: React.ReactElement,
   options?: Omit<RenderOptions, 'wrapper'>,
 ) =>
@@ -10,9 +10,3 @@ const mount = (
     wrapper: TestProvider,
     ...options,
   });
-
-export * from '@testing-library/react';
-
-export { default as userEvent } from '@testing-library/user-event';
-
-export { mount };

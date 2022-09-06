@@ -1,11 +1,11 @@
 import { expect, it } from 'vitest';
 
-import { mount, screen } from '@/test/support';
+import { renderWithProvider, screen } from '@/test/support';
 
 import Fallback from './Fallback';
 
 it('should display fallback message', () => {
-  mount(<Fallback />);
+  renderWithProvider(<Fallback />);
 
   expect(screen.getByText('Unexpected Error')).toBeDefined();
 });

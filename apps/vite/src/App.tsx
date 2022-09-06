@@ -1,10 +1,12 @@
 import { StrictMode } from 'react';
 import { HelmetProvider } from 'react-helmet-async';
-import { BrowserRouter } from 'react-router-dom';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 import IntlProvider from '@/contexts/intl';
 import StoreProvider from '@/contexts/store';
-import Routes from '@/routes';
+import Frame from '@/layouts/Frame/Frame';
+import Index from '@/routes/Index';
+import NotFound from '@/routes/NotFound';
 
 export default function App() {
   return (
@@ -13,7 +15,12 @@ export default function App() {
         <StoreProvider>
           <IntlProvider>
             <BrowserRouter>
-              <Routes />
+              <Routes>
+                <Route path="/" element={<Frame />}>
+                  <Route index element={<Index />} />
+                  <Route path="*" element={<NotFound />} />
+                </Route>
+              </Routes>
             </BrowserRouter>
           </IntlProvider>
         </StoreProvider>

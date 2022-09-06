@@ -13,12 +13,12 @@
     "next": "12.2.5",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "sharp": "0.30.7"
+    "sharp": "0.31.0"
   },
   "devDependencies": {
     "@template-react/eslint-config": "workspace:*",
     "@template-react/ts-config": "workspace:*",
-    "@types/node": "18.7.14",
+    "@types/node": "18.7.15",
     "@types/react": "18.0.18",
     "autoprefixer": "10.4.8",
     "postcss": "8.4.16",

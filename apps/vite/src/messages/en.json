@@ -2,7 +2,7 @@
   "components.fallback.headline": "Unexpected Error",
   "features.template.components.welcome.description": "Get started by editing the {file} file!",
   "features.template.components.welcome.headline": "Template React",
-  "routes.landing.title": "Welcome",
+  "routes.index.title": "Welcome",
   "routes.notFound.headline": "Not Found",
   "routes.notFound.title": "Not Found"
 }
