@@ -6,8 +6,13 @@ import { reportWebVitals } from '@/utils/web-vitals';
 import App from './App';
 import './index.css';
 
-const root = createRoot(document.querySelector('#app')!);
-root.render(<App />);
+// render app
+const element = document.querySelector('#app');
+
+if (element) {
+  const root = createRoot(element);
+  root.render(<App />);
+}
 
 // https://docs.sentry.io/platforms/javascript/guides/react/
 initMonitoring();
