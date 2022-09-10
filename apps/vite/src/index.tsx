@@ -1,3 +1,4 @@
+import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
 
 import { initMonitoring } from '@/utils/monitoring';
@@ -11,7 +12,11 @@ const element = document.querySelector('#app');
 
 if (element) {
   const root = createRoot(element);
-  root.render(<App />);
+  root.render(
+    <StrictMode>
+      <App />
+    </StrictMode>,
+  );
 }
 
 // https://docs.sentry.io/platforms/javascript/guides/react/

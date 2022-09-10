@@ -1,4 +1,3 @@
-import { StrictMode } from 'react';
 import { HelmetProvider } from 'react-helmet-async';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
@@ -10,21 +9,19 @@ import NotFound from '@/routes/NotFound';
 
 export default function App() {
   return (
-    <StrictMode>
-      <HelmetProvider>
-        <StoreProvider>
-          <IntlProvider>
-            <BrowserRouter>
-              <Routes>
-                <Route path="/" element={<Frame />}>
-                  <Route index element={<Index />} />
-                  <Route path="*" element={<NotFound />} />
-                </Route>
-              </Routes>
-            </BrowserRouter>
-          </IntlProvider>
-        </StoreProvider>
-      </HelmetProvider>
-    </StrictMode>
+    <HelmetProvider>
+      <StoreProvider>
+        <IntlProvider>
+          <BrowserRouter>
+            <Routes>
+              <Route path="/" element={<Frame />}>
+                <Route index element={<Index />} />
+                <Route path="*" element={<NotFound />} />
+              </Route>
+            </Routes>
+          </BrowserRouter>
+        </IntlProvider>
+      </StoreProvider>
+    </HelmetProvider>
   );
 }
