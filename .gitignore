@@ -1,8 +1,9 @@
 # Common
 .DS_Store
-.turbo/
 *.local
 *.log
+*.tsbuildinfo
+.turbo/
 coverage/
 node_modules/
 

@@ -37,58 +37,81 @@ The template takes away the work of having to assemble and configure all the too
 
 ```sh
 pnpm install
-pnpm dev
+pnpm turbo dev
 ```
 
 :rocket: Now you can get up and running with your ideas!
 
-## Scripts
+## Workspaces
 
-```sh
-# run all dev servers in parallel during development (turbo)
-pnpm dev
-
-# build all workspaces (turbo)
-pnpm build
-
-# run all preview servers in parallel (turbo)
-pnpm preview
-
-# lint all workspaces (turbo)
-pnpm lint
-
-# run tests for each workspace (turbo)
-pnpm test
-
-# run tests and check coverage for each workspace (turbo)
-pnpm test:coverage
-
-# run type checks for each workspace (turbo)
-pnpm typecheck
-
-# format repo files
-pnpm format
-
-# describe a feat/fix and add the changeset
-pnpm changeset
-
-# update version and create tags
-pnpm release
-```
-
-## Apps
+### Apps
 
 - [next](./apps/next/README.md)
 - [vite](./apps/vite/README.md)
 
-## Packages
+### Packages
 
-- [eslint-config](./packages/eslint-config/)
-- [ts-config](./packages/ts-config/)
+- [eslint-config](./packages/eslint-config/README.md)
+- [ts-config](./packages/ts-config/README.md)
+
+## Tasks
+
+### Turbo
+
+```sh
+# run all development servers
+pnpm turbo dev
+
+# build all workspaces
+pnpm turbo build
+
+# run all preview servers
+pnpm turbo preview
+
+# lint all workspaces
+pnpm turbo lint
+
+# test all workspaces
+pnpm turbo test
+
+# test (with coverage check) all workspaces
+pnpm turbo test:coverage
+
+# typecheck all workspaces
+pnpm turbo typecheck
+```
+
+> Use `--filter` to run a task only in specified workspaces (https://turborepo.org/docs/core-concepts/filtering)
+
+> See also https://turborepo.org/docs/reference/command-line-reference
+
+### Changeset
+
+```sh
+# create a changeset file (interactive)
+pnpm changeset add
+
+# update versions of workspaces
+pnpm changeset version
+
+# update tags of workspaces
+pnpm changeset tag
+```
+
+> See also https://github.com/changesets/changesets/blob/main/packages/cli/README.md
+
+### Scripts
+
+```sh
+# format files with prettier
+pnpm run format
+```
+
+> See also https://pnpm.io/cli/run
 
 ## Workflows
 
-### CI
+### Continuous Integration (CI)
 
 [See workflow](./.github/workflows/ci.yml)
 
@@ -123,7 +146,7 @@ pnpm release
 - `FOSSA_API_KEY` see https://docs.fossa.com/docs/api-reference
 - `SNYK_TOKEN` see https://docs.snyk.io/features/user-and-group-management/authentication/authentication-for-third-party-tools
 
-### PR
+### Pull Request (PR)
 
 [See workflow](./.github/workflows/pr.yml)
 

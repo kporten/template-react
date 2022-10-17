@@ -1,4 +1,5 @@
 {
+  "root": true,
   "extends": "@template-react/eslint-config/react",
   "rules": {
     "import/no-restricted-paths": [

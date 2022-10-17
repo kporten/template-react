@@ -17,6 +17,7 @@
   },
   "ignorePatterns": ["*.js"],
   "extends": [
+    "turbo",
     "eslint:recommended",
     "plugin:@typescript-eslint/recommended",
     "plugin:@typescript-eslint/recommended-requiring-type-checking",
@@ -26,6 +27,7 @@
     "plugin:unicorn/recommended"
   ],
   "rules": {
+    "eqeqeq": ["error", "always"],
     "max-params": ["error", 2],
     "no-console": [
       "error",
@@ -130,6 +132,7 @@
             "group": "internal"
           }
         ],
+        "pathGroupsExcludedImportTypes": [],
         "warnOnUnassignedImports": true
       }
     ],
@@ -150,6 +153,7 @@
           "ctx": false,
           "dst": false,
           "env": false,
+          "params": false,
           "props": false,
           "ref": false,
           "req": false,

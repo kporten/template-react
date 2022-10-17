@@ -35,11 +35,11 @@ jobs:
       - uses: actions/checkout@v3
       - uses: ./.github/actions/setup
       - name: Typecheck
-        run: pnpm run typecheck
+        run: pnpm turbo typecheck
       - name: Lint
-        run: pnpm run lint
+        run: pnpm turbo lint
       - name: Test Coverage
-        run: pnpm run test:coverage
+        run: pnpm turbo test:coverage
 
   versioning:
     if: ${{ github.event_name == 'push' && contains('refs/heads/main', github.ref) }}
@@ -58,7 +58,7 @@ jobs:
           title: 'chore: update versions'
           commit: 'chore: update versions'
           createGithubReleases: false
-          publish: pnpm exec changeset tag
+          publish: pnpm changeset tag
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
@@ -74,7 +74,7 @@ jobs:
       - uses: actions/checkout@v3
       - uses: ./.github/actions/setup
       - name: Build
-        run: pnpm run build
+        run: pnpm turbo build
       - uses: actions/upload-artifact@v3
         with:
           name: build

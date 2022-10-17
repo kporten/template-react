@@ -1,7 +1,7 @@
 import { MemoryRouter } from 'react-router-dom';
 
-import IntlProvider from '@/contexts/intl';
-import StoreProvider from '@/contexts/store';
+import IntlProvider from '@/providers/IntlProvider/IntlProvider';
+import StoreProvider from '@/providers/StoreProvider/StoreProvider';
 import { localeAtom } from '@/store/locale';
 
 type TestProviderProps = {

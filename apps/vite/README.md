@@ -1,45 +1,45 @@
-# Workspace: Vite
+# Workspace: vite
 
 This is an example app with [React](https://reactjs.org) ([TypeScript](https://www.typescriptlang.org)) and [Vite](https://vitejs.dev).
 
 ## Scripts
 
 ```sh
-# run dev server
-pnpm --filter vite dev
+# run development server
+pnpm --filter=vite dev
 
-# build app
-pnpm --filter vite build
+# build workspace
+pnpm --filter=vite build
 
 # run preview server
-pnpm --filter vite preview
+pnpm --filter=vite preview
 
 # extract and compile intl messages
-pnpm --filter vite intl
+pnpm --filter=vite intl
 
 # extract intl messages
-pnpm --filter vite intl:extract
+pnpm --filter=vite intl:extract
 
 # compile extracted intl messages
-pnpm --filter vite intl:compile
+pnpm --filter=vite intl:compile
 
 # clean extracted intl messages
-pnpm --filter vite intl:clean
+pnpm --filter=vite intl:clean
 
-# lint app files
-pnpm --filter vite lint
+# lint workspace
+pnpm --filter=vite lint
 
-# run tests
-pnpm --filter vite test
+# test workspace
+pnpm --filter=vite test
 
-# run tests and check coverage
-pnpm --filter vite test:coverage
+# test (with coverage check) workspace
+pnpm --filter=vite test:coverage
 
 # open test ui and watch
-pnpm --filter vite test:ui
+pnpm --filter=vite test:ui
 
-# run type checks
-pnpm --filter vite typecheck
+# typecheck workspace
+pnpm --filter=vite typecheck
 ```
 
 ## Environment Variables
