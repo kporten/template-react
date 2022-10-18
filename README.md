@@ -135,11 +135,15 @@ pnpm run format
   - _starts on `push` to `main` branch_
   - create pull request to update workspace versions and changelogs
   - create workspace version tags (requires merged pull request from step before)
-- `build`
+- `vite-ignore`
   - _all previous jobs need to be successful_
   - _starts on `push` to `main` branch_
-  - build apps
-  - upload builded apps as artifact
+  - checks if app was changed
+- `vite-build`
+  - _all previous jobs need to be successful_
+  - _starts on `push` to `main` branch and only when the app was changed_
+  - build app
+  - upload builded app as artifact
 
 #### Secrets
 

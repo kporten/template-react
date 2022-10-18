@@ -44,8 +44,8 @@ jobs:
   versioning:
     if: ${{ github.event_name == 'push' && contains('refs/heads/main', github.ref) }}
     needs:
-      - licenses
       - security
+      - licenses
       - test
     runs-on: ubuntu-latest
     steps:
@@ -62,22 +62,49 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-  build:
+  vite-ignore:
     if: ${{ github.event_name == 'push' && contains('refs/heads/main', github.ref) }}
     needs:
-      - licenses
-      - security
-      - test
       - versioning
+    runs-on: ubuntu-latest
+    outputs:
+      status: ${{ steps.status-affected.outputs.status }}
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+      - uses: ./.github/actions/setup
+      - name: Ignore Check
+        id: ignore-check
+        run: pnpm turbo-ignore vite
+        continue-on-error: true
+      - name: Set Status Affected
+        id: status-affected
+        if: ${{ steps.ignore-check.outcome == 'failure' }}
+        run: echo "status=affected" >> $GITHUB_OUTPUT
+
+  vite-build:
+    if: ${{ github.event_name == 'push' && contains('refs/heads/main', github.ref) && needs.vite-ignore.outputs.status == 'affected' }}
+    needs:
+      - vite-ignore
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
       - uses: ./.github/actions/setup
+      - name: Prune
+        run: |
+          pnpm turbo prune --scope=@template-react/vite
+          pnpm dlx rimraf ./out/**/node_modules
+          mv ./.git ./out/.git
+      - name: Install
+        run: pnpm i
+        working-directory: out
       - name: Build
-        run: pnpm turbo build
+        run: pnpm turbo build --filter=vite...
+        working-directory: out
       - uses: actions/upload-artifact@v3
         with:
           name: build
-          path: apps/*/dist
+          path: ./out/apps/vite/dist
           if-no-files-found: error
           retention-days: 1
