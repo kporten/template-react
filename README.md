@@ -137,7 +137,7 @@ pnpm run format
   - create workspace version tags (requires merged pull request from step before)
 - `vite-ignore`
   - _all previous jobs need to be successful_
-  - _starts on `push` to `main` branch_
+  - _starts on `push` to `main` branch and only when changesets were applied_
   - checks if app was changed
 - `vite-build`
   - _all previous jobs need to be successful_
