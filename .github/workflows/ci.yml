@@ -48,12 +48,15 @@ jobs:
       - licenses
       - test
     runs-on: ubuntu-latest
+    outputs:
+      published: ${{ steps.changesets.outputs.published }}
     steps:
       - uses: actions/checkout@v3
         with:
           fetch-depth: 0
       - uses: ./.github/actions/setup
       - uses: changesets/action@v1
+        id: changesets
         with:
           title: 'chore: update versions'
           commit: 'chore: update versions'
@@ -62,8 +65,8 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-  vite-ignore:
-    if: ${{ github.event_name == 'push' && contains('refs/heads/main', github.ref) }}
+  vite-status:
+    if: ${{ needs.versioning.outputs.published == 'true' }}
     needs:
       - versioning
     runs-on: ubuntu-latest
@@ -84,9 +87,9 @@ jobs:
         run: echo "status=affected" >> $GITHUB_OUTPUT
 
   vite-build:
-    if: ${{ github.event_name == 'push' && contains('refs/heads/main', github.ref) && needs.vite-ignore.outputs.status == 'affected' }}
+    if: ${{ needs.vite-status.outputs.status == 'affected' }}
     needs:
-      - vite-ignore
+      - vite-status
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
