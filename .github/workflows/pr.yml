@@ -3,8 +3,11 @@ name: pr
 on:
   pull_request:
     types: [opened, edited, reopened, synchronize]
-    branches:
-      - main
+    branches: [main]
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
 
 jobs:
   lint:
@@ -14,7 +17,9 @@ jobs:
         with:
           fetch-depth: 0
       - uses: ./.github/actions/setup
-      - name: Lint Pull Request Title
-        run: pnpm commitlint <<< "${{ github.event.pull_request.title }}"
-      - name: Report Changeset Status
+      - name: 🔦 Lint pull request title
+        run: pnpm commitlint <<< "$TITLE"
+        env:
+          TITLE: ${{ github.event.pull_request.title }}
+      - name: 📝 Check changeset status
         run: pnpm changeset status --since=origin/main
