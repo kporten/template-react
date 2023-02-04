@@ -8,21 +8,21 @@
   "bugs": "https://github.com/kporten/template-react/issues",
   "private": true,
   "engines": {
-    "node": ">=18",
-    "pnpm": ">=7"
+    "node": ">=18 <19"
   },
+  "packageManager": "pnpm@7.26.3",
   "scripts": {
-    "format": "prettier --write --ignore-unknown .",
-    "prepare": "husky install"
+    "format": "prettier --write .",
+    "format:check": "prettier --check ."
   },
   "devDependencies": {
-    "@changesets/cli": "2.25.1",
-    "@commitlint/cli": "17.1.2",
-    "@commitlint/config-conventional": "17.1.0",
-    "husky": "8.0.1",
-    "lint-staged": "13.0.3",
-    "prettier": "2.7.1",
-    "prettier-plugin-tailwindcss": "0.1.13",
-    "turbo": "1.6.2"
+    "@changesets/cli": "2.26.0",
+    "@commitlint/cli": "17.4.2",
+    "@commitlint/config-conventional": "17.4.2",
+    "@commitlint/types": "17.4.0",
+    "prettier": "2.8.3",
+    "prettier-plugin-tailwindcss": "0.2.2",
+    "turbo": "1.7.3",
+    "turbo-ignore": "1.7.3"
   }
 }

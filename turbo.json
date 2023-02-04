@@ -1,9 +1,10 @@
 {
-  "$schema": "https://turborepo.org/schema.json",
+  "$schema": "https://turbo.build/schema.json",
   "pipeline": {
     "dev": {
       "dependsOn": ["^build"],
-      "cache": false
+      "cache": false,
+      "persistent": true
     },
     "build": {
       "dependsOn": ["^build"],
@@ -11,16 +12,15 @@
     },
     "preview": {
       "dependsOn": ["build"],
-      "cache": false
+      "cache": false,
+      "persistent": true
     },
     "lint": {
-      "dependsOn": ["^build"],
-      "outputs": []
+      "dependsOn": ["^build"]
     },
     "test": {
       "dependsOn": ["^build"],
-      "inputs": ["**/*.tsx", "**/*.ts"],
-      "outputs": []
+      "inputs": ["**/*.tsx", "**/*.ts"]
     },
     "test:coverage": {
       "dependsOn": ["^build"],
@@ -29,8 +29,7 @@
     },
     "typecheck": {
       "dependsOn": ["^build"],
-      "inputs": ["**/*.tsx", "**/*.ts"],
-      "outputs": []
+      "inputs": ["**/*.tsx", "**/*.ts"]
     }
   }
 }

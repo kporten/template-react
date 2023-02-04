@@ -1,8 +1,8 @@
-name: pr
+name: Pull Request
 
 on:
   pull_request:
-    types: [opened, edited, reopened, synchronize]
+    types: [opened, reopened, edited, synchronize]
     branches: [main]
 
 concurrency:
@@ -13,10 +13,12 @@ jobs:
   lint:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - name: 📥 Checkout
+        uses: actions/checkout@v3
         with:
           fetch-depth: 0
-      - uses: ./.github/actions/setup
+      - name: ⚙️ Setup
+        uses: ./.github/actions/setup
       - name: 🔦 Lint pull request title
         run: pnpm commitlint <<< "$TITLE"
         env:

@@ -1,28 +1,30 @@
 # Workspace: next
 
-This is an example app with [React](https://reactjs.org) ([TypeScript](https://www.typescriptlang.org)) and [Next.js](https://nextjs.org).
+This is a template for a web app with [Next.js](https://nextjs.org).
 
-## Scripts
+## Tech Stack
+
+- [Next.js](https://nextjs.org)
+- [TypeScript](https://www.typescriptlang.org)
+- [Tailwind CSS](https://tailwindcss.com)
+
+## Tasks
+
+### Turbo
 
 ```sh
 # run development server
-pnpm --filter=next dev
+pnpm turbo dev --filter=next
 
 # build workspace
-pnpm --filter=next build
+pnpm turbo build --filter=next
 
 # run preview server
-pnpm --filter=next preview
-
-# run prod server
-pnpm --filter=next start
+pnpm turbo preview --filter=next
 
 # lint workspace
-pnpm --filter=next lint
+pnpm turbo lint --filter=next
+
+# typecheck workspace
+pnpm turbo typecheck --filter=next
 ```
-
-## Tools
-
-- [Next.js](https://nextjs.org)
-- [React](https://reactjs.org)
-- [Tailwind CSS](https://tailwindcss.com)

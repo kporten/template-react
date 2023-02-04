@@ -5,25 +5,27 @@
 ![last-commit](https://img.shields.io/github/last-commit/kporten/template-react)
 ![ci](https://github.com/kporten/template-react/workflows/ci/badge.svg?branch=main&event=push)
 
-This monorepo template allows you to start immediately with a [React](https://reactjs.org) ([TypeScript](https://www.typescriptlang.org)) single-page application, but it can also be used for any other type of web app.
+This monorepo template allows you to start immediately with a [React](https://reactjs.org) ([TypeScript](https://www.typescriptlang.org)) single-page app ([Vite](https://vitejs.dev)) or web app ([Next.js](https://nextjs.org)), but it can also be used for any other type of web app or service.
 
 The template takes away the work of having to assemble and configure all the tools for professional development yourself.
 
-## Tools
+## Tech Stack
 
-- [Turborepo](https://turborepo.org)
-- [TypeScript](https://www.typescriptlang.org)
-- [Changesets](https://github.com/changesets/changesets)
-- [Commitlint](https://commitlint.js.org)
-- [ESLint](https://eslint.org)
-- [Fossa](https://fossa.com)
-- [Husky](https://typicode.github.io/husky)
-- [Lint Staged](https://github.com/okonet/lint-staged)
-- [Prettier](https://prettier.io)
-- [Snyk](https://snyk.io)
-- ...and more in app templates:
-  - [Next](./apps/next/README.md#tools)
-  - [Vite](./apps/vite/README.md#tools)
+- Language:
+  - [TypeScript](https://www.typescriptlang.org)
+- Repository Management:
+  - [Pnpm](https://pnpm.io)
+  - [Turborepo](https://turborepo.org)
+  - [Changesets](https://github.com/changesets/changesets)
+- Quality & Security:
+  - [ESLint](https://eslint.org)
+  - [Commitlint](https://commitlint.js.org)
+  - [Prettier](https://prettier.io)
+  - [Fossa](https://fossa.com)
+  - [Snyk](https://snyk.io)
+- App Templates:
+  - [Next.js](https://nextjs.org) with [Tailwind CSS](https://tailwindcss.com)
+  - [Vite](https://vitejs.dev) with [React](https://reactjs.org), [Tailwind CSS](https://tailwindcss.com) and [Testing Library](https://testing-library.com)
 
 ## Getting Started
 
@@ -46,13 +48,13 @@ pnpm turbo dev
 
 ### Apps
 
-- [next](./apps/next/README.md)
-- [vite](./apps/vite/README.md)
+- [Next.js Template](./apps/next/README.md) (`./apps/next`)
+- [Vite (React) Template](./apps/vite/README.md) (`./apps/vite`)
 
 ### Packages
 
-- [eslint-config](./packages/eslint-config/README.md)
-- [ts-config](./packages/ts-config/README.md)
+- [Shared ESLint Configuration](./packages/eslint-config/README.md) (`./packages/eslint-config`)
+- [Shared TypeScript Configuration](./packages/ts-config/README.md) (`./packages/ts-config`)
 
 ## Tasks
 
@@ -105,69 +107,73 @@ pnpm changeset tag
 ```sh
 # format files with prettier
 pnpm run format
+
+# check formatting of files with prettier
+pnpm run format:check
 ```
 
 > See also https://pnpm.io/cli/run
 
 ## Workflows
 
-### Continuous Integration (CI)
+### Pull Request
 
-[See workflow](./.github/workflows/ci.yml)
+[.github/workflows/pull-request.yml](./.github/workflows/pull-request.yml)
 
 #### Events
 
-- `push`
-- `pull_request`
+- `pull_request` with base branch `main`
+
+#### Jobs
+
+- `lint`
+  - 🔦 Lint pull request title
+  - 📝 Check changeset status
+
+### Integration
+
+[.github/workflows/integration.yml](./.github/workflows/integration.yml)
+
+#### Events
+
+- `pull_request` with base branch `main`
 
 #### Jobs
 
 - `security`
-  - run https://github.com/snyk/actions
+  - 🐾 Audit dependencies
 - `licenses`
-  - run https://github.com/fossas/fossa-action
+  - 🔦 Scan licenses
+  - 🧪 Validate licenses
 - `test`
-  - run typecheck
-  - run lint
-  - run tests and check coverage threshold
-- `versioning`
-  - _all previous jobs need to be successful_
-  - _starts on `push` to `main` branch_
-  - create pull request to update workspace versions and changelogs
-  - create workspace version tags (requires merged pull request from step before)
-- `vite-ignore`
-  - _all previous jobs need to be successful_
-  - _starts on `push` to `main` branch and only when changesets were applied_
-  - checks if app was changed
-- `vite-build`
-  - _all previous jobs need to be successful_
-  - _starts on `push` to `main` branch and only when the app was changed_
-  - build app
-  - upload builded app as artifact
+  - 🖍️ Check formatting
+  - 🛡️ Typecheck projects
+  - 🔦 Lint projects
+  - 🧪 Test coverage
 
 #### Secrets
 
 - `FOSSA_API_KEY` see https://docs.fossa.com/docs/api-reference
 - `SNYK_TOKEN` see https://docs.snyk.io/features/user-and-group-management/authentication/authentication-for-third-party-tools
 
-### Pull Request (PR)
+### Deployment
 
-[See workflow](./.github/workflows/pr.yml)
+[.github/workflows/deployment.yml](./.github/workflows/deployment.yml)
 
 #### Events
 
-- `pull_request`
+- `push` with base branch `main`
 
 #### Jobs
 
-- `lint`
-  - run commitlint on pull request title
-  - run changeset status report
+- `versioning`
+  - 📝 Process changesets
+- `status` needs `versioning`
+  - 🪄 Analyze vite
+- `vite` needs `status`
+  - 🏗️ Build
+  - 🚀 Upload
 
-## License
-
-MIT License
-
-Copyright (c) 2022 Kevin Porten
+## Licenses
 
 [![FOSSA Status](https://app.fossa.com/api/projects/custom%2B27173%2Fgithub.com%2Fkporten%2Ftemplate-react.svg?type=large)](https://app.fossa.com/projects/custom%2B27173%2Fgithub.com%2Fkporten%2Ftemplate-react?ref=badge_large)

@@ -6,7 +6,6 @@
     "dev": "next dev --port=5171",
     "build": "next build",
     "preview": "next start --port=5171",
-    "start": "next start",
     "lint": "TIMING=1 next lint",
     "typecheck": "tsc"
   },
