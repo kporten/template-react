@@ -1,24 +1,4 @@
 {
   "$schema": "https://json.schemastore.org/eslintrc",
-  "extends": ["./react", "plugin:@next/next/recommended"],
-  "rules": {
-    "jsx-a11y/anchor-is-valid": "off",
-    "react/jsx-props-no-spreading": "off"
-  },
-  "overrides": [
-    {
-      "files": ["*.tsx"],
-      "rules": {
-        "unicorn/filename-case": [
-          "error",
-          {
-            "cases": {
-              "pascalCase": true
-            },
-            "ignore": ["^_*"]
-          }
-        ]
-      }
-    }
-  ]
+  "extends": ["./react", "plugin:@next/next/recommended", "prettier"]
 }

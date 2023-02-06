@@ -4,7 +4,7 @@
 module.exports = {
   content: [
     'index.html',
-    'src/**/*.tsx',
+    './src/**/*.tsx',
     // add paths of imported packages if tailwind is used
     // '../packages/ui/**/*.tsx'
   ],

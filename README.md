@@ -1,9 +1,8 @@
 # Template React
 
-![license](https://img.shields.io/github/license/kporten/template-react)
-![tag](https://img.shields.io/github/v/tag/kporten/template-react)
-![last-commit](https://img.shields.io/github/last-commit/kporten/template-react)
-![ci](https://github.com/kporten/template-react/workflows/ci/badge.svg?branch=main&event=push)
+![license](https://img.shields.io/github/license/kporten/template-react?style=for-the-badge)
+![tag](https://img.shields.io/github/v/tag/kporten/template-react?style=for-the-badge)
+![last-commit](https://img.shields.io/github/last-commit/kporten/template-react?style=for-the-badge)
 
 This monorepo template allows you to start immediately with a [React](https://reactjs.org) ([TypeScript](https://www.typescriptlang.org)) single-page app ([Vite](https://vitejs.dev)) or web app ([Next.js](https://nextjs.org)), but it can also be used for any other type of web app or service.
 
@@ -53,8 +52,8 @@ pnpm turbo dev
 
 ### Packages
 
-- [Shared ESLint Configuration](./packages/eslint-config/README.md) (`./packages/eslint-config`)
-- [Shared TypeScript Configuration](./packages/ts-config/README.md) (`./packages/ts-config`)
+- [Shared ESLint Configurations](./packages/eslint-config/README.md) (`./packages/eslint-config`)
+- [Shared TypeScript Configurations](./packages/ts-config/README.md) (`./packages/ts-config`)
 
 ## Tasks
 
@@ -81,6 +80,12 @@ pnpm turbo test:coverage
 
 # typecheck all workspaces
 pnpm turbo typecheck
+
+# format files with prettier (root script)
+pnpm turbo format
+
+# check formatting of files with prettier (root script)
+pnpm turbo format:check
 ```
 
 > Use `--filter` to run a task only in specified workspaces (https://turborepo.org/docs/core-concepts/filtering)
@@ -101,18 +106,6 @@ pnpm changeset tag
 ```
 
 > See also https://github.com/changesets/changesets/blob/main/packages/cli/README.md
-
-### Scripts
-
-```sh
-# format files with prettier
-pnpm run format
-
-# check formatting of files with prettier
-pnpm run format:check
-```
-
-> See also https://pnpm.io/cli/run
 
 ## Workflows
 

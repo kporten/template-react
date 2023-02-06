@@ -1,6 +1,6 @@
 import { render, type RenderOptions } from '@testing-library/react';
 
-import TestProvider from '@/test/providers/TestProvider';
+import TestProvider from '@/test/providers/test-provider';
 
 export const renderWithProvider = (
   ui: React.ReactElement,

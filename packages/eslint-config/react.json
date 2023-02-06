@@ -9,18 +9,17 @@
     }
   },
   "extends": [
-    "./base",
+    "./typescript",
     "plugin:react/recommended",
     "plugin:react/jsx-runtime",
     "plugin:react-hooks/recommended",
     "plugin:jsx-a11y/recommended",
-    "prettier"
+    "plugin:tailwindcss/recommended"
   ],
   "plugins": ["formatjs"],
   "rules": {
     "formatjs/enforce-default-message": ["error", "literal"],
     "formatjs/enforce-id": "error",
-    "formatjs/no-camel-case": "error",
     "formatjs/no-multiple-plurals": "error",
     "formatjs/no-multiple-whitespaces": "error",
     "formatjs/no-offset": "error",
@@ -56,9 +55,8 @@
           "error",
           {
             "cases": {
-              "pascalCase": true
-            },
-            "ignore": ["\\.test\\.tsx$"]
+              "kebabCase": true
+            }
           }
         ],
         "unicorn/prefer-top-level-await": "off"

@@ -6,24 +6,25 @@
     "dev": "next dev --port=5171",
     "build": "next build",
     "preview": "next start --port=5171",
-    "lint": "TIMING=1 next lint",
+    "lint": "next lint",
     "typecheck": "tsc"
   },
   "dependencies": {
-    "next": "12.3.0",
+    "@next/font": "13.1.6",
+    "next": "13.1.6",
     "react": "18.2.0",
-    "react-dom": "18.2.0",
-    "sharp": "0.31.0"
+    "react-dom": "18.2.0"
   },
   "devDependencies": {
-    "@template-react/eslint-config": "workspace:*",
-    "@template-react/ts-config": "workspace:*",
-    "@types/node": "18.7.16",
-    "@types/react": "18.0.19",
-    "autoprefixer": "10.4.8",
-    "eslint": "8.25.0",
-    "postcss": "8.4.16",
-    "tailwindcss": "3.1.8",
-    "typescript": "4.8.3"
+    "@template-react/eslint-config": "workspace:0.0.0",
+    "@template-react/ts-config": "workspace:0.0.0",
+    "@types/node": "18.11.19",
+    "@types/react": "18.0.27",
+    "@types/react-dom": "18.0.10",
+    "autoprefixer": "10.4.13",
+    "eslint": "8.33.0",
+    "postcss": "8.4.21",
+    "tailwindcss": "3.2.4",
+    "typescript": "4.9.5"
   }
 }

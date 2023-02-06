@@ -45,7 +45,7 @@ jobs:
       - name: ⚙️ Setup
         uses: ./.github/actions/setup
       - name: 🖍️ Check formatting
-        run: pnpm format:check
+        run: pnpm turbo format:check
       - name: 🛡️ Typecheck projects
         run: pnpm turbo typecheck
       - name: 🔦 Lint projects

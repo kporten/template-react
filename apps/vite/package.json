@@ -32,8 +32,8 @@
   "devDependencies": {
     "@formatjs/cli": "5.1.0",
     "@headlessui/tailwindcss": "0.1.1",
-    "@template-react/eslint-config": "workspace:*",
-    "@template-react/ts-config": "workspace:*",
+    "@template-react/eslint-config": "workspace:0.0.0",
+    "@template-react/ts-config": "workspace:0.0.0",
     "@testing-library/dom": "8.17.1",
     "@testing-library/react": "13.4.0",
     "@testing-library/user-event": "14.4.3",

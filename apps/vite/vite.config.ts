@@ -9,7 +9,7 @@ export default defineConfig({
   plugins: [
     reactPlugin(),
     webfontPlugin([
-      'https://fonts.googleapis.com/css2?family=Leckerli+One&display=swap',
+      'https://fonts.googleapis.com/css2?family=Leckerli+One&display=optional',
     ]),
   ],
   resolve: {

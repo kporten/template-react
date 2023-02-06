@@ -4,7 +4,7 @@ import { createRoot } from 'react-dom/client';
 import { initMonitoring } from '@/utils/monitoring';
 import { reportWebVitals } from '@/utils/web-vitals';
 
-import App from './App';
+import App from './app';
 import './index.css';
 
 // render app

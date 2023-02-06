@@ -30,6 +30,8 @@
     "typecheck": {
       "dependsOn": ["^build"],
       "inputs": ["**/*.tsx", "**/*.ts"]
-    }
+    },
+    "//#format": {},
+    "//#format:check": {}
   }
 }
