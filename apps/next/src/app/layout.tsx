@@ -1,11 +1,11 @@
 import '@/styles/global.css';
 import { leckerliOne } from '@/utils/fonts';
 
-type RootLayoutProps = {
+export default function RootLayout({
+  children,
+}: {
   children: React.ReactNode;
-};
-
-export default function RootLayout({ children }: RootLayoutProps) {
+}) {
   return (
     <html lang="en" className={leckerliOne.variable}>
       <body>

@@ -1,7 +1,3 @@
-type TextProps = {
-  children: React.ReactNode;
-};
-
-export default function Text({ children }: TextProps) {
+export default function Text({ children }: { children: React.ReactNode }) {
   return <span className="text-base md:text-lg">{children}</span>;
 }

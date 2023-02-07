@@ -48,6 +48,9 @@ pnpm turbo typecheck --filter=vite
 ### Scripts
 
 ```sh
+# open test ui and watch
+pnpm --filter=vite test:ui
+
 # extract and compile intl messages
 pnpm --filter=vite intl
 
@@ -59,7 +62,4 @@ pnpm --filter=vite intl:compile
 
 # clean extracted intl messages
 pnpm --filter=vite intl:clean
-
-# open test ui and watch
-pnpm --filter=vite test:ui
 ```

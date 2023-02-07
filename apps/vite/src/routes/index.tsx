@@ -12,7 +12,7 @@ export default function Index() {
         <title>
           {intl.formatMessage({
             id: 'routes.index.title',
-            defaultMessage: 'Welcome',
+            defaultMessage: 'Index',
           })}
         </title>
       </Helmet>

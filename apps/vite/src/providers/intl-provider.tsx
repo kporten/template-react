@@ -1,4 +1,4 @@
-import { useAtom } from 'jotai';
+import { useAtomValue } from 'jotai';
 import { IntlProvider as Provider } from 'react-intl';
 
 import en from '@/messages/en.json';
@@ -6,12 +6,12 @@ import { LOCALE_DEFAULT, localeAtom } from '@/store/locale';
 
 const messages = { en };
 
-type IntlProviderProps = {
+export default function IntlProvider({
+  children,
+}: {
   children: React.ReactNode;
-};
-
-export default function IntlProvider({ children }: IntlProviderProps) {
-  const [locale] = useAtom(localeAtom);
+}) {
+  const locale = useAtomValue(localeAtom);
 
   return (
     <Provider

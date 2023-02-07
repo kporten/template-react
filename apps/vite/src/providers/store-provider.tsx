@@ -1,13 +1,24 @@
-import { Provider } from 'jotai';
+import { createStore, Provider } from 'jotai';
+import { useHydrateAtoms } from 'jotai/utils';
 
-type StoreProviderProps = {
-  children: React.ReactNode;
-  values?: React.ComponentPropsWithoutRef<typeof Provider>['initialValues'];
-};
+const store = createStore();
 
 export default function StoreProvider({
-  values,
   children,
-}: StoreProviderProps) {
-  return <Provider initialValues={values}>{children}</Provider>;
+}: {
+  children: React.ReactNode;
+}) {
+  return <Provider store={store}>{children}</Provider>;
+}
+
+export function HydrateAtoms({
+  initialValues,
+  children,
+}: {
+  initialValues: Parameters<typeof useHydrateAtoms>[0];
+  children: React.ReactElement;
+}) {
+  useHydrateAtoms(initialValues);
+
+  return children;
 }

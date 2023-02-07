@@ -1,11 +1,7 @@
-import { ErrorBoundary } from '@sentry/react';
 import { Helmet } from 'react-helmet-async';
 import { useIntl } from 'react-intl';
-import { Outlet } from 'react-router-dom';
 
-import Fallback from '@/components/fallback';
-
-export default function Frame() {
+export default function Frame({ children }: { children: React.ReactNode }) {
   const intl = useIntl();
   const [lang] = intl.locale.split('-');
 
@@ -29,9 +25,7 @@ export default function Frame() {
         />
       </Helmet>
       <div className="grid min-h-[100dvh] place-items-center p-4 dark:bg-gray-900 dark:text-gray-100">
-        <ErrorBoundary fallback={Fallback} showDialog>
-          <Outlet />
-        </ErrorBoundary>
+        {children}
       </div>
     </>
   );
