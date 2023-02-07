@@ -9,18 +9,17 @@
     }
   },
   "extends": [
-    "./base",
+    "./typescript",
     "plugin:react/recommended",
     "plugin:react/jsx-runtime",
     "plugin:react-hooks/recommended",
     "plugin:jsx-a11y/recommended",
-    "prettier"
+    "plugin:tailwindcss/recommended"
   ],
   "plugins": ["formatjs"],
   "rules": {
     "formatjs/enforce-default-message": ["error", "literal"],
     "formatjs/enforce-id": "error",
-    "formatjs/no-camel-case": "error",
     "formatjs/no-multiple-plurals": "error",
     "formatjs/no-multiple-whitespaces": "error",
     "formatjs/no-offset": "error",
@@ -45,7 +44,6 @@
     "react/jsx-props-no-spreading": "error",
     "react/jsx-no-useless-fragment": "error",
     "react/jsx-pascal-case": "error",
-    "react/no-multi-comp": "error",
     "react/prop-types": "off"
   },
   "overrides": [
@@ -56,9 +54,8 @@
           "error",
           {
             "cases": {
-              "pascalCase": true
-            },
-            "ignore": ["\\.test\\.tsx$"]
+              "kebabCase": true
+            }
           }
         ],
         "unicorn/prefer-top-level-await": "off"

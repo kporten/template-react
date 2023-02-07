@@ -1,0 +1,54 @@
+name: Integration
+
+on:
+  pull_request:
+    types: [opened, reopened, synchronize]
+    branches: [main]
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  security:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 📥 Checkout
+        uses: actions/checkout@v3
+      - name: 🐾 Audit dependencies
+        uses: snyk/actions/node@master
+        with:
+          args: --severity-threshold=high --fail-on=all
+        env:
+          SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
+
+  licenses:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 📥 Checkout
+        uses: actions/checkout@v3
+      - name: 🔦 Scan licenses
+        uses: fossas/fossa-action@main
+        with:
+          api-key: ${{ secrets.FOSSA_API_KEY }}
+      - name: 🧪 Validate licenses
+        uses: fossas/fossa-action@main
+        with:
+          api-key: ${{ secrets.FOSSA_API_KEY }}
+          run-tests: true
+
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 📥 Checkout
+        uses: actions/checkout@v3
+      - name: ⚙️ Setup
+        uses: ./.github/actions/setup
+      - name: 🖍️ Check formatting
+        run: pnpm turbo format:check
+      - name: 🛡️ Typecheck projects
+        run: pnpm turbo typecheck
+      - name: 🔦 Lint projects
+        run: pnpm turbo lint
+      - name: 🧪 Test coverage
+        run: pnpm turbo test:coverage

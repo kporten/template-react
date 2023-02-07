@@ -1,8 +1,10 @@
-// https://nextjs.org/docs/api-reference/next.config.js/introduction
+// https://beta.nextjs.org/docs/api-reference/next.config.js
 
 /** @type {import('next').NextConfig} */
 module.exports = {
-  poweredByHeader: false,
+  experimental: {
+    appDir: true,
+  },
   reactStrictMode: true,
   swcMinify: true,
 };

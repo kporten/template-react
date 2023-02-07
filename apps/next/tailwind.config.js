@@ -1,17 +1,18 @@
 // https://tailwindcss.com/docs/configuration
 
+const defaultTheme = require('tailwindcss/defaultTheme');
+
 /** @type {import('tailwindcss/types').Config} */
 module.exports = {
   content: [
-    'index.html',
-    'src/**/*.tsx',
+    './src/**/*.tsx',
     // add paths of imported packages if tailwind is used
     // ../packages/ui/**/*.tsx
   ],
   theme: {
     extend: {
       fontFamily: {
-        template: ['Leckerli One'],
+        template: ['var(--font-leckerli-one)', ...defaultTheme.fontFamily.sans],
       },
     },
   },

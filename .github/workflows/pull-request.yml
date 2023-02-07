@@ -1,0 +1,27 @@
+name: Pull Request
+
+on:
+  pull_request:
+    types: [opened, reopened, edited, synchronize]
+    branches: [main]
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 📥 Checkout
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+      - name: ⚙️ Setup
+        uses: ./.github/actions/setup
+      - name: 🔦 Lint pull request title
+        run: pnpm commitlint <<< "$TITLE"
+        env:
+          TITLE: ${{ github.event.pull_request.title }}
+      - name: 📝 Check changeset status
+        run: pnpm changeset status --since=origin/main
