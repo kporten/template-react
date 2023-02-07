@@ -11,8 +11,8 @@ export default function Index() {
       <Helmet>
         <title>
           {intl.formatMessage({
-            id: 'routes.index.title',
-            defaultMessage: 'Index',
+            id: 'routes.index.welcome',
+            defaultMessage: 'Welcome',
           })}
         </title>
       </Helmet>
