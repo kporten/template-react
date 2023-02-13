@@ -37,7 +37,6 @@
       "inputs": ["**/*.tsx", "**/*.ts"]
     },
     "intl": {
-      "dependsOn": ["^build"],
       "inputs": ["**/*.tsx", "**/*.ts"],
       "outputs": ["src/messages/*.json"]
     },
