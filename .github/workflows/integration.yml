@@ -31,11 +31,12 @@ jobs:
         uses: fossas/fossa-action@main
         with:
           api-key: ${{ secrets.FOSSA_API_KEY }}
-          branch: ${{ github.ref_name }}
+          branch: ${{ github.ref }}
       - name: 🧪 Validate licenses
         uses: fossas/fossa-action@main
         with:
           api-key: ${{ secrets.FOSSA_API_KEY }}
+          branch: ${{ github.ref }}
           run-tests: true
 
   test:
