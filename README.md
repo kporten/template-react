@@ -75,11 +75,17 @@ pnpm turbo lint
 # test all workspaces
 pnpm turbo test
 
-# test (with coverage check) all workspaces
+# test all workspaces with coverage check
 pnpm turbo test:coverage
+
+# test all workspaces with browser UI
+pnpm turbo test:ui --filter=vite
 
 # typecheck all workspaces
 pnpm turbo typecheck
+
+# extract and compile intl messages in all workspaces
+pnpm turbo intl
 
 # format files with prettier (root script)
 pnpm turbo format
@@ -135,9 +141,6 @@ pnpm changeset tag
 
 - `security`
   - 🐾 Audit dependencies
-- `licenses`
-  - 🔦 Scan licenses
-  - 🧪 Validate licenses
 - `test`
   - 🖍️ Check formatting
   - 🛡️ Typecheck projects
@@ -166,6 +169,42 @@ pnpm changeset tag
 - `vite` needs `status`
   - 🏗️ Build
   - 🚀 Upload
+
+### Report
+
+[.github/workflows/report.yml](./.github/workflows/report.yml)
+
+#### Events
+
+- `schedule` with cron definition to run on a regular base
+- `workflow_dispatch` to run the workflow manually
+
+#### Jobs
+
+- `licenses`
+  - 🔦 Scan licenses
+  - 🔎 Validate licenses
+- `security`
+  - 🐾 Audit dependencies
+
+## Repository Settings
+
+- **Branches**
+  - Branch protection rules
+    - `main`
+      - ✅ Require a pull request before merging
+      - ✅ Require status checks to pass before merging
+        - ✅ Require branches to be up to date before merging
+        - Status checks that are required.
+          - `test`
+          - `security`
+          - `lint`
+      - ✅ Require linear history
+- **Actions**
+  - General
+    - Workflow permissions
+      - ✅ Read and write permissions
+      - ✅ Allow GitHub Actions to create and approve pull requests
 
 ## Licenses
 

@@ -27,9 +27,19 @@
       "inputs": ["**/*.tsx", "**/*.ts"],
       "outputs": ["coverage/**"]
     },
+    "test:ui": {
+      "dependsOn": ["^build"],
+      "cache": false,
+      "persistent": true
+    },
     "typecheck": {
       "dependsOn": ["^build"],
       "inputs": ["**/*.tsx", "**/*.ts"]
+    },
+    "intl": {
+      "dependsOn": ["^build"],
+      "inputs": ["**/*.tsx", "**/*.ts"],
+      "outputs": ["src/messages/*.json"]
     },
     "//#format": {},
     "//#format:check": {}
