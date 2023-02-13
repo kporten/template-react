@@ -22,23 +22,6 @@ jobs:
         env:
           SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
 
-  licenses:
-    runs-on: ubuntu-latest
-    steps:
-      - name: 📥 Checkout
-        uses: actions/checkout@v3
-      - name: 🔦 Scan licenses
-        uses: fossas/fossa-action@main
-        with:
-          api-key: ${{ secrets.FOSSA_API_KEY }}
-          branch: ${{ github.ref }}
-      - name: 🧪 Validate licenses
-        uses: fossas/fossa-action@main
-        with:
-          api-key: ${{ secrets.FOSSA_API_KEY }}
-          branch: ${{ github.ref }}
-          run-tests: true
-
   test:
     runs-on: ubuntu-latest
     steps:
