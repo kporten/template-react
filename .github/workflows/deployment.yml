@@ -10,8 +10,6 @@ concurrency:
 jobs:
   versioning:
     runs-on: ubuntu-latest
-    permissions:
-      contents: write
     outputs:
       published: ${{ steps.changesets.outputs.published }}
     steps:
