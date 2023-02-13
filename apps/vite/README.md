@@ -38,22 +38,22 @@ pnpm turbo lint --filter=vite
 # test workspace
 pnpm turbo test --filter=vite
 
-# test (with coverage check) workspace
+# test workspace with coverage check
 pnpm turbo test:coverage --filter=vite
+
+# test workspace with browser UI
+pnpm turbo test:ui --filter=vite
 
 # typecheck workspace
 pnpm turbo typecheck --filter=vite
+
+# extract and compile intl messages in workspace
+pnpm turbo intl --filter=vite
 ```
 
 ### Scripts
 
 ```sh
-# open test ui and watch
-pnpm --filter=vite test:ui
-
-# extract and compile intl messages
-pnpm --filter=vite intl
-
 # extract intl messages
 pnpm --filter=vite intl:extract
 

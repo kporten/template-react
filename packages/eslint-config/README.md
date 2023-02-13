@@ -23,8 +23,8 @@ Add `eslint-config` to your `.eslintrc` config file.
 
 The following configurations are available:
 
-- [typescript](./typescript.json) - TypeScript base rules (includes parser config)
-- [react](./react.json) - React rules (extends `typescript` config)
+- [base](./base.json) - Base rules (includes parser config for TypeScript)
+- [react](./react.json) - React rules (extends `base` config)
 - [next](./next.json) - Next.js project default rules (extends `react` config)
 - [vite](./vite.json) - Vite project default rules (extends `react` config)
 

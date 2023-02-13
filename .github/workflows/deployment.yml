@@ -32,12 +32,13 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
   status:
-    if: ${{ needs.versioning.outputs.published == 'true' }}
+    if: needs.versioning.outputs.published == 'true'
     needs:
       - versioning
     runs-on: ubuntu-latest
     outputs:
       vite-ignore: ${{ steps.vite.outputs.ignore }}
+      next-ignore: ${{ steps.next.outputs.ignore }}
     steps:
       - name: 📥 Checkout
         uses: actions/checkout@v3
@@ -45,14 +46,19 @@ jobs:
           fetch-depth: 0
       - name: ⚙️ Setup
         uses: ./.github/actions/setup
-      - name: 🪄 Analyze vite
+      - name: 🪄 Analyze vite app
         id: vite
         uses: ./.github/actions/ignore
         with:
           workspace: vite
+      - name: 🪄 Analyze next app
+        id: next
+        uses: ./.github/actions/ignore
+        with:
+          workspace: next
 
   vite:
-    if: ${{ needs.status.outputs.vite-ignore == 'false' }}
+    if: needs.status.outputs.vite-ignore == 'false'
     needs:
       - status
     runs-on: ubuntu-latest
@@ -70,3 +76,17 @@ jobs:
           path: ./apps/vite/dist
           if-no-files-found: error
           retention-days: 1
+
+  next:
+    if: needs.status.outputs.next-ignore == 'false'
+    needs:
+      - status
+    runs-on: ubuntu-latest
+    steps:
+      - name: 📥 Checkout
+        uses: actions/checkout@v3
+      - name: ⚙️ Setup
+        uses: ./.github/actions/setup
+      - name: 🏗️ Build
+        run: pnpm turbo build --filter=next...
+        # e.g. https://nextjs.org/docs/advanced-features/output-file-tracing
