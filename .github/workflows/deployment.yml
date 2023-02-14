@@ -68,7 +68,7 @@ jobs:
       - name: ⚙️ Setup
         uses: ./.github/actions/setup
       - name: 🏗️ Build
-        run: pnpm turbo build --filter=vite...
+        run: pnpm turbo build --filter=vite
       - name: 🚀 Upload
         uses: actions/upload-artifact@v3
         with:
@@ -88,5 +88,5 @@ jobs:
       - name: ⚙️ Setup
         uses: ./.github/actions/setup
       - name: 🏗️ Build
-        run: pnpm turbo build --filter=next...
+        run: pnpm turbo build --filter=next
         # e.g. https://nextjs.org/docs/advanced-features/output-file-tracing
