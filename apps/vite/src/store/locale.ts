@@ -1,19 +1,19 @@
-import * as IntlLocaleMatcher from '@formatjs/intl-localematcher';
+import { match as matchLocale } from '@formatjs/intl-localematcher';
 import { atom } from 'jotai';
 
-export type Locale = keyof typeof LOCALES;
+export type Locale = keyof typeof availableLocales;
 
-export const LOCALES = {
+export const availableLocales = {
   en: 'English',
 } as const;
 
-export const LOCALE_DEFAULT: Locale = 'en';
+export const defaultLocale: Locale = 'en';
 
 export const localeAtom = atom(
-  IntlLocaleMatcher.match(
+  matchLocale(
     navigator.languages as string[],
-    Object.keys(LOCALES),
-    LOCALE_DEFAULT,
+    Object.keys(availableLocales),
+    defaultLocale,
     { algorithm: 'best fit' },
   ) as Locale,
 );

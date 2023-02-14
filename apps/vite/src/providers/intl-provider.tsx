@@ -2,7 +2,7 @@ import { useAtomValue } from 'jotai';
 import { IntlProvider as Provider } from 'react-intl';
 
 import en from '@/messages/en.json';
-import { LOCALE_DEFAULT, localeAtom } from '@/store/locale';
+import { defaultLocale, localeAtom } from '@/store/locale';
 
 const messages = { en };
 
@@ -17,7 +17,7 @@ export default function IntlProvider({
     <Provider
       messages={messages[locale]}
       locale={locale}
-      defaultLocale={LOCALE_DEFAULT}
+      defaultLocale={defaultLocale}
     >
       {children}
     </Provider>

@@ -71,7 +71,7 @@
       },
       {
         "selector": ["variable"],
-        "format": ["strictCamelCase", "StrictPascalCase", "UPPER_CASE"]
+        "format": ["strictCamelCase", "StrictPascalCase"]
       },
       {
         "selector": ["typeProperty"],
