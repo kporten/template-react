@@ -10,7 +10,9 @@
     "typecheck": "tsc"
   },
   "dependencies": {
+    "@formatjs/intl-localematcher": "0.2.32",
     "@next/font": "13.1.6",
+    "negotiator": "0.6.3",
     "next": "13.1.6",
     "react": "18.2.0",
     "react-dom": "18.2.0"
@@ -18,6 +20,7 @@
   "devDependencies": {
     "@template-react/eslint-config": "workspace:0.0.0",
     "@template-react/ts-config": "workspace:0.0.0",
+    "@types/negotiator": "0.6.1",
     "@types/node": "18.13.0",
     "@types/react": "18.0.28",
     "@types/react-dom": "18.0.10",
