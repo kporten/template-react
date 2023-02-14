@@ -1,3 +1,5 @@
+// https://beta.nextjs.org/docs/api-reference/file-conventions/head
+
 export default function Head() {
   return (
     <>

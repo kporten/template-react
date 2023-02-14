@@ -1,7 +1,10 @@
+// https://beta.nextjs.org/docs/api-reference/file-conventions/layout
+
 import '@/styles/global.css';
 import { leckerliOne } from '@/utils/fonts';
 import { availableLocales } from '@/utils/locales';
 
+// https://beta.nextjs.org/docs/api-reference/generate-static-params
 export function generateStaticParams() {
   return availableLocales.map((locale) => ({ locale }));
 }

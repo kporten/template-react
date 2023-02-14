@@ -1,3 +1,5 @@
+// https://beta.nextjs.org/docs/guides/internationalization
+
 import { match as matchLocale } from '@formatjs/intl-localematcher';
 import Negotiator from 'negotiator';
 import { type NextRequest, NextResponse } from 'next/server';
