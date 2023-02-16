@@ -12,7 +12,7 @@ The template takes away the work of having to assemble and configure all the [to
 
 1. Clone the template: `npx degit kporten/template-react my-project`
 
-2. Configure `.env` files per app (see workspace README files)
+2. Follow the instructions in the `Setup` section in each app workspace (e.g. configure `.env`)
 
 3. Execute the following commands in your terminal:
 

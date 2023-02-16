@@ -38,6 +38,7 @@ jobs:
     runs-on: ubuntu-latest
     outputs:
       vite-ignore: ${{ steps.vite.outputs.ignore }}
+      trpc-ignore: ${{ steps.trpc.outputs.ignore }}
       next-ignore: ${{ steps.next.outputs.ignore }}
     steps:
       - name: 📥 Checkout
@@ -51,6 +52,11 @@ jobs:
         uses: ./.github/actions/ignore
         with:
           workspace: vite
+      - name: 🪄 Analyze trpc app
+        id: trpc
+        uses: ./.github/actions/ignore
+        with:
+          workspace: trpc
       - name: 🪄 Analyze next app
         id: next
         uses: ./.github/actions/ignore
@@ -69,13 +75,28 @@ jobs:
         uses: ./.github/actions/setup
       - name: 🏗️ Build
         run: pnpm turbo build --filter=vite
-      - name: 🚀 Upload
-        uses: actions/upload-artifact@v3
-        with:
-          name: vite
-          path: ./apps/vite/dist
-          if-no-files-found: error
-          retention-days: 1
+      # - name: 🚀 Deploy
+      #   uses: actions/upload-artifact@v3
+      #   with:
+      #     name: vite
+      #     path: ./apps/vite/dist
+      #     if-no-files-found: error
+      #     retention-days: 1
+
+  trpc:
+    if: needs.status.outputs.trpc-ignore == 'false'
+    needs:
+      - status
+    runs-on: ubuntu-latest
+    steps:
+      - name: 📥 Checkout
+        uses: actions/checkout@v3
+      - name: ⚙️ Setup
+        uses: ./.github/actions/setup
+      - name: 🏗️ Build
+        run: pnpm turbo build --filter=trpc
+      # - name: 🚀 Deploy
+      #   run:
 
   next:
     if: needs.status.outputs.next-ignore == 'false'
@@ -89,4 +110,5 @@ jobs:
         uses: ./.github/actions/setup
       - name: 🏗️ Build
         run: pnpm turbo build --filter=next
-        # e.g. https://nextjs.org/docs/advanced-features/output-file-tracing
+      # - name: 🚀 Deploy
+      #   run:
