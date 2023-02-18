@@ -1,18 +1,30 @@
 // https://beta.nextjs.org/docs/api-reference/next.config.js
 
-/** @type {import('next').NextConfig} */
-module.exports = {
-  experimental: {
-    appDir: true,
-  },
-  reactStrictMode: true,
-  swcMinify: true,
-  headers: () => [
-    {
-      source: '/:path*',
-      headers: securityHeaders,
+const { PHASE_DEVELOPMENT_SERVER } = require('next/constants');
+
+module.exports = (phase) => {
+  /** @type {import('next').NextConfig} */
+  const config = {
+    experimental: {
+      appDir: true,
     },
-  ],
+    reactStrictMode: true,
+    swcMinify: true,
+    headers: () => {
+      const headers = [];
+
+      if (phase !== PHASE_DEVELOPMENT_SERVER) {
+        headers.push({
+          source: '/:path*',
+          headers: securityHeaders,
+        });
+      }
+
+      return headers;
+    },
+  };
+
+  return config;
 };
 
 // https://nextjs.org/docs/advanced-features/security-headers
