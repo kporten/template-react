@@ -1,11 +1,13 @@
-import { cn } from '@/utils/class-names';
+import { cn } from '@/utils/styles';
 
 export default function Headline({
   children,
+  className,
   level,
   variant = 'default',
 }: {
   children: React.ReactNode;
+  className?: string;
   level?: 1 | 2 | 3 | 4 | 5 | 6;
   variant?: 'default' | 'error';
 }) {
@@ -18,6 +20,7 @@ export default function Headline({
         variant === 'error'
           ? 'from-red-400 to-red-500'
           : 'from-sky-400 to-sky-800',
+        className,
       )}
     >
       {children}

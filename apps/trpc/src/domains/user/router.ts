@@ -5,10 +5,10 @@ import { procedure, router } from '@/utils/trpc';
 import { getById, getList } from './service';
 
 export default router({
-  getById: procedure.input(z.string()).query(({ input }) => {
+  byId: procedure.input(z.string()).query(({ input }) => {
     return getById(input);
   }),
-  getList: procedure.query(() => {
+  list: procedure.query(() => {
     return getList();
   }),
 });

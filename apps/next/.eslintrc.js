@@ -8,7 +8,7 @@ module.exports = {
   extends: '@template-react/eslint-config/next',
   settings: {
     tailwindcss: {
-      config: path.resolve('./tailwind.config.js'),
+      config: path.join(__dirname, './tailwind.config.js'),
     },
   },
   rules: {

@@ -30,7 +30,7 @@
   ],
   "rules": {
     "eqeqeq": ["error", "always"],
-    "max-params": ["error", 2],
+    "max-params": ["error", 3],
     "no-console": [
       "error",
       {

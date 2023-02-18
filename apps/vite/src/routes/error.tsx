@@ -4,7 +4,7 @@ import { useIntl } from 'react-intl';
 import { isRouteErrorResponse, useRouteError } from 'react-router-dom';
 
 import Headline from '@/components/headline';
-import { cn } from '@/utils/class-names';
+import { cn } from '@/utils/styles';
 
 export default function Error() {
   const intl = useIntl();

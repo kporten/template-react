@@ -12,6 +12,7 @@ export default function Frame({ children }: { children: React.ReactNode }) {
         defaultTitle="template-react | vite"
       >
         <html lang={lang} />
+        <body className="dark:bg-gray-900 dark:text-gray-100" />
         <meta name="description" content="template-react" />
         <meta
           name="theme-color"
@@ -24,9 +25,7 @@ export default function Frame({ children }: { children: React.ReactNode }) {
           content="rgb(7 89 133)"
         />
       </Helmet>
-      <div className="grid min-h-[100dvh] place-items-center p-4 dark:bg-gray-900 dark:text-gray-100">
-        {children}
-      </div>
+      <div className="mx-auto min-h-[100dvh] max-w-3xl p-4">{children}</div>
     </>
   );
 }

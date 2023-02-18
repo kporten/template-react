@@ -2,7 +2,8 @@ import { useAtomValue } from 'jotai';
 import { IntlProvider as Provider } from 'react-intl';
 
 import en from '@/messages/en.json';
-import { defaultLocale, localeAtom } from '@/store/locale';
+import { localeAtom } from '@/store/locale';
+import { defaultLocale } from '@/utils/locales';
 
 const messages = { en };
 

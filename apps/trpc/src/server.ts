@@ -11,8 +11,9 @@ const app = express();
 
 app.use(cors);
 app.use(helmet);
-app.use('/', (req, res) => res.sendStatus(200));
 app.use('/trpc', trpc);
+
+app.get('/', (req, res) => res.sendStatus(200));
 
 app.listen(env.PORT, () => {
   console.info(`➜ Local: http://localhost:${env.PORT}`);
