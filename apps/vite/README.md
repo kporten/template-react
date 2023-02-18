@@ -2,21 +2,9 @@
 
 This is a template for a single-page app with [Vite](https://vitejs.dev) ([React](https://reactjs.org)).
 
-## Tech Stack
+## Setup
 
-- [Vite](https://vitejs.dev)
-- [React](https://reactjs.org)
-- [React Router](https://reactrouter.com)
-- [Tailwind CSS](https://tailwindcss.com)
-- [React Helmet](https://github.com/nfl/react-helmet)
-- [Format JS](https://formatjs.io)
-- [Headless UI](https://headlessui.dev)
-- [Heroicons](https://heroicons.com)
-- [Jotai](https://jotai.pmnd.rs)
-- [Vitest](https://vitest.dev)
-- [Testing Library](https://testing-library.com)
-- [Sentry](https://sentry.io)
-- [Web Vitals](https://github.com/GoogleChrome/web-vitals)
+- Copy `.env.example` and rename it to `.env`, then change the values if needed
 
 ## Tasks
 
@@ -63,3 +51,21 @@ pnpm --filter=vite intl:compile
 # clean extracted intl messages
 pnpm --filter=vite intl:clean
 ```
+
+## Tech Stack
+
+- [Vite](https://vitejs.dev)
+- [React](https://reactjs.org)
+- [React Router](https://reactrouter.com)
+- [Tailwind CSS](https://tailwindcss.com)
+- [React Helmet](https://github.com/nfl/react-helmet)
+- [Format JS](https://formatjs.io)
+- [Headless UI](https://headlessui.dev)
+- [Heroicons](https://heroicons.com)
+- [Jotai](https://jotai.pmnd.rs)
+- [tRPC](https://trpc.io)
+- [Vitest](https://vitest.dev)
+- [Testing Library](https://testing-library.com)
+- [Mock Service Worker](https://mswjs.io)
+- [Sentry](https://sentry.io)
+- [Web Vitals](https://github.com/GoogleChrome/web-vitals)

@@ -12,11 +12,9 @@ The template takes away the work of having to assemble and configure all the [to
 
 1. Clone the template: `npx degit kporten/template-react my-project`
 
-2. Replace all occurrences of `template-react` and `Template React` with the name of your project.
+2. Follow the instructions in the `Setup` section in each app workspace (e.g. configure `.env`)
 
-3. Adjust the information (e.g. the author name) in the files `package.json`, `LICENSE` and `README.md`.
-
-4. Execute the following commands in your terminal:
+3. Execute the following commands in your terminal:
 
 ```sh
 pnpm install
@@ -30,6 +28,7 @@ pnpm turbo dev
 ### Apps
 
 - [Next.js Template](./apps/next/README.md) (`./apps/next`)
+- [tRPC Template](./apps/trpc/README.md) (`./apps/trpc`)
 - [Vite (React) Template](./apps/vite/README.md) (`./apps/vite`)
 
 ### Packages
@@ -52,6 +51,7 @@ pnpm turbo dev
 ### Apps
 
 - [Next.js](https://nextjs.org) with [Tailwind CSS](https://tailwindcss.com)
+- [tRPC](https://trpc.io) with [Express](https://expressjs.com)
 - [Vite](https://vitejs.dev) with [React](https://reactjs.org), [Tailwind CSS](https://tailwindcss.com) and [Testing Library](https://testing-library.com)
 
 ### Repository Management

@@ -30,7 +30,7 @@
   ],
   "rules": {
     "eqeqeq": ["error", "always"],
-    "max-params": ["error", 2],
+    "max-params": ["error", 3],
     "no-console": [
       "error",
       {
@@ -45,6 +45,12 @@
         "ignoreDeclarationSort": true,
         "ignoreMemberSort": false,
         "allowSeparatedGroups": true
+      }
+    ],
+    "@typescript-eslint/array-type": [
+      "error",
+      {
+        "default": "array-simple"
       }
     ],
     "@typescript-eslint/consistent-type-definitions": ["error", "type"],

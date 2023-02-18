@@ -7,7 +7,7 @@ import { type NextRequest, NextResponse } from 'next/server';
 import { availableLocales, defaultLocale } from '@/utils/locales';
 
 export const config = {
-  matcher: '/((?!_next|api|favicon).*)',
+  matcher: '/((?!_next|favicon).*)',
 };
 
 export function middleware(req: NextRequest) {

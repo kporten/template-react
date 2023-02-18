@@ -1,3 +1,13 @@
-export default function Text({ children }: { children: React.ReactNode }) {
-  return <span className="text-base md:text-lg">{children}</span>;
+import { cn } from '@/utils/styles';
+
+export default function Text({
+  children,
+  className,
+}: {
+  children: React.ReactNode;
+  className?: string;
+}) {
+  return (
+    <span className={cn('text-base md:text-lg', className)}>{children}</span>
+  );
 }

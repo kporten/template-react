@@ -6,14 +6,14 @@ import Text from '@/components/text';
 
 export default function GettingStarted() {
   return (
-    <div className="text-center">
-      <Headline level={1}>
+    <>
+      <Headline level={1} className="text-center">
         <FormattedMessage
           id="features.welcome.components.getting-started.headline"
           defaultMessage="Template React"
         />
       </Headline>
-      <p className="mt-8">
+      <p className="mt-8 text-center">
         <Text>
           <FormattedMessage
             id="features.welcome.components.getting-started.description"
@@ -22,6 +22,6 @@ export default function GettingStarted() {
           />
         </Text>
       </p>
-    </div>
+    </>
   );
 }
