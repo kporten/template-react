@@ -16,7 +16,7 @@ runs:
   steps:
     - id: check
       run: |
-        if ! pnpm turbo-ignore ${{ inputs.workspace }}; then
+        if ! pnpm dlx turbo-ignore ${{ inputs.workspace }}; then
           echo "ignore=false" >> $GITHUB_OUTPUT
         else
           echo "ignore=true" >> $GITHUB_OUTPUT
