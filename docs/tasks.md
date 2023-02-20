@@ -37,8 +37,10 @@ pnpm turbo format
 pnpm turbo format:check
 ```
 
+> **Note**
 > Use `--filter` to run a task only in specified workspaces (https://turborepo.org/docs/core-concepts/filtering)
 
+> **Note**
 > See also https://turborepo.org/docs/reference/command-line-reference
 
 ## Changeset
@@ -54,4 +56,5 @@ pnpm changeset version
 pnpm changeset tag
 ```
 
+> **Note**
 > See also https://github.com/changesets/changesets/blob/main/packages/cli/README.md

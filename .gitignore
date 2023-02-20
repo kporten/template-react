@@ -1,16 +1,16 @@
 # Common
 .DS_Store
 .env
-.turbo/
+.turbo
 *.local
 *.log
 *.tsbuildinfo
-coverage/
-node_modules/
+coverage
+node_modules
 
 # Next
-.next/
+.next
 
 # Vite
-dist/
+dist
 stats.html
