@@ -26,6 +26,7 @@ importers:
       '@next/font': 13.1.6
       '@template-react/eslint-config': workspace:0.0.0
       '@template-react/ts-config': workspace:0.0.0
+      '@total-typescript/ts-reset': 0.3.7
       '@types/negotiator': 0.6.1
       '@types/node': 18.14.0
       '@types/react': 18.0.28
@@ -49,6 +50,7 @@ importers:
     devDependencies:
       '@template-react/eslint-config': link:../../packages/eslint-config
       '@template-react/ts-config': link:../../packages/ts-config
+      '@total-typescript/ts-reset': 0.3.7
       '@types/negotiator': 0.6.1
       '@types/node': 18.14.0
       '@types/react': 18.0.28
@@ -63,6 +65,7 @@ importers:
     specifiers:
       '@template-react/eslint-config': workspace:0.0.0
       '@template-react/ts-config': workspace:0.0.0
+      '@total-typescript/ts-reset': 0.3.7
       '@trpc/server': 10.12.0
       '@types/cors': 2.8.13
       '@types/express': 4.17.17
@@ -85,6 +88,7 @@ importers:
     devDependencies:
       '@template-react/eslint-config': link:../../packages/eslint-config
       '@template-react/ts-config': link:../../packages/ts-config
+      '@total-typescript/ts-reset': 0.3.7
       '@types/cors': 2.8.13
       '@types/express': 4.17.17
       '@types/node': 18.14.0
@@ -107,6 +111,7 @@ importers:
       '@testing-library/dom': 9.0.0
       '@testing-library/react': 14.0.0
       '@testing-library/user-event': 14.4.3
+      '@total-typescript/ts-reset': 0.3.7
       '@trpc/client': 10.12.0
       '@trpc/react-query': 10.12.0
       '@trpc/server': 10.12.0
@@ -162,6 +167,7 @@ importers:
       '@testing-library/dom': 9.0.0
       '@testing-library/react': 14.0.0_biqbaboplfbrettd7655fr4n2y
       '@testing-library/user-event': 14.4.3_@testing-library+dom@9.0.0
+      '@total-typescript/ts-reset': 0.3.7
       '@types/react': 18.0.28
       '@types/react-dom': 18.0.11
       '@vitejs/plugin-react-swc': 3.2.0_vite@4.1.4
@@ -1652,6 +1658,10 @@ packages:
       '@testing-library/dom': '>=7.21.4'
     dependencies:
       '@testing-library/dom': 9.0.0
+    dev: true
+
+  /@total-typescript/ts-reset/0.3.7:
+    resolution: {integrity: sha512-yXt2BRRVCJVvzWaxac5n0nCXzIrQEBE/MeYlNQ8/Iq7UeelNmm/AdnUAu18ilSS893mbEQ4u6whPt/HvOPc4rw==}
     dev: true
 
   /@trpc/client/10.12.0_@trpc+server@10.12.0:
