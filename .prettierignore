@@ -1,11 +1,12 @@
 # Common
 CHANGELOG.md
-coverage/
-messages/
+coverage
+messages
 pnpm-lock.yaml
 
 # Next
-.next/
+.next
 
 # Vite
-dist/
+dist
+stats.html

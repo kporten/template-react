@@ -12,9 +12,9 @@ export default [
         {
           result: {
             data: [
-              { id: 'u1', name: 'User 1' },
-              { id: 'u2', name: 'User 2' },
-              { id: 'u3', name: 'User 3' },
+              { id: 1, email: 'user1@email', name: 'User 1' },
+              { id: 2, email: 'user2@email', name: 'User 2' },
+              { id: 3, email: 'user3@email', name: 'User 3' },
             ] satisfies TrpcOutput['user']['list'],
           },
         },

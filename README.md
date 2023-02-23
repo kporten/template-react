@@ -51,7 +51,7 @@ pnpm turbo dev
 ### Apps
 
 - [Next.js](https://nextjs.org) with [Tailwind CSS](https://tailwindcss.com)
-- [tRPC](https://trpc.io) with [Express](https://expressjs.com)
+- [tRPC](https://trpc.io) with [Express](https://expressjs.com) and [Prisma](https://www.prisma.io)
 - [Vite](https://vitejs.dev) with [React](https://reactjs.org), [Tailwind CSS](https://tailwindcss.com) and [Testing Library](https://testing-library.com)
 
 ### Repository Management

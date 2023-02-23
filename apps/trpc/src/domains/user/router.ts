@@ -2,13 +2,13 @@ import { z } from 'zod';
 
 import { procedure, router } from '@/utils/trpc';
 
-import { getById, getList } from './service';
+import { getUserById, getUsers } from './service';
 
 export default router({
-  byId: procedure.input(z.string()).query(({ input }) => {
-    return getById(input);
+  byId: procedure.input(z.number().int()).query(async ({ input }) => {
+    return getUserById(input);
   }),
-  list: procedure.query(() => {
-    return getList();
+  list: procedure.query(async () => {
+    return getUsers();
   }),
 });
