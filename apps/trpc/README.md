@@ -26,6 +26,9 @@ pnpm turbo lint --filter=trpc
 
 # typecheck workspace
 pnpm turbo typecheck --filter=trpc
+
+# generate dependencies in workspace
+pnpm turbo generate --filter=trpc
 ```
 
 ### Prisma
