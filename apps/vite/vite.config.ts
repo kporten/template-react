@@ -20,7 +20,7 @@ export default defineConfig({
       lines: 90,
       exclude: ['src/test/**'],
     },
-    environment: 'happy-dom',
+    environment: 'jsdom',
     mockReset: true,
     setupFiles: ['./src/test/setup.ts'],
   },

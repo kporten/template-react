@@ -27,9 +27,6 @@ pnpm turbo test:ui
 # typecheck all workspaces
 pnpm turbo typecheck
 
-# generate dependencies in all workspaces
-pnpm turbo generate
-
 # extract and compile intl messages in all workspaces
 pnpm turbo intl
 

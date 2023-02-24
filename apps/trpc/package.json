@@ -9,7 +9,7 @@
     "preview": "node ./dist/server.js",
     "lint": "eslint --max-warnings=0 --ignore-path=../../.gitignore .",
     "typecheck": "tsc",
-    "generate": "prisma generate"
+    "postinstall": "prisma generate"
   },
   "prisma": {
     "seed": "tsx ./prisma/seed.ts"
