@@ -2,12 +2,12 @@
   "$schema": "https://turbo.build/schema.json",
   "pipeline": {
     "dev": {
-      "dependsOn": ["^build", "generate"],
+      "dependsOn": ["^build"],
       "cache": false,
       "persistent": true
     },
     "build": {
-      "dependsOn": ["^build", "generate"],
+      "dependsOn": ["^build"],
       "outputs": ["dist/**", ".next/**"]
     },
     "preview": {
@@ -16,28 +16,25 @@
       "persistent": true
     },
     "lint": {
-      "dependsOn": ["^build", "generate"]
+      "dependsOn": ["^build"]
     },
     "test": {
-      "dependsOn": ["^build", "generate"],
+      "dependsOn": ["^build"],
       "inputs": ["**/*.tsx", "**/*.ts"]
     },
     "test:coverage": {
-      "dependsOn": ["^build", "generate"],
+      "dependsOn": ["^build"],
       "inputs": ["**/*.tsx", "**/*.ts"],
       "outputs": ["coverage/**"]
     },
     "test:ui": {
-      "dependsOn": ["^build", "generate"],
+      "dependsOn": ["^build"],
       "cache": false,
       "persistent": true
     },
     "typecheck": {
-      "dependsOn": ["^build", "generate"],
+      "dependsOn": ["^build"],
       "inputs": ["**/*.tsx", "**/*.ts"]
-    },
-    "generate": {
-      "cache": false
     },
     "intl": {
       "inputs": ["**/*.tsx", "**/*.ts"],
