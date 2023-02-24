@@ -6,7 +6,7 @@
     "dev": "next dev --port=5171",
     "build": "next build",
     "preview": "next start --port=5171",
-    "lint": "next lint",
+    "lint": "next lint --max-warnings=0 --ignore-path=../../.gitignore",
     "typecheck": "tsc"
   },
   "dependencies": {
