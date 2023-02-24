@@ -20,6 +20,7 @@
   "devDependencies": {
     "@template-react/eslint-config": "workspace:0.0.0",
     "@template-react/ts-config": "workspace:0.0.0",
+    "@total-typescript/ts-reset": "0.3.7",
     "@types/negotiator": "0.6.1",
     "@types/node": "18.14.0",
     "@types/react": "18.0.28",

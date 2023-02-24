@@ -57,8 +57,7 @@
               "kebabCase": true
             }
           }
-        ],
-        "unicorn/prefer-top-level-await": "off"
+        ]
       }
     }
   ]

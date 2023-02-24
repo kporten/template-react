@@ -1,25 +1,16 @@
-const users: Array<{
-  id: string;
-  name: string;
-}> = [
-  {
-    id: 'u1',
-    name: 'User 1',
-  },
-  {
-    id: 'u2',
-    name: 'User 2',
-  },
-  {
-    id: 'u3',
-    name: 'User 3',
-  },
-];
+import { user } from '@/utils/prisma';
 
-export function getById(id: string) {
-  return users.find((user) => user.id === id);
+export async function getUserById(id: number) {
+  return user.findFirst({
+    where: {
+      id,
+    },
+    include: {
+      posts: true,
+    },
+  });
 }
 
-export function getList() {
-  return users;
+export async function getUsers() {
+  return user.findMany({ orderBy: { email: 'asc' } });
 }
