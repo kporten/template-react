@@ -1,8 +1,24 @@
 // https://beta.nextjs.org/docs/api-reference/file-conventions/layout
 
+import type { Metadata } from 'next';
+
 import '@/styles/global.css';
 import { leckerliOne } from '@/utils/fonts';
 import { availableLocales } from '@/utils/locales';
+
+// https://beta.nextjs.org/docs/api-reference/metadata
+export const metadata: Metadata = {
+  title: {
+    default: 'next | template-react',
+    template: '%s | next | template-react',
+  },
+  icons: {
+    icon: {
+      url: '/favicon.png',
+      type: 'image/png',
+    },
+  },
+};
 
 // https://beta.nextjs.org/docs/api-reference/generate-static-params
 export function generateStaticParams() {

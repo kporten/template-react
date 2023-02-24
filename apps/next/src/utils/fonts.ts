@@ -1,6 +1,6 @@
 // https://beta.nextjs.org/docs/optimizing/fonts
 
-import { Leckerli_One } from '@next/font/google';
+import { Leckerli_One } from 'next/font/google';
 
 export const leckerliOne = Leckerli_One({
   subsets: ['latin'],

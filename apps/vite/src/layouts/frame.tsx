@@ -8,8 +8,8 @@ export default function Frame({ children }: { children: React.ReactNode }) {
   return (
     <>
       <Helmet
-        titleTemplate="template-react | vite | %s"
-        defaultTitle="template-react | vite"
+        titleTemplate="%s | vite | template-react"
+        defaultTitle="vite | template-react"
       >
         <html lang={lang} />
         <body className="dark:bg-gray-900 dark:text-gray-100" />
