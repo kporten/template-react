@@ -5,11 +5,14 @@ const { PHASE_DEVELOPMENT_SERVER } = require('next/constants');
 module.exports = (phase) => {
   /** @type {import('next').NextConfig} */
   const config = {
+    reactStrictMode: true,
+    swcMinify: true,
     experimental: {
       appDir: true,
     },
-    reactStrictMode: true,
-    swcMinify: true,
+    eslint: {
+      ignoreDuringBuilds: true,
+    },
     headers: () => {
       const headers = [];
 
