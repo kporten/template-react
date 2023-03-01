@@ -32,10 +32,10 @@ jobs:
       - name: ⚙️ Setup
         uses: ./.github/actions/setup
       - name: 🖍️ Check formatting
-        run: pnpm turbo format:check
+        run: turbo format:check
       - name: 🛡️ Typecheck projects
-        run: pnpm turbo typecheck
+        run: turbo typecheck
       - name: 🔦 Lint projects
-        run: pnpm turbo lint
+        run: turbo lint
       - name: 🧪 Test coverage
-        run: pnpm turbo test:coverage
+        run: turbo test:coverage

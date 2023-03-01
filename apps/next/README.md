@@ -2,29 +2,36 @@
 
 This is a template for a web app with [Next.js](https://nextjs.org).
 
-## Tech Stack
-
-- [Next.js](https://nextjs.org)
-- [TypeScript](https://www.typescriptlang.org)
-- [Tailwind CSS](https://tailwindcss.com)
-
 ## Tasks
 
-### Turbo
+### Turborepo
 
 ```sh
 # run development server
-pnpm turbo dev --filter=next
+turbo dev --filter=next
 
 # build workspace
-pnpm turbo build --filter=next
+turbo build --filter=next
 
 # run preview server
-pnpm turbo preview --filter=next
+turbo preview --filter=next
 
 # lint workspace
-pnpm turbo lint --filter=next
+turbo lint --filter=next
 
 # typecheck workspace
-pnpm turbo typecheck --filter=next
+turbo typecheck --filter=next
 ```
+
+> **Note**
+> More information about filtering: https://turborepo.org/docs/core-concepts/filtering
+
+## Tech Stack
+
+### General
+
+- [Next.js](https://nextjs.org)
+
+### UI
+
+- [Tailwind CSS](https://tailwindcss.com)

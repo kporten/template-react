@@ -2,7 +2,7 @@
 
 ## Pull Request
 
-[.github/workflows/pull-request.yml](./.github/workflows/pull-request.yml)
+[.github/workflows/pull-request.yml](../.github/workflows/pull-request.yml)
 
 ### Events
 
@@ -16,7 +16,7 @@
 
 ## Integration
 
-[.github/workflows/integration.yml](./.github/workflows/integration.yml)
+[.github/workflows/integration.yml](../.github/workflows/integration.yml)
 
 ### Events
 
@@ -39,7 +39,7 @@
 
 ## Deployment
 
-[.github/workflows/deployment.yml](./.github/workflows/deployment.yml)
+[.github/workflows/deployment.yml](../.github/workflows/deployment.yml)
 
 ### Events
 
@@ -65,7 +65,7 @@
 
 ## Report
 
-[.github/workflows/report.yml](./.github/workflows/report.yml)
+[.github/workflows/report.yml](../.github/workflows/report.yml)
 
 ### Events
 

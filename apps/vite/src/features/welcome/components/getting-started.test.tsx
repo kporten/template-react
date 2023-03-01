@@ -1,7 +1,7 @@
 import { screen } from '@testing-library/react';
 import { expect, it } from 'vitest';
 
-import { renderWithProviders } from '@/test/renderers';
+import { renderWithProviders } from '@/test/render';
 
 import GettingStarted from './getting-started';
 

@@ -1,60 +1,54 @@
 # Tasks
 
-## Turbo
+## Turborepo
 
 ```sh
 # run all development servers
-pnpm turbo dev
+turbo dev
 
 # build all workspaces
-pnpm turbo build
+turbo build
 
 # run all preview servers
-pnpm turbo preview
+turbo preview
 
 # lint all workspaces
-pnpm turbo lint
+turbo lint
 
 # test all workspaces
-pnpm turbo test
+turbo test
 
 # test all workspaces with coverage check
-pnpm turbo test:coverage
+turbo test:coverage
 
 # test all workspaces with browser UI
-pnpm turbo test:ui
+turbo test:ui
 
 # typecheck all workspaces
-pnpm turbo typecheck
+turbo typecheck
 
 # extract and compile intl messages in all workspaces
-pnpm turbo intl
+turbo intl
 
 # format files with prettier (root script)
-pnpm turbo format
+turbo format
 
 # check formatting of files with prettier (root script)
-pnpm turbo format:check
+turbo format:check
 ```
 
 > **Note**
-> Use `--filter` to run a task only in specified workspaces (https://turborepo.org/docs/core-concepts/filtering)
+> Use `--filter` to run a task only in specified workspaces: https://turborepo.org/docs/core-concepts/filtering
 
 > **Note**
-> See also https://turborepo.org/docs/reference/command-line-reference
+> More information about available commands: https://turborepo.org/docs/reference/command-line-reference
 
 ## Changeset
 
 ```sh
-# create a changeset file (interactive)
-pnpm changeset add
-
-# update versions of workspaces
-pnpm changeset version
-
-# update tags of workspaces
-pnpm changeset tag
+# exec changeset cli (manage versioning and changelogs)
+pnpm exec changeset [command]
 ```
 
 > **Note**
-> See also https://github.com/changesets/changesets/blob/main/packages/cli/README.md
+> More information about available commands: https://github.com/changesets/changesets/blob/main/packages/cli/README.md

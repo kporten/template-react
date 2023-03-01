@@ -9,39 +9,49 @@ This is a template for a [tRPC](https://trpc.io) API with [Express](https://expr
 
 ## Tasks
 
-### Turbo
+### Turborepo
 
 ```sh
 # run development server
-pnpm turbo dev --filter=trpc
+turbo dev --filter=trpc
 
 # build workspace
-pnpm turbo build --filter=trpc
+turbo build --filter=trpc
 
 # run preview server
-pnpm turbo preview --filter=trpc
+turbo preview --filter=trpc
 
 # lint workspace
-pnpm turbo lint --filter=trpc
+turbo lint --filter=trpc
 
 # typecheck workspace
-pnpm turbo typecheck --filter=trpc
+turbo typecheck --filter=trpc
 ```
+
+> **Note**
+> More information about filtering: https://turborepo.org/docs/core-concepts/filtering
 
 ### Prisma
 
 ```sh
 # exec prisma cli (database toolkit)
-pnpm --filter=trpc exec prisma
+pnpm --filter=trpc exec prisma [command]
 ```
 
 > **Note**
-> See also https://www.prisma.io/docs/reference/api-reference/command-reference
+> More information about available commands: https://www.prisma.io/docs/reference/api-reference/command-reference
 
 ## Tech Stack
 
-- [tRPC](https://trpc.io)
-- [Zod](https://zod.dev)
+### General
+
 - [Express](https://expressjs.com)
-- [Helmet](https://helmetjs.github.io)
+- [tRPC](https://trpc.io)
+
+### Database
+
 - [Prisma](https://www.prisma.io)
+
+### Security
+
+- [Helmet](https://helmetjs.github.io)

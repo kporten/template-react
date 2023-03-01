@@ -25,8 +25,8 @@ jobs:
         with:
           title: 'chore: update versions'
           commit: 'chore: update versions'
-          version: pnpm changeset version
-          publish: pnpm changeset tag
+          version: pnpm exec changeset version
+          publish: pnpm exec changeset tag
           createGithubReleases: false
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -74,7 +74,7 @@ jobs:
       - name: ⚙️ Setup
         uses: ./.github/actions/setup
       - name: 🏗️ Build
-        run: pnpm turbo build --filter=vite
+        run: turbo build --filter=vite
       # - name: 🚀 Deploy
       #   uses: actions/upload-artifact@v3
       #   with:
@@ -94,7 +94,7 @@ jobs:
       - name: ⚙️ Setup
         uses: ./.github/actions/setup
       - name: 🏗️ Build
-        run: pnpm turbo build --filter=trpc
+        run: turbo build --filter=trpc
       # - name: 🚀 Deploy
       #   run:
 
@@ -109,6 +109,6 @@ jobs:
       - name: ⚙️ Setup
         uses: ./.github/actions/setup
       - name: 🏗️ Build
-        run: pnpm turbo build --filter=next
+        run: turbo build --filter=next
       # - name: 🚀 Deploy
       #   run:

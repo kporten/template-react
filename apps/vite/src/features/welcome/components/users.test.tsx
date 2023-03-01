@@ -4,7 +4,7 @@ import { TRPC_ERROR_CODES_BY_KEY } from '@trpc/server/rpc';
 import { rest } from 'msw';
 import { expect, it } from 'vitest';
 
-import { renderWithProviders } from '@/test/renderers';
+import { renderWithProviders } from '@/test/render';
 import { server } from '@/test/trpc/server';
 
 import Users from './users';
@@ -23,7 +23,7 @@ it('should render users', async () => {
 
 it('should render error', async () => {
   server.use(
-    rest.get('http://localhost/user.list', (req, res, ctx) => {
+    rest.get('http://trpc/user.list', async (req, res, ctx) => {
       return res(
         ctx.status(400),
         ctx.json([

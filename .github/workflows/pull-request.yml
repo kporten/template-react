@@ -20,8 +20,8 @@ jobs:
       - name: ⚙️ Setup
         uses: ./.github/actions/setup
       - name: 🔦 Lint pull request title
-        run: pnpm commitlint <<< "$TITLE"
+        run: pnpm exec commitlint <<< "$TITLE"
         env:
           TITLE: ${{ github.event.pull_request.title }}
       - name: 📝 Check changeset status
-        run: pnpm changeset status --since=origin/main
+        run: pnpm exec changeset status --since=origin/main

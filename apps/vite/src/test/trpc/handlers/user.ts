@@ -5,7 +5,7 @@ import { rest } from 'msw';
 import type { TrpcOutput } from '@/utils/trpc';
 
 export default [
-  rest.get('http://localhost/user.list', (req, res, ctx) => {
+  rest.get('http://trpc/user.list', async (req, res, ctx) => {
     return res(
       ctx.status(200),
       ctx.json([
