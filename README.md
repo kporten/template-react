@@ -24,9 +24,9 @@ The template takes away the work of having to assemble and configure all the [to
 
 ### Apps
 
-- [Next.js Template](./apps/next/README.md) (`./apps/next`)
-- [tRPC Template](./apps/trpc/README.md) (`./apps/trpc`)
-- [Vite (React) Template](./apps/vite/README.md) (`./apps/vite`)
+- [Next.js Template](./apps/next/README.md) (`./apps/next`, 🔌 5171)
+- [tRPC Template](./apps/trpc/README.md) (`./apps/trpc`, 🔌 4001)
+- [Vite (React) Template](./apps/vite/README.md) (`./apps/vite`, 🔌 5172)
 
 ### Packages
 
