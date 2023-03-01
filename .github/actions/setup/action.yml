@@ -11,6 +11,7 @@ runs:
         cache: pnpm
     - run: pnpm install
       shell: bash
+    - run: pnpm add --global turbo
     - uses: actions/cache@v3
       with:
         path: ./node_modules/.cache/turbo

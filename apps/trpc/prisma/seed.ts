@@ -1,12 +1,12 @@
 // https://www.prisma.io/docs/guides/database/seed-database
 
+import { PrismaClient } from '.prisma/client';
 import { faker } from '@faker-js/faker';
-import { PrismaClient } from '@prisma/client';
 
 const prisma = new PrismaClient();
 
 async function seed() {
-  const userSeed = 50;
+  const userSeed = 5;
 
   for (let index = 0; index < userSeed; index += 1) {
     await prisma.user.create({

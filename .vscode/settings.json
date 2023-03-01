@@ -5,5 +5,9 @@
     "editor.defaultFormatter": "Prisma.prisma"
   },
   "typescript.tsdk": "./node_modules/typescript/lib",
-  "typescript.enablePromptUseWorkspaceTsdk": true
+  "typescript.enablePromptUseWorkspaceTsdk": true,
+  "eslint.workingDirectories": [
+    { "pattern": "./apps/*" },
+    { "pattern": "./packages/*" }
+  ]
 }
