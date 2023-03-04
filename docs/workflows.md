@@ -53,13 +53,16 @@
   - 🪄 Analyze vite app
   - 🪄 Analyze trpc app
   - 🪄 Analyze next app
-- `vite` needs `status`
+- `keystone` needs `status`
+  - 🏗️ Build
+  - 🚀 Deploy (NOTE: Adjust this step according to your needs.)
+- `next` needs `status`
   - 🏗️ Build
   - 🚀 Deploy (NOTE: Adjust this step according to your needs.)
 - `trpc` needs `status`
   - 🏗️ Build
   - 🚀 Deploy (NOTE: Adjust this step according to your needs.)
-- `next` needs `status`
+- `vite` needs `status`
   - 🏗️ Build
   - 🚀 Deploy (NOTE: Adjust this step according to your needs.)
 

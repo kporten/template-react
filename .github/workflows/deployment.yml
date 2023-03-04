@@ -37,9 +37,10 @@ jobs:
       - versioning
     runs-on: ubuntu-latest
     outputs:
-      vite-ignore: ${{ steps.vite.outputs.ignore }}
-      trpc-ignore: ${{ steps.trpc.outputs.ignore }}
+      keystone-ignore: ${{ steps.keystone.outputs.ignore }}
       next-ignore: ${{ steps.next.outputs.ignore }}
+      trpc-ignore: ${{ steps.trpc.outputs.ignore }}
+      vite-ignore: ${{ steps.vite.outputs.ignore }}
     steps:
       - name: 📥 Checkout
         uses: actions/checkout@v3
@@ -47,21 +48,71 @@ jobs:
           fetch-depth: 0
       - name: ⚙️ Setup
         uses: ./.github/actions/setup
-      - name: 🪄 Analyze vite app
-        id: vite
+      - name: 🪄 Analyze keystone app
+        id: keystone
         uses: ./.github/actions/ignore
         with:
-          workspace: vite
-      - name: 🪄 Analyze trpc app
-        id: trpc
-        uses: ./.github/actions/ignore
-        with:
-          workspace: trpc
+          workspace: keystone
       - name: 🪄 Analyze next app
         id: next
         uses: ./.github/actions/ignore
         with:
           workspace: next
+      - name: 🪄 Analyze trpc app
+        id: trpc
+        uses: ./.github/actions/ignore
+        with:
+          workspace: trpc
+      - name: 🪄 Analyze vite app
+        id: vite
+        uses: ./.github/actions/ignore
+        with:
+          workspace: vite
+
+  keystone:
+    if: needs.status.outputs.keystone-ignore == 'false'
+    needs:
+      - status
+    runs-on: ubuntu-latest
+    steps:
+      - name: 📥 Checkout
+        uses: actions/checkout@v3
+      - name: ⚙️ Setup
+        uses: ./.github/actions/setup
+      - name: 🏗️ Build
+        run: turbo build --filter=keystone
+      # - name: 🚀 Deploy
+      #   run:
+
+  next:
+    if: needs.status.outputs.next-ignore == 'false'
+    needs:
+      - status
+    runs-on: ubuntu-latest
+    steps:
+      - name: 📥 Checkout
+        uses: actions/checkout@v3
+      - name: ⚙️ Setup
+        uses: ./.github/actions/setup
+      - name: 🏗️ Build
+        run: turbo build --filter=next
+      # - name: 🚀 Deploy
+      #   run:
+
+  trpc:
+    if: needs.status.outputs.trpc-ignore == 'false'
+    needs:
+      - status
+    runs-on: ubuntu-latest
+    steps:
+      - name: 📥 Checkout
+        uses: actions/checkout@v3
+      - name: ⚙️ Setup
+        uses: ./.github/actions/setup
+      - name: 🏗️ Build
+        run: turbo build --filter=trpc
+      # - name: 🚀 Deploy
+      #   run:
 
   vite:
     if: needs.status.outputs.vite-ignore == 'false'
@@ -82,33 +133,3 @@ jobs:
       #     path: ./apps/vite/dist
       #     if-no-files-found: error
       #     retention-days: 1
-
-  trpc:
-    if: needs.status.outputs.trpc-ignore == 'false'
-    needs:
-      - status
-    runs-on: ubuntu-latest
-    steps:
-      - name: 📥 Checkout
-        uses: actions/checkout@v3
-      - name: ⚙️ Setup
-        uses: ./.github/actions/setup
-      - name: 🏗️ Build
-        run: turbo build --filter=trpc
-      # - name: 🚀 Deploy
-      #   run:
-
-  next:
-    if: needs.status.outputs.next-ignore == 'false'
-    needs:
-      - status
-    runs-on: ubuntu-latest
-    steps:
-      - name: 📥 Checkout
-        uses: actions/checkout@v3
-      - name: ⚙️ Setup
-        uses: ./.github/actions/setup
-      - name: 🏗️ Build
-        run: turbo build --filter=next
-      # - name: 🚀 Deploy
-      #   run:

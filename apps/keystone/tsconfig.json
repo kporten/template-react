@@ -1,0 +1,6 @@
+{
+  "extends": "@template-react/ts-config/base",
+  "compilerOptions": {
+    "baseUrl": "."
+  }
+}
