@@ -6,11 +6,15 @@
 *.log
 *.tsbuildinfo
 coverage
+dist
 node_modules
+
+# Keystone
+.keystone
+keystone.db*
 
 # Next
 .next
 
 # Vite
-dist
 stats.html

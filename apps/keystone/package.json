@@ -1,0 +1,32 @@
+{
+  "name": "@template-react/keystone",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "keystone dev",
+    "build": "keystone build",
+    "preview": "keystone start",
+    "lint": "eslint --max-warnings=0 --ignore-path=../../.gitignore .",
+    "typecheck": "tsc",
+    "postinstall": "keystone build --no-ui --frozen"
+  },
+  "dependencies": {
+    "@keystone-6/auth": "7.0.0",
+    "@keystone-6/core": "5.1.0",
+    "@keystone-6/fields-document": "7.0.0",
+    "@prisma/client": "4.11.0",
+    "dotenv": "16.0.3",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "zod": "3.21.0"
+  },
+  "devDependencies": {
+    "@template-react/eslint-config": "workspace:*",
+    "@template-react/ts-config": "workspace:*",
+    "@total-typescript/ts-reset": "0.3.7",
+    "@types/node": "18.14.6",
+    "eslint": "8.35.0",
+    "prisma": "4.11.0",
+    "typescript": "4.9.5"
+  }
+}

@@ -1,12 +1,16 @@
 # Common
 CHANGELOG.md
 coverage
+dist
 messages
 pnpm-lock.yaml
+
+# Keystone
+.keystone
+schema.graphql
 
 # Next
 .next
 
 # Vite
-dist
 stats.html
