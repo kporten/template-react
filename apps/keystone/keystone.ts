@@ -4,7 +4,7 @@ import env from './env';
 import { config } from '@keystone-6/core';
 
 import { type Session, session, withAuth } from './auth';
-import { lists } from './lists';
+import { Post, User } from './lists';
 
 export default withAuth(
   config({
@@ -17,10 +17,13 @@ export default withAuth(
       url: env.DATABASE_URL,
       prismaClientPath: './node_modules/.prisma/client',
     },
-    lists,
-    session,
+    lists: {
+      User,
+      Post,
+    },
     ui: {
       isAccessAllowed: (context) => Boolean((context.session as Session)?.data),
     },
+    session,
   }),
 );

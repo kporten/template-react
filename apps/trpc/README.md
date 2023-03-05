@@ -5,7 +5,7 @@ This is a template for a [tRPC](https://trpc.io) API with [Express](https://expr
 ## Setup
 
 - Copy `.env.example` and rename it to `.env`, then change the values if needed
-- Run `pnpm --filter=trpc exec prisma migrate dev --name=init` to create the database and seed initial data
+- After `pnpm install` you can run `pnpm --filter=trpc exec prisma migrate dev --name=init` to create the database and seed initial data
 
 ## Tasks
 

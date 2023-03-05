@@ -1,7 +1,7 @@
 import { config } from 'dotenv';
 import { z } from 'zod';
 
-config({ path: process.env.CI ? '.env.example' : '.env' });
+config({ path: '.env' });
 
 const env = z.object({
   DATABASE_URL: z.string(),
@@ -9,4 +9,8 @@ const env = z.object({
   SESSION_SECRET: z.string(),
 });
 
-export default env.parse(process.env);
+export default env.parse({
+  DATABASE_URL: process.env.DATABASE_URL,
+  PORT: process.env.PORT,
+  SESSION_SECRET: process.env.SESSION_SECRET,
+});
