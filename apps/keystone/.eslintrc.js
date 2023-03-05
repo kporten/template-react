@@ -4,4 +4,10 @@
 module.exports = {
   root: true,
   extends: '@template-react/eslint-config/base',
+  rules: {
+    'turbo/no-undeclared-env-vars': [
+      'error',
+      { allowList: ['DATABASE_URL', 'PORT', 'SESSION_SECRET'] },
+    ],
+  },
 };

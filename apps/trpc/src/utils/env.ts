@@ -8,4 +8,7 @@ const env = z.object({
   PORT: z.coerce.number().int(),
 });
 
-export default env.parse(process.env);
+export default env.parse({
+  DATABASE_URL: process.env.DATABASE_URL,
+  PORT: process.env.PORT,
+});

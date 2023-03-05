@@ -14,8 +14,8 @@ The template takes away the work of having to assemble and configure all the [to
 > Prerequisite is the global installation of [pnpm](https://pnpm.io/installation) and [Turborepo](https://turbo.build/repo/docs/faq#should-i-install-turborepo-globally).
 
 1. Clone the template: `npx degit kporten/template-react my-project`
-2. Install dependencies: `pnpm install`
-3. Follow the **setup** instructions in each app workspace that you want to use
+2. Follow the **setup** instructions in each app workspace that you want to use
+3. Install dependencies: `pnpm install`
 4. Start development servers: `turbo dev`
 
 :rocket: Now you can get up and running with your ideas!

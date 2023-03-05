@@ -7,8 +7,7 @@
     "build": "keystone build",
     "preview": "keystone start",
     "lint": "eslint --max-warnings=0 --ignore-path=../../.gitignore .",
-    "typecheck": "tsc",
-    "postinstall": "keystone build --no-ui --frozen"
+    "typecheck": "tsc"
   },
   "dependencies": {
     "@keystone-6/auth": "7.0.0",
