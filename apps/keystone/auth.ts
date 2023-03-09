@@ -1,3 +1,5 @@
+// https://keystonejs.com/docs/config/auth
+
 import { createAuth } from '@keystone-6/auth';
 import { statelessSessions } from '@keystone-6/core/session';
 

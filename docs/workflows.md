@@ -50,11 +50,12 @@
 - `versioning`
   - 📝 Process changesets
 - `status` needs `versioning`
+  - 🪄 Analyze keystone app
   - 🪄 Analyze vite app
   - 🪄 Analyze trpc app
   - 🪄 Analyze next app
 - `keystone` needs `status`
-  - 🏗️ Build
+  - 🏗️ Build (NOTE: Provide GitHub secrets.)
   - 🚀 Deploy (NOTE: Adjust this step according to your needs.)
 - `next` needs `status`
   - 🏗️ Build

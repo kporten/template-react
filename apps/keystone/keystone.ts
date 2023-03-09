@@ -1,3 +1,5 @@
+// https://keystonejs.com/docs/config/config
+
 // eslint-disable-next-line import/order
 import env from './env';
 
