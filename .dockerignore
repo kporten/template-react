@@ -1,0 +1,25 @@
+# Common
+**/.DS_Store
+**/.env
+**/.turbo
+**/*.local
+**/*.log
+**/*.tsbuildinfo
+**/coverage
+**/dist
+**/node_modules
+
+# Keystone
+**/.keystone
+**/keystone.db*
+
+# Next
+**/.next
+
+# Vite
+**/stats.html
+
+# Docker
+**/Dockerfile
+.git
+.gitignore
