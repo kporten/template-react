@@ -30,6 +30,10 @@ export const Post = list({
   access: allowAll,
   fields: {
     title: text({ validation: { isRequired: true } }),
+    content: text({
+      db: { nativeType: 'Text', isNullable: true },
+      ui: { displayMode: 'textarea' },
+    }),
     publishedAt: timestamp(),
     status: select({
       options: [

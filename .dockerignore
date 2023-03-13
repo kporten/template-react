@@ -2,6 +2,7 @@
 **/.DS_Store
 **/.env
 **/.turbo
+**/*.db*
 **/*.local
 **/*.log
 **/*.tsbuildinfo
@@ -11,7 +12,6 @@
 
 # Keystone
 **/.keystone
-**/keystone.db*
 
 # Next
 **/.next
