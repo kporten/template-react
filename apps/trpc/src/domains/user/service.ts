@@ -1,4 +1,4 @@
-import { user } from '@/utils/prisma';
+import { user } from '@/lib/prisma';
 
 export async function getUserById(id: number) {
   return user.findFirst({
