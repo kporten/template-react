@@ -11,12 +11,13 @@ The template takes away the work of having to assemble and configure all the [to
 ## Getting Started
 
 > **Note**
-> Prerequisite is the global installation of [pnpm](https://pnpm.io/installation) and [Turborepo](https://turbo.build/repo/docs/faq#should-i-install-turborepo-globally).
+> Prerequisite is the global installation of [pnpm](https://pnpm.io/installation), [Turborepo](https://turbo.build/repo/docs/faq#should-i-install-turborepo-globally) and [Docker](https://docs.docker.com/get-docker/) if you want to use certain applications with a database.
 
 1. Clone the template: `npx degit kporten/template-react my-project`
-2. Follow the **setup** instructions in each app workspace that you want to use
-3. Install dependencies: `pnpm install`
-4. Start development servers: `turbo dev`
+2. Follow the instructions in each app workspace that you want to use
+3. Install required dependencies: `pnpm install`
+4. Start the database service: `docker-compose up -d db`
+5. Start the development servers: `turbo dev`
 
 :rocket: Now you can get up and running with your ideas!
 

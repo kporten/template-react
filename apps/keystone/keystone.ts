@@ -15,7 +15,7 @@ export default withAuth(
       healthCheck: true,
     },
     db: {
-      provider: 'sqlite',
+      provider: 'mysql',
       url: env.DATABASE_URL,
       prismaClientPath: './node_modules/.prisma/client',
     },

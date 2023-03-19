@@ -2,9 +2,13 @@
 
 This is a template for the [Keystone](https://keystonejs.com) CMS.
 
-## Setup
+## Configuration
 
 - Copy `.env.example` and rename it to `.env`, then change the values if needed
+
+## Setup
+
+- Start the database service with `docker-compose up -d db`
 
 ## Tasks
 

@@ -1,6 +1,6 @@
 import { z } from 'zod';
 
-import { procedure, router } from '@/utils/trpc';
+import { procedure, router } from '@/lib/trpc';
 
 import { getUserById, getUsers } from './service';
 

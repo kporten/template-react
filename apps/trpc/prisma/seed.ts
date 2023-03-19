@@ -30,7 +30,7 @@ async function seed() {
     });
   }
 
-  console.info(`🌱  ${userSeed} users with ${userSeed * 2} posts seeded.`);
+  console.info(`${userSeed} users with ${userSeed * 2} posts seeded.`);
 }
 
 void (async () => {

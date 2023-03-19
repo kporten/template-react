@@ -137,6 +137,7 @@ input PostRelateToManyForCreateInput {
 type Post {
   id: ID!
   title: String
+  content: String
   publishedAt: DateTime
   status: String
   author: User
@@ -152,6 +153,7 @@ input PostWhereInput {
   NOT: [PostWhereInput!]
   id: IDFilter
   title: StringFilter
+  content: StringNullableFilter
   publishedAt: DateTimeNullableFilter
   status: StringNullableFilter
   author: UserWhereInput
@@ -188,12 +190,14 @@ input NestedStringNullableFilter {
 input PostOrderByInput {
   id: OrderDirection
   title: OrderDirection
+  content: OrderDirection
   publishedAt: OrderDirection
   status: OrderDirection
 }
 
 input PostUpdateInput {
   title: String
+  content: String
   publishedAt: DateTime
   status: String
   author: UserRelateToOneForUpdateInput
@@ -212,6 +216,7 @@ input PostUpdateArgs {
 
 input PostCreateInput {
   title: String
+  content: String
   publishedAt: DateTime
   status: String
   author: UserRelateToOneForCreateInput
