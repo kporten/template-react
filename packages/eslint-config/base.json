@@ -38,6 +38,7 @@
       }
     ],
     "no-implicit-coercion": "error",
+    "prefer-arrow-callback": "error",
     "sort-imports": [
       "error",
       {

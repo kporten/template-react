@@ -1,13 +1,15 @@
+import { randomBytes } from 'node:crypto';
+
 import { config } from 'dotenv';
 import { z } from 'zod';
 
 config({ path: '.env' });
 
 const env = z.object({
-  DATABASE_URL: z.string(),
+  DATABASE_URL: z.string().default(''),
   NODE_ENV: z.enum(['development', 'production']).optional(),
   PORT: z.coerce.number().int().optional(),
-  SESSION_SECRET: z.string(),
+  SESSION_SECRET: z.string().default(randomBytes(32).toString('hex')),
 });
 
 const envParsed = env.safeParse({
