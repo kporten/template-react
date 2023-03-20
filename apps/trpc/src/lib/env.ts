@@ -17,7 +17,7 @@ const envParsed = env.safeParse({
 
 if (!envParsed.success) {
   console.error(
-    '👀  invalid env configuration',
+    '👀 invalid env configuration',
     envParsed.error.flatten().fieldErrors,
   );
 

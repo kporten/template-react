@@ -55,17 +55,17 @@
       }
     ],
     "@typescript-eslint/consistent-type-definitions": ["error", "type"],
+    "@typescript-eslint/consistent-type-exports": [
+      "error",
+      {
+        "fixMixedExportsWithInlineTypeSpecifier": true
+      }
+    ],
     "@typescript-eslint/consistent-type-imports": [
       "error",
       {
         "prefer": "type-imports",
         "fixStyle": "separate-type-imports"
-      }
-    ],
-    "@typescript-eslint/consistent-type-exports": [
-      "error",
-      {
-        "fixMixedExportsWithInlineTypeSpecifier": true
       }
     ],
     "@typescript-eslint/member-ordering": "error",
@@ -96,16 +96,16 @@
         "format": null
       }
     ],
-    "@typescript-eslint/no-misused-promises": [
-      "error",
-      {
-        "checksVoidReturn": false
-      }
-    ],
     "@typescript-eslint/no-confusing-void-expression": [
       "error",
       {
         "ignoreArrowShorthand": true
+      }
+    ],
+    "@typescript-eslint/no-misused-promises": [
+      "error",
+      {
+        "checksVoidReturn": false
       }
     ],
     "@typescript-eslint/padding-line-between-statements": [
