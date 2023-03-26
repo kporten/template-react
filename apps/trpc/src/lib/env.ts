@@ -3,25 +3,25 @@ import { z } from 'zod';
 
 config({ path: '.env' });
 
-const env = z.object({
-  DATABASE_URL: z.string(),
+const schema = z.object({
+  DATABASE_URL: z.string().url(),
   NODE_ENV: z.enum(['development', 'production']).optional(),
-  PORT: z.coerce.number().int(),
+  PORT: z.coerce.number().int().positive(),
 });
 
-const envParsed = env.safeParse({
+const env = schema.safeParse({
   DATABASE_URL: process.env.DATABASE_URL,
   NODE_ENV: process.env.NODE_ENV,
   PORT: process.env.PORT,
 });
 
-if (!envParsed.success) {
+if (!env.success) {
   console.error(
-    '👀 invalid env configuration',
-    envParsed.error.flatten().fieldErrors,
+    '👀 Invalid env configuration:',
+    env.error.flatten().fieldErrors,
   );
 
   throw new Error('invalid env configuration');
 }
 
-export default envParsed.data;
+export default env.data;
