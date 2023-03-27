@@ -7,10 +7,6 @@
   "[prisma]": {
     "editor.defaultFormatter": "Prisma.prisma"
   },
-  "eslint.workingDirectories": [
-    { "pattern": "./apps/*", "!cwd": true },
-    { "pattern": "./packages/*", "!cwd": true }
-  ],
   "typescript.tsdk": "./node_modules/typescript/lib",
   "typescript.enablePromptUseWorkspaceTsdk": true
 }
