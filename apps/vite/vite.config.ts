@@ -18,7 +18,7 @@ export default defineConfig({
       provider: 'c8',
       branches: 90,
       lines: 90,
-      exclude: ['src/test/**'],
+      exclude: ['./src/test/**'],
     },
     environment: 'happy-dom',
     mockReset: true,

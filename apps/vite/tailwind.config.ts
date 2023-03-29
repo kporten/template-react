@@ -1,7 +1,9 @@
 // https://tailwindcss.com/docs/configuration
 
-/** @type {import('tailwindcss/types').Config} */
-module.exports = {
+import headlessuiPlugin from '@headlessui/tailwindcss';
+import type { Config } from 'tailwindcss';
+
+export default {
   content: [
     'index.html',
     './src/**/*.tsx',
@@ -15,5 +17,5 @@ module.exports = {
       },
     },
   },
-  plugins: [require('@headlessui/tailwindcss')],
-};
+  plugins: [headlessuiPlugin],
+} satisfies Config;

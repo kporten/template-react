@@ -108,6 +108,7 @@
         "checksVoidReturn": false
       }
     ],
+    "@typescript-eslint/no-non-null-assertion": "off",
     "@typescript-eslint/padding-line-between-statements": [
       "error",
       {

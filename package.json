@@ -1,7 +1,7 @@
 {
   "name": "template-react",
   "description": "Monorepo template for web apps",
-  "version": "4.5.3",
+  "version": "4.5.4",
   "license": "MIT",
   "author": "Kevin Porten <hello@kevinporten.dev>",
   "repository": "https://github.com/kporten/template-react",
@@ -10,18 +10,18 @@
   "engines": {
     "node": ">=18 <19"
   },
-  "packageManager": "pnpm@7.30.0",
+  "packageManager": "pnpm@8.0.0",
   "scripts": {
     "format": "prettier --write .",
     "format:check": "prettier --check ."
   },
   "devDependencies": {
-    "@changesets/cli": "2.26.0",
-    "@commitlint/cli": "17.4.4",
+    "@changesets/cli": "2.26.1",
+    "@commitlint/cli": "17.5.1",
     "@commitlint/config-conventional": "17.4.4",
     "@commitlint/types": "17.4.4",
-    "prettier": "2.8.5",
-    "prettier-plugin-tailwindcss": "0.2.5",
+    "prettier": "2.8.7",
+    "prettier-plugin-tailwindcss": "0.2.6",
     "typescript": "5.0.2"
   }
 }

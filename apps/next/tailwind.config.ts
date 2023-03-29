@@ -1,9 +1,9 @@
 // https://tailwindcss.com/docs/configuration
 
-const defaultTheme = require('tailwindcss/defaultTheme');
+import type { Config } from 'tailwindcss';
+import defaultTheme from 'tailwindcss/defaultTheme';
 
-/** @type {import('tailwindcss/types').Config} */
-module.exports = {
+export default {
   content: [
     './src/**/*.tsx',
     // add paths of imported packages if tailwind is used
@@ -16,4 +16,4 @@ module.exports = {
       },
     },
   },
-};
+} satisfies Config;

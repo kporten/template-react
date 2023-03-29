@@ -6,7 +6,7 @@ import { z } from 'zod';
 config({ path: '.env' });
 
 const schema = z.object({
-  DATABASE_URL: z.string().url().default(''),
+  DATABASE_URL: z.string().url().optional(),
   NODE_ENV: z.enum(['development', 'production']).optional(),
   PORT: z.coerce.number().int().positive().optional(),
   SESSION_SECRET: z.string().default(randomBytes(32).toString('hex')),
