@@ -1,7 +1,7 @@
 {
   "name": "template-react",
   "description": "Monorepo template for web apps",
-  "version": "4.5.5",
+  "version": "4.6.0",
   "license": "MIT",
   "author": "Kevin Porten <hello@kevinporten.dev>",
   "repository": "https://github.com/kporten/template-react",
@@ -10,7 +10,7 @@
   "engines": {
     "node": ">=18 <19"
   },
-  "packageManager": "pnpm@8.1.0",
+  "packageManager": "pnpm@8.2.0",
   "scripts": {
     "format": "prettier --write .",
     "format:check": "prettier --check ."

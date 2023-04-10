@@ -109,6 +109,10 @@
       }
     ],
     "@typescript-eslint/no-non-null-assertion": "off",
+    "@typescript-eslint/no-unused-vars": [
+      "error",
+      { "argsIgnorePattern": "^_" }
+    ],
     "@typescript-eslint/padding-line-between-statements": [
       "error",
       {

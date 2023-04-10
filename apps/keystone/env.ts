@@ -7,7 +7,7 @@ config({ path: '.env' });
 
 const schema = z.object({
   DATABASE_URL: z.string().url().optional(),
-  NODE_ENV: z.enum(['development', 'production']).optional(),
+  NODE_ENV: z.enum(['development', 'production']).default('development'),
   PORT: z.coerce.number().int().positive().optional(),
   SESSION_SECRET: z.string().default(randomBytes(32).toString('hex')),
 });
