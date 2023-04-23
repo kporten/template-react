@@ -36,6 +36,12 @@
 
 - `FOSSA_API_KEY` see https://docs.fossa.com/docs/api-reference
 - `SNYK_TOKEN` see https://docs.snyk.io/features/user-and-group-management/authentication/authentication-for-third-party-tools
+- `TURBO_TOKEN` see https://turbo.build/repo/docs/ci/github-actions#remote-caching or https://ducktors.github.io/turborepo-remote-cache/custom-remote-caching.html#local-environment-variables
+
+### Variables
+
+- `TURBO_API` required only for custom remote, see https://ducktors.github.io/turborepo-remote-cache/custom-remote-caching.html#local-environment-variables
+- `TURBO_TEAM` see https://turbo.build/repo/docs/ci/github-actions#remote-caching or https://ducktors.github.io/turborepo-remote-cache/custom-remote-caching.html#local-environment-variables
 
 ## Deployment
 
@@ -67,6 +73,15 @@
   - 🏗️ Build
   - 🚀 Deploy (NOTE: Adjust this step according to your needs.)
 
+### Secrets
+
+- `TURBO_TOKEN` see https://turbo.build/repo/docs/ci/github-actions#remote-caching or https://ducktors.github.io/turborepo-remote-cache/custom-remote-caching.html#local-environment-variables
+
+### Variables
+
+- `TURBO_API` required only for custom remote, see https://ducktors.github.io/turborepo-remote-cache/custom-remote-caching.html#local-environment-variables
+- `TURBO_TEAM` see https://turbo.build/repo/docs/ci/github-actions#remote-caching or https://ducktors.github.io/turborepo-remote-cache/custom-remote-caching.html#local-environment-variables
+
 ## Report
 
 [.github/workflows/report.yml](../.github/workflows/report.yml)
@@ -83,3 +98,6 @@
   - 🔎 Validate licenses
 - `security`
   - 🐾 Audit dependencies
+
+> **Note**
+> Some workflow jobs are using [Turborepo](https://turborepo.org). The `TURBO_*` secrets and variables can be configured to enable remote caching. See https://turbo.build/repo/docs/core-concepts/remote-caching or https://ducktors.github.io/turborepo-remote-cache.

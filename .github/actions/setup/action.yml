@@ -13,7 +13,3 @@ runs:
       shell: bash
     - run: pnpm add --global turbo
       shell: bash
-    - uses: actions/cache@v3
-      with:
-        path: ./node_modules/.cache/turbo
-        key: turbo-${{ github.job }}-${{ github.ref }}
