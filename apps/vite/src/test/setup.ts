@@ -4,12 +4,12 @@ import { afterAll, afterEach, beforeAll, vi } from 'vitest';
 
 import { server } from './trpc/server';
 
-vi.stubEnv('VITE_TRPC_URL', 'http://trpc');
+vi.stubEnv('VITE_TRPC_URL', 'http://localhost');
 
-// https://github.com/capricorn86/happy-dom/tree/master/packages/happy-dom#additional-features
 // eslint-disable-next-line @typescript-eslint/naming-convention
-type WindowWithHappyDOM = typeof window & { happyDOM: Window['happyDOM'] };
-(window as WindowWithHappyDOM).happyDOM.setURL('http://localhost');
+(window as typeof window & { happyDOM: Window['happyDOM'] }).happyDOM.setURL(
+  'http://localhost',
+);
 
 beforeAll(() => {
   server.listen({

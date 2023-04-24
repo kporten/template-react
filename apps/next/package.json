@@ -6,13 +6,13 @@
     "dev": "next dev --port=5172",
     "build": "next build",
     "preview": "next start --port=5172",
-    "lint": "eslint --max-warnings=0 --ignore-path=../../.gitignore",
+    "lint": "eslint --max-warnings=0 --ignore-path=../../.gitignore .",
     "typecheck": "tsc"
   },
   "dependencies": {
     "@formatjs/intl-localematcher": "0.2.32",
     "negotiator": "0.6.3",
-    "next": "13.2.4",
+    "next": "13.3.1",
     "react": "18.2.0",
     "react-dom": "18.2.0"
   },
@@ -21,13 +21,13 @@
     "@template-react/ts-config": "workspace:*",
     "@total-typescript/ts-reset": "0.4.2",
     "@types/negotiator": "0.6.1",
-    "@types/node": "18.15.11",
-    "@types/react": "18.0.31",
+    "@types/node": "18.16.0",
+    "@types/react": "18.0.38",
     "@types/react-dom": "18.0.11",
     "autoprefixer": "10.4.14",
-    "eslint": "8.37.0",
-    "postcss": "8.4.21",
-    "tailwindcss": "3.3.0",
-    "typescript": "5.0.2"
+    "eslint": "8.39.0",
+    "postcss": "8.4.23",
+    "tailwindcss": "3.3.1",
+    "typescript": "5.0.4"
   }
 }
