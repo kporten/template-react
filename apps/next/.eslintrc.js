@@ -6,11 +6,6 @@ const path = require('node:path');
 module.exports = {
   root: true,
   extends: '@template-react/eslint-config/next',
-  settings: {
-    tailwindcss: {
-      config: path.join(__dirname, 'tailwind.config.js'),
-    },
-  },
   rules: {
     '@next/next/no-html-link-for-pages': 'off',
   },

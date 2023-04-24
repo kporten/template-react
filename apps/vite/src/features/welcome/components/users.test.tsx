@@ -23,7 +23,7 @@ it('should render users', async () => {
 
 it('should render error', async () => {
   server.use(
-    rest.get('http://trpc/user.list', async (req, res, ctx) => {
+    rest.get('/user.list', async (req, res, ctx) => {
       return res(
         ctx.status(400),
         ctx.json([
