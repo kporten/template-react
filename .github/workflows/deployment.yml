@@ -87,8 +87,6 @@ jobs:
         run: turbo build --filter=keystone
       # - name: 🚀 Deploy
       #   run:
-      #   env:
-      #     DATABASE_URL: '-- KEYSTONE DATABASE URL; USE GITHUB SECRETS --'
 
   next:
     if: needs.status.outputs.next-ignore == 'false'

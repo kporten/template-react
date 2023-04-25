@@ -3,6 +3,13 @@ import { z } from 'zod';
 
 config({ path: '.env' });
 
+const env = {
+  DATABASE_URL: process.env.DATABASE_URL,
+  LOG_LEVEL: process.env.LOG_LEVEL,
+  NODE_ENV: process.env.NODE_ENV,
+  PORT: process.env.PORT,
+};
+
 const schema = z.object({
   DATABASE_URL: z.string().url(),
   LOG_LEVEL: z
@@ -12,20 +19,22 @@ const schema = z.object({
   PORT: z.coerce.number().int().positive().default(5173),
 });
 
-const env = schema.safeParse({
-  DATABASE_URL: process.env.DATABASE_URL,
-  LOG_LEVEL: process.env.LOG_LEVEL,
-  NODE_ENV: process.env.NODE_ENV,
-  PORT: process.env.PORT,
-});
+const parsed =
+  process.env.SKIP_ENV_REQUIRED === '1'
+    ? schema
+        .partial({
+          DATABASE_URL: true,
+        })
+        .safeParse(env)
+    : schema.safeParse(env);
 
-if (!env.success) {
+if (!parsed.success) {
   console.error(
     '👀 Invalid env configuration:',
-    env.error.flatten().fieldErrors,
+    parsed.error.flatten().fieldErrors,
   );
 
   throw new Error('invalid env configuration');
 }
 
-export default env.data;
+export default parsed.data as z.infer<typeof schema>;

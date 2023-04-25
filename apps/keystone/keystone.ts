@@ -16,7 +16,7 @@ export default withAuth(
     },
     db: {
       provider: 'mysql',
-      url: env.DATABASE_URL!,
+      url: env.DATABASE_URL,
       prismaClientPath: './node_modules/.prisma/client',
     },
     lists: {
