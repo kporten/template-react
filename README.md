@@ -16,8 +16,7 @@ The template takes away the work of having to assemble and configure all the [to
 1. Clone the template: `npx degit kporten/template-react my-project`
 2. Follow the instructions in each app workspace that you want to use
 3. Install required dependencies: `pnpm install`
-4. Start the database service: `docker compose up -d db`
-5. Start the development servers: `turbo dev`
+4. Start the development servers: `turbo dev`
 
 :rocket: Now you can get up and running with your ideas!
 

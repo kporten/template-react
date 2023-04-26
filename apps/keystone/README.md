@@ -8,7 +8,7 @@ This is a template for the [Keystone](https://keystonejs.com) CMS.
 
 ## Setup
 
-- Start the database service with `docker-compose up -d db`
+- Start the database service with `docker compose up -d db`
 
 ## Tasks
 

@@ -8,7 +8,7 @@ This is a template for a [tRPC](https://trpc.io) API with [Express](https://expr
 
 ## Setup
 
-- Start the database service with `docker-compose up -d db`
+- Start the database service with `docker compose up -d db`
 - You can run `pnpm --filter=trpc exec prisma migrate dev --name=init` to create the database, an initial migration and to seed data
 
 ## Tasks
