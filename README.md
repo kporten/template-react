@@ -26,7 +26,7 @@ The template takes away the work of having to assemble and configure all the [to
 
 - [Keystone Template](./apps/keystone/README.md) (`./apps/keystone`, 🔌 5171)
 - [Next.js Template](./apps/next/README.md) (`./apps/next`, 🔌 5172)
-- [tRPC Template](./apps/trpc/README.md) (`./apps/trpc`, 🔌 5173)
+- [Express Template](./apps/express/README.md) (`./apps/express`, 🔌 5173)
 - [Vite (React) Template](./apps/vite/README.md) (`./apps/vite`, 🔌 5174)
 
 ### Packages
@@ -48,9 +48,9 @@ The template takes away the work of having to assemble and configure all the [to
 
 ### Apps
 
+- [Express](https://expressjs.com) API with [tRPC](https://trpc.io) and [Prisma](https://www.prisma.io)
 - [Keystone](https://keystonejs.com) CMS
 - [Next.js](https://nextjs.org) with [Tailwind CSS](https://tailwindcss.com)
-- [tRPC](https://trpc.io) with [Express](https://expressjs.com) and [Prisma](https://www.prisma.io)
 - [Vite](https://vitejs.dev) with [React](https://reactjs.org), [Tailwind CSS](https://tailwindcss.com) and [Testing Library](https://testing-library.com)
 
 ### Repository Management

@@ -19,7 +19,7 @@ RUN pnpm install --frozen-lockfile --ignore-scripts
 # run scripts and build app
 COPY --from=builder /app/out/full/ .
 RUN pnpm install --frozen-lockfile
-RUN pnpm dlx turbo run build --filter=keystone
+RUN SKIP_ENV_REQUIRED=1 pnpm dlx turbo run build --filter=keystone
 
 # install only prod dependencies
 RUN pnpm dlx rimraf --glob './**/node_modules/{*,.bin,.pnpm,.*.yaml}'

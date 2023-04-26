@@ -1,4 +1,4 @@
-import type { AppRouter } from '@template-react/trpc';
+import type { AppRouter } from '@template-react/express';
 import { createTRPCReact } from '@trpc/react-query';
 import type {
   inferRouterError,

@@ -37,9 +37,9 @@ jobs:
       - versioning
     runs-on: ubuntu-latest
     outputs:
+      express-ignore: ${{ steps.express.outputs.ignore }}
       keystone-ignore: ${{ steps.keystone.outputs.ignore }}
       next-ignore: ${{ steps.next.outputs.ignore }}
-      trpc-ignore: ${{ steps.trpc.outputs.ignore }}
       vite-ignore: ${{ steps.vite.outputs.ignore }}
     steps:
       - name: 📥 Checkout
@@ -48,6 +48,11 @@ jobs:
           fetch-depth: 0
       - name: ⚙️ Setup
         uses: ./.github/actions/setup
+      - name: 🪄 Analyze express app
+        id: express
+        uses: ./.github/actions/ignore
+        with:
+          workspace: express
       - name: 🪄 Analyze keystone app
         id: keystone
         uses: ./.github/actions/ignore
@@ -58,16 +63,30 @@ jobs:
         uses: ./.github/actions/ignore
         with:
           workspace: next
-      - name: 🪄 Analyze trpc app
-        id: trpc
-        uses: ./.github/actions/ignore
-        with:
-          workspace: trpc
       - name: 🪄 Analyze vite app
         id: vite
         uses: ./.github/actions/ignore
         with:
           workspace: vite
+
+  express:
+    if: needs.status.outputs.express-ignore == 'false'
+    needs:
+      - status
+    runs-on: ubuntu-latest
+    env:
+      TURBO_API: ${{ vars.TURBO_API }}
+      TURBO_TEAM: ${{ vars.TURBO_TEAM }}
+      TURBO_TOKEN: ${{ secrets.TURBO_TOKEN }}
+    steps:
+      - name: 📥 Checkout
+        uses: actions/checkout@v3
+      - name: ⚙️ Setup
+        uses: ./.github/actions/setup
+      - name: 🏗️ Build
+        run: turbo build --filter=express
+      # - name: 🚀 Deploy
+      #   run:
 
   keystone:
     if: needs.status.outputs.keystone-ignore == 'false'
@@ -106,25 +125,6 @@ jobs:
         uses: ./.github/actions/setup
       - name: 🏗️ Build
         run: turbo build --filter=next
-      # - name: 🚀 Deploy
-      #   run:
-
-  trpc:
-    if: needs.status.outputs.trpc-ignore == 'false'
-    needs:
-      - status
-    runs-on: ubuntu-latest
-    env:
-      TURBO_API: ${{ vars.TURBO_API }}
-      TURBO_TEAM: ${{ vars.TURBO_TEAM }}
-      TURBO_TOKEN: ${{ secrets.TURBO_TOKEN }}
-    steps:
-      - name: 📥 Checkout
-        uses: actions/checkout@v3
-      - name: ⚙️ Setup
-        uses: ./.github/actions/setup
-      - name: 🏗️ Build
-        run: turbo build --filter=trpc
       # - name: 🚀 Deploy
       #   run:
 

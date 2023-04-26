@@ -56,17 +56,17 @@
 - `versioning`
   - 📝 Process changesets
 - `status` needs `versioning`
+  - 🪄 Analyze express app
   - 🪄 Analyze keystone app
   - 🪄 Analyze vite app
-  - 🪄 Analyze trpc app
   - 🪄 Analyze next app
-- `keystone` needs `status`
-  - 🏗️ Build (NOTE: Provide GitHub secrets.)
-  - 🚀 Deploy (NOTE: Adjust this step according to your needs.)
-- `next` needs `status`
+- `express` needs `status`
   - 🏗️ Build
   - 🚀 Deploy (NOTE: Adjust this step according to your needs.)
-- `trpc` needs `status`
+- `keystone` needs `status`
+  - 🏗️ Build
+  - 🚀 Deploy (NOTE: Adjust this step according to your needs.)
+- `next` needs `status`
   - 🏗️ Build
   - 🚀 Deploy (NOTE: Adjust this step according to your needs.)
 - `vite` needs `status`

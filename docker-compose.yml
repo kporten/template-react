@@ -9,6 +9,17 @@ services:
     volumes:
       - db:/var/lib/mysql
 
+  express:
+    depends_on:
+      - db
+    build:
+      context: .
+      dockerfile: ./apps/express/docker/Dockerfile
+    restart: always
+    env_file: ./apps/express/.env
+    ports:
+      - 5173:5173
+
   keystone:
     depends_on:
       - db
@@ -19,17 +30,6 @@ services:
     env_file: ./apps/keystone/.env
     ports:
       - 5171:5171
-
-  trpc:
-    depends_on:
-      - db
-    build:
-      context: .
-      dockerfile: ./apps/trpc/docker/Dockerfile
-    restart: always
-    env_file: ./apps/trpc/.env
-    ports:
-      - 5173:5173
 
 volumes:
   db:

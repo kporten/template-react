@@ -1,6 +1,6 @@
-# Workspace: trpc
+# Workspace: express
 
-This is a template for a [tRPC](https://trpc.io) API with [Express](https://expressjs.com).
+This is a template for an [Express](https://expressjs.com) API with [tRPC](https://trpc.io).
 
 ## Configuration
 
@@ -9,7 +9,7 @@ This is a template for a [tRPC](https://trpc.io) API with [Express](https://expr
 ## Setup
 
 - Start the database service with `docker compose up -d db`
-- You can run `pnpm --filter=trpc exec prisma migrate dev --name=init` to create the database, an initial migration and to seed data
+- You can run `pnpm --filter=express exec prisma migrate dev --name=init` to create the database, an initial migration and to seed data
 
 ## Tasks
 
@@ -17,19 +17,19 @@ This is a template for a [tRPC](https://trpc.io) API with [Express](https://expr
 
 ```sh
 # run development server
-turbo dev --filter=trpc
+turbo dev --filter=express
 
 # build workspace
-turbo build --filter=trpc
+turbo build --filter=express
 
 # run preview server
-turbo preview --filter=trpc
+turbo preview --filter=express
 
 # lint workspace
-turbo lint --filter=trpc
+turbo lint --filter=express
 
 # typecheck workspace
-turbo typecheck --filter=trpc
+turbo typecheck --filter=express
 ```
 
 > **Note**
@@ -39,7 +39,7 @@ turbo typecheck --filter=trpc
 
 ```sh
 # exec prisma cli (database toolkit)
-pnpm --filter=trpc exec prisma [command]
+pnpm --filter=express exec prisma [command]
 ```
 
 > **Note**
