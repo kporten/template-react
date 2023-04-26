@@ -19,14 +19,7 @@ const schema = z.object({
   PORT: z.coerce.number().int().positive().default(5173),
 });
 
-const parsed =
-  process.env.SKIP_ENV_REQUIRED === '1'
-    ? schema
-        .partial({
-          DATABASE_URL: true,
-        })
-        .safeParse(env)
-    : schema.safeParse(env);
+const parsed = schema.safeParse(env);
 
 if (!parsed.success) {
   console.error(
@@ -37,4 +30,4 @@ if (!parsed.success) {
   throw new Error('invalid env configuration');
 }
 
-export default parsed.data as z.infer<typeof schema>;
+export default parsed.data;

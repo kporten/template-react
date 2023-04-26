@@ -8,13 +8,8 @@ module.exports = {
     'turbo/no-undeclared-env-vars': [
       'error',
       {
-        allowList: [
-          'DATABASE_URL',
-          'NODE_ENV',
-          'PORT',
-          'SESSION_SECRET',
-          'SKIP_ENV_REQUIRED',
-        ],
+        // runtime variables
+        allowList: ['DATABASE_URL', 'NODE_ENV', 'PORT', 'SESSION_SECRET'],
       },
     ],
   },

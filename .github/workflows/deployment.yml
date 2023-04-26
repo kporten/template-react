@@ -85,6 +85,8 @@ jobs:
         uses: ./.github/actions/setup
       - name: 🏗️ Build
         run: turbo build --filter=keystone
+        env:
+          SKIP_ENV_REQUIRED: 1
       # - name: 🚀 Deploy
       #   run:
 
