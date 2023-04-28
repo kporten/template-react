@@ -1,12 +1,9 @@
 // https://keystonejs.com/docs/config/config
-
-// eslint-disable-next-line import/order
-import env from './env';
-
 import { config } from '@keystone-6/core';
 
-import { type Session, session, withAuth } from './auth';
-import { Post, User } from './lists';
+import { type Session, session, withAuth } from './src/auth';
+import env from './src/env';
+import { Post, User } from './src/lists';
 
 export default withAuth(
   config({
