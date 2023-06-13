@@ -3,7 +3,7 @@ import { useIntl } from 'react-intl';
 
 import Welcome from '@/features/welcome';
 
-export default function Index() {
+export default function IndexPage() {
   const intl = useIntl();
 
   return (
@@ -11,7 +11,7 @@ export default function Index() {
       <Helmet>
         <title>
           {intl.formatMessage({
-            id: 'routes.index.welcome',
+            id: 'pages.index.title',
             defaultMessage: 'Welcome',
           })}
         </title>

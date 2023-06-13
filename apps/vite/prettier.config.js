@@ -6,4 +6,5 @@ module.exports = {
     // https://github.com/tailwindlabs/prettier-plugin-tailwindcss
     require('prettier-plugin-tailwindcss'),
   ],
+  tailwindFunctions: ['cva'],
 };

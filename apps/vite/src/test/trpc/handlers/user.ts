@@ -21,4 +21,18 @@ export default [
       ]),
     );
   }),
+  rest.get('/user.me', async (req, res, ctx) => {
+    return res(
+      ctx.status(200),
+      ctx.json([
+        {
+          result: {
+            data: (req.headers.get('Authorization')
+              ? 'John'
+              : 'Unknown') satisfies TrpcOutput['user']['me'],
+          },
+        },
+      ]),
+    );
+  }),
 ];

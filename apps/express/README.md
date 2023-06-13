@@ -1,6 +1,6 @@
 # Workspace: express
 
-This is a template for an [Express](https://expressjs.com) API with [tRPC](https://trpc.io).
+This is a template for an [Express](https://expressjs.com) api with [tRPC](https://trpc.io), [Prisma](https://www.prisma.io) and [Clerk](https://clerk.com).
 
 ## Configuration
 
@@ -55,6 +55,10 @@ pnpm --filter=express exec prisma [command]
 ### Database
 
 - [Prisma](https://www.prisma.io)
+
+### Auth
+
+- [Clerk](https://clerk.com)
 
 ### Security
 

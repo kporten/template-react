@@ -4,6 +4,8 @@ import { afterAll, afterEach, beforeAll, vi } from 'vitest';
 
 import { server } from './trpc/server';
 
+vi.mock('@clerk/clerk-react');
+
 vi.stubEnv('VITE_TRPC_URL', 'http://localhost');
 
 // eslint-disable-next-line @typescript-eslint/naming-convention
@@ -22,6 +24,7 @@ afterAll(() => {
 });
 
 afterEach(() => {
+  vi.restoreAllMocks();
   server.resetHandlers();
   cleanup();
 });

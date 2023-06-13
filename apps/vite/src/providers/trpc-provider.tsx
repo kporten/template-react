@@ -1,3 +1,4 @@
+import { useAuth } from '@clerk/clerk-react';
 import {
   type DefaultOptions,
   QueryClient,
@@ -15,6 +16,8 @@ export default function TrpcProvider({
   children: React.ReactNode;
   options?: DefaultOptions;
 }) {
+  const { getToken } = useAuth();
+
   const queryClient = useRef<QueryClient>();
 
   if (!queryClient.current) {
@@ -28,6 +31,17 @@ export default function TrpcProvider({
       links: [
         httpBatchLink({
           url: import.meta.env.VITE_TRPC_URL,
+          headers: async () => {
+            const token = await getToken();
+
+            if (token) {
+              return {
+                Authorization: `Bearer ${token}`,
+              };
+            }
+
+            return {};
+          },
         }),
       ],
     });

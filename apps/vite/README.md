@@ -1,10 +1,14 @@
 # Workspace: vite
 
-This is a template for a single-page app with [Vite](https://vitejs.dev) ([React](https://reactjs.org)).
+This is a template for a single-page [Vite](https://vitejs.dev) app with [React](https://reactjs.org), [Tailwind CSS](https://tailwindcss.com), [Testing Library](https://testing-library.com) and [Clerk](https://clerk.com).
+
+## Configuration
+
+- Copy `.env.example` and rename it to `.env`, then change the values if needed
 
 ## Setup
 
-- Copy `.env.example` and rename it to `.env`, then change the values if needed
+- This project needs to be started together with the [Express](../express/README.md) api to connect to the [tRPC](https://trpc.io) server.
 
 ## Tasks
 
@@ -59,11 +63,14 @@ turbo intl --filter=vite
 - [tRPC](https://trpc.io)
 - [TanStack Query](https://tanstack.com/query)
 
+### Auth
+
+- [Clerk](https://clerk.com)
+
 ### UI
 
+- [Radix](https://www.radix-ui.com) and [shadcn/ui](https://ui.shadcn.com)
 - [Tailwind CSS](https://tailwindcss.com)
-- [Headless UI](https://headlessui.dev)
-- [Heroicons](https://heroicons.com)
 - [Format JS](https://formatjs.io)
 
 ### Testing

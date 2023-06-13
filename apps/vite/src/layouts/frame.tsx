@@ -12,20 +12,11 @@ export default function Frame({ children }: { children: React.ReactNode }) {
         defaultTitle="vite | template-react"
       >
         <html lang={lang} />
-        <body className="dark:bg-gray-900 dark:text-gray-100" />
         <meta name="description" content="template-react" />
-        <meta
-          name="theme-color"
-          media="(prefers-color-scheme: light)"
-          content="rgb(56 189 248)"
-        />
-        <meta
-          name="theme-color"
-          media="(prefers-color-scheme: dark)"
-          content="rgb(7 89 133)"
-        />
       </Helmet>
-      <div className="mx-auto min-h-[100dvh] max-w-3xl p-4">{children}</div>
+      <div className="min-h-[100dvh] bg-background text-foreground">
+        <div className="mx-auto max-w-5xl p-4">{children}</div>
+      </div>
     </>
   );
 }

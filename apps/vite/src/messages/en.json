@@ -1,7 +1,11 @@
 {
+  "features.welcome.components.auth.signIn": "Sign In",
+  "features.welcome.components.auth.signOut": "Sign Out",
   "features.welcome.components.getting-started.description": "Get started by editing the {file} file!",
   "features.welcome.components.getting-started.headline": "Template React",
-  "routes.error.not-found": "Not Found",
-  "routes.error.unexpected": "Unexpected Error",
-  "routes.index.welcome": "Welcome"
+  "features.welcome.components.getting-started.hello": "Hello {name} 👋",
+  "pages.error.not-found": "Not Found",
+  "pages.error.unexpected": "Unexpected Error",
+  "pages.index.title": "Welcome",
+  "pages.profile.title": "Profile"
 }

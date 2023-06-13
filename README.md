@@ -48,10 +48,10 @@ The template takes away the work of having to assemble and configure all the [to
 
 ### Apps
 
-- [Express](https://expressjs.com) API with [tRPC](https://trpc.io) and [Prisma](https://www.prisma.io)
-- [Keystone](https://keystonejs.com) CMS
+- [Express](https://expressjs.com) api with [tRPC](https://trpc.io), [Prisma](https://www.prisma.io) and [Clerk](https://clerk.com)
+- [Keystone](https://keystonejs.com) cms
 - [Next.js](https://nextjs.org) with [Tailwind CSS](https://tailwindcss.com)
-- [Vite](https://vitejs.dev) with [React](https://reactjs.org), [Tailwind CSS](https://tailwindcss.com) and [Testing Library](https://testing-library.com)
+- [Vite](https://vitejs.dev) app with [React](https://reactjs.org), [Tailwind CSS](https://tailwindcss.com), [Testing Library](https://testing-library.com) and [Clerk](https://clerk.com)
 
 ### Repository Management
 

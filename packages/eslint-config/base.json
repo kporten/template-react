@@ -87,7 +87,7 @@
       {
         "selector": ["typeProperty", "variable"],
         "types": ["boolean"],
-        "prefix": ["is", "should", "has", "can", "did", "will"],
+        "prefix": ["as", "has", "is"],
         "format": ["StrictPascalCase"]
       },
       {
@@ -199,6 +199,12 @@
       "rules": {
         "@typescript-eslint/consistent-type-definitions": "off",
         "@typescript-eslint/naming-convention": "off"
+      }
+    },
+    {
+      "files": ["*.test.{ts,tsx}", "**/__mocks__/**"],
+      "rules": {
+        "unicorn/no-useless-promise-resolve-reject": "off"
       }
     }
   ]

@@ -4,6 +4,7 @@ import { z } from 'zod';
 config({ path: '.env' });
 
 const env = {
+  CLERK_SECRET_KEY: process.env.CLERK_SECRET_KEY,
   DATABASE_URL: process.env.DATABASE_URL,
   LOG_LEVEL: process.env.LOG_LEVEL,
   NODE_ENV: process.env.NODE_ENV,
@@ -11,6 +12,7 @@ const env = {
 };
 
 const schema = z.object({
+  CLERK_SECRET_KEY: z.string().nonempty(),
   DATABASE_URL: z.string().url(),
   LOG_LEVEL: z
     .enum(['fatal', 'error', 'warn', 'info', 'debug', 'trace'])

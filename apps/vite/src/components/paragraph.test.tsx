@@ -1,18 +1,18 @@
 import { render } from '@testing-library/react';
 import { expect, it } from 'vitest';
 
-import Code from './code';
+import Paragraph from './paragraph';
 
 it('should render default variant', () => {
-  const { asFragment } = render(<Code>const a = 1;</Code>);
+  const { asFragment } = render(<Paragraph>paragraph</Paragraph>);
 
   expect(asFragment()).toMatchInlineSnapshot(`
     <DocumentFragment>
-      <code
-        class="relative rounded bg-muted px-[0.3rem] py-[0.2rem] font-mono text-sm font-semibold"
+      <p
+        class="leading-7 [&:not(:first-child)]:mt-6"
       >
-        const a = 1;
-      </code>
+        paragraph
+      </p>
     </DocumentFragment>
   `);
 });

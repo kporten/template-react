@@ -18,10 +18,12 @@ export default defineConfig({
       provider: 'c8',
       branches: 90,
       lines: 90,
-      exclude: ['./src/test/**'],
+      exclude: ['**/__mocks__/**', '**/test/**'],
     },
     environment: 'happy-dom',
-    mockReset: true,
     setupFiles: ['./src/test/setup.ts'],
+    typecheck: {
+      include: ['**/*.{ts,tsx}'],
+    },
   },
 });

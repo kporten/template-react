@@ -1,13 +1,27 @@
+import { useAuth } from '@clerk/clerk-react';
 import { screen } from '@testing-library/react';
-import { expect, it } from 'vitest';
+import { expect, it, vi } from 'vitest';
 
 import { renderWithProviders } from '@/test/render';
 
 import GettingStarted from './getting-started';
 
-it('should render start', () => {
+it('should render known user', async () => {
   renderWithProviders(<GettingStarted />);
 
   expect(screen.getByRole('heading', { name: 'Template React' })).toBeDefined();
   expect(screen.getByText('Get started', { exact: false })).toBeDefined();
+  expect(await screen.findByText('Hello John', { exact: false })).toBeDefined();
+});
+
+it('should render unknown user', async () => {
+  vi.mocked(useAuth, { partial: true }).mockImplementation(() => ({
+    getToken: async () => Promise.resolve(null),
+  }));
+
+  renderWithProviders(<GettingStarted />);
+
+  expect(
+    await screen.findByText('Hello Unknown', { exact: false }),
+  ).toBeDefined();
 });

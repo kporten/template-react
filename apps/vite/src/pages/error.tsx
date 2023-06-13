@@ -1,4 +1,4 @@
-import FaceFrownIcon from '@heroicons/react/24/outline/FaceFrownIcon';
+import { FrownIcon } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 import { useIntl } from 'react-intl';
 import { isRouteErrorResponse, useRouteError } from 'react-router-dom';
@@ -6,18 +6,18 @@ import { isRouteErrorResponse, useRouteError } from 'react-router-dom';
 import Headline from '@/components/headline';
 import { cn } from '@/utils/styles';
 
-export default function Error() {
+export default function ErrorPage() {
   const intl = useIntl();
   const routeError = useRouteError();
 
   let message = intl.formatMessage({
-    id: 'routes.error.unexpected',
+    id: 'pages.error.unexpected',
     defaultMessage: 'Unexpected Error',
   });
 
   if (isRouteErrorResponse(routeError) && routeError.status === 404) {
     message = intl.formatMessage({
-      id: 'routes.error.not-found',
+      id: 'pages.error.not-found',
       defaultMessage: 'Not Found',
     });
   }
@@ -28,15 +28,15 @@ export default function Error() {
         <title>{message}</title>
       </Helmet>
       <div className="flex flex-col items-center space-y-4">
-        <FaceFrownIcon
+        <FrownIcon
           className={cn(
             'h-16 w-16 md:h-24 md:w-24',
             isRouteErrorResponse(routeError) ? 'text-sky-800' : 'text-red-500',
           )}
         />
         <Headline
-          level={1}
-          variant={isRouteErrorResponse(routeError) ? 'default' : 'error'}
+          variant="h1"
+          className={{ 'text-destructive': isRouteErrorResponse(routeError) }}
         >
           {message}
         </Headline>

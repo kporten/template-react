@@ -1,8 +1,11 @@
+import { SignIn, SignUp } from '@clerk/clerk-react';
 import { createBrowserRouter, Outlet, RouterProvider } from 'react-router-dom';
 
+import ProtectedRoute from '@/components/protected-route';
 import Frame from '@/layouts/frame';
-import Error from '@/routes/error';
-import Index from '@/routes/index';
+import ErrorPage from '@/pages/error';
+import IndexPage from '@/pages/index';
+import ProfilePage from '@/pages/profile';
 
 const router = createBrowserRouter([
   {
@@ -14,13 +17,29 @@ const router = createBrowserRouter([
     ),
     errorElement: (
       <Frame>
-        <Error />
+        <ErrorPage />
       </Frame>
     ),
     children: [
       {
         index: true,
-        element: <Index />,
+        element: <IndexPage />,
+      },
+      {
+        path: 'sign-in/*',
+        element: <SignIn routing="path" path="/sign-in" />,
+      },
+      {
+        path: 'sign-up/*',
+        element: <SignUp routing="path" path="/sign-up" />,
+      },
+      {
+        path: 'profile',
+        element: (
+          <ProtectedRoute>
+            <ProfilePage />
+          </ProtectedRoute>
+        ),
       },
     ],
   },

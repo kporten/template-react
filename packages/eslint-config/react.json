@@ -40,7 +40,6 @@
     "react/jsx-boolean-value": "error",
     "react/jsx-filename-extension": ["error", { "extensions": [".tsx"] }],
     "react/jsx-fragments": "error",
-    "react/jsx-props-no-spreading": "error",
     "react/jsx-no-useless-fragment": "error",
     "react/jsx-pascal-case": "error",
     "react/prop-types": "off"

@@ -1,12 +1,20 @@
 import { TRPCError } from '@trpc/server';
 import { z } from 'zod';
 
-import { procedure, router } from '@/lib/trpc';
+import clerk from '@/lib/auth';
+import { procedure, protectedProcedure, router } from '@/lib/trpc';
 
 import { getUserById, getUsers } from './service';
 
 export default router({
-  byId: procedure.input(z.number().int()).query(async ({ input }) => {
+  me: procedure.query(async ({ ctx }) => {
+    const user = ctx.auth?.userId
+      ? await clerk.users.getUser(ctx.auth.userId)
+      : null;
+
+    return user?.firstName ?? 'Unknown';
+  }),
+  byId: protectedProcedure.input(z.number().int()).query(async ({ input }) => {
     const user = await getUserById(input);
 
     if (!user) {
@@ -18,7 +26,7 @@ export default router({
 
     return user;
   }),
-  list: procedure.query(async () => {
+  list: protectedProcedure.query(async () => {
     return getUsers();
   }),
 });

@@ -6,7 +6,7 @@ export default function Users() {
 
   return (
     <>
-      <Headline level={2} className="text-center text-3xl md:text-4xl">
+      <Headline variant="h3" className="text-center">
         tRPC
       </Headline>
       <pre className="mt-4 rounded-lg border-2 border-sky-800 p-4">

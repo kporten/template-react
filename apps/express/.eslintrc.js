@@ -9,7 +9,13 @@ module.exports = {
       'error',
       {
         // runtime variables
-        allowList: ['DATABASE_URL', 'LOG_LEVEL', 'NODE_ENV', 'PORT'],
+        allowList: [
+          'CLERK_SECRET_KEY',
+          'DATABASE_URL',
+          'LOG_LEVEL',
+          'NODE_ENV',
+          'PORT',
+        ],
       },
     ],
   },

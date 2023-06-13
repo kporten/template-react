@@ -1,6 +1,7 @@
 # Common
 .DS_Store
 .env
+.swc
 .turbo
 *.db*
 *.local
