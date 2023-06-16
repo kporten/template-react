@@ -10,7 +10,7 @@
     "test": "vitest run",
     "test:coverage": "vitest run --coverage",
     "test:ui": "vitest --ui",
-    "typecheck": "vitest typecheck --run",
+    "test:types": "vitest typecheck --run",
     "intl": "pnpm run intl:extract && pnpm run intl:compile && pnpm run intl:clean",
     "intl:extract": "formatjs extract 'src/**/*.{tsx,ts}' --format=crowdin --out-file=messages.json --throws",
     "intl:compile": "formatjs compile messages.json --format=crowdin --out-file=src/messages/en.json",

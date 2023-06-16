@@ -24,8 +24,8 @@ turbo test:coverage
 # test all workspaces with browser UI
 turbo test:ui
 
-# typecheck all workspaces
-turbo typecheck
+# test all workspaces with types
+turbo test:types
 
 # extract and compile intl messages in all workspaces
 turbo intl

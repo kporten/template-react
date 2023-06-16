@@ -37,9 +37,9 @@ jobs:
         uses: ./.github/actions/setup
       - name: 🖍️ Check formatting
         run: turbo format:check
-      - name: 🛡️ Typecheck projects
-        run: turbo typecheck
-      - name: 🔦 Lint projects
+      - name: 🛡️ Test types
+        run: turbo test:types
+      - name: 🔦 Lint code
         run: turbo lint
       - name: 🧪 Test coverage
         run: turbo test:coverage

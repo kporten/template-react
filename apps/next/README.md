@@ -19,8 +19,8 @@ turbo preview --filter=next
 # lint workspace
 turbo lint --filter=next
 
-# typecheck workspace
-turbo typecheck --filter=next
+# test workspace with type check
+turbo test:types --filter=next
 ```
 
 > **Note**

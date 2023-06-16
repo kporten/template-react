@@ -36,8 +36,8 @@ turbo test:coverage --filter=vite
 # test workspace with browser UI
 turbo test:ui --filter=vite
 
-# typecheck workspace
-turbo typecheck --filter=vite
+# test workspace with type check
+turbo test:types --filter=vite
 
 # extract and compile intl messages in workspace
 turbo intl --filter=vite

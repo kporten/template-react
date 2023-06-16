@@ -7,7 +7,7 @@
     "build": "next build",
     "preview": "next start --port=5172",
     "lint": "eslint --max-warnings=0 --ignore-path=../../.gitignore .",
-    "typecheck": "tsc"
+    "test:types": "tsc"
   },
   "dependencies": {
     "@formatjs/intl-localematcher": "0.2.32",

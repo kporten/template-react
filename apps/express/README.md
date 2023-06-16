@@ -28,8 +28,8 @@ turbo preview --filter=express
 # lint workspace
 turbo lint --filter=express
 
-# typecheck workspace
-turbo typecheck --filter=express
+# test workspace with type check
+turbo test:types --filter=express
 ```
 
 > **Note**

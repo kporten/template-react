@@ -27,8 +27,8 @@ turbo preview --filter=keystone
 # lint workspace
 turbo lint --filter=keystone
 
-# typecheck workspace
-turbo typecheck --filter=keystone
+# test workspace with type check
+turbo test:types --filter=keystone
 ```
 
 > **Note**

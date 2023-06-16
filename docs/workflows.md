@@ -28,8 +28,8 @@
   - 🐾 Audit dependencies
 - `test`
   - 🖍️ Check formatting
-  - 🛡️ Typecheck projects
-  - 🔦 Lint projects
+  - 🛡️ Test types
+  - 🔦 Lint code
   - 🧪 Test coverage
 
 ### Secrets
