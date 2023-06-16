@@ -145,6 +145,7 @@ jobs:
       - name: 🏗️ Build
         run: turbo build --filter=vite
         # env:
+        #   VITE_CLERK_PUBLISHABLE_KEY: ${{ vars.VITE_CLERK_PUBLISHABLE_KEY }}
         #   VITE_SENTRY_DSN: ${{ vars.SENTRY_DSN }}
         #   VITE_TRPC_URL: ${{ vars.VITE_TRPC_URL }}
       # - name: 🚀 Deploy

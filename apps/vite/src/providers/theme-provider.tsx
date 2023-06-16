@@ -11,7 +11,7 @@ export default function ThemeProvider({
   const [theme, setTheme] = useAtom(themeAtom);
 
   useEffect(() => {
-    const setDarkMode = (isDarkMode: boolean) => {
+    const handleDarkMode = (isDarkMode: boolean) => {
       const className = 'dark';
 
       if (isDarkMode) {
@@ -21,18 +21,20 @@ export default function ThemeProvider({
       }
     };
 
-    setDarkMode(theme === 'dark');
+    handleDarkMode(theme === 'dark');
 
-    const handleChange = ({ matches }: MediaQueryListEvent) => {
-      setTheme(matches ? 'dark' : 'light');
-      setDarkMode(matches);
-    };
+    const abort = new AbortController();
 
-    mediaDark.addEventListener('change', handleChange);
+    mediaDark.addEventListener(
+      'change',
+      ({ matches }) => {
+        setTheme(matches ? 'dark' : 'light');
+        handleDarkMode(matches);
+      },
+      { signal: abort.signal },
+    );
 
-    return () => {
-      mediaDark.removeEventListener('change', handleChange);
-    };
+    return () => abort.abort();
   }, [theme, setTheme]);
 
   return children;

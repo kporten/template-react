@@ -1,8 +1,9 @@
+import { DevTools } from 'jotai-devtools';
 import { HelmetProvider } from 'react-helmet-async';
 
 import AuthProvider from '@/providers/auth-provider';
 import IntlProvider from '@/providers/intl-provider';
-import StoreProvider from '@/providers/store-provider';
+import StoreProvider, { store } from '@/providers/store-provider';
 import ThemeProvider from '@/providers/theme-provider';
 import TrpcProvider from '@/providers/trpc-provider';
 
@@ -17,7 +18,12 @@ export default function Providers({
         <IntlProvider>
           <AuthProvider>
             <TrpcProvider>
-              <ThemeProvider>{children}</ThemeProvider>
+              <ThemeProvider>
+                <>
+                  <DevTools store={store} />
+                  {children}
+                </>
+              </ThemeProvider>
             </TrpcProvider>
           </AuthProvider>
         </IntlProvider>

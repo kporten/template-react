@@ -1,12 +1,14 @@
+import { useHydrateAtoms } from 'jotai/utils';
+
 import IntlProvider from '@/providers/intl-provider';
-import StoreProvider, { HydrateAtoms } from '@/providers/store-provider';
+import StoreProvider from '@/providers/store-provider';
 import TrpcProvider from '@/providers/trpc-provider';
 import { localeAtom } from '@/store/locale';
 
 export default function Providers({ children }: { children: React.ReactNode }) {
   return (
     <StoreProvider>
-      <HydrateAtoms initialValues={[[localeAtom, 'en']]}>
+      <HydrateAtoms>
         <IntlProvider>
           <TrpcProvider
             options={{
@@ -21,4 +23,10 @@ export default function Providers({ children }: { children: React.ReactNode }) {
       </HydrateAtoms>
     </StoreProvider>
   );
+}
+
+export function HydrateAtoms({ children }: { children: React.ReactElement }) {
+  useHydrateAtoms([[localeAtom, 'en']]);
+
+  return children;
 }

@@ -11,3 +11,4 @@ export const localeAtom = atom(
     { algorithm: 'best fit' },
   ) as Locale,
 );
+localeAtom.debugLabel = 'locale';
