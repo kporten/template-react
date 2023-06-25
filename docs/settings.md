@@ -13,9 +13,9 @@
       - ✅ Require status checks to pass before merging
         - ✅ Require branches to be up to date before merging
         - Status checks that are required.
-          - `test`
-          - `security`
+          - `audit`
           - `lint`
+          - `test`
       - ✅ Require linear history
 - **Actions**
   - General

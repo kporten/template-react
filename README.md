@@ -64,9 +64,4 @@ The template takes away the work of having to assemble and configure all the [to
 - [ESLint](https://eslint.org)
 - [Commitlint](https://commitlint.js.org)
 - [Prettier](https://prettier.io)
-- [Fossa](https://fossa.com)
 - [Snyk](https://snyk.io)
-
-### Licenses
-
-[![FOSSA Status](https://app.fossa.com/api/projects/custom%2B27173%2Fgithub.com%2Fkporten%2Ftemplate-react.svg?type=large)](https://app.fossa.com/projects/custom%2B27173%2Fgithub.com%2Fkporten%2Ftemplate-react?ref=badge_large)

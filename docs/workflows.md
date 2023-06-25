@@ -24,7 +24,7 @@
 
 ### Jobs
 
-- `security`
+- `audit`
   - 🐾 Audit dependencies
 - `test`
   - 🖍️ Check formatting
@@ -34,7 +34,6 @@
 
 ### Secrets
 
-- `FOSSA_API_KEY` see https://docs.fossa.com/docs/api-reference
 - `SNYK_TOKEN` see https://docs.snyk.io/features/user-and-group-management/authentication/authentication-for-third-party-tools
 - `TURBO_TOKEN` see https://turbo.build/repo/docs/ci/github-actions#remote-caching or https://ducktors.github.io/turborepo-remote-cache/custom-remote-caching.html#local-environment-variables
 
@@ -93,10 +92,7 @@
 
 ### Jobs
 
-- `licenses`
-  - 🔦 Scan licenses
-  - 🔎 Validate licenses
-- `security`
+- `audit`
   - 🐾 Audit dependencies
 
 > **Note**

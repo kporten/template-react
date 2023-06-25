@@ -6,22 +6,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  licenses:
-    runs-on: ubuntu-latest
-    steps:
-      - name: 📥 Checkout
-        uses: actions/checkout@v3
-      - name: 🔦 Scan licenses
-        uses: fossas/fossa-action@main
-        with:
-          api-key: ${{ secrets.FOSSA_API_KEY }}
-      - name: 🔎 Validate licenses
-        uses: fossas/fossa-action@main
-        with:
-          api-key: ${{ secrets.FOSSA_API_KEY }}
-          run-tests: true
-
-  security:
+  audit:
     runs-on: ubuntu-latest
     steps:
       - name: 📥 Checkout
