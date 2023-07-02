@@ -6,8 +6,8 @@ import { mediaDark, themeAtom } from '@/store/theme';
 export default function ThemeProvider({
   children,
 }: {
-  children: React.ReactElement;
-}): React.ReactElement {
+  children: React.ReactNode;
+}) {
   const [theme, setTheme] = useAtom(themeAtom);
 
   useEffect(() => {

@@ -7,11 +7,7 @@ import StoreProvider, { store } from '@/providers/store-provider';
 import ThemeProvider from '@/providers/theme-provider';
 import TrpcProvider from '@/providers/trpc-provider';
 
-export default function Providers({
-  children,
-}: {
-  children: React.ReactElement;
-}) {
+export default function Providers({ children }: { children: React.ReactNode }) {
   return (
     <HelmetProvider>
       <StoreProvider>
@@ -19,10 +15,8 @@ export default function Providers({
           <AuthProvider>
             <TrpcProvider>
               <ThemeProvider>
-                <>
-                  <DevTools store={store} />
-                  {children}
-                </>
+                <DevTools store={store} />
+                {children}
               </ThemeProvider>
             </TrpcProvider>
           </AuthProvider>

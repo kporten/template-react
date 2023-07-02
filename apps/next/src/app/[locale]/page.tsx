@@ -1,5 +1,4 @@
-// https://beta.nextjs.org/docs/api-reference/file-conventions/page
-
+// https://nextjs.org/docs/app/api-reference/file-conventions/page
 export default function Page() {
   return (
     <div className="text-center">

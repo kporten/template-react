@@ -4,7 +4,7 @@ import { Outlet } from 'react-router-dom';
 export default function ProtectedRoute({
   children,
 }: {
-  children?: React.ReactElement;
+  children?: React.ReactNode;
 }) {
   const { isSignedIn } = useAuth();
 

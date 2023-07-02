@@ -1,15 +1,10 @@
-// https://beta.nextjs.org/docs/api-reference/next.config.js
+// https://nextjs.org/docs/app/api-reference/next-config-js
 
 const { PHASE_DEVELOPMENT_SERVER } = require('next/constants');
 
 module.exports = (phase) => {
   /** @type {import('next').NextConfig} */
   const config = {
-    reactStrictMode: true,
-    swcMinify: true,
-    experimental: {
-      appDir: true,
-    },
     eslint: {
       ignoreDuringBuilds: true,
     },

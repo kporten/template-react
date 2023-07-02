@@ -1,5 +1,3 @@
-// https://beta.nextjs.org/docs/guides/internationalization
-
 import { match as matchLocale } from '@formatjs/intl-localematcher';
 import Negotiator from 'negotiator';
 import { type NextRequest, NextResponse } from 'next/server';
@@ -7,9 +5,10 @@ import { type NextRequest, NextResponse } from 'next/server';
 import { availableLocales, defaultLocale } from '@/utils/locales';
 
 export const config = {
-  matcher: '/((?!_next|favicon).*)',
+  matcher: '/((?!_next).*)',
 };
 
+// https://nextjs.org/docs/app/building-your-application/routing/internationalization
 export function middleware(req: NextRequest) {
   const { pathname } = req.nextUrl;
 

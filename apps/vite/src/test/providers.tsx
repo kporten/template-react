@@ -25,7 +25,7 @@ export default function Providers({ children }: { children: React.ReactNode }) {
   );
 }
 
-export function HydrateAtoms({ children }: { children: React.ReactElement }) {
+export function HydrateAtoms({ children }: { children: React.ReactNode }) {
   useHydrateAtoms([[localeAtom, 'en']]);
 
   return children;

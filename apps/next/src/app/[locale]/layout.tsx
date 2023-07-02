@@ -1,28 +1,21 @@
-// https://beta.nextjs.org/docs/api-reference/file-conventions/layout
-
 import '@/styles/global.css';
 import { leckerliOne } from '@/utils/fonts';
 import { availableLocales } from '@/utils/locales';
 
-// https://beta.nextjs.org/docs/api-reference/metadata
+// https://nextjs.org/docs/app/api-reference/functions/generate-metadata
 export const metadata = {
   title: {
     default: 'next | template-react',
     template: '%s | next | template-react',
   },
-  icons: {
-    icon: {
-      url: '/favicon.png',
-      type: 'image/png',
-    },
-  },
 };
 
-// https://beta.nextjs.org/docs/api-reference/generate-static-params
+// https://nextjs.org/docs/app/api-reference/functions/generate-static-params
 export function generateStaticParams() {
   return availableLocales.map((locale) => ({ locale }));
 }
 
+// https://nextjs.org/docs/app/api-reference/file-conventions/layout
 export default function RootLayout({
   children,
   params,

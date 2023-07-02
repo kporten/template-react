@@ -12,13 +12,18 @@ export default defineConfig({
       '@': path.resolve('./src'),
     },
   },
+  define: {
+    // https://github.com/jotaijs/jotai-devtools/issues/82
+    'process.platform': `'${process.platform}'`,
+  },
   // https://vitest.dev/config/
   test: {
     coverage: {
-      provider: 'c8',
+      provider: 'v8',
       branches: 90,
       lines: 90,
       exclude: ['**/__mocks__/**', '**/test/**'],
+      reporter: ['text', 'html'],
     },
     environment: 'happy-dom',
     setupFiles: ['./src/test/setup.ts'],
