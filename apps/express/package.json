@@ -2,7 +2,12 @@
   "name": "@template-react/express",
   "version": "0.0.0",
   "private": true,
-  "types": "./dist/server.d.ts",
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/server.d.ts"
+    }
+  },
   "scripts": {
     "dev": "tsup --watch --onSuccess='node ./dist/server.js'",
     "build": "tsup",

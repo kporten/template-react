@@ -15,7 +15,7 @@
       }
     }
   },
-  "ignorePatterns": ["*.js"],
+  "ignorePatterns": ["*.js", "*.cjs", "*.mjs"],
   "extends": [
     "turbo",
     "eslint:recommended",

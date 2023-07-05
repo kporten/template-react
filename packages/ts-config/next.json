@@ -2,7 +2,12 @@
   "$schema": "https://json.schemastore.org/tsconfig",
   "extends": "./react",
   "compilerOptions": {
+    "allowJs": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
     "incremental": true,
-    "jsx": "preserve"
+    "jsx": "preserve",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "resolveJsonModule": true
   }
 }
