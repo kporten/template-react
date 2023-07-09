@@ -1,38 +1,54 @@
-FROM node:18.16.1-alpine AS builder
+FROM node:18.16.1-alpine AS base
+
+
+FROM base AS setup
 RUN apk update && apk add --no-cache libc6-compat
 WORKDIR /app
 
 COPY . .
+
 RUN corepack enable
 RUN pnpm dlx turbo prune --scope=@template-react/express --docker
 
-FROM node:18.16.1-alpine AS installer
+
+FROM base AS builder
 RUN apk update && apk add --no-cache libc6-compat
 WORKDIR /app
 
-# install all dependencies
-COPY --from=builder /app/out/json/ .
-COPY --from=builder /app/out/pnpm-lock.yaml .
+COPY --from=setup /app/out/json/ .
+COPY --from=setup /app/out/pnpm-lock.yaml .
+
 RUN corepack enable
 RUN pnpm install --frozen-lockfile --ignore-scripts
 
-# run scripts and build app
-COPY --from=builder /app/out/full/ .
+COPY --from=setup /app/out/full/ .
+
 RUN pnpm install --frozen-lockfile
 RUN pnpm dlx turbo run build --filter=express
 
-# install only prod dependencies
-RUN pnpm dlx rimraf --glob './**/node_modules/{*,.bin,.pnpm,.*.yaml}'
+
+FROM base AS installer
+RUN apk update && apk add --no-cache libc6-compat
+WORKDIR /app
+
+COPY --from=builder --chown=node:node /app/package.json .
+COPY --from=builder --chown=node:node /app/pnpm-lock.yaml .
+COPY --from=builder --chown=node:node /app/pnpm-workspace.yaml .
+COPY --from=builder --chown=node:node /app/apps/express/package.json ./apps/express/
+
+RUN corepack enable
 RUN pnpm install --frozen-lockfile --ignore-scripts --prod --filter=express
 
-FROM node:18.16.1-alpine AS runner
+
+FROM base AS runner
 WORKDIR /app
 USER node
 
-COPY --from=installer --chown=node:node /app/apps/express/package.json .
 COPY --from=installer --chown=node:node /app/node_modules ./node_modules
 COPY --from=installer --chown=node:node /app/apps/express/node_modules ./apps/express/node_modules
-COPY --from=installer --chown=node:node /app/apps/express/dist ./apps/express/dist
+COPY --from=builder --chown=node:node /app/apps/express/node_modules/prisma-client ./apps/express/node_modules/prisma-client
+COPY --from=builder --chown=node:node /app/apps/express/package.json ./apps/express/
+COPY --from=builder --chown=node:node /app/apps/express/dist ./apps/express/dist
 
 WORKDIR /app/apps/express
 CMD ["node", "./dist/server.js"]

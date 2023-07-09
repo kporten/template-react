@@ -13,8 +13,8 @@ export default withAuth(
     },
     db: {
       provider: 'mysql',
-      url: env.DATABASE_URL,
-      prismaClientPath: './node_modules/.prisma/client',
+      url: env.DATABASE_URL || '',
+      prismaClientPath: './node_modules/prisma-client',
     },
     lists: {
       User,
