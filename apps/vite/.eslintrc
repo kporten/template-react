@@ -1,0 +1,26 @@
+{
+  "root": true,
+  "extends": "@template-react/eslint-config/vite",
+  "rules": {
+    "import/no-restricted-paths": [
+      "error",
+      {
+        "basePath": "./**/src",
+        "zones": [
+          {
+            "target": "./components/**/*",
+            "from": "./{features,layouts,routes}/**/*"
+          },
+          {
+            "target": "./features/**/*",
+            "from": "./{layouts,routes}/**/*"
+          },
+          {
+            "target": "./layouts/**/*",
+            "from": "./{features,routes}/**/*"
+          }
+        ]
+      }
+    ]
+  }
+}
