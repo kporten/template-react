@@ -23,5 +23,9 @@ if (element) {
 }
 
 // https://web.dev/vitals/
-// If you want to report web vitals, you can pass a report handler (https://github.com/GoogleChrome/web-vitals#reporthandler)
-reportWebVitals().catch(console.error);
+try {
+  // If you want to report web vitals, you can pass a report handler (https://github.com/GoogleChrome/web-vitals#reporthandler)
+  await reportWebVitals();
+} catch (error) {
+  console.error(error);
+}

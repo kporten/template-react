@@ -10,15 +10,15 @@
   "engines": {
     "node": ">=18 <19"
   },
-  "packageManager": "pnpm@8.6.7",
+  "packageManager": "pnpm@8.6.9",
   "scripts": {
     "format": "prettier --write .",
     "format:check": "prettier --check ."
   },
   "devDependencies": {
     "@changesets/cli": "2.26.2",
-    "@commitlint/cli": "17.6.6",
-    "@commitlint/config-conventional": "17.6.6",
+    "@commitlint/cli": "17.6.7",
+    "@commitlint/config-conventional": "17.6.7",
     "@commitlint/types": "17.4.4",
     "prettier": "3.0.0",
     "prettier-plugin-tailwindcss": "0.4.1",

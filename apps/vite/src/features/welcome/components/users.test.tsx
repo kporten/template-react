@@ -5,7 +5,7 @@ import { rest } from 'msw';
 import { expect, it, vi } from 'vitest';
 
 import { renderWithProviders } from '@/test/render';
-import { server } from '@/test/trpc/server';
+import { server } from '@/test/server';
 
 import Users from './users';
 

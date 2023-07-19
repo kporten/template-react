@@ -33,12 +33,10 @@ async function seed() {
   console.info(`${userSeed} users with ${userSeed * 2} posts seeded.`);
 }
 
-void (async () => {
-  try {
-    await seed();
-    await prisma.$disconnect();
-  } catch (error) {
-    console.error(error);
-    await prisma.$disconnect();
-  }
-})();
+try {
+  await seed();
+} catch (error) {
+  console.error(error);
+} finally {
+  await prisma.$disconnect();
+}

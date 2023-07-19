@@ -2,7 +2,7 @@ import { cleanup } from '@testing-library/react';
 import type { Window } from 'happy-dom';
 import { afterAll, afterEach, beforeAll, vi } from 'vitest';
 
-import { server } from './trpc/server';
+import { server } from './server';
 
 vi.mock('@clerk/clerk-react');
 

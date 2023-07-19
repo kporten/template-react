@@ -13,6 +13,9 @@ export default defineConfig((env) => {
         '@': path.resolve('./src'),
       },
     },
+    build: {
+      target: 'esnext',
+    },
     ...(env.mode === 'development' && {
       define: {
         // https://github.com/jotaijs/jotai-devtools/issues/82

@@ -2,6 +2,6 @@
 
 import { setupServer } from 'msw/node';
 
-import user from './handlers/user';
+import user from './trpc/handlers/user';
 
 export const server = setupServer(...user);
