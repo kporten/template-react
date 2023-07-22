@@ -2,9 +2,8 @@ import { useAuth } from '@clerk/clerk-react';
 import { screen } from '@testing-library/react';
 import { expect, it, vi } from 'vitest';
 
+import GettingStarted from '@/features/welcome/components/getting-started';
 import { renderWithProviders } from '@/test/render';
-
-import GettingStarted from './getting-started';
 
 it('should render known user', async () => {
   renderWithProviders(<GettingStarted />);

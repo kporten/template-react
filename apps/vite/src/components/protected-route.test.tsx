@@ -2,9 +2,8 @@ import { useAuth } from '@clerk/clerk-react';
 import { screen } from '@testing-library/react';
 import { expect, it, vi } from 'vitest';
 
+import ProtectedRoute from '@/components/protected-route';
 import { renderWithProviders } from '@/test/render';
-
-import ProtectedRoute from './protected-route';
 
 it('should render the protected content', () => {
   const route = 'protected';

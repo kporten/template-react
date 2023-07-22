@@ -4,10 +4,9 @@ import { TRPC_ERROR_CODES_BY_KEY } from '@trpc/server/rpc';
 import { rest } from 'msw';
 import { expect, it, vi } from 'vitest';
 
+import Users from '@/features/welcome/components/users';
 import { renderWithProviders } from '@/test/render';
 import { server } from '@/test/server';
-
-import Users from './users';
 
 it('should render users', async () => {
   renderWithProviders(<Users />);

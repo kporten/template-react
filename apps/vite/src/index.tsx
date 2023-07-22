@@ -1,11 +1,10 @@
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
 
+import App from '@/app';
+import '@/index.css';
 import { initMonitoring } from '@/utils/monitoring';
 import { reportWebVitals } from '@/utils/web-vitals';
-
-import App from './app';
-import './index.css';
 
 // https://docs.sentry.io/platforms/javascript/guides/react/
 initMonitoring();

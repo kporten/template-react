@@ -1,7 +1,7 @@
 import { render } from '@testing-library/react';
 import { expect, it } from 'vitest';
 
-import Code from './code';
+import Code from '@/components/code';
 
 it('should render default variant', () => {
   const { asFragment } = render(<Code>const a = 1;</Code>);

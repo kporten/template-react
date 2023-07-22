@@ -4,9 +4,8 @@ import userEvent from '@testing-library/user-event';
 import { MemoryRouter } from 'react-router-dom';
 import { expect, it, vi } from 'vitest';
 
+import Auth from '@/features/welcome/components/auth';
 import { renderWithProviders } from '@/test/render';
-
-import Auth from './auth';
 
 it('should render sign in button', () => {
   vi.mocked(useAuth, { partial: true }).mockImplementation(() => ({
