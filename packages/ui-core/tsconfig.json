@@ -1,0 +1,9 @@
+{
+  "extends": "@template-react/ts-config/react",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"]
+    }
+  }
+}

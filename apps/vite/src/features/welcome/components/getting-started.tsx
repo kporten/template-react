@@ -1,8 +1,6 @@
+import { Code, Headline, Paragraph } from '@template-react/ui-core';
 import { FormattedMessage } from 'react-intl';
 
-import Code from '@/components/code';
-import Headline from '@/components/headline';
-import Paragraph from '@/components/paragraph';
 import { trpc } from '@/utils/trpc';
 
 export default function GettingStarted() {

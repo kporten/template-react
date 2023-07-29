@@ -2,7 +2,7 @@
 
 This package provides shared [ESLint](https://eslint.org) configurations.
 
-## Installation
+## Setup
 
 Add the `eslint-config` package to your workspace dev dependencies.
 
@@ -26,6 +26,7 @@ The following configurations are available:
 - [base](./base.json) - Base rules (includes parser config for TypeScript)
 - [react](./react.json) - React rules (extends `base` config)
 - [next](./next.json) - Next.js project default rules (extends `react` config)
+- [storybook](./storybook.json) - Storybook project default rules (extends `react` config)
 - [vite](./vite.json) - Vite project default rules (extends `react` config)
 
 ## Parser
@@ -45,5 +46,5 @@ The following configurations are available:
 - Promise
 - React
 - SonarJS
-- Tailwind CSS
+- Storybook
 - Unicorn

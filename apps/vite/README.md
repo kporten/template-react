@@ -69,7 +69,6 @@ turbo intl --filter=vite
 
 ### UI
 
-- [Radix](https://www.radix-ui.com) and [shadcn/ui](https://ui.shadcn.com)
 - [Tailwind CSS](https://tailwindcss.com)
 - [Format JS](https://formatjs.io)
 

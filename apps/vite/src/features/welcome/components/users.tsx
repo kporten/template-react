@@ -1,4 +1,5 @@
-import Headline from '@/components/headline';
+import { Headline } from '@template-react/ui-core';
+
 import { trpc } from '@/utils/trpc';
 
 export default function Users() {

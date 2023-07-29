@@ -1,9 +1,8 @@
 import { SignedIn, SignedOut, SignInButton, useAuth } from '@clerk/clerk-react';
 import { useQueryClient } from '@tanstack/react-query';
+import { Button } from '@template-react/ui-core';
 import { FormattedMessage } from 'react-intl';
 import { Link } from 'react-router-dom';
-
-import Button from '@/components/button';
 
 export default function Auth() {
   const { signOut } = useAuth();

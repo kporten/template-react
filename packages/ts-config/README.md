@@ -2,7 +2,7 @@
 
 This package provides shared TypeScript configurations.
 
-## Installation
+## Setup
 
 Add the `ts-config` package to your workspace dev dependencies.
 
