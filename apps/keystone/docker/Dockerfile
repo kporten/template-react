@@ -1,4 +1,4 @@
-FROM node:18.16.1-alpine AS base
+FROM node:18.17.0-alpine AS base
 
 
 FROM base AS setup
@@ -16,7 +16,6 @@ RUN apk update && apk add --no-cache libc6-compat
 WORKDIR /app
 
 COPY --from=setup /app/out/json/ .
-COPY --from=setup /app/out/pnpm-lock.yaml .
 
 RUN corepack enable
 RUN pnpm install --frozen-lockfile --ignore-scripts

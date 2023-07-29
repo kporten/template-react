@@ -2,25 +2,45 @@ import path from 'node:path';
 
 import reactPlugin from '@vitejs/plugin-react-swc';
 import { visualizer } from 'rollup-plugin-visualizer';
+import dtsPlugin from 'vite-plugin-dts';
 import { defineConfig, type UserConfig } from 'vitest/config';
+
+import { peerDependencies } from './package.json';
 
 // https://vitejs.dev/config/
 export default defineConfig((env) => {
   return {
-    plugins: [reactPlugin(), visualizer()],
+    plugins: [
+      reactPlugin(),
+      dtsPlugin({
+        include: ['src', 'presets'],
+        exclude: ['**/*.stories.*', '**/*.test.*', '**/test/**'],
+        insertTypesEntry: true,
+      }),
+      visualizer(),
+    ],
     resolve: {
       alias: {
         '@': path.resolve('./src'),
       },
     },
-    ...(env.mode === 'development' && {
+    ...(env.command === 'build' && {
       define: {
-        // https://github.com/jotaijs/jotai-devtools/issues/82
-        'process.platform': `'${process.platform}'`,
+        'process.env.NODE_ENV': "'production'",
       },
     }),
     build: {
       target: 'esnext',
+      minify: false,
+      lib: {
+        entry: {
+          'ui-core': './src/index.ts',
+        },
+        formats: ['es'],
+      },
+      rollupOptions: {
+        external: Object.keys(peerDependencies),
+      },
     },
     // https://vitest.dev/config/
     test: {

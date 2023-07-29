@@ -1,5 +1,5 @@
 import { useAtom } from 'jotai';
-import { useEffect } from 'react';
+import { useLayoutEffect } from 'react';
 
 import { mediaDark, themeAtom } from '@/store/theme';
 
@@ -10,14 +10,15 @@ export default function ThemeProvider({
 }) {
   const [theme, setTheme] = useAtom(themeAtom);
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     const handleDarkMode = (isDarkMode: boolean) => {
+      const root = document.querySelector(':root');
       const className = 'dark';
 
       if (isDarkMode) {
-        document.body.classList.add(className);
+        root?.classList.add(className);
       } else {
-        document.body.classList.remove(className);
+        root?.classList.remove(className);
       }
     };
 

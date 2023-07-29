@@ -24,8 +24,8 @@
     "@template-react/eslint-config": "workspace:*",
     "@template-react/ts-config": "workspace:*",
     "@total-typescript/ts-reset": "0.4.2",
-    "@types/node": "18.16.19",
-    "eslint": "8.45.0",
+    "@types/node": "18.17.1",
+    "eslint": "8.46.0",
     "typescript": "5.1.6"
   }
 }

@@ -31,8 +31,9 @@ The template takes away the work of having to assemble and configure all the [to
 
 ### Packages
 
-- [Shared ESLint Configurations](./packages/eslint-config/README.md) (`./packages/eslint-config`)
-- [Shared TypeScript Configurations](./packages/ts-config/README.md) (`./packages/ts-config`)
+- [Shared ESLint configurations](./packages/eslint-config/README.md) (`./packages/eslint-config`)
+- [Shared TypeScript configurations](./packages/ts-config/README.md) (`./packages/ts-config`)
+- [Shared UI components, utils and presets](./packages/ui-core/README.md) (`./packages/ui-core`)
 
 ## Documentation
 

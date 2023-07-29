@@ -28,6 +28,7 @@
   - 🐾 Audit dependencies
 - `test`
   - 🖍️ Check formatting
+  - 🏗️ Build packages
   - 🛡️ Test types
   - 🔦 Lint code
   - 🧪 Test coverage

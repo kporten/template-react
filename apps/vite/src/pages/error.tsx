@@ -1,10 +1,8 @@
+import { cn, Headline } from '@template-react/ui-core';
 import { FrownIcon } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 import { useIntl } from 'react-intl';
 import { isRouteErrorResponse, useRouteError } from 'react-router-dom';
-
-import Headline from '@/components/headline';
-import { cn } from '@/utils/styles';
 
 export default function ErrorPage() {
   const intl = useIntl();
