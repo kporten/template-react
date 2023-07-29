@@ -16,7 +16,6 @@ RUN apk update && apk add --no-cache libc6-compat
 WORKDIR /app
 
 COPY --from=setup /app/out/json/ .
-COPY --from=setup /app/out/pnpm-lock.yaml .
 
 RUN corepack enable
 RUN pnpm install --frozen-lockfile --ignore-scripts
