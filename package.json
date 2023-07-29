@@ -1,7 +1,7 @@
 {
   "name": "template-react",
   "description": "Monorepo template for web apps",
-  "version": "4.10.0",
+  "version": "4.9.2",
   "license": "MIT",
   "author": "Kevin Porten <hello@kevinporten.dev>",
   "repository": "https://github.com/kporten/template-react",
