@@ -35,6 +35,8 @@ jobs:
         uses: actions/checkout@v3
       - name: ⚙️ Setup
         uses: ./.github/actions/setup
+      - name: 🏗️ Build packages
+        run: turbo build --filter='./packages/*'
       - name: 🖍️ Check formatting
         run: turbo format:check
       - name: 🛡️ Test types
