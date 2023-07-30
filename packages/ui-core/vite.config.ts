@@ -5,7 +5,7 @@ import { visualizer } from 'rollup-plugin-visualizer';
 import dtsPlugin from 'vite-plugin-dts';
 import { defineConfig, type UserConfig } from 'vitest/config';
 
-import { peerDependencies } from './package.json';
+import { dependencies, peerDependencies } from './package.json';
 
 // https://vitejs.dev/config/
 export default defineConfig((env) => {
@@ -39,7 +39,10 @@ export default defineConfig((env) => {
         formats: ['es'],
       },
       rollupOptions: {
-        external: Object.keys(peerDependencies),
+        external: [
+          ...Object.keys(dependencies),
+          ...Object.keys(peerDependencies),
+        ],
       },
     },
     // https://vitest.dev/config/
