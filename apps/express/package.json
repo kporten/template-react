@@ -20,7 +20,7 @@
     "seed": "tsx ./prisma/seed.ts"
   },
   "dependencies": {
-    "@clerk/clerk-sdk-node": "4.12.1",
+    "@clerk/clerk-sdk-node": "4.12.2",
     "@prisma/client": "5.1.0",
     "@trpc/server": "10.36.0",
     "cors": "2.8.5",
@@ -42,7 +42,7 @@
     "@types/node": "18.17.1",
     "eslint": "8.46.0",
     "prisma": "5.1.0",
-    "tsup": "7.1.0",
+    "tsup": "7.2.0",
     "tsx": "3.12.7",
     "typescript": "5.1.6"
   }

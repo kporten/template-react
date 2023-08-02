@@ -33,8 +33,8 @@ importers:
   apps/express:
     dependencies:
       '@clerk/clerk-sdk-node':
-        specifier: 4.12.1
-        version: 4.12.1
+        specifier: 4.12.2
+        version: 4.12.2
       '@prisma/client':
         specifier: 5.1.0
         version: 5.1.0(prisma@5.1.0)
@@ -94,8 +94,8 @@ importers:
         specifier: 5.1.0
         version: 5.1.0
       tsup:
-        specifier: 7.1.0
-        version: 7.1.0(ts-node@10.9.1)(typescript@5.1.6)
+        specifier: 7.2.0
+        version: 7.2.0(ts-node@10.9.1)(typescript@5.1.6)
       tsx:
         specifier: 3.12.7
         version: 3.12.7
@@ -210,11 +210,11 @@ importers:
   apps/vite:
     dependencies:
       '@clerk/clerk-react':
-        specifier: 4.23.1
-        version: 4.23.1(react@18.2.0)
+        specifier: 4.23.2
+        version: 4.23.2(react@18.2.0)
       '@clerk/localizations':
-        specifier: 1.24.0
-        version: 1.24.0(react@18.2.0)
+        specifier: 1.24.1
+        version: 1.24.1(react@18.2.0)
       '@formatjs/intl-localematcher':
         specifier: 0.4.0
         version: 0.4.0
@@ -240,8 +240,8 @@ importers:
         specifier: 2.2.3
         version: 2.2.3(@types/react@18.2.18)(react@18.2.0)
       jotai-devtools:
-        specifier: 0.6.0
-        version: 0.6.0(@emotion/react@11.11.1)(@types/react@18.2.18)(react-dom@18.2.0)(react@18.2.0)(redux@4.2.1)
+        specifier: 0.6.1
+        version: 0.6.1(@emotion/react@11.11.1)(@types/react@18.2.18)(react-dom@18.2.0)(react@18.2.0)(redux@4.2.1)
       lucide-react:
         specifier: 0.263.1
         version: 0.263.1(react@18.2.0)
@@ -307,8 +307,8 @@ importers:
         specifier: 8.46.0
         version: 8.46.0
       happy-dom:
-        specifier: 10.5.2
-        version: 10.5.2
+        specifier: 10.6.3
+        version: 10.6.3
       msw:
         specifier: 1.2.3
         version: 1.2.3(typescript@5.1.6)
@@ -329,7 +329,7 @@ importers:
         version: 4.4.8(@types/node@18.17.1)(less@4.1.3)
       vitest:
         specifier: 0.34.1
-        version: 0.34.1(@vitest/ui@0.34.1)(happy-dom@10.5.2)(less@4.1.3)
+        version: 0.34.1(@vitest/ui@0.34.1)(happy-dom@10.6.3)(less@4.1.3)
 
   packages/eslint-config:
     dependencies:
@@ -402,12 +402,6 @@ importers:
       clsx:
         specifier: 2.0.0
         version: 2.0.0
-      react:
-        specifier: 18.2.0
-        version: 18.2.0
-      react-dom:
-        specifier: 18.2.0
-        version: 18.2.0(react@18.2.0)
       tailwind-merge:
         specifier: 1.14.0
         version: 1.14.0
@@ -461,8 +455,14 @@ importers:
         specifier: 8.46.0
         version: 8.46.0
       happy-dom:
-        specifier: 10.5.2
-        version: 10.5.2
+        specifier: 10.6.3
+        version: 10.6.3
+      react:
+        specifier: 18.2.0
+        version: 18.2.0
+      react-dom:
+        specifier: 18.2.0
+        version: 18.2.0(react@18.2.0)
       rollup-plugin-visualizer:
         specifier: 5.9.2
         version: 5.9.2
@@ -480,7 +480,7 @@ importers:
         version: 3.4.0(@types/node@18.17.1)(typescript@5.1.6)(vite@4.4.8)
       vitest:
         specifier: 0.34.1
-        version: 0.34.1(@vitest/ui@0.34.1)(happy-dom@10.5.2)(less@4.1.3)
+        version: 0.34.1(@vitest/ui@0.34.1)(happy-dom@10.6.3)(less@4.1.3)
 
 packages:
 
@@ -3095,11 +3095,11 @@ packages:
       prettier: 2.8.8
     dev: true
 
-  /@clerk/backend@0.26.0:
-    resolution: {integrity: sha512-lFDKVqx2soDvKpynZRtRzb1mg4peE5O5I5H7XIgaGhcchOVPrv+IYR0+rTwlSZkep4xCG12dPIKW+Bjtp6QLKw==}
+  /@clerk/backend@0.27.0:
+    resolution: {integrity: sha512-Sj541JrpqAn1A/UwdyDBxFV3stq2A/Pe/8HdPTG3Cct6briPyavfi46O5s1+L3BSvUcKUY+UbM0+8VsoCNFi4w==}
     engines: {node: '>=14'}
     dependencies:
-      '@clerk/types': 3.48.1
+      '@clerk/types': 3.49.0
       '@peculiar/webcrypto': 1.4.1
       '@types/node': 16.18.6
       cookie: 0.5.0
@@ -3109,25 +3109,24 @@ packages:
       tslib: 2.4.1
     dev: false
 
-  /@clerk/clerk-react@4.23.1(react@18.2.0):
-    resolution: {integrity: sha512-X0h7I2aPxc3cY7f5ZOaUrrgYjYXSOWbWOCyNuF4rZeW1L6ED8mZEFpQV4+EluUgAomxgGrt8kdMIyMwSsGw3Tg==}
+  /@clerk/clerk-react@4.23.2(react@18.2.0):
+    resolution: {integrity: sha512-6MJa8ecr22qHhTfdkMMIJGctMBqj01fLJ4vmfZvr22tIkwkPXoeYJd5XcFKuSoO2dXc1eHD/F9i/HdCqGm68gw==}
     engines: {node: '>=14'}
     peerDependencies:
       react: '>=16'
     dependencies:
-      '@clerk/shared': 0.20.0(react@18.2.0)
-      '@clerk/types': 3.48.1
+      '@clerk/shared': 0.21.0(react@18.2.0)
+      '@clerk/types': 3.49.0
       react: 18.2.0
-      swr: 1.3.0(react@18.2.0)
       tslib: 2.4.1
     dev: false
 
-  /@clerk/clerk-sdk-node@4.12.1:
-    resolution: {integrity: sha512-KR8L0zX9YWms8ScZPXLfBmEHYxFWuI+JeXJ/UtYhTP5qu2LBoAOBbZI0zsYPwTKE2L/1i2Gga6m3whmVAJfmzg==}
+  /@clerk/clerk-sdk-node@4.12.2:
+    resolution: {integrity: sha512-7xYPsLSeGO5XoP0No/9m2dsCMezwtmiYGKOwWzt41ZzJNFlU0rfqYF3VOZEsbtQlc3ZXeU+67ItjoJYrf3kT6A==}
     engines: {node: '>=14'}
     dependencies:
-      '@clerk/backend': 0.26.0
-      '@clerk/types': 3.48.1
+      '@clerk/backend': 0.27.0
+      '@clerk/types': 3.49.0
       '@types/cookies': 0.7.7
       '@types/express': 4.17.14
       '@types/node-fetch': 2.6.2
@@ -3136,18 +3135,18 @@ packages:
       tslib: 2.4.1
     dev: false
 
-  /@clerk/localizations@1.24.0(react@18.2.0):
-    resolution: {integrity: sha512-WOkwoyYpbG1DiS5rZQhFiIoUsBosaBohRvudhD552tCljoH7iGyytNMx3JRkemNT/bi0RYEpUL0YzFuBc1Mj0w==}
+  /@clerk/localizations@1.24.1(react@18.2.0):
+    resolution: {integrity: sha512-qOAAkubSYxyC514XXf33tbfoIWmZJyapWNbkfb7tt4fI8xBna6f9LjG/xvWoj3s89khu5PkDTOxhFN+jHmpoUA==}
     engines: {node: '>=14'}
     peerDependencies:
       react: '>=16'
     dependencies:
-      '@clerk/types': 3.48.1
+      '@clerk/types': 3.49.0
       react: 18.2.0
     dev: false
 
-  /@clerk/shared@0.20.0(react@18.2.0):
-    resolution: {integrity: sha512-VbJZQ3DwF35qPNTa1u2r/UO0vEfk4Gzf8dzbbma6fLPRILAFovQGYb5Cwvmef+Qj7S0XPpOlW1lSYHBHL326gQ==}
+  /@clerk/shared@0.21.0(react@18.2.0):
+    resolution: {integrity: sha512-tkV2OAddFMPBHDjcMbtNNrV3NQD+hGKf2hn3TKv1mRJNZ2oR5Bfk8r0bkaqwoqxX8ndkbHLCa9gwR8SWO7GGow==}
     peerDependencies:
       react: '>=16'
     dependencies:
@@ -3157,8 +3156,8 @@ packages:
       swr: 1.3.0(react@18.2.0)
     dev: false
 
-  /@clerk/types@3.48.1:
-    resolution: {integrity: sha512-bpSSfqdrw4iYCLlJ8UVN8HWMkA12wOH0lICdjnefPKKm1qO3yb8P5p6jmaCckcwF77unMECAslO2q2ocZcO1QA==}
+  /@clerk/types@3.49.0:
+    resolution: {integrity: sha512-vAx5R/iYfsgIaIDMiDr6ZKQnAneAmRrUVYz6KCtPG6/hnEAnRYhwXpEUi89e5G0BFmuUfSxe/N/Anfc1PNteXQ==}
     engines: {node: '>=14'}
     dependencies:
       csstype: 3.1.1
@@ -5014,14 +5013,14 @@ packages:
     dependencies:
       asn1js: 3.0.5
       pvtsutils: 1.3.2
-      tslib: 2.4.1
+      tslib: 2.6.1
     dev: false
 
   /@peculiar/json-schema@1.1.12:
     resolution: {integrity: sha512-coUfuoMeIB7B8/NMekxaDzLhaYmp0HZNPEjYRm9goRou8UZIC3z21s0sL9AWoCw4EG876QyO3kYrc61WNF9B/w==}
     engines: {node: '>=8.0.0'}
     dependencies:
-      tslib: 2.4.1
+      tslib: 2.6.1
     dev: false
 
   /@peculiar/webcrypto@1.4.1:
@@ -5031,7 +5030,7 @@ packages:
       '@peculiar/asn1-schema': 2.3.6
       '@peculiar/json-schema': 1.1.12
       pvtsutils: 1.3.2
-      tslib: 2.4.1
+      tslib: 2.6.1
       webcrypto-core: 1.7.7
     dev: false
 
@@ -7452,20 +7451,6 @@ packages:
       tslib: 2.6.1
     dev: false
 
-  /@tabler/icons-react@2.30.0(react@18.2.0):
-    resolution: {integrity: sha512-aYggXusHW133L4KujJkVf4GIIrjg7tIRHgNf/n37mnoHqMjwNP+PjmVdrBM1Z8Ywx9PKFRlrwM0eUMDcG+I4HA==}
-    peerDependencies:
-      react: ^16.5.1 || ^17.0.0 || ^18.0.0
-    dependencies:
-      '@tabler/icons': 2.30.0
-      prop-types: 15.8.1
-      react: 18.2.0
-    dev: false
-
-  /@tabler/icons@2.30.0:
-    resolution: {integrity: sha512-tvtmkI4ALjKThVVORh++sB9JnkFY7eGInKxNy+Df7WVQiF7T85tlvGADzlgX4Ic+CK5MIUzZ0jhOlQ/RRlgXpg==}
-    dev: false
-
   /@tanstack/query-core@4.32.1:
     resolution: {integrity: sha512-VEAGHboOFWN/bvf/7cCoeLQfld0AA8n0V/kfc77W+FvxnnSwJufEh6gfjqpX5bRE/DEYfYDYdNtuL3KM+lIs8Q==}
     dev: false
@@ -8324,7 +8309,7 @@ packages:
       std-env: 3.3.3
       test-exclude: 6.0.0
       v8-to-istanbul: 9.1.0
-      vitest: 0.34.1(@vitest/ui@0.34.1)(happy-dom@10.5.2)(less@4.1.3)
+      vitest: 0.34.1(@vitest/ui@0.34.1)(happy-dom@10.6.3)(less@4.1.3)
     transitivePeerDependencies:
       - supports-color
     dev: true
@@ -8371,7 +8356,7 @@ packages:
       pathe: 1.1.1
       picocolors: 1.0.0
       sirv: 2.0.3
-      vitest: 0.34.1(@vitest/ui@0.34.1)(happy-dom@10.5.2)(less@4.1.3)
+      vitest: 0.34.1(@vitest/ui@0.34.1)(happy-dom@10.6.3)(less@4.1.3)
     dev: true
 
   /@vitest/utils@0.34.1:
@@ -8998,7 +8983,7 @@ packages:
     dependencies:
       pvtsutils: 1.3.2
       pvutils: 1.1.3
-      tslib: 2.4.1
+      tslib: 2.6.1
     dev: false
 
   /assert@2.0.0:
@@ -10307,7 +10292,7 @@ packages:
     resolution: {integrity: sha512-Kv5nKlh6yRrdrGvxeJ2e5y2eRUpkUosIW4A2AS38zwSz27zu7ufDwQPi5Jhs3XAlGNetl3bmnGhQsMtkKJnj3w==}
     dependencies:
       no-case: 3.0.4
-      tslib: 2.4.1
+      tslib: 2.6.1
     dev: false
 
   /dot-prop@5.3.0:
@@ -11800,8 +11785,8 @@ packages:
       uglify-js: 3.17.4
     dev: true
 
-  /happy-dom@10.5.2:
-    resolution: {integrity: sha512-dTA1cDcLOPIkAdykLd9Wo1k8Ly36Hh2OdKGkWEHWuAHb89KcVVRLSj1OFev7ir90xhRLSGCGrEdDvS6u9l13kg==}
+  /happy-dom@10.6.3:
+    resolution: {integrity: sha512-se+f89YhkhoaZ52WrsfLWIS77FwzdbHi2lbPyyrIEnSeoTU4kAdvDIdezfs+IN23ZBDL7PkqAwscNWqkIp4Gyw==}
     dependencies:
       css.escape: 1.5.1
       entities: 4.5.0
@@ -12604,8 +12589,8 @@ packages:
     resolution: {integrity: sha512-8wb9Yw966OSxApiCt0K3yNJL8pnNeIv+OEq2YMidz4FKP6nonSRoOXc80iXY4JaN2FC11B9qsNmDsm+ZOfMROA==}
     dev: true
 
-  /jotai-devtools@0.6.0(@emotion/react@11.11.1)(@types/react@18.2.18)(react-dom@18.2.0)(react@18.2.0)(redux@4.2.1):
-    resolution: {integrity: sha512-CbTDNokAlCbTs3PylpS+w+5A553ArTXDbqIsRH2aNAdAo2YWCwRToASLg4u57xapdtAGntf/twgYu/4Q35CNEg==}
+  /jotai-devtools@0.6.1(@emotion/react@11.11.1)(@types/react@18.2.18)(react-dom@18.2.0)(react@18.2.0)(redux@4.2.1):
+    resolution: {integrity: sha512-VyPGA1hMiUwSoCrtqmimF7EPca1PeqD7+vseMq9+wVmoKFcFiiKG0QVElRUm6DtV/D07e6l/TLMpmDait75Mdw==}
     engines: {node: '>=14.0.0'}
     peerDependencies:
       '@emotion/react': '>=11.0.0'
@@ -12616,13 +12601,12 @@ packages:
       '@mantine/hooks': 6.0.17(react@18.2.0)
       '@mantine/prism': 6.0.17(@mantine/core@6.0.17)(@mantine/hooks@6.0.17)(react-dom@18.2.0)(react@18.2.0)
       '@redux-devtools/extension': 3.2.5(redux@4.2.1)
-      '@tabler/icons-react': 2.30.0(react@18.2.0)
       javascript-stringify: 2.1.0
       jsondiffpatch: 0.4.1
       react: 18.2.0
-      react-error-boundary: 3.1.4(react@18.2.0)
+      react-error-boundary: 4.0.10(react@18.2.0)
       react-json-tree: 0.18.0(@types/react@18.2.18)(react@18.2.0)
-      react-resizable-panels: 0.0.42(react-dom@18.2.0)(react@18.2.0)
+      react-resizable-panels: 0.0.54(react-dom@18.2.0)(react@18.2.0)
     transitivePeerDependencies:
       - '@types/react'
       - react-dom
@@ -12777,6 +12761,7 @@ packages:
       chalk: 2.4.2
       diff-match-patch: 1.0.5
     dev: false
+    bundledDependencies: []
 
   /jsonfile@4.0.0:
     resolution: {integrity: sha512-m6F1R3z8jjlf2imQHS2Qez5sjKWQzbuuhuJ/FKYFRZvPE3PuHcSMVZzfsLhGVOkfd20obL5SWEBew5ShlquNxg==}
@@ -13125,7 +13110,7 @@ packages:
   /lower-case@2.0.2:
     resolution: {integrity: sha512-7fm3l3NAF9WfN6W3JOmf5drwpVqX78JtoGJ3A6W0a6ZnldM41w2fV5D490psKFTpMds8TJse/eHLFFsNHHjHgg==}
     dependencies:
-      tslib: 2.4.1
+      tslib: 2.6.1
     dev: false
 
   /lru-cache@10.0.0:
@@ -13785,7 +13770,7 @@ packages:
     resolution: {integrity: sha512-fgAN3jGAh+RoxUGZHTSOLJIqUc2wmoBwGR4tbpNAKmmovFoWq0OdRkb0VkldReO2a2iBT/OEulG9XSUc10r3zg==}
     dependencies:
       lower-case: 2.0.2
-      tslib: 2.4.1
+      tslib: 2.6.1
     dev: false
 
   /node-abort-controller@3.1.1:
@@ -14817,7 +14802,7 @@ packages:
   /pvtsutils@1.3.2:
     resolution: {integrity: sha512-+Ipe2iNUyrZz+8K/2IOo+kKikdtfhRKzNpQbruF2URmqPtoqAs8g3xS7TJvFF2GcPXjh7DkqMnpVveRFq4PgEQ==}
     dependencies:
-      tslib: 2.4.1
+      tslib: 2.6.1
     dev: false
 
   /pvutils@1.1.3:
@@ -14983,9 +14968,8 @@ packages:
       react-is: 18.1.0
     dev: true
 
-  /react-error-boundary@3.1.4(react@18.2.0):
-    resolution: {integrity: sha512-uM9uPzZJTF6wRQORmSrvOIgt4lJ9MC1sNgEOj2XGsDTRE4kmpWxg7ENK9EWNKJRMAOY9z0MuF4yIfl6gp4sotA==}
-    engines: {node: '>=10', npm: '>=6'}
+  /react-error-boundary@4.0.10(react@18.2.0):
+    resolution: {integrity: sha512-pvVKdi77j2OoPHo+p3rorgE43OjDWiqFkaqkJz8sJKK6uf/u8xtzuaVfj5qJ2JnDLIgF1De3zY5AJDijp+LVPA==}
     peerDependencies:
       react: '>=16.13.1'
     dependencies:
@@ -15162,8 +15146,8 @@ packages:
       use-sidecar: 1.1.2(@types/react@18.2.18)(react@18.2.0)
     dev: false
 
-  /react-resizable-panels@0.0.42(react-dom@18.2.0)(react@18.2.0):
-    resolution: {integrity: sha512-nOaN9DeUTsmKjN3MFGaLd35kngGyO29SHRLdBRafYR1SV2F/LbWbpVUKVPwL2fBBTnQe2/rqOQwT4k+3cKeK+w==}
+  /react-resizable-panels@0.0.54(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-f8hHdQrqvXoiZGdRNuoOi/C2cdYT2nEpaOb1KIWVWorSTPZmnE+ZQiamGeu+AMx3iZ/tqBtlAkBOpKXzTnDCoA==}
     peerDependencies:
       react: ^16.14.0 || ^17.0.0 || ^18.0.0
       react-dom: ^16.14.0 || ^17.0.0 || ^18.0.0
@@ -16013,7 +15997,7 @@ packages:
     resolution: {integrity: sha512-LAOh4z89bGQvl9pFfNF8V146i7o7/CqFPbqzYgP+yYzDIDeS9HaNFtXABamRW+AQzEVODcvE79ljJ+8a9YSdMg==}
     dependencies:
       dot-case: 3.0.4
-      tslib: 2.4.1
+      tslib: 2.6.1
     dev: false
 
   /snakecase-keys@3.2.1:
@@ -16888,8 +16872,8 @@ packages:
   /tslib@2.6.1:
     resolution: {integrity: sha512-t0hLfiEKfMUoqhG+U1oid7Pva4bbDPHYfJNiB7BiIjRkj1pyC++4N3huJfqY6aRH6VTB0rvtzQwjM4K6qpfOig==}
 
-  /tsup@7.1.0(ts-node@10.9.1)(typescript@5.1.6):
-    resolution: {integrity: sha512-mazl/GRAk70j8S43/AbSYXGgvRP54oQeX8Un4iZxzATHt0roW0t6HYDVZIXMw0ZQIpvr1nFMniIVnN5186lW7w==}
+  /tsup@7.2.0(ts-node@10.9.1)(typescript@5.1.6):
+    resolution: {integrity: sha512-vDHlczXbgUvY3rWvqFEbSqmC1L7woozbzngMqTtL2PGBODTtWlRwGDDawhvWzr5c1QjKe4OAKqJGfE1xeXUvtQ==}
     engines: {node: '>=16.14'}
     hasBin: true
     peerDependencies:
@@ -17409,7 +17393,7 @@ packages:
       fsevents: 2.3.2
     dev: true
 
-  /vitest@0.34.1(@vitest/ui@0.34.1)(happy-dom@10.5.2)(less@4.1.3):
+  /vitest@0.34.1(@vitest/ui@0.34.1)(happy-dom@10.6.3)(less@4.1.3):
     resolution: {integrity: sha512-G1PzuBEq9A75XSU88yO5G4vPT20UovbC/2osB2KEuV/FisSIIsw7m5y2xMdB7RsAGHAfg2lPmp2qKr3KWliVlQ==}
     engines: {node: '>=v14.18.0'}
     hasBin: true
@@ -17454,7 +17438,7 @@ packages:
       cac: 6.7.14
       chai: 4.3.7
       debug: 4.3.4
-      happy-dom: 10.5.2
+      happy-dom: 10.6.3
       local-pkg: 0.4.3
       magic-string: 0.30.2
       pathe: 1.1.1
@@ -17538,7 +17522,7 @@ packages:
       '@peculiar/json-schema': 1.1.12
       asn1js: 3.0.5
       pvtsutils: 1.3.2
-      tslib: 2.4.1
+      tslib: 2.6.1
     dev: false
 
   /webidl-conversions@3.0.1:
