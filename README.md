@@ -4,9 +4,9 @@
 ![tag](https://img.shields.io/github/v/tag/kporten/template-react?style=for-the-badge)
 ![last-commit](https://img.shields.io/github/last-commit/kporten/template-react?style=for-the-badge)
 
-This monorepo template allows you to start immediately with a [React](https://reactjs.org) ([TypeScript](https://www.typescriptlang.org)) single-page app ([Vite](https://vitejs.dev)) or web app ([Next.js](https://nextjs.org)), but it can also be used for any other type of web app or service.
+This monorepo template allows you to start immediately with a [React](https://reactjs.org) ([Vite](https://vitejs.dev)), [Next.js](https://nextjs.org) or [Express](https://expressjs.com) app, but it can also be used for any other type of web app or service.
 
-The template takes away the work of having to assemble and configure all the [tools](#tech-stack) for professional development yourself.
+The template takes away the work of having to assemble and configure the [tech stack](#tech-stack) for professional development yourself.
 
 ## Getting Started
 

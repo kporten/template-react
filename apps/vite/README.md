@@ -16,31 +16,31 @@ This is a template for a single-page [Vite](https://vitejs.dev) app with [React]
 
 ```sh
 # run development server
-turbo dev --filter=vite
+turbo dev --filter vite
 
 # build workspace
-turbo build --filter=vite
+turbo build --filter vite
 
 # run preview server
-turbo preview --filter=vite
+turbo preview --filter vite
 
 # lint workspace
-turbo lint --filter=vite
+turbo lint --filter vite
 
 # test workspace
-turbo test --filter=vite
+turbo test --filter vite
 
 # test workspace with coverage check
-turbo test:coverage --filter=vite
+turbo test:coverage --filter vite
 
 # test workspace with browser UI
-turbo test:ui --filter=vite
+turbo test:ui --filter vite
 
 # test workspace with type check
-turbo test:types --filter=vite
+turbo test:types --filter vite
 
 # extract and compile intl messages in workspace
-turbo intl --filter=vite
+turbo intl --filter vite
 ```
 
 > **Note**

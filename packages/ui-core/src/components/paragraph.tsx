@@ -1,12 +1,13 @@
 import type { ClassValue } from 'clsx';
+import type { ReactNode } from 'react';
 
 import { cn } from '@/utils/styles';
 
-export default function Paragraph({
+export function Paragraph({
   children,
   className,
 }: {
-  children: React.ReactNode;
+  children: ReactNode;
   className?: ClassValue;
 }) {
   return (

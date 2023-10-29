@@ -1,4 +1,4 @@
-// https://mswjs.io/docs/getting-started/integrate/node
+// https://mswjs.io/docs/integrations/node
 
 import { setupServer } from 'msw/node';
 

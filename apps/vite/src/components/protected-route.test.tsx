@@ -1,14 +1,13 @@
 import { useAuth } from '@clerk/clerk-react';
-import { screen } from '@testing-library/react';
+import { render, screen } from '@testing-library/react';
 import { expect, it, vi } from 'vitest';
 
 import ProtectedRoute from '@/components/protected-route';
-import { renderWithProviders } from '@/test/render';
 
 it('should render the protected content', () => {
   const route = 'protected';
 
-  renderWithProviders(
+  render(
     <ProtectedRoute>
       <div>{route}</div>
     </ProtectedRoute>,
@@ -25,7 +24,7 @@ it('should render the redirect component', () => {
 
   const route = 'protected';
 
-  renderWithProviders(
+  render(
     <ProtectedRoute>
       <div>{route}</div>
     </ProtectedRoute>,

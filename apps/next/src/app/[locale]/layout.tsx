@@ -1,3 +1,5 @@
+import type { ReactNode } from 'react';
+
 import '@/styles/global.css';
 import { leckerliOne } from '@/utils/fonts';
 import { availableLocales } from '@/utils/locales';
@@ -20,7 +22,7 @@ export default function RootLayout({
   children,
   params,
 }: {
-  children: React.ReactNode;
+  children: ReactNode;
   params: { locale: string };
 }) {
   return (

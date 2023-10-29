@@ -202,6 +202,7 @@
     {
       "files": ["*.test.{ts,tsx}", "**/__mocks__/**"],
       "rules": {
+        "sonarjs/no-duplicate-string": "off",
         "unicorn/no-useless-promise-resolve-reject": "off"
       }
     }

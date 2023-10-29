@@ -1,4 +1,4 @@
-FROM node:18.17.0-alpine AS base
+FROM node:20.9.0-alpine AS base
 
 
 FROM base AS setup
@@ -8,7 +8,7 @@ WORKDIR /app
 COPY . .
 
 RUN corepack enable
-RUN pnpm dlx turbo prune --scope=@template-react/keystone --docker
+RUN pnpm dlx turbo prune --scope @template-react/keystone --docker
 
 
 FROM base AS builder
@@ -23,7 +23,7 @@ RUN pnpm install --frozen-lockfile --ignore-scripts
 COPY --from=setup /app/out/full/ .
 
 RUN pnpm install --frozen-lockfile
-RUN SKIP_ENV_REQUIRED=1 pnpm dlx turbo run build --filter=keystone
+RUN SKIP_ENV_REQUIRED=1 pnpm dlx turbo run build --filter keystone
 
 
 FROM base AS installer
@@ -36,7 +36,7 @@ COPY --from=builder --chown=node:node /app/pnpm-workspace.yaml .
 COPY --from=builder --chown=node:node /app/apps/keystone/package.json ./apps/keystone/
 
 RUN corepack enable
-RUN pnpm install --frozen-lockfile --ignore-scripts --prod --filter=keystone
+RUN pnpm install --frozen-lockfile --ignore-scripts --prod --filter keystone
 
 
 FROM base AS runner

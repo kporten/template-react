@@ -6,26 +6,26 @@
     "dev": "keystone dev",
     "build": "keystone build",
     "preview": "keystone start",
-    "lint": "eslint --max-warnings=0 --ignore-path=../../.gitignore .",
+    "lint": "eslint --max-warnings 0 --ignore-path ../../.gitignore .",
     "test:types": "tsc"
   },
   "dependencies": {
     "@keystone-6/auth": "7.0.2",
-    "@keystone-6/core": "5.4.0",
-    "@keystone-6/fields-document": "8.0.0",
-    "@prisma/client": "5.1.0",
+    "@keystone-6/core": "5.7.0",
+    "@keystone-6/fields-document": "8.0.2",
+    "@prisma/client": "5.5.2",
     "dotenv": "16.3.1",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "zod": "3.21.4"
+    "zod": "3.22.4"
   },
   "devDependencies": {
     "@template-react/eslint-config": "workspace:*",
     "@template-react/ts-config": "workspace:*",
-    "@total-typescript/ts-reset": "0.4.2",
-    "@types/node": "18.17.1",
-    "eslint": "8.46.0",
-    "prisma": "5.1.0",
-    "typescript": "5.1.6"
+    "@total-typescript/ts-reset": "0.5.1",
+    "@types/node": "20.8.9",
+    "eslint": "8.52.0",
+    "prisma": "5.5.2",
+    "typescript": "5.2.2"
   }
 }

@@ -2,7 +2,7 @@ import type { ClassValue } from 'clsx';
 
 import { cn } from '@/utils/styles';
 
-export default function Code({
+export function Code({
   children,
   className,
 }: {

@@ -3,17 +3,15 @@ import type { CreateExpressContextOptions } from '@trpc/server/adapters/express'
 import type { Request } from 'express';
 import type { Logger } from 'pino';
 
-import type { AuthLoose, AuthStrict } from '@/lib/auth';
+import type { LooseAuth, StrictAuth } from '@/lib/clerk';
 
-// https://trpc.io/docs/server/context
-type Context<T> = T & { log: Logger };
-
-export function createContext(
-  options: CreateExpressContextOptions,
-): Context<{ auth: AuthLoose }> {
+export function createContext(options: CreateExpressContextOptions): {
+  auth: LooseAuth;
+  log: Logger;
+} {
   return {
     // https://clerk.com/docs/request-authentication/nodejs-express
-    auth: (options.req as Request & { auth: AuthLoose }).auth,
+    auth: (options.req as Request & { auth: LooseAuth }).auth,
     // https://github.com/pinojs/pino-http
     log: options.req.log,
   };
@@ -23,15 +21,15 @@ const trpc = initTRPC
   .context<inferAsyncReturnType<typeof createContext>>()
   .create();
 
-const isAuthed = trpc.middleware(async ({ next, ctx }) => {
+const isAuthed = trpc.middleware(async ({ ctx, next }) => {
   if (!ctx.auth?.userId) {
     throw new TRPCError({ code: 'UNAUTHORIZED' });
   }
 
   return next({
     ctx: {
-      auth: ctx.auth,
-    } satisfies Partial<Context<{ auth: AuthStrict }>>,
+      auth: ctx.auth as StrictAuth,
+    } satisfies Partial<ReturnType<typeof createContext>>,
   });
 });
 

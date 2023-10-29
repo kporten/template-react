@@ -2,7 +2,7 @@
 
 import type { Config } from 'tailwindcss';
 
-import defaultPreset from './src/presets/default';
+import { defaultPreset } from './src/presets/default';
 
 export default {
   presets: [defaultPreset],

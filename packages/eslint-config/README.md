@@ -7,7 +7,7 @@ This package provides shared [ESLint](https://eslint.org) configurations.
 Add the `eslint-config` package to your workspace dev dependencies.
 
 ```sh
-pnpm --filter=[workspace] add @template-react/eslint-config --save-dev
+pnpm --filter [workspace] add @template-react/eslint-config --save-dev
 ```
 
 ## Usage

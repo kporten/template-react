@@ -1,42 +1,51 @@
-import { useAtom } from 'jotai';
-import { useLayoutEffect } from 'react';
+import { useAtomValue } from 'jotai';
+import { atomWithStorage } from 'jotai/utils';
+import { type ReactNode, useLayoutEffect } from 'react';
 
-import { mediaDark, themeAtom } from '@/store/theme';
+type Theme = 'dark' | 'light' | 'system';
 
-export default function ThemeProvider({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
-  const [theme, setTheme] = useAtom(themeAtom);
+const matchSystemColorSchemeDark = window.matchMedia(
+  '(prefers-color-scheme: dark)',
+);
+
+export const themeAtom = atomWithStorage<Theme>('theme', 'system');
+
+export default function ThemeProvider({ children }: { children: ReactNode }) {
+  const theme = useAtomValue(themeAtom);
 
   useLayoutEffect(() => {
-    const handleDarkMode = (isDarkMode: boolean) => {
+    const updateRootClassList = (isSystemColorSchemeDark: boolean) => {
       const root = document.querySelector(':root');
-      const className = 'dark';
 
-      if (isDarkMode) {
-        root?.classList.add(className);
+      root?.classList.remove('dark', 'light');
+
+      if (theme === 'system') {
+        const themeSystem: Exclude<Theme, 'system'> = isSystemColorSchemeDark
+          ? 'dark'
+          : 'light';
+
+        root?.classList.add(themeSystem);
       } else {
-        root?.classList.remove(className);
+        root?.classList.add(theme);
       }
     };
 
-    handleDarkMode(theme === 'dark');
+    updateRootClassList(matchSystemColorSchemeDark.matches);
 
     const abort = new AbortController();
 
-    mediaDark.addEventListener(
+    matchSystemColorSchemeDark.addEventListener(
       'change',
       ({ matches }) => {
-        setTheme(matches ? 'dark' : 'light');
-        handleDarkMode(matches);
+        updateRootClassList(matches);
       },
-      { signal: abort.signal },
+      {
+        signal: abort.signal,
+      },
     );
 
     return () => abort.abort();
-  }, [theme, setTheme]);
+  }, [theme]);
 
   return children;
 }

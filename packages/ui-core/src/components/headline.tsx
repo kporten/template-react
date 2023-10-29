@@ -1,5 +1,6 @@
 import { cva, type VariantProps } from 'class-variance-authority';
 import type { ClassValue } from 'clsx';
+import type { ReactNode } from 'react';
 
 import { cn } from '@/utils/styles';
 
@@ -17,12 +18,12 @@ const variants = cva('scroll-m-20 tracking-tight', {
   },
 });
 
-export default function Headline({
+export function Headline({
   children,
   className,
   variant,
 }: {
-  children: React.ReactNode;
+  children: ReactNode;
   className?: ClassValue;
 } & VariantProps<typeof variants>) {
   const Tag: keyof JSX.IntrinsicElements = variant ?? 'h1';

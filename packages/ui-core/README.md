@@ -7,7 +7,7 @@ This package provides shared UI components, utils and presets.
 Add the `ui-core` package to your workspace dependencies.
 
 ```sh
-pnpm --filter=[workspace] add @template-react/ui-core
+pnpm --filter [workspace] add @template-react/ui-core
 ```
 
 Then use the preset in your `tailwind.config` file.
@@ -27,25 +27,25 @@ export default {
 
 ```sh
 # run development server
-turbo dev --filter=ui-core
+turbo dev --filter ui-core
 
 # build workspace
-turbo build --filter=ui-core
+turbo build --filter ui-core
 
 # lint workspace
-turbo lint --filter=ui-core
+turbo lint --filter ui-core
 
 # test workspace
-turbo test --filter=ui-core
+turbo test --filter ui-core
 
 # test workspace with coverage check
-turbo test:coverage --filter=ui-core
+turbo test:coverage --filter ui-core
 
 # test workspace with browser UI
-turbo test:ui --filter=ui-core
+turbo test:ui --filter ui-core
 
 # test workspace with type check
-turbo test:types --filter=ui-core
+turbo test:types --filter ui-core
 ```
 
 > **Note**

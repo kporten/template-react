@@ -1,4 +1,4 @@
-import { Code, Headline, Paragraph } from '@template-react/ui-core';
+import { Code, Paragraph } from '@template-react/ui-core';
 import { FormattedMessage } from 'react-intl';
 
 import { trpc } from '@/utils/trpc';
@@ -8,20 +8,13 @@ export default function GettingStarted() {
 
   return (
     <div className="text-center">
-      <Headline variant="h1">
-        <FormattedMessage
-          id="features.welcome.components.getting-started.headline"
-          defaultMessage="Template React"
-        />
-      </Headline>
       <Paragraph>
         <FormattedMessage
           id="features.welcome.components.getting-started.hello"
           defaultMessage="Hello {name} 👋"
           values={{ name: me ?? '...' }}
         />
-      </Paragraph>
-      <Paragraph>
+        <br />
         <FormattedMessage
           id="features.welcome.components.getting-started.description"
           defaultMessage="Get started by editing the {file} file!"

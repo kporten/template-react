@@ -33,7 +33,7 @@ const variants = cva(
   },
 );
 
-const Button = forwardRef<
+export const Button = forwardRef<
   HTMLButtonElement,
   ButtonHTMLAttributes<HTMLButtonElement> &
     VariantProps<typeof variants> & {
@@ -52,5 +52,3 @@ const Button = forwardRef<
 });
 
 Button.displayName = 'Button';
-
-export default Button;

@@ -1,25 +1,23 @@
 import { ClerkProvider } from '@clerk/clerk-react';
 import { deDE, enUS } from '@clerk/localizations';
-import { useAtomValue } from 'jotai';
+import type { ComponentProps, ReactNode } from 'react';
+import { useIntl } from 'react-intl';
 
-import { localeAtom } from '@/store/locale';
-
-const localization = {
+const localization: Record<
+  string,
+  ComponentProps<typeof ClerkProvider>['localization']
+> = {
   de: deDE,
   en: enUS,
 };
 
-export default function AuthProvider({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
-  const locale = useAtomValue(localeAtom);
+export default function AuthProvider({ children }: { children: ReactNode }) {
+  const intl = useIntl();
 
   return (
     <ClerkProvider
       publishableKey={import.meta.env.VITE_CLERK_PUBLISHABLE_KEY}
-      localization={localization[locale]}
+      localization={localization[intl.locale]}
     >
       {children}
     </ClerkProvider>

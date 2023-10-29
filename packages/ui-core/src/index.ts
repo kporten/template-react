@@ -1,11 +1,12 @@
 // components
-export { default as Button } from '@/components/button';
-export { default as Code } from '@/components/code';
-export { default as Headline } from '@/components/headline';
-export { default as Paragraph } from '@/components/paragraph';
+export * from '@/components/button';
+export * from '@/components/code';
+export * from '@/components/dropdown-menu';
+export * from '@/components/headline';
+export * from '@/components/paragraph';
 
 // presets
-export { default as defaultPreset } from '@/presets/default';
+export * from '@/presets/default';
 
 // utils
-export { cn } from '@/utils/styles';
+export * from '@/utils/styles';

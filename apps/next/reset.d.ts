@@ -1,2 +1,2 @@
-// https://github.com/total-typescript/ts-reset
+// https://www.totaltypescript.com/ts-reset
 import '@total-typescript/ts-reset';

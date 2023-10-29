@@ -8,8 +8,10 @@ import { renderWithProviders } from '@/test/render';
 it('should render known user', async () => {
   renderWithProviders(<GettingStarted />);
 
-  expect(screen.getByRole('heading', { name: 'Template React' })).toBeDefined();
-  expect(screen.getByText('Get started', { exact: false })).toBeDefined();
+  expect(
+    await screen.findByText('Get started', { exact: false }),
+  ).toBeDefined();
+
   expect(await screen.findByText('Hello John', { exact: false })).toBeDefined();
 });
 

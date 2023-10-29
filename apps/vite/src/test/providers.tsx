@@ -1,31 +1,40 @@
 import { useHydrateAtoms } from 'jotai/utils';
+import { type ReactNode, Suspense } from 'react';
+import { HelmetProvider } from 'react-helmet-async';
 
-import IntlProvider from '@/providers/intl-provider';
+import IntlProvider, { localeAtom } from '@/providers/intl-provider';
+import QueryProvider from '@/providers/query-provider';
 import StoreProvider from '@/providers/store-provider';
+import ThemeProvider from '@/providers/theme-provider';
 import TrpcProvider from '@/providers/trpc-provider';
-import { localeAtom } from '@/store/locale';
 
-export default function Providers({ children }: { children: React.ReactNode }) {
+export default function Providers({ children }: { children: ReactNode }) {
   return (
-    <StoreProvider>
-      <HydrateAtoms>
-        <IntlProvider>
-          <TrpcProvider
+    <HelmetProvider>
+      <StoreProvider>
+        <HydrateAtoms>
+          <QueryProvider
             options={{
               queries: {
                 retry: false,
               },
             }}
           >
-            {children}
-          </TrpcProvider>
-        </IntlProvider>
-      </HydrateAtoms>
-    </StoreProvider>
+            <Suspense>
+              <IntlProvider>
+                <TrpcProvider>
+                  <ThemeProvider>{children}</ThemeProvider>
+                </TrpcProvider>
+              </IntlProvider>
+            </Suspense>
+          </QueryProvider>
+        </HydrateAtoms>
+      </StoreProvider>
+    </HelmetProvider>
   );
 }
 
-export function HydrateAtoms({ children }: { children: React.ReactNode }) {
+export function HydrateAtoms({ children }: { children: ReactNode }) {
   useHydrateAtoms([[localeAtom, 'en']]);
 
   return children;

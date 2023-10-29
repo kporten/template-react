@@ -3,16 +3,8 @@ import { z } from 'zod';
 
 config({ path: '.env' });
 
-const env = {
-  CLERK_SECRET_KEY: process.env.CLERK_SECRET_KEY,
-  DATABASE_URL: process.env.DATABASE_URL,
-  LOG_LEVEL: process.env.LOG_LEVEL,
-  NODE_ENV: process.env.NODE_ENV,
-  PORT: process.env.PORT,
-};
-
 const schema = z.object({
-  CLERK_SECRET_KEY: z.string().nonempty(),
+  CLERK_SECRET_KEY: z.string().min(1),
   DATABASE_URL: z.string().url(),
   LOG_LEVEL: z
     .enum(['fatal', 'error', 'warn', 'info', 'debug', 'trace'])
@@ -21,7 +13,7 @@ const schema = z.object({
   PORT: z.coerce.number().int().positive().default(5173),
 });
 
-const parsed = schema.safeParse(env);
+const parsed = schema.safeParse(process.env);
 
 if (!parsed.success) {
   console.error(

@@ -3,31 +3,31 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "dev": "next dev --port=5172 --turbo",
+    "dev": "next dev --port 5172",
     "build": "next build",
-    "preview": "next start --port=5172",
-    "lint": "eslint --max-warnings=0 --ignore-path=../../.gitignore .",
+    "preview": "next start --port 5172",
+    "lint": "eslint --max-warnings 0 --ignore-path ../../.gitignore .",
     "test:types": "tsc"
   },
   "dependencies": {
-    "@formatjs/intl-localematcher": "0.4.0",
+    "@formatjs/intl-localematcher": "0.4.2",
     "negotiator": "0.6.3",
-    "next": "13.4.12",
+    "next": "14.0.0",
     "react": "18.2.0",
     "react-dom": "18.2.0"
   },
   "devDependencies": {
     "@template-react/eslint-config": "workspace:*",
     "@template-react/ts-config": "workspace:*",
-    "@total-typescript/ts-reset": "0.4.2",
-    "@types/negotiator": "0.6.1",
-    "@types/node": "18.17.1",
-    "@types/react": "18.2.18",
-    "@types/react-dom": "18.2.7",
-    "autoprefixer": "10.4.14",
-    "eslint": "8.46.0",
-    "postcss": "8.4.27",
-    "tailwindcss": "3.3.3",
-    "typescript": "5.1.6"
+    "@total-typescript/ts-reset": "0.5.1",
+    "@types/negotiator": "0.6.2",
+    "@types/node": "20.8.9",
+    "@types/react": "18.2.33",
+    "@types/react-dom": "18.2.14",
+    "autoprefixer": "10.4.16",
+    "eslint": "8.52.0",
+    "postcss": "8.4.31",
+    "tailwindcss": "3.3.5",
+    "typescript": "5.2.2"
   }
 }

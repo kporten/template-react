@@ -1,7 +1,7 @@
 import type { StorybookConfig } from '@storybook/react-vite';
 
 export default {
-  addons: ['@storybook/addon-essentials', '@storybook/addon-styling'],
+  addons: ['@storybook/addon-essentials', '@storybook/addon-themes'],
   docs: {
     autodocs: 'tag',
   },

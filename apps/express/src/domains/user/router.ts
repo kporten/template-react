@@ -1,7 +1,7 @@
 import { TRPCError } from '@trpc/server';
 import { z } from 'zod';
 
-import clerk from '@/lib/auth';
+import clerk from '@/lib/clerk';
 import { procedure, protectedProcedure, router } from '@/lib/trpc';
 
 import { getUserById, getUsers } from './service';

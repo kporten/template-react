@@ -1,9 +1,10 @@
 import { render, type RenderOptions } from '@testing-library/react';
+import type { ReactElement } from 'react';
 
 import Providers from '@/test/providers';
 
 export function renderWithProviders(
-  ui: React.ReactElement,
+  ui: ReactElement,
   options?: Omit<RenderOptions, 'wrapper'>,
 ) {
   return render(ui, {

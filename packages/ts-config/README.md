@@ -7,7 +7,7 @@ This package provides shared TypeScript configurations.
 Add the `ts-config` package to your workspace dev dependencies.
 
 ```sh
-pnpm --filter=[workspace] add @template-react/ts-config --save-dev
+pnpm --filter [workspace] add @template-react/ts-config --save-dev
 ```
 
 ## Usage

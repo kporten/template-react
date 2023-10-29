@@ -8,19 +8,19 @@ This is a template for a web app with [Next.js](https://nextjs.org).
 
 ```sh
 # run development server
-turbo dev --filter=next
+turbo dev --filter next
 
 # build workspace
-turbo build --filter=next
+turbo build --filter next
 
 # run preview server
-turbo preview --filter=next
+turbo preview --filter next
 
 # lint workspace
-turbo lint --filter=next
+turbo lint --filter next
 
 # test workspace with type check
-turbo test:types --filter=next
+turbo test:types --filter next
 ```
 
 > **Note**

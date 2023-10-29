@@ -1,6 +1,7 @@
 import { Helmet } from 'react-helmet-async';
 import { useIntl } from 'react-intl';
 
+import Settings from '@/features/settings';
 import Welcome from '@/features/welcome';
 
 export default function IndexPage() {
@@ -16,7 +17,10 @@ export default function IndexPage() {
           })}
         </title>
       </Helmet>
-      <Welcome />
+      <div className="space-y-12">
+        <Welcome />
+        <Settings />
+      </div>
     </>
   );
 }

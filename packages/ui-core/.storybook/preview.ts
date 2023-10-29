@@ -1,11 +1,11 @@
-import { withThemeByClassName } from '@storybook/addon-styling';
-import type { Preview } from '@storybook/react';
+import { withThemeByClassName } from '@storybook/addon-themes';
+import type { Preview, ReactRenderer } from '@storybook/react';
 
 import '@/index.css';
 
 export default {
   decorators: [
-    withThemeByClassName({
+    withThemeByClassName<ReactRenderer>({
       themes: {
         light: '',
         dark: 'dark',

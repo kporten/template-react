@@ -1,0 +1,16 @@
+{
+  "features.settings.components.theme.button": "Thema wechseln",
+  "features.settings.components.theme.dark": "Dunkel",
+  "features.settings.components.theme.light": "Hell",
+  "features.settings.components.theme.system": "System",
+  "features.welcome.components.auth.profile": "Profil",
+  "features.welcome.components.auth.signIn": "Anmelden",
+  "features.welcome.components.auth.signOut": "Abmelden",
+  "features.welcome.components.getting-started.description": "Starte mit dem Bearbeiten von {file}!",
+  "features.welcome.components.getting-started.headline": "Template React",
+  "features.welcome.components.getting-started.hello": "Hallo {name} 👋",
+  "pages.error.not-found": "Nicht gefunden",
+  "pages.error.unexpected": "Unerwarteter Fehler",
+  "pages.index.title": "Willkommen",
+  "pages.profile.title": "Profil"
+}

@@ -5,13 +5,6 @@ import { z } from 'zod';
 
 config({ path: '.env' });
 
-const env = {
-  DATABASE_URL: process.env.DATABASE_URL,
-  NODE_ENV: process.env.NODE_ENV,
-  PORT: process.env.PORT,
-  SESSION_SECRET: process.env.SESSION_SECRET,
-};
-
 const schema = z.object({
   DATABASE_URL: z.string().url(),
   NODE_ENV: z.enum(['development', 'production']).default('development'),
@@ -25,8 +18,8 @@ const parsed =
         .partial({
           DATABASE_URL: true,
         })
-        .safeParse(env)
-    : schema.safeParse(env);
+        .safeParse(process.env)
+    : schema.safeParse(process.env);
 
 if (!parsed.success) {
   console.error(

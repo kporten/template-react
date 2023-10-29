@@ -1,7 +1,7 @@
 import { render } from '@testing-library/react';
 import { expect, it } from 'vitest';
 
-import Headline from '@/components/headline';
+import { Headline } from '@/components/headline';
 
 it('should render default variant', () => {
   const { asFragment } = render(<Headline>h1</Headline>);

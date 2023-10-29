@@ -20,7 +20,7 @@ jobs:
       - name: 🐾 Audit dependencies
         uses: snyk/actions/node@master
         with:
-          args: --all-projects --severity-threshold=high --fail-on=all
+          args: --all-projects --severity-threshold high --fail-on all
         env:
           SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
 
@@ -36,7 +36,7 @@ jobs:
       - name: ⚙️ Setup
         uses: ./.github/actions/setup
       - name: 🏗️ Build packages
-        run: turbo build --filter='./packages/*'
+        run: turbo build --filter './packages/*'
       - name: 🖍️ Check formatting
         run: turbo format:check
       - name: 🛡️ Test types

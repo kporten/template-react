@@ -1,7 +1,7 @@
 import { render } from '@testing-library/react';
 import { expect, it } from 'vitest';
 
-import Paragraph from '@/components/paragraph';
+import { Paragraph } from '@/components/paragraph';
 
 it('should render default variant', () => {
   const { asFragment } = render(<Paragraph>paragraph</Paragraph>);

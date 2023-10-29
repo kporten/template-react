@@ -16,19 +16,19 @@ This is a template for the [Keystone](https://keystonejs.com) CMS.
 
 ```sh
 # run development server
-turbo dev --filter=keystone
+turbo dev --filter keystone
 
 # build workspace
-turbo build --filter=keystone
+turbo build --filter keystone
 
 # run preview server
-turbo preview --filter=keystone
+turbo preview --filter keystone
 
 # lint workspace
-turbo lint --filter=keystone
+turbo lint --filter keystone
 
 # test workspace with type check
-turbo test:types --filter=keystone
+turbo test:types --filter keystone
 ```
 
 > **Note**
@@ -38,7 +38,7 @@ turbo test:types --filter=keystone
 
 ```sh
 # exec keystone cli
-pnpm --filter=keystone exec keystone [command]
+pnpm --filter keystone exec keystone [command]
 ```
 
 > **Note**

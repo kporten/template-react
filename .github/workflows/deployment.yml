@@ -84,7 +84,7 @@ jobs:
       - name: ⚙️ Setup
         uses: ./.github/actions/setup
       - name: 🏗️ Build
-        run: turbo build --filter=express
+        run: turbo build --filter express
       # - name: 🚀 Deploy
       #   run:
 
@@ -103,7 +103,7 @@ jobs:
       - name: ⚙️ Setup
         uses: ./.github/actions/setup
       - name: 🏗️ Build
-        run: turbo build --filter=keystone
+        run: turbo build --filter keystone
         env:
           SKIP_ENV_REQUIRED: 1
       # - name: 🚀 Deploy
@@ -124,7 +124,7 @@ jobs:
       - name: ⚙️ Setup
         uses: ./.github/actions/setup
       - name: 🏗️ Build
-        run: turbo build --filter=next
+        run: turbo build --filter next
       # - name: 🚀 Deploy
       #   run:
 
@@ -143,7 +143,7 @@ jobs:
       - name: ⚙️ Setup
         uses: ./.github/actions/setup
       - name: 🏗️ Build
-        run: turbo build --filter=vite
+        run: turbo build --filter vite
         # env:
         #   VITE_CLERK_PUBLISHABLE_KEY: ${{ vars.VITE_CLERK_PUBLISHABLE_KEY }}
         #   VITE_SENTRY_DSN: ${{ vars.SENTRY_DSN }}

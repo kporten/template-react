@@ -2,8 +2,9 @@
 
 import type { Config } from 'tailwindcss';
 import plugin from 'tailwindcss/plugin';
+import animate from 'tailwindcss-animate';
 
-export default {
+export const defaultPreset = {
   content: ['./src/**/*.tsx'],
   darkMode: 'class',
   theme: {
@@ -51,7 +52,8 @@ export default {
     },
   },
   plugins: [
-    plugin(({ addBase }) => {
+    animate,
+    plugin(({ addBase, theme }) => {
       addBase({
         ':root': {
           '--background': '0 0% 100%',
@@ -116,6 +118,12 @@ export default {
           '--ring': '216 34% 17%',
 
           '--radius': '0.5rem',
+        },
+      });
+
+      addBase({
+        '*': {
+          'border-color': theme('colors.border'),
         },
       });
     }),

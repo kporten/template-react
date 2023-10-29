@@ -1,7 +1,7 @@
 import { screen } from '@testing-library/react';
 import type { DefaultErrorShape } from '@trpc/server';
 import { TRPC_ERROR_CODES_BY_KEY } from '@trpc/server/rpc';
-import { rest } from 'msw';
+import { http, HttpResponse } from 'msw';
 import { expect, it, vi } from 'vitest';
 
 import Users from '@/features/welcome/components/users';
@@ -12,7 +12,7 @@ it('should render users', async () => {
   renderWithProviders(<Users />);
 
   expect(
-    screen.getByText('"status": "loading"', { exact: false }),
+    await screen.findByText('"status": "loading"', { exact: false }),
   ).toBeDefined();
 
   expect(
@@ -24,10 +24,9 @@ it('should render error', async () => {
   vi.spyOn(console, 'error').mockImplementation(() => void 0);
 
   server.use(
-    rest.get('/user.list', async (req, res, ctx) => {
-      return res(
-        ctx.status(400),
-        ctx.json([
+    http.get('/user.list', () => {
+      return HttpResponse.json(
+        [
           {
             error: {
               code: TRPC_ERROR_CODES_BY_KEY.BAD_REQUEST,
@@ -35,7 +34,8 @@ it('should render error', async () => {
               data: { code: 'BAD_REQUEST', httpStatus: 400 },
             } satisfies DefaultErrorShape,
           },
-        ]),
+        ],
+        { status: 400 },
       );
     }),
   );

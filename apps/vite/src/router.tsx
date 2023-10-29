@@ -8,9 +8,9 @@ import {
 
 import ProtectedRoute from '@/components/protected-route';
 import Frame from '@/layouts/frame';
-import ErrorPage from '@/pages/error';
-import IndexPage from '@/pages/index';
-import ProfilePage from '@/pages/profile';
+import ErrorPage from '@/pages/error-page';
+import IndexPage from '@/pages/index-page';
+import ProfilePage from '@/pages/profile-page';
 
 const router = createBrowserRouter(
   createRoutesFromElements(

@@ -9,7 +9,7 @@ This is a template for an [Express](https://expressjs.com) api with [tRPC](https
 ## Setup
 
 - Start the database service with `docker compose up -d db`
-- You can run `pnpm --filter=express exec prisma migrate dev --name=init` to create the database, an initial migration and to seed data
+- You can run `pnpm --filter express exec prisma migrate dev --name init` to create the database, an initial migration and to seed data
 
 ## Tasks
 
@@ -17,19 +17,19 @@ This is a template for an [Express](https://expressjs.com) api with [tRPC](https
 
 ```sh
 # run development server
-turbo dev --filter=express
+turbo dev --filter express
 
 # build workspace
-turbo build --filter=express
+turbo build --filter express
 
 # run preview server
-turbo preview --filter=express
+turbo preview --filter express
 
 # lint workspace
-turbo lint --filter=express
+turbo lint --filter express
 
 # test workspace with type check
-turbo test:types --filter=express
+turbo test:types --filter express
 ```
 
 > **Note**
@@ -39,7 +39,7 @@ turbo test:types --filter=express
 
 ```sh
 # exec prisma cli (database toolkit)
-pnpm --filter=express exec prisma [command]
+pnpm --filter express exec prisma [command]
 ```
 
 > **Note**

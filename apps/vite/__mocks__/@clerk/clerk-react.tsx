@@ -1,3 +1,4 @@
+import type { ReactNode } from 'react';
 import { vi } from 'vitest';
 
 export const useAuth = vi.fn(() => ({
@@ -9,7 +10,7 @@ export function RedirectToSignIn() {
   return <div data-testid="RedirectToSignIn" />;
 }
 
-export function SignedIn({ children }: { children: React.ReactNode }) {
+export function SignedIn({ children }: { children: ReactNode }) {
   const { isSignedIn } = useAuth();
 
   if (isSignedIn) {
@@ -19,7 +20,7 @@ export function SignedIn({ children }: { children: React.ReactNode }) {
   return null;
 }
 
-export function SignedOut({ children }: { children: React.ReactNode }) {
+export function SignedOut({ children }: { children: ReactNode }) {
   const { isSignedIn } = useAuth();
 
   if (!isSignedIn) {
@@ -29,6 +30,6 @@ export function SignedOut({ children }: { children: React.ReactNode }) {
   return null;
 }
 
-export function SignInButton({ children }: { children: React.ReactNode }) {
+export function SignInButton({ children }: { children: ReactNode }) {
   return <div data-testid="SignInButton">{children}</div>;
 }

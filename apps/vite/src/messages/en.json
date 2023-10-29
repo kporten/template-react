@@ -1,4 +1,9 @@
 {
+  "features.settings.components.theme.button": "Toggle theme",
+  "features.settings.components.theme.dark": "Dark",
+  "features.settings.components.theme.light": "Light",
+  "features.settings.components.theme.system": "System",
+  "features.welcome.components.auth.profile": "Profile",
   "features.welcome.components.auth.signIn": "Sign In",
   "features.welcome.components.auth.signOut": "Sign Out",
   "features.welcome.components.getting-started.description": "Get started by editing the {file} file!",
