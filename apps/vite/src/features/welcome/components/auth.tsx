@@ -1,4 +1,4 @@
-import { SignedIn, SignedOut, SignInButton, useAuth } from '@clerk/clerk-react';
+import { SignInButton, SignedIn, SignedOut, useAuth } from '@clerk/clerk-react';
 import { useQueryClient } from '@tanstack/react-query';
 import { Button } from '@template-react/ui-core';
 import { FormattedMessage } from 'react-intl';

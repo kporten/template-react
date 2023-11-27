@@ -1,8 +1,7 @@
 // https://tailwindcss.com/docs/presets
-
 import type { Config } from 'tailwindcss';
-import plugin from 'tailwindcss/plugin';
 import animate from 'tailwindcss-animate';
+import plugin from 'tailwindcss/plugin';
 
 export const defaultPreset = {
   content: ['./src/**/*.tsx'],
@@ -16,30 +15,37 @@ export const defaultPreset = {
         background: 'hsl(var(--background))',
         foreground: 'hsl(var(--foreground))',
         primary: {
+          // eslint-disable-next-line @typescript-eslint/naming-convention
           DEFAULT: 'hsl(var(--primary))',
           foreground: 'hsl(var(--primary-foreground))',
         },
         secondary: {
+          // eslint-disable-next-line @typescript-eslint/naming-convention
           DEFAULT: 'hsl(var(--secondary))',
           foreground: 'hsl(var(--secondary-foreground))',
         },
         destructive: {
+          // eslint-disable-next-line @typescript-eslint/naming-convention
           DEFAULT: 'hsl(var(--destructive))',
           foreground: 'hsl(var(--destructive-foreground))',
         },
         muted: {
+          // eslint-disable-next-line @typescript-eslint/naming-convention
           DEFAULT: 'hsl(var(--muted))',
           foreground: 'hsl(var(--muted-foreground))',
         },
         accent: {
+          // eslint-disable-next-line @typescript-eslint/naming-convention
           DEFAULT: 'hsl(var(--accent))',
           foreground: 'hsl(var(--accent-foreground))',
         },
         popover: {
+          // eslint-disable-next-line @typescript-eslint/naming-convention
           DEFAULT: 'hsl(var(--popover))',
           foreground: 'hsl(var(--popover-foreground))',
         },
         card: {
+          // eslint-disable-next-line @typescript-eslint/naming-convention
           DEFAULT: 'hsl(var(--card))',
           foreground: 'hsl(var(--card-foreground))',
         },

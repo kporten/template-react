@@ -1,6 +1,5 @@
 // https://web.dev/vitals/
-
-import { type ReportCallback } from 'web-vitals';
+import type { ReportCallback } from 'web-vitals';
 
 export async function reportWebVitals(onReport?: ReportCallback) {
   if (!onReport) return;

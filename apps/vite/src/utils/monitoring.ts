@@ -1,5 +1,4 @@
 // https://docs.sentry.io/platforms/javascript/guides/react/
-
 import { init } from '@sentry/react';
 
 import { name, version } from '../../package.json';

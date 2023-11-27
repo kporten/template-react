@@ -1,5 +1,5 @@
 import { Slot } from '@radix-ui/react-slot';
-import { cva, type VariantProps } from 'class-variance-authority';
+import { type VariantProps, cva } from 'class-variance-authority';
 import { type ButtonHTMLAttributes, forwardRef } from 'react';
 
 import { cn } from '@/utils/styles';
@@ -40,6 +40,7 @@ export const Button = forwardRef<
       asChild?: boolean;
     }
 >(({ className, variant, size, asChild = false, ...props }, ref) => {
+  // eslint-disable-next-line @typescript-eslint/naming-convention
   const Component = asChild ? Slot : 'button';
 
   return (

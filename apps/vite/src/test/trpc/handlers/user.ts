@@ -1,6 +1,5 @@
 // https://mswjs.io/docs/network-behavior/rest
-
-import { http, HttpResponse } from 'msw';
+import { HttpResponse, http } from 'msw';
 
 import type { TrpcOutput } from '@/utils/trpc';
 

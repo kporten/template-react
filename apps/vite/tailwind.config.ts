@@ -1,5 +1,4 @@
 // https://tailwindcss.com/docs/configuration
-
 import { defaultPreset } from '@template-react/ui-core';
 import type { Config } from 'tailwindcss';
 

@@ -1,5 +1,4 @@
 // https://keystonejs.com/docs/config/lists
-
 import { list } from '@keystone-6/core';
 import { allowAll } from '@keystone-6/core/access';
 import {

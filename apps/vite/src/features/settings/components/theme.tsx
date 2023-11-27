@@ -30,19 +30,31 @@ export default function Theme() {
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent align="center">
-        <DropdownMenuItem onClick={() => setTheme('light')}>
+        <DropdownMenuItem
+          onClick={() => {
+            setTheme('light');
+          }}
+        >
           <FormattedMessage
             id="features.settings.components.theme.light"
             defaultMessage="Light"
           />
         </DropdownMenuItem>
-        <DropdownMenuItem onClick={() => setTheme('dark')}>
+        <DropdownMenuItem
+          onClick={() => {
+            setTheme('dark');
+          }}
+        >
           <FormattedMessage
             id="features.settings.components.theme.dark"
             defaultMessage="Dark"
           />
         </DropdownMenuItem>
-        <DropdownMenuItem onClick={() => setTheme(RESET)}>
+        <DropdownMenuItem
+          onClick={() => {
+            setTheme(RESET);
+          }}
+        >
           <FormattedMessage
             id="features.settings.components.theme.system"
             defaultMessage="System"

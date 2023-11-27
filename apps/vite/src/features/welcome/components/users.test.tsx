@@ -1,7 +1,7 @@
 import { screen } from '@testing-library/react';
 import type { DefaultErrorShape } from '@trpc/server';
 import { TRPC_ERROR_CODES_BY_KEY } from '@trpc/server/rpc';
-import { http, HttpResponse } from 'msw';
+import { HttpResponse, http } from 'msw';
 import { expect, it, vi } from 'vitest';
 
 import Users from '@/features/welcome/components/users';

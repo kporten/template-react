@@ -1,6 +1,6 @@
-import { cva, type VariantProps } from 'class-variance-authority';
+import { type VariantProps, cva } from 'class-variance-authority';
 import type { ClassValue } from 'clsx';
-import type { ReactNode } from 'react';
+import type { JSX, ReactNode } from 'react';
 
 import { cn } from '@/utils/styles';
 
@@ -26,7 +26,12 @@ export function Headline({
   children: ReactNode;
   className?: ClassValue;
 } & VariantProps<typeof variants>) {
-  const Tag: keyof JSX.IntrinsicElements = variant ?? 'h1';
+  // eslint-disable-next-line @typescript-eslint/naming-convention
+  const Element: keyof JSX.IntrinsicElements = variant ?? 'h1';
 
-  return <Tag className={cn(variants({ className, variant }))}>{children}</Tag>;
+  return (
+    <Element className={cn(variants({ className, variant }))}>
+      {children}
+    </Element>
+  );
 }

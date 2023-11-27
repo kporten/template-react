@@ -5,6 +5,7 @@
     "module": "esnext",
     "moduleResolution": "bundler",
     "noEmit": true,
+    "noUncheckedIndexedAccess": true,
     "skipLibCheck": true,
     "strict": true,
     "target": "esnext"

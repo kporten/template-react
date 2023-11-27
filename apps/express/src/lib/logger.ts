@@ -1,4 +1,4 @@
-import { type Level, pino, type TransportMultiOptions } from 'pino';
+import { type TransportMultiOptions, pino } from 'pino';
 import type { PrettyOptions } from 'pino-pretty';
 
 import env from '@/lib/env';
@@ -6,7 +6,7 @@ import env from '@/lib/env';
 const transportDevelopment: TransportMultiOptions = {
   targets: [
     {
-      level: env.LOG_LEVEL satisfies Level,
+      level: env.logLevel,
       target: 'pino-pretty',
       options: {
         colorize: true,
@@ -18,6 +18,6 @@ const transportDevelopment: TransportMultiOptions = {
 
 // https://getpino.io/#/docs/api
 export default pino({
-  level: env.LOG_LEVEL satisfies Level,
-  transport: env.NODE_ENV === 'development' ? transportDevelopment : undefined,
+  level: env.logLevel,
+  transport: env.nodeEnv === 'development' ? transportDevelopment : undefined,
 });

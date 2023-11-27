@@ -17,7 +17,10 @@ it('should render known user', async () => {
 
 it('should render unknown user', async () => {
   vi.mocked(useAuth, { partial: true }).mockImplementation(() => ({
-    getToken: async () => Promise.resolve(null),
+    // eslint-disable-next-line @typescript-eslint/require-await
+    getToken: async () => {
+      return null;
+    },
   }));
 
   renderWithProviders(<GettingStarted />);

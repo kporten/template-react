@@ -25,11 +25,13 @@ export default pinoHttp({
     return correlationId;
   },
   customSuccessMessage: (req, res, responseTime) => {
-    return `${req.method!} ${req.url!} ➜ ${
+    return `${req.method ?? ''} ${req.url ?? ''} ➜ ${
       res.statusCode
     } in ${responseTime}ms [${String(req.id)}]`;
   },
   customErrorMessage: (req, res) => {
-    return `${req.method!} ${req.url!} ➜ ${res.statusCode} [${String(req.id)}]`;
+    return `${req.method ?? ''} ${req.url ?? ''} ➜ ${res.statusCode} [${String(
+      req.id,
+    )}]`;
   },
 });

@@ -44,7 +44,9 @@ export default function ThemeProvider({ children }: { children: ReactNode }) {
       },
     );
 
-    return () => abort.abort();
+    return () => {
+      abort.abort();
+    };
   }, [theme]);
 
   return children;

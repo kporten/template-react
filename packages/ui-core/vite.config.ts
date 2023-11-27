@@ -3,7 +3,7 @@ import path from 'node:path';
 import reactPlugin from '@vitejs/plugin-react-swc';
 import { visualizer } from 'rollup-plugin-visualizer';
 import dtsPlugin from 'vite-plugin-dts';
-import { defineConfig, type UserConfig } from 'vitest/config';
+import { type UserConfig, defineConfig } from 'vitest/config';
 
 import { dependencies, peerDependencies } from './package.json';
 
@@ -33,9 +33,7 @@ export default defineConfig((env) => {
       target: 'esnext',
       minify: false,
       lib: {
-        entry: {
-          'ui-core': './src/index.ts',
-        },
+        entry: './src/index.ts',
         formats: ['es'],
       },
       rollupOptions: {

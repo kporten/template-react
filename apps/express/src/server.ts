@@ -2,10 +2,8 @@ import env from '@/lib/env';
 
 import app from './app';
 
-export type { AppRouter } from './app';
-
-const server = app.listen(env.PORT, () => {
-  console.info(`➜ Local: http://localhost:${env.PORT}`);
+const server = app.listen(env.serverPort, () => {
+  console.info(`➜ Local: http://localhost:${env.serverPort}`);
 });
 
 const shutdown = async () => {
@@ -33,3 +31,5 @@ process.on('SIGTERM', async () => {
   await shutdown();
   process.exit(0);
 });
+
+export type { AppRouter } from './app';

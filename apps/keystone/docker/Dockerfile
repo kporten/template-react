@@ -1,4 +1,4 @@
-FROM node:20.9.0-alpine AS base
+FROM node:20.10.0-alpine AS base
 
 
 FROM base AS setup

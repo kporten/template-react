@@ -141,19 +141,25 @@ function CheckboxesStory() {
       <DropdownMenuContent className="w-44">
         <DropdownMenuCheckboxItem
           checked={showSidebar}
-          onCheckedChange={setShowSidebar}
+          onCheckedChange={(checked) => {
+            setShowSidebar(checked);
+          }}
         >
           Show sidebar
         </DropdownMenuCheckboxItem>
         <DropdownMenuCheckboxItem
           checked={showToolbar}
-          onCheckedChange={setShowToolbar}
+          onCheckedChange={(checked) => {
+            setShowToolbar(checked);
+          }}
         >
           Show toolbar
         </DropdownMenuCheckboxItem>
         <DropdownMenuCheckboxItem
           checked={showAddons}
-          onCheckedChange={setShowAddons}
+          onCheckedChange={(checked) => {
+            setShowAddons(checked);
+          }}
         >
           Show addons
         </DropdownMenuCheckboxItem>
@@ -180,7 +186,12 @@ function RadioGroupStory() {
         <Button variant="outline">Position</Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent className="w-36">
-        <DropdownMenuRadioGroup value={position} onValueChange={setPosition}>
+        <DropdownMenuRadioGroup
+          value={position}
+          onValueChange={(value) => {
+            setPosition(value);
+          }}
+        >
           <DropdownMenuRadioItem value="top">Top</DropdownMenuRadioItem>
           <DropdownMenuRadioItem value="bottom">Bottom</DropdownMenuRadioItem>
           <DropdownMenuRadioItem value="left">Left</DropdownMenuRadioItem>

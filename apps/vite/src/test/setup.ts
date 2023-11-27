@@ -8,7 +8,6 @@ vi.mock('@clerk/clerk-react');
 
 vi.stubEnv('VITE_TRPC_URL', 'http://localhost');
 
-// eslint-disable-next-line @typescript-eslint/naming-convention
 (window as typeof window & { happyDOM: Window['happyDOM'] }).happyDOM.setURL(
   'http://localhost',
 );

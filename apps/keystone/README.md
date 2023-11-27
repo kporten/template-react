@@ -24,9 +24,6 @@ turbo build --filter keystone
 # run preview server
 turbo preview --filter keystone
 
-# lint workspace
-turbo lint --filter keystone
-
 # test workspace with type check
 turbo test:types --filter keystone
 ```

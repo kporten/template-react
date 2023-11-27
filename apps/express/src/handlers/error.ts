@@ -5,12 +5,13 @@ import type { NextFunction, Request, Response } from 'express';
 import env from '@/lib/env';
 import logger from '@/lib/logger';
 
-// eslint-disable-next-line max-params
-function errorHandler(
+// eslint-disable-next-line @typescript-eslint/max-params
+export default function errorHandler(
   error: Error,
   req: Request,
   res: Response,
-  _next: NextFunction,
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  next: NextFunction,
 ) {
   logger.error(
     error,
@@ -22,9 +23,7 @@ function errorHandler(
   res.status(500).json({
     error: {
       message:
-        env.NODE_ENV === 'development' ? error.message : STATUS_CODES[500],
+        env.nodeEnv === 'development' ? error.message : STATUS_CODES[500],
     },
   });
 }
-
-export default errorHandler;

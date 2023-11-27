@@ -7,21 +7,26 @@
   "repository": "https://github.com/kporten/template-react",
   "bugs": "https://github.com/kporten/template-react/issues",
   "private": true,
+  "type": "module",
   "engines": {
     "node": ">=18 <21"
   },
-  "packageManager": "pnpm@8.10.0",
+  "packageManager": "pnpm@8.11.0",
   "scripts": {
     "format": "prettier --write .",
     "format:check": "prettier --check ."
   },
   "devDependencies": {
     "@changesets/cli": "2.26.2",
-    "@commitlint/cli": "18.2.0",
-    "@commitlint/config-conventional": "18.1.0",
-    "@commitlint/types": "18.1.0",
-    "prettier": "3.0.3",
-    "prettier-plugin-tailwindcss": "0.5.6",
-    "typescript": "5.2.2"
+    "@commitlint/cli": "18.4.3",
+    "@commitlint/config-conventional": "18.4.3",
+    "@commitlint/types": "18.4.3",
+    "@trivago/prettier-plugin-sort-imports": "4.3.0",
+    "eslint": "8.54.0",
+    "globals": "13.23.0",
+    "prettier": "3.1.0",
+    "prettier-plugin-tailwindcss": "0.5.7",
+    "turbo": "1.10.16",
+    "typescript": "5.3.2"
   }
 }

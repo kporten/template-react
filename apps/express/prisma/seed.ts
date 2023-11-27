@@ -1,5 +1,4 @@
 // https://www.prisma.io/docs/guides/database/seed-database
-
 import { faker } from '@faker-js/faker';
 import { PrismaClient } from 'prisma-client';
 

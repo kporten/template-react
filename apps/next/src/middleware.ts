@@ -2,7 +2,7 @@ import { match as matchLocale } from '@formatjs/intl-localematcher';
 import Negotiator from 'negotiator';
 import { type NextRequest, NextResponse } from 'next/server';
 
-import { availableLocales, defaultLocale } from '@/utils/locales';
+import { DEFAULT_LOCALE, SUPPORTED_LOCALES } from '@/utils/locales';
 
 // https://nextjs.org/docs/app/building-your-application/routing/middleware
 export const config = {
@@ -14,7 +14,7 @@ export function middleware(request: NextRequest) {
 
   // handle locale redirect
   // https://nextjs.org/docs/app/building-your-application/routing/internationalization
-  const hasLocaleInPathname = availableLocales.some(
+  const hasLocaleInPathname = SUPPORTED_LOCALES.some(
     (locale) => pathname === `/${locale}` || pathname.startsWith(`/${locale}/`),
   );
 
@@ -25,8 +25,8 @@ export function middleware(request: NextRequest) {
 
     const locale = matchLocale(
       negotiator.languages(),
-      availableLocales as unknown as string[],
-      defaultLocale,
+      SUPPORTED_LOCALES as unknown as string[],
+      DEFAULT_LOCALE,
       { algorithm: 'best fit' },
     );
 

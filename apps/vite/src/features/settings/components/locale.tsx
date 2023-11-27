@@ -8,9 +8,9 @@ import {
 import { useAtom } from 'jotai';
 
 import { localeAtom } from '@/providers/intl-provider';
-import type { Locale } from '@/utils/locales';
+import type { SupportedLocale } from '@/utils/locales';
 
-const locales: Record<Locale, string> = {
+const LOCALES: Readonly<Record<SupportedLocale, string>> = {
   de: 'Deutsch',
   en: 'English',
 };
@@ -21,14 +21,22 @@ export default function Locale() {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-        <Button variant="outline">{locales[locale]}</Button>
+        <Button variant="outline">{LOCALES[locale]}</Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent align="center">
-        <DropdownMenuItem onClick={() => setLocale('de')}>
-          {locales['de']}
+        <DropdownMenuItem
+          onClick={() => {
+            setLocale('de');
+          }}
+        >
+          {LOCALES.de}
         </DropdownMenuItem>
-        <DropdownMenuItem onClick={() => setLocale('en')}>
-          {locales['en']}
+        <DropdownMenuItem
+          onClick={() => {
+            setLocale('en');
+          }}
+        >
+          {LOCALES.en}
         </DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>

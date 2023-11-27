@@ -1,5 +1,5 @@
-export type Locale = (typeof availableLocales)[number];
+export const SUPPORTED_LOCALES = ['de', 'en'] as const;
 
-export const availableLocales = ['de', 'en'] as const;
+export type SupportedLocale = (typeof SUPPORTED_LOCALES)[number];
 
-export const defaultLocale: Locale = 'en';
+export const DEFAULT_LOCALE: SupportedLocale = 'en';

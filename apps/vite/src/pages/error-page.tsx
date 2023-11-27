@@ -1,4 +1,4 @@
-import { cn, Headline } from '@template-react/ui-core';
+import { Headline, cn } from '@template-react/ui-core';
 import { FrownIcon } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 import { useIntl } from 'react-intl';
@@ -34,7 +34,7 @@ export default function ErrorPage() {
         />
         <Headline
           variant="h1"
-          className={{ 'text-destructive': isRouteErrorResponse(routeError) }}
+          className={isRouteErrorResponse(routeError) && 'text-destructive'}
         >
           {message}
         </Headline>

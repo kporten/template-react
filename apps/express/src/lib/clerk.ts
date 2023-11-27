@@ -1,7 +1,7 @@
 import {
-  createClerkClient,
   type LooseAuthProp,
   type StrictAuthProp,
+  createClerkClient,
 } from '@clerk/clerk-sdk-node';
 import '@clerk/types';
 
@@ -11,7 +11,7 @@ export type LooseAuth = LooseAuthProp['auth'];
 export type StrictAuth = StrictAuthProp['auth'];
 
 const clerk: ReturnType<typeof createClerkClient> = createClerkClient({
-  secretKey: env.CLERK_SECRET_KEY,
+  secretKey: env.clerkSecretKey,
 });
 
 export default clerk;

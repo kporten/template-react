@@ -8,7 +8,7 @@ import { getUserById, getUsers } from './service';
 
 export default router({
   me: procedure.query(async ({ ctx }) => {
-    const user = ctx.auth?.userId
+    const user = ctx.auth.userId
       ? await clerk.users.getUser(ctx.auth.userId)
       : null;
 

@@ -3,9 +3,8 @@ import { deDE, enUS } from '@clerk/localizations';
 import type { ComponentProps, ReactNode } from 'react';
 import { useIntl } from 'react-intl';
 
-const localization: Record<
-  string,
-  ComponentProps<typeof ClerkProvider>['localization']
+const LOCALIZATION: Readonly<
+  Record<string, ComponentProps<typeof ClerkProvider>['localization']>
 > = {
   de: deDE,
   en: enUS,
@@ -17,7 +16,7 @@ export default function AuthProvider({ children }: { children: ReactNode }) {
   return (
     <ClerkProvider
       publishableKey={import.meta.env.VITE_CLERK_PUBLISHABLE_KEY}
-      localization={localization[intl.locale]}
+      localization={LOCALIZATION[intl.locale]}
     >
       {children}
     </ClerkProvider>

@@ -1,5 +1,4 @@
 // https://tailwindcss.com/docs/configuration
-
 import type { Config } from 'tailwindcss';
 
 import { defaultPreset } from './src/presets/default';

@@ -1,6 +1,6 @@
 // https://nextjs.org/docs/app/api-reference/next-config-js
 
-module.exports = () => {
+export default () => {
   /** @type {import('next').NextConfig} */
   const config = {
     eslint: {

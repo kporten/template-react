@@ -1,9 +1,9 @@
 import {
-  createBrowserRouter,
-  createRoutesFromElements,
   Outlet,
   Route,
   RouterProvider,
+  createBrowserRouter,
+  createRoutesFromElements,
 } from 'react-router-dom';
 
 import ProtectedRoute from '@/components/protected-route';
@@ -42,6 +42,7 @@ const router = createBrowserRouter(
 
 export default function Router() {
   return (
+    // eslint-disable-next-line @typescript-eslint/naming-convention
     <RouterProvider router={router} future={{ v7_startTransition: true }} />
   );
 }

@@ -1,18 +1,22 @@
 import { match as matchLocale } from '@formatjs/intl-localematcher';
 import { useQuery } from '@tanstack/react-query';
 import { atom, useAtomValue } from 'jotai';
-import { type ComponentProps, type ReactNode } from 'react';
+import type { ComponentProps, ReactNode } from 'react';
 import { IntlProvider as Provider } from 'react-intl';
 
-import { availableLocales, defaultLocale, type Locale } from '@/utils/locales';
+import {
+  DEFAULT_LOCALE,
+  SUPPORTED_LOCALES,
+  type SupportedLocale,
+} from '@/utils/locales';
 
 export const localeAtom = atom(
   matchLocale(
     navigator.languages as string[],
-    availableLocales as unknown as string[],
-    defaultLocale,
+    SUPPORTED_LOCALES as unknown as string[],
+    DEFAULT_LOCALE,
     { algorithm: 'best fit' },
-  ) as Locale,
+  ) as SupportedLocale,
 );
 
 export default function IntlProvider({ children }: { children: ReactNode }) {
@@ -37,7 +41,11 @@ export default function IntlProvider({ children }: { children: ReactNode }) {
   });
 
   return (
-    <Provider messages={messages} locale={locale} defaultLocale={defaultLocale}>
+    <Provider
+      messages={messages}
+      locale={locale}
+      defaultLocale={DEFAULT_LOCALE}
+    >
       {children}
     </Provider>
   );

@@ -18,7 +18,10 @@ it('should render sign in button', async () => {
 });
 
 it('should render sign out button and handle click', async () => {
-  const signOut = vi.fn(async () => Promise.resolve());
+  // eslint-disable-next-line @typescript-eslint/require-await
+  const signOut = vi.fn(async () => {
+    return;
+  });
 
   vi.mocked(useAuth, { partial: true }).mockImplementation(() => ({
     isSignedIn: true,

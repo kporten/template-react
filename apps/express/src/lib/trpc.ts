@@ -1,4 +1,4 @@
-import { type inferAsyncReturnType, initTRPC, TRPCError } from '@trpc/server';
+import { TRPCError, type inferAsyncReturnType, initTRPC } from '@trpc/server';
 import type { CreateExpressContextOptions } from '@trpc/server/adapters/express';
 import type { Request } from 'express';
 import type { Logger } from 'pino';
@@ -22,7 +22,7 @@ const trpc = initTRPC
   .create();
 
 const isAuthed = trpc.middleware(async ({ ctx, next }) => {
-  if (!ctx.auth?.userId) {
+  if (!ctx.auth.userId) {
     throw new TRPCError({ code: 'UNAUTHORIZED' });
   }
 

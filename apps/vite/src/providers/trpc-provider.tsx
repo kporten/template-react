@@ -21,7 +21,7 @@ export default function TrpcProvider({ children }: { children: ReactNode }) {
 
             if (token) {
               return {
-                Authorization: `Bearer ${token}`,
+                authorization: `Bearer ${token}`,
               };
             }
 
