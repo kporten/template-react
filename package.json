@@ -1,7 +1,7 @@
 {
   "name": "template-react",
   "description": "Monorepo template for web apps",
-  "version": "5.1.0",
+  "version": "5.1.1",
   "license": "MIT",
   "author": "Kevin Porten <hello@kevinporten.dev>",
   "repository": "https://github.com/kporten/template-react",
@@ -17,7 +17,7 @@
     "format:check": "prettier --check ."
   },
   "devDependencies": {
-    "@changesets/cli": "2.26.2",
+    "@changesets/cli": "2.27.1",
     "@commitlint/cli": "18.4.3",
     "@commitlint/config-conventional": "18.4.3",
     "@commitlint/types": "18.4.3",
