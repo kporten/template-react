@@ -13,11 +13,15 @@ pnpm --filter [workspace] add @template-react/ui-core
 Then use the preset in your `tailwind.config` file.
 
 ```js
+import path from 'node:path';
+
 import { defaultPreset } from '@template-react/ui-core';
 
 export default {
   presets: [defaultPreset],
-  content: ['node_modules/@template-react/ui-core/dist/*.js'],
+  content: [
+    path.join(path.dirname(require.resolve('@template-react/ui-core')), '*.js'),
+  ],
 };
 ```
 

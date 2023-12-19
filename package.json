@@ -20,7 +20,6 @@
     "@changesets/cli": "2.27.1",
     "@commitlint/cli": "18.4.3",
     "@commitlint/config-conventional": "18.4.3",
-    "@commitlint/types": "18.4.3",
     "@trivago/prettier-plugin-sort-imports": "4.3.0",
     "eslint": "8.54.0",
     "globals": "13.23.0",

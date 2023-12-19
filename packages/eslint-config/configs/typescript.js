@@ -36,6 +36,7 @@ export default {
       },
     ],
     'no-template-curly-in-string': 'error',
+    'no-undef': 'off',
     'prefer-arrow-callback': 'error',
     ...typescriptPlugin.configs['recommended-type-checked'].rules,
     ...typescriptPlugin.configs['strict-type-checked'].rules,
